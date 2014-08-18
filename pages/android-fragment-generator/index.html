@@ -1,0 +1,98 @@
+<!doctype html>
+<html ng-app="FragmentGenerator">
+  <head>
+    <script src="http://code.angularjs.org/1.2.10/angular.min.js"></script>
+    <script src="fragment-generator.js"></script>
+
+<!--
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  </head>
+  <body>
+    <div ng-controller="FragmentGeneratorController as fragmentGenerator">
+      <div>
+        <h3>
+          <span class="label label-primary">Package</span> 
+          <input type="string" ng-model="package" required >
+        </h3>
+      </div>
+      <div>
+        <h3>
+          <span class="label label-primary">Class</span>
+          <input type="string" ng-model="className" required >
+        </h3>
+      </div>
+
+<!--
+      <div>
+        Argument: 
+        <input type="string" ng-model="arg1_name" >
+        <select ng-model="arg1_type" ng-options="argType.name for argType in argTypes">
+          <option value="">-- choose type --</option>
+        </select>
+      </div>
+-->
+      <div>
+        <ul>
+          <li ng-repeat="argument in fragmentArguments">
+            <h4>
+              <span class="label label-primary">Argument:</span> 
+              <input type="string" ng-model="argument.name">
+              <select ng-model="argument.argType" ng-options="argType.name for argType in argTypes">
+                <option value="">-- choose type --</option>
+              </select>
+              <a href ng-click="fragmentArguments.splice($index, 1)" class="label label-danger">X</a>
+            </h4>
+          </li>
+        </ul>
+
+        <h3>
+          <a href ng-click="fragmentArguments.push({})" class="btn btn-default btn-sm">Add argument</a>
+        </h3>
+      </div>
+
+      <div>
+
+<div>
+<pre class="prettyprint lang-java">
+<code>
+package {{package}};
+
+import android.app.Fragment; // or import android.support.v4.app.Fragment;
+<!-- imports --><span ng-show="fragmentArguments.length">import android.os.Bundle;<br/></span>
+<!-- begin class -->public class {{className}} extends Fragment {
+  <!-- begin constants --><span ng-show="fragmentArguments.length"><br/>  private static final String PACKAGE_PREFIX = "{{package}}.";</span>
+  <!-- arg key constants --><span ng-repeat="argument in fragmentArguments"><br/>  private static final String ARG_{{argument.name|uppercase}}_KEY = PACKAGE_PREFIX + "{{argument.name|lowercase}}-key";</span>
+  <!-- begin instance static method -->
+  public static {{className}}(<span ng-repeat="argument in fragmentArguments">{{argument.argType.qualifiedName}} {{argument.name}}, </span>) {
+    <!-- call empty constructor -->    
+    {{className}} fragment = new {{className}}();
+    <!-- create bundle -->
+    <span ng-show="fragmentArguments.length">Bundle bundle = new Bundle();
+      <span ng-repeat="argument in fragmentArguments">
+    bundle.{{argument.argType.putMethod}}(ARG_{{argument.name|uppercase}}_KEY, {{argument.name}});
+      </span>
+    fragment.setArguments(bundle);
+    </span>
+    return fragment;
+  }
+  <!-- end instance static method -->    
+  <span ng-repeat="argument in fragmentArguments">
+  private {{argument.argType.qualifiedName}} get{{argument.name|capitalize}}() (
+    return getArguments().get{{argument.argType.qualifiedName}}(ARG_{{argument.name|uppercase}}_KEY);
+  )
+  </span>
+}
+<!-- end class -->
+</code>
+</pre>
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>
