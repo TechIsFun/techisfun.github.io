@@ -52,11 +52,22 @@
           </div>
         </div>
 
+        <!-- layout -->
+        <div class="form-group" style="padding-top:12px">
+          <label for="inputLayout" class="col-sm-4 control-label">Layout</label>
+          <div class="col-sm-4">
+            <input type="string" class="form-control" id="inputLayout" ng-model="layout" required placeholder="layout.xml">
+          </div>
+        </div>
+
         <!-- argument inputs -->
         <div ng-repeat="argument in fragmentArguments" class="form-group padding-top:12px">
           <label for="inputArgument{{$index}}" class="col-sm-4 control-label">Argument:</label> 
           <div class="col-sm-2">
-            <input type="string" ng-model="argument.name" class="form-control" id="inputArgument{{$index}}" placeholder="arg{{$index+1}}">
+            <input type="string" ng-model="argument.name" 
+                   class="form-control" id="inputArgument{{$index}}" 
+                   placeholder="arg{{$index+1}}"
+                   autofocus>
           </div>
           <div class="col-sm-2">
             <select class="form-control" ng-model="argument.argType" ng-options="argType.name for argType in argTypes">
@@ -70,7 +81,7 @@
 
         <!-- add argument button -->
         <div class="form-group col-lg-12 text-center" style="padding-top:12px">
-          <a href ng-click="fragmentArguments.push({})" class="btn btn-default">Add argument</a>
+          <a href ng-click="addArgument()" class="btn btn-default">Add argument</a>
         </div>
 
       </form>
@@ -86,28 +97,38 @@
 package {{package}};
 
 import android.app.Fragment; // or import android.support.v4.app.Fragment;
-<!-- imports --><span ng-show="fragmentArguments.length">import android.os.Bundle;<br/></span>
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.os.Bundle;
+
 <!-- begin class -->public class {{className}} extends Fragment {
-  <!-- begin constants --><span ng-show="fragmentArguments.length"><br/>  private static final String PACKAGE_PREFIX = "{{package}}.";</span>
-  <!-- arg key constants --><span ng-repeat="argument in fragmentArguments"><br/>  private static final String ARG_{{argument.name|uppercase}}_KEY = PACKAGE_PREFIX + "{{argument.name|lowercase}}-key";</span>
+  <!-- begin constants --><span ng-show="fragmentArguments.length"><br/>  private static final String KEY_PREFIX = "{{package}}.{{className}}.";</span>
+  <!-- arg key constants --><span ng-repeat="argument in fragmentArguments"><br/>  private static final String ARG_{{argument.name|uppercase}}_KEY = KEY_PREFIX + "{{argument.name|lowercase}}-key";</span>
   <!-- begin instance static method -->
-  public static {{className}}(<span ng-repeat="argument in fragmentArguments">{{argument.argType.qualifiedName}} {{argument.name}}, </span>) {
-    <!-- call empty constructor -->    
-    {{className}} fragment = new {{className}}();
+  public static {{className}} getInstance({{argumentList}}) {
+    <!-- call empty constructor -->{{className}} fragment = new {{className}}();
     <!-- create bundle -->
     <span ng-show="fragmentArguments.length">Bundle bundle = new Bundle();
       <span ng-repeat="argument in fragmentArguments">
-    bundle.{{argument.argType.putMethod}}(ARG_{{argument.name|uppercase}}_KEY, {{argument.name}});
+    bundle.put{{argument.argType.name}}(ARG_{{argument.name|uppercase}}_KEY, {{argument.name}});
       </span>
     fragment.setArguments(bundle);
     </span>
     return fragment;
   }
-  <!-- end instance static method -->    
+  <!-- end instance static method -->
+  <!-- onCreateView --><span ng-show="layout">@Override
+  public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    View view = inflater.inflate(R.layout.{{layout|lowercase|stripExtension}}, null);
+
+    return view;
+  }
+  </span>
   <span ng-repeat="argument in fragmentArguments">
-  private {{argument.argType.qualifiedName}} get{{argument.name|capitalize}}() (
-    return getArguments().get{{argument.argType.qualifiedName}}(ARG_{{argument.name|uppercase}}_KEY);
-  )
+  private {{argument.argType.qualifiedName}} get{{argument.name|capitalize}}() {
+    return getArguments().get{{argument.argType.name}}(ARG_{{argument.name|uppercase}}_KEY);
+  }
   </span>
 }
 <!-- end class -->
