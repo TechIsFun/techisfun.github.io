@@ -13,18 +13,25 @@ var app = angular.module('FragmentGenerator', [])
     $scope.fragmentArguments = [];
 
     // default values
-    $scope.package = "com.example";
-    $scope.className = "MyFragment";
+    $scope.package = "";
+    $scope.className = "";
 
     //$scope.generated_code_package = "";
 
     //$log.log($scope.package);
+
+     $scope.$watch('package', function (value) {
+        $log.log($scope.package)
+    });
+
+     $scope.$watch('className', function (value) {
+        $log.log($scope.className)
+    });
   }]);
 
 app.filter('capitalize', function() {
  return function(input, scope) {
    if (input!=null)
-   input = input.toLowerCase();
    return input.substring(0,1).toUpperCase()+input.substring(1);
  }
 });
@@ -33,14 +40,15 @@ app.filter('capitalize', function() {
 function SourceCodeGenerator($scope, $log) {
   $scope.$watch('package', function (value) {
         $scope.generated_code_package = "package " + value + ";";
-        //$log.log($scope.package)
-        //$log.log($scope.generatedCode)
+        $log.log($scope.package)
+        $log.log($scope.generatedCode)
   });
+
 
   $scope.$watch('className', function (value) {
         $scope.generated_code_package = "package " + value + ";";
-        //$log.log($scope.package)
-        //$log.log($scope.generatedCode)
+        $log.log($scope.package)
+        $log.log($scope.generatedCode)
   });
 };
 */
