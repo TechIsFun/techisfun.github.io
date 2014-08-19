@@ -45,8 +45,6 @@ var app = angular.module('FragmentGenerator', [])
 
     //$scope.generated_code_package = "";
 
-    //$log.log($scope.package);
-
     $scope.$watch('package', function (value) {
         $log.log($scope.package)
     });
@@ -60,7 +58,9 @@ var app = angular.module('FragmentGenerator', [])
         $scope.argumentList = "";
         
         angular.forEach(values, function(argument, key) {
-          $scope.argumentList += argument.argType.qualifiedName + " " + argument.name + ", ";
+          if (argument.argType && argument.name) {
+            $scope.argumentList += argument.argType.qualifiedName + " " + argument.name + ", ";
+          }
         }, $log);
 
         length = $scope.argumentList.length;
@@ -96,21 +96,4 @@ app.filter('stripExtension', function() {
 });
 
 
-
-/*
-function SourceCodeGenerator($scope, $log) {
-  $scope.$watch('package', function (value) {
-        $scope.generated_code_package = "package " + value + ";";
-        $log.log($scope.package)
-        $log.log($scope.generatedCode)
-  });
-
-
-  $scope.$watch('className', function (value) {
-        $scope.generated_code_package = "package " + value + ";";
-        $log.log($scope.package)
-        $log.log($scope.generatedCode)
-  });
-};
-*/
   
