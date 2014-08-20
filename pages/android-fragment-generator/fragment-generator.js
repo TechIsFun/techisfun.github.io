@@ -39,11 +39,14 @@ var app = angular.module('FragmentGenerator', [])
     $scope.fragmentArguments = [];
 
     // default values
-    $scope.package = "";
-    $scope.className = "";
+    $scope.package = "com.example";
+    $scope.className = "MyFragment";
+    $scope.layout = "my_fragment_layout.xml";
     $scope.argumentList = "";
-
-    //$scope.generated_code_package = "";
+    $scope.fragmentArguments.push({
+      name:"firstArgument",
+      argType: $scope.argTypes[28]
+    });
 
     $scope.$watch('package', function (value) {
         $log.log($scope.package)
@@ -94,6 +97,4 @@ app.filter('stripExtension', function() {
    return input;
  }
 });
-
-
   
