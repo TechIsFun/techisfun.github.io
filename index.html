@@ -29,6 +29,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Angular Js -->
+    <script src="http://code.angularjs.org/1.2.10/angular.min.js"></script>
+
     <!-- start Google Analytics -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -43,7 +46,7 @@
     <!-- end of Google Analytics -->
 </head>
 
-<body id="page-top" class="index">
+<body id="page-top" class="index" ng-app="TechIsFunWebsite">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -65,11 +68,9 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <!--
                     <li class="page-scroll">
                         <a href="#portfolio">Portfolio</a>
                     </li>
-                    -->
                     <li class="page-scroll">
                         <a href="#about">About</a>
                     </li>
@@ -99,9 +100,9 @@
         </div>
     </header>
 
-    <!-- Portfolio Grid Section
+    <!-- Portfolio Grid Section -->
     <section id="portfolio">
-        <div class="container">
+        <div class="container" ng-controller="PortfolioController">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Portfolio</h2>
@@ -109,6 +110,20 @@
                 </div>
             </div>
             <div class="row">
+
+                <div ng-repeat="project in projects | orderBy:'priority'" class="col-sm-4 portfolio-item" align="center">
+                    <a href="#portfolioModal{{$index}}" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img  src="{{project.imageUrl}}" class="img-responsive" alt="">
+                        <h3 >{{project.title}}</h3>
+                    </a>
+                </div>
+
+<!--
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -169,10 +184,10 @@
                         <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
                     </a>
                 </div>
+                -->
             </div>
         </div>
     </section> 
-    -->
     
     <!-- Public Repos (GitHub) -->
     <section id="github">
@@ -332,6 +347,40 @@
     </div>
 
     <!-- Portfolio Modals -->
+    <div class="container" ng-controller="PortfolioController">
+        <div ng-repeat="project in projects | orderBy:'priority'" class="portfolio-modal modal fade" id="portfolioModal{{$index}}" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>{{project.title}}</h2>
+                                <hr class="star-primary">
+                                <img src="{{project.imageUrl}}" class="img-responsive img-centered" alt="" style="max-height:450px">
+                                <p ng-bind-html="project.description|to_trusted"></p>
+                                <ul class="list-inline item-details">
+                                    <li ng-repeat="link in project.links">
+                                        <strong>
+                                            <a href="{{link.url}}">{{link.label}}</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- modal examples 
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -554,6 +603,7 @@
             </div>
         </div>
     </div>
+    -->
 
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>
@@ -572,6 +622,8 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
+    
+    <script type="text/javascript" src="js/data.js"></script>
 
 </body>
 
