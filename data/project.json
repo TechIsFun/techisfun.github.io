@@ -1,0 +1,30 @@
+[
+  {
+    "title":"Setlist Android App",
+    "priority":10,
+    "imageUrl":"https://lh6.ggpht.com/FpLqL42lQg1aJyQp2Kpd_UY8A0leJchB6eDM3cmh1w7NqkDi6egAb_QZQYrN4ypgjoQ=w300",
+    "description":"",
+    "links":[
+    	{
+    		"url":"https://play.google.com/store/apps/details?id=it.andreamaglie.android.setlistManager",
+    		"label":"Get it on Play Store"
+    	}
+    ]
+  },
+  {
+    "title":"Sono Digitale Podcast",
+    "priority":20,
+    "imageUrl":"https://lh6.googleusercontent.com/-Pm2wQ5uxzwM/UVK-_8Hd1BI/AAAAAAAAABw/m7CZsDde2x8/s674-no/logo.png",
+    "description":"<strong>Italian tech podcast</strong>, made by me and a friend of mine. We talk about tech news, upcoming devices, great apps and curious gadgets.",
+    "links":[ 
+     	{
+     		"url":"http://sonodigitale.altervista.org/",
+     		"label":"Website" 
+     	},
+      {
+        "url":"https://itunes.apple.com/it/podcast/sono-digitale/id598636082?mt=2",
+        "label":"iTunes"
+      }
+	  ]
+  }
+]
