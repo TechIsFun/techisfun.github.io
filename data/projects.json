@@ -5,10 +5,10 @@
     "imageUrl":"https://lh6.ggpht.com/FpLqL42lQg1aJyQp2Kpd_UY8A0leJchB6eDM3cmh1w7NqkDi6egAb_QZQYrN4ypgjoQ=w300",
     "description":"",
     "links":[
-    	{
-    		"url":"https://play.google.com/store/apps/details?id=it.andreamaglie.android.setlistManager",
-    		"label":"Get it on Play Store"
-    	}
+      {
+        "url":"https://play.google.com/store/apps/details?id=it.andreamaglie.android.setlistManager",
+        "label":"Get it on Play Store"
+      }
     ]
   },
   {
@@ -17,14 +17,26 @@
     "imageUrl":"https://lh6.googleusercontent.com/-Pm2wQ5uxzwM/UVK-_8Hd1BI/AAAAAAAAABw/m7CZsDde2x8/s674-no/logo.png",
     "description":"<strong>Italian tech podcast</strong>, made by me and a friend of mine. We talk about tech news, upcoming devices, great apps and curious gadgets.",
     "links":[ 
-     	{
-     		"url":"http://sonodigitale.altervista.org/",
-     		"label":"Website" 
-     	},
+      {
+        "url":"http://sonodigitale.altervista.org/",
+        "label":"Website" 
+      },
       {
         "url":"https://itunes.apple.com/it/podcast/sono-digitale/id598636082?mt=2",
         "label":"iTunes"
       }
-	  ]
+    ]
+  },
+  {
+    "title":"Android Fragment Generator",
+    "priority":30,
+    "imageUrl":"img/frag_gen_preview.jpg",
+    "description":"There are many ways to create a fragment in Android.<br/>This tools will help you find the right one.",
+    "links":[ 
+      {
+        "url":"pages/android-fragment-generator/index.html",
+        "label":"Try it!" 
+      }
+    ]
   }
 ]
