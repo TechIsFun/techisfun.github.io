@@ -39,7 +39,7 @@ var app = angular.module('FragmentGenerator', [])
     $scope.fragmentArguments = [];
 
     // default values
-    $scope.package = "com.example";
+    $scope.packageName = "com.example";
     $scope.className = "MyFragment";
     $scope.layout = "my_fragment_layout.xml";
     $scope.argumentList = "";
@@ -50,7 +50,7 @@ var app = angular.module('FragmentGenerator', [])
     $scope.fieldAssignStatements = [];
 
     $scope.$watch('package', function (value) {
-        $log.log($scope.package)
+        $log.log($scope.packageName)
     });
 
     $scope.$watch('className', function (value) {
