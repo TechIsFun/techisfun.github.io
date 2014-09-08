@@ -20,7 +20,7 @@ var app = angular.module('FragmentGenerator', [])
       {name:'FloatArray', qualifiedName:'float[]'},
       {name:'Int', qualifiedName:'int'},
       {name:'IntArray', qualifiedName:'int[]'},
-      {name:'Integer', qualifiedName:'Integer'},
+      //{name:'Integer', qualifiedName:'Integer'},
       {name:'IntegerArrayList', qualifiedName:'java.util.ArrayList<Integer>'},
       {name:'Long', qualifiedName:'long'},
       {name:'LongArray', qualifiedName:'long[]'},
@@ -45,8 +45,9 @@ var app = angular.module('FragmentGenerator', [])
     $scope.argumentList = "";
     $scope.fragmentArguments.push({
       name:"firstArgument",
-      argType: $scope.argTypes[28]
+      argType: $scope.argTypes[27] // default value: String
     });
+    $scope.fieldAssignStatements = [];
 
     $scope.$watch('package', function (value) {
         $log.log($scope.package)
@@ -59,10 +60,10 @@ var app = angular.module('FragmentGenerator', [])
     $scope.$watch('fragmentArguments', function (values) {
         // create argument list
         $scope.argumentList = "";
-        
+
         angular.forEach(values, function(argument, key) {
           if (argument.argType && argument.name) {
-            $scope.argumentList += argument.argType.qualifiedName + " " + argument.name + ", ";
+            $scope.argumentList += argument.argType.qualifiedName + " " + argument.name + ", ";       
           }
         }, $log);
 
@@ -98,3 +99,9 @@ app.filter('stripExtension', function() {
  }
 });
   
+app.filter('asField', function() {
+ return function(input, scope) {
+   if (input!=null)
+   return "m" + input.substring(0,1).toUpperCase()+input.substring(1);
+ }
+});
