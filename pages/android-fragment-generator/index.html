@@ -14,8 +14,6 @@
 
     <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-    <!--<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>-->
     
     <!-- start Google Analytics -->
     <script>
@@ -69,7 +67,7 @@
         <div class="form-group" style="padding-top:12px">
           <label for="inputPackage" class="col-sm-4 control-label">Package</label>
           <div class="col-sm-4">
-            <input type="string" class="form-control" id="inputPackage" ng-model="package" required placeholder="com.example">
+            <input type="string" class="form-control" id="inputPackage" ng-model="packageName" required placeholder="com.example">
           </div>
         </div>
 
@@ -127,7 +125,7 @@
 
           <pre id="codeContainer">
 <code>
-package {{package}};
+package {{packageName}};
 
 import android.app.Fragment; // or import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -199,8 +197,13 @@ import android.os.Bundle;
           </div>
       </div>
     </footer>
+  </body>
 
-    <script type="text/javascript">
+  <!-- highlight.js -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/github.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+
+  <script type="text/javascript">
       function selectAll(containerid) {
         if (document.selection) {
           var range = document.body.createTextRange();
@@ -212,7 +215,8 @@ import android.os.Bundle;
           window.getSelection().addRange(range);
         }
       }
-    </script>
 
-  </body>
+      hljs.highlightBlock(document.getElementById('codeContainer'));
+  </script>
+
 </html>
