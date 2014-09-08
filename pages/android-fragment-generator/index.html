@@ -120,7 +120,12 @@
       
         <div class="col-md-2"></div>
         <div class="col-md-8">
-          <pre>
+  
+          <div class="clo-lg-12" align="right">
+            <span class="btn btn-default btn-xs" onClick="selectAll('codeContainer')">Select all</span>
+          </div>
+
+          <pre id="codeContainer">
 <code>
 package {{package}};
 
@@ -165,11 +170,8 @@ import android.os.Bundle;
     return view;
   }</span>
 
-}
-<!-- end class -->
-
-</code>
-        </pre>
+}<!-- end class -->
+</code></pre>
         </div>
         <div class="col-md-2"></div>
       </div>
@@ -197,6 +199,20 @@ import android.os.Bundle;
           </div>
       </div>
     </footer>
+
+    <script type="text/javascript">
+      function selectAll(containerid) {
+        if (document.selection) {
+          var range = document.body.createTextRange();
+          range.moveToElementText(document.getElementById(containerid));
+          range.select();
+        } else if (window.getSelection) {
+          var range = document.createRange();
+          range.selectNode(document.getElementById(containerid));
+          window.getSelection().addRange(range);
+        }
+      }
+    </script>
 
   </body>
 </html>
