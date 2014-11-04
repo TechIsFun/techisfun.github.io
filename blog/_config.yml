@@ -1,0 +1,31 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Tech Is Fun
+tagline:          'A tech blog by Andrea Maglie'
+description:      'A tech blog by Andrea Maglie'
+url:              
+baseurl:          /
+
+author:
+  name:           'Andrea Maglie'
+  url:            https://plus.google.com/+AndreaMaglie?rel=author
+
+paginate:         5
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/TechIsFun
+
+social:
+  googleplus:     https://plus.google.com/+AndreaMaglie?rel=author
+  twitter:		  https://twitter.com/TechIsFun
+
