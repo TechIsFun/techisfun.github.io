@@ -34,7 +34,7 @@
     "description":"There are many ways to create a fragment in Android.<br/>This tools will help you find the right one.",
     "links":[ 
       {
-        "url":"pages/android-fragment-generator/index.html",
+        "url":"android-fragment-generator/index.html",
         "label":"Try it!" 
       }
     ]
