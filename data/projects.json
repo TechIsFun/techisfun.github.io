@@ -1,13 +1,29 @@
 [
   {
-    "title":"Setlist Android App",
+    "title":"Setlist for Android",
     "priority":10,
     "imageUrl":"https://lh6.ggpht.com/FpLqL42lQg1aJyQp2Kpd_UY8A0leJchB6eDM3cmh1w7NqkDi6egAb_QZQYrN4ypgjoQ=w300",
     "description":"",
     "links":[
       {
         "url":"https://play.google.com/store/apps/details?id=it.andreamaglie.android.setlistManager",
-        "label":"Get it on Play Store"
+        "label":"Get it on Google Play"
+      }
+    ]
+  },
+  {
+    "title":"Loopo Player for Android",
+    "priority":10,
+    "imageUrl":"https://lh5.ggpht.com/MN4i35H_-1qnwsv4DsV-AQrnYaBm-xZP-R47Q08kcjBe-Vx7b2JxTUZ5lCEKn2_DCbtR=w300",
+    "description":"",
+    "links":[
+      {
+        "url":"projects/loopo/index.html",
+        "label":"Project Page"
+      },
+      {
+        "url":"https://play.google.com/store/apps/details?id=com.andreamaglie.android.abplayer",
+        "label":"Get it on Google Play"
       }
     ]
   },
