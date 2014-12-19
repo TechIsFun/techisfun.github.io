@@ -4,6 +4,7 @@
     "priority":10,
     "imageUrl":"https://lh6.ggpht.com/FpLqL42lQg1aJyQp2Kpd_UY8A0leJchB6eDM3cmh1w7NqkDi6egAb_QZQYrN4ypgjoQ=w300",
     "description":"",
+    "url":"https://play.google.com/store/apps/details?id=it.andreamaglie.android.setlistManager",
     "links":[
       {
         "url":"https://play.google.com/store/apps/details?id=it.andreamaglie.android.setlistManager",
@@ -16,9 +17,10 @@
     "priority":10,
     "imageUrl":"https://lh5.ggpht.com/MN4i35H_-1qnwsv4DsV-AQrnYaBm-xZP-R47Q08kcjBe-Vx7b2JxTUZ5lCEKn2_DCbtR=w300",
     "description":"",
+    "url":"projects/loopo-android-player/index.html",
     "links":[
       {
-        "url":"projects/loopo/index.html",
+        "url":"projects/loopo-android-player/index.html",
         "label":"Project Page"
       },
       {
@@ -32,6 +34,7 @@
     "priority":20,
     "imageUrl":"https://lh6.googleusercontent.com/-Pm2wQ5uxzwM/UVK-_8Hd1BI/AAAAAAAAABw/m7CZsDde2x8/s674-no/logo.png",
     "description":"<strong>Italian tech podcast</strong>, made by me and a friend of mine. We talk about tech news, upcoming devices, great apps and curious gadgets.",
+    "url":"http://sonodigitale.altervista.org/",
     "links":[ 
       {
         "url":"http://sonodigitale.altervista.org/",
@@ -48,6 +51,7 @@
     "priority":30,
     "imageUrl":"img/frag_gen_preview.jpg",
     "description":"There are many ways to create a fragment in Android.<br/>This tools will help you find the right one.",
+    "url":"android-fragment-generator/index.html",
     "links":[ 
       {
         "url":"android-fragment-generator/index.html",
