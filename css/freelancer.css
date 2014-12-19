@@ -449,3 +449,8 @@ footer .footer-below {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+
+#portfolio img {
+    height: 250px;
+    width: 250px;
+}
