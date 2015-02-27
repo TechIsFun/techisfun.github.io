@@ -144,6 +144,10 @@ nav.navbar.fixed-to-top{
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
+.navbar-brand img {
+	height: 42px;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /* HEADER 
@@ -178,7 +182,7 @@ header .carousel-iphone{
 	margin-left: auto;
 	width: 320px;
 	height: 672px;
-	background: url('../img/nexus5.png') no-repeat;
+	/*background: url('../img/nexus5.png') no-repeat;*/
 	background-size: 100%;
 	
 }
@@ -188,7 +192,7 @@ header .carousel {
 	margin-right: auto;
 	margin-left: 12px;
 	padding: 50px 0px 0px 0px;
-	width: 290px;
+	width: 310px;
 }
 
 header .carousel-indicators .active {
@@ -198,7 +202,7 @@ header .carousel-indicators .active {
 }
 
 header .carousel-indicators {
-	bottom: -63px;
+	bottom: -25px;
 }
 
 header .carousel-indicators li {
