@@ -524,8 +524,9 @@ header, .social{
 	}
 	
 	header .carousel, .detail .app-screenshot img{
-		padding-top: 85px;
-		width: 245px;
+		padding-top: 44px;
+		width: 252px;
+		margin-left: 10px;
 	}
 	
 	.detail .app-screenshot img{
