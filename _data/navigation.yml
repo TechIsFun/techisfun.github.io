@@ -1,0 +1,13 @@
+# Menu navigation links
+
+- title: Portfolio
+  url: /portfolio/
+
+- title: Curriculum Vitae
+  url: /curriculum/
+
+- title: Apps On Play Store
+  url: http://bit.ly/1bISG1K
+
+- title: Contact me
+  url: /contact-me/

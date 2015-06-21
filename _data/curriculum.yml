@@ -1,0 +1,257 @@
+#########################
+# DATI PERSONALI
+#########################
+profile:
+    name: Andrea Maglie
+    address_1: >
+     Street<br>
+     City<br>
+     Country<br>
+    address_2: >
+     Mob: number<br>
+     Web: www.website.com<br>
+     Email: mailme<br>
+    highlights: >
+      Freelance software developer.
+    education: >
+      Master of Computer Science, 2004
+    languages: >
+      English, German, Spanish
+    hobbies: >
+      Hiking, Swimming
+#########################
+# FINE DATI PERSONALI
+#########################
+
+
+########################
+# LAVORO
+########################
+work:
+  - title: Senior Android Developer @ TEXA S.P.A.
+    id: senior-android-developer-texa
+    date_short: 2014 - now
+    date_long: from 2014 to present day
+    description: >
+      <p>TEXA is a global leader in the design, development and production of multibrand diagnostic tools, exhaust gas analysers, air conditioning recharge stations and telediagnostic devices for cars, bikes, trucks, boats and farm machinery.</p>
+      <p>I work both as developer on the new suite of tools based on Android and as a trainer for other team's developers that enters the Android world.</p>
+    url: http://www.texa.com
+    url_title: TEXA S.P.A.
+
+
+  - title: Android and iOS Developer @ MiSiedo S.R.L.
+    id: android-developer-misiedo
+    date_short: 2012 - 2014
+    date_long: from 2012 to 2014
+    description: >
+      <p>MiSiedo is an Italian startup that provides a real-time table booking service. The service is provided through the website and mobile applications for Android and iPhone devices. I'm responsible for the entire Android application development process, dealing with various issues like:
+          <ul>
+              <li>Client-server communication</li>
+              <li>Querying RESTFUL webservices</li>
+              <li>Reading and converting data in JSON format</li>
+              <li>User account management on Android device</li>
+              <li>Support for the various form factors of Android devices</li>
+              <li>Creating graphical components compatible with all versions of Android starting from Gingerbread-
+              Integration with other Android applications</li>
+              <li>Integration with Facebook and Twitter</li>
+          </ul>
+      </p>             
+    url: http://www.misiedo.com
+    url_title: MiSiedo S.R.L.
+
+
+  - title: Java Developer @ Previmedical S.P.A.
+    id: java-developer-previmedical
+    date_short: 2008 - 2012
+    date_long: from 2008 to 2012
+    description: >
+      <p>Previmedical provides services for the healthcare industry and it has rapidly become a major player in the European market. I joined the development team at its beginning, and this allowed me to follow every development of services that constitute the core business, plus other minor projects. The main project is divided into different modules, depending on the specific service provided:
+          <ul>
+            <li>Management of claims for reimbursement of health expenses;</li>
+            <li>Authorization of health services;</li>
+            <li>Management of appointments;</li>
+            <li>Interfacing with health care facilities;</li>
+            <li>Invoicing;</li>
+            <li>Claims status view and new claim insertion for assisted people.</li>
+          </ul>
+      </p>
+      <p>
+          Services are provided by Java enterprise web applications based on Struts and other proprietary MVC frameworks.
+          There are many customers who purchase our services, with hundreds of thousands of active users. So applications must be highly reliable and have a high degree of personalization, through the clever combination of different technologies and design patterns, so that it can be adapted the needs of each customer.
+      </p>           
+      <p>
+          Among the other projects in which I participated there are:
+          <ul>
+              <li>A web application for managing a system of voting used by some customers to manage internal corporate voting (such as the approval of the budget);</li>
+              <li>A system for the integration of Java and Perl processes.</li>
+          </ul>
+      </p>
+      <p>
+          My analysis and development activities are:
+          <ul>
+              <li>Implementation of infrastructure-level delegation of the source code model, controller and view;</li>
+              <li>Application of design patterns (Gang Of Four);</li>
+              <li>Taglib implementations;</li>
+              <li>Developing JavaScript with Ajax technologies and frameworks such as Prototype and Scriptaculous;</li>
+              <li>Implementation and publication of RESTful services according to the standard JSR 311;</li>
+              <li>JBoss application server administration in development and testing environment;</li>
+              <li>Internationalization of Web applications;</li>
+              <li>Implementation of single sign-on access across web applications;</li>
+              <li>Test driven development;</li>
+              <li>Unit testing, integration testing and continuous integration with JUnit 3 and 4, Mockito, Selenium, 
+              Hudson;</li>
+              <li>Pair programming;</li>
+              <li>Integration of different web applications;</li>
+              <li>Reading and writing Excel files in Java using Apache POI libraries;</li>
+              <li>Generation and manipulation of PDF with iText, XSL-FO and Freemarker;</li>
+              <li>Analysis, implementation and optimization of JDBC queries and Store Procedures;</li>
+              <li>Automatic form validation according to the standard JSR 303;</li>
+              <li>Development with Eclipse IDE;</li>
+              <li>Batch-side programming in Bash and Perl;</li>
+              <li>Management of bugs through Bugzilla;</li>
+              <li>Users profiling;</li>
+              <li>Training of new staff;</li>
+              <li>Direct assistance to the customer.</li>
+          </ul>
+      </p>
+    url: http://www.previmedical.it/
+    url_title: Previmedical S.P.A.
+
+
+  - title: Java, C++ and PHP Developer @ Elaide S.R.L.
+    id: developer-elaide
+    date_short: 2007 - 2008
+    date_long: from 2007 to 2008
+    description: >
+      <p>Elaide is a company that provides IT services to several major clients, including the Chamber of Commerce. During my experience I have acquired skills in:
+        <ul>
+          <li>Development of web applications on Java J2EE Struts 1.3;</li>
+          <li>Development of web applications with PHP 4;</li>
+          <li>Developing applications in C ++ (with GUI based on QT);</li>
+          <li>Analysis and implementation of JDBC queries on Oracle, MySQL and Postgres databases;</li>
+          <li>Digital signature;</li>
+          <li>Encryption.</li>
+        </ul>
+      </p>
+      <p>
+        Some of the projects I've been working on are:
+        <ul>
+          <li>Analysis and management of data extracted from digital tachographs. A Java application parses the clinical data (routes, timetables, vehicle characteristics) from the smart card used in digital tachographs on trucks. Processed data are saved to database (Oracle). Using J2EE Web application, you can consult the data and generate reports.</li>
+          <li>Documents exchange with digital signature. The project purpose is to allow two users to exchange digitally signed documents. Through a web interface written in PHP, a user has the option to upload a file (doc or pdf), by specifying a target user of the document. A JAva process is involved in applying the digital signature to the file before delivering it to the recipient.</li>
+           </ul>
+      </p>   
+    url: http://www.elaide.com/
+    url_title: Elaide S.R.L.
+
+
+  - title: Computer Science Teacher @ Regione Veneto
+    id: teacher-regione-veneto
+    date_short: 2007
+    date_long: November 2007
+    description: >
+      <p>I've been teaching Computer Sience to Public Administration employees through a short course of
+      lectures for Regione Veneto.</p>
+
+
+  - title: System Administrator @ TIM S.P.A.
+    id: sysadmin-timspa
+    date_short: 2007
+    date_long: 2007
+    description: >
+      <p>In my experience in TIM S.P.A., I dealt with the application management and monitoring of the mobile network's billing system. My activities included:
+          <ul>
+              <li>Development of Korn Shell scripts on HP-UX;</li>
+              <li>Perl development;</li>
+              <li>Massive log analysis.</li>
+          </ul>
+          I also implemented an application for eployees turn management, based on PHP and MySQL.
+      </p>              
+
+
+  - title: System Administrator @ Apollo SE S.R.L.
+    id: sysadmin-apollose
+    date_short: 2007
+    date_long: 2007
+    description: >
+      <p>Stage in Linux system administration (Red Hat Enterprise). Acquired skills:
+          <ul>
+            <li>user management;</li>
+            <li>network administration;</li>
+            <li>iptables firewall configuration.</li>
+        </ul>
+      </p>
+########################
+# FINE LAVORO
+########################
+
+
+#########################
+# EDUCAZIONE
+#########################
+education:
+  - title: Qualification to the profession of Engineer
+    id: engineer-qualification
+    organization: University of Padua
+    date_short: 2007
+    date_long: November 2007
+    description:
+
+  - title: Five Years Bachelor in Information Technology Engineering
+    id: engineer-bachelor
+    organization: University of Padua
+    date_short: 2000 - 2006
+    date_long: from 2000 to 2006
+    description: >
+      <p>
+        Graduation Thesis: <strong>A platform for audio and haptic rendering of continous interactions.</strong>
+      </p>
+      <p>
+        I've implemented a virtual reality application that can simulate audio and haptic textures of different 
+        kind of surfaces, with the dual purpose of creating an environment for experimental use and provide a 
+        basis for the implementation of more sophisticated applications, i.e. for medical training, remote control or entertainment.
+        The simulation runs in real time, with very low latency.
+        I've used the Phantom Omni of SensAble Technologies as aptic device; the software component was a 3D graphical interface and a my implementation of an audio synthesis with Pure Data.
+        Starting from a model that describes the generation of a fractal noise and other models that describe 
+        the contacts between an object and the surface on which it moves, I have realized a parametric 
+        implementation of an algorithm that synthesizes the sound produced by a body that scrapes on 
+        another. Another algorithm was developed to recreate the textures on haptic virtual objects. The 
+        audio, graphic and haptic component runs simultaneously with low latency, so that the audio and 
+        haptic rendering are synchronized.
+        This application was used to perform a study on the psycho-physical bimodal perception, whose 
+        results have confirmed the validity of the models and of their implementations.
+      </p>
+      <p>
+        Other projects:
+        <ul>
+          <li>A remote control system for RoboCup's robots via serial port and bluetooth (built in C++ using QT libraries)</li>
+          <li>A Java application for the calculation of the sum of Minkowski</li>
+          <li>A Java application for matrix multiplication with the Strassen algorithm</li>
+          <li>Java application for edge detection of an image with the Canny algorithm, implemented in Swing GUI</li> 
+          <li>Java application for exchanging files over network with UDP port connection.</li>
+        </ul>
+        Skills acquired:
+        <ul>
+          <li>Analysis and implementation of algorithms</li>
+          <li>Data structures</li>
+          <li>Programming in C/C++, Java, SQL</li>
+          <li>Theoretical and practical parallel computing using the MPI libraries</li>
+          <li>Computer architecture and Operating Systems</li>
+          <li>Networking</li>
+          <li>Sound analysis and synthesis</li>
+          <li>Signal processing</li>
+          <li>Electronics and microelectronics</li>
+        </ul>
+      </p>
+
+  - title: High School Leaving Qualification in Business Economics
+    id: high-school-economics
+    organization: I.T.S.C. Francesco Foscari, Mestre (Venice)
+    date_short: 1995 - 2000
+    date_long: from 1995 to 2000
+    description: >
+      <p>Economic management and accounting business.</p>
+      <p>Knowledge of law and economics.</p>
+      <p>Study of English and German languages.</p>
+#########################
+# FINE EDUCAZIONE
+#########################

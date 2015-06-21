@@ -1,0 +1,137 @@
+---
+sitemap: false
+---
+
+/*
+ *
+ *  HPSTR
+ *
+ *  Designer: Michael Rose
+ *  Twitter: http://twitter.com/mmistakes
+ *
+*/
+
+// Partials
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "vendor/font-awesome/font-awesome";
+@import "vendor/magnific-popup/magnific-popup";
+@import "site";
+@import "typography";
+@import "pygments";
+@import "coderay";
+@import "gist";
+@import "grid";
+@import "elements";
+@import "animations";
+@import "dl-menu";
+@import "page";
+
+pre {
+    background-color: transparent;
+}
+
+.play-store-button {
+    margin: 12px;
+}
+
+/* Timeline
+-------------------------------------------------- */
+.timeline {
+    /*background: url("../img/line.gif") repeat-y scroll 109px 0 transparent;*/
+    /*margin-left: 50px;*/
+}
+.timeline-item {
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+.timeline-head {
+    background: none repeat scroll 0 0 #FBA24E;
+    border-radius: 136px 136px 136px 136px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-size: 28px;
+    height: 46px;
+    line-height: 46px;
+    margin-top: 20px;
+    text-align: center;
+    width: 46px;
+    margin-left: 85px;  
+}
+.timeline-head-content {
+    background-color: #F5F5F5;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    margin-left: 15px;
+    padding: 10px 30px;
+    position: relative;
+    width: 70%;
+}
+.timeline-head-content h3{
+    color: #363636;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.timeline-item-date {
+    float: left;
+    margin-top: 31px;
+    width: 85px;
+    font-size: 14px;    
+}
+.timeline-item-trigger {
+    background: none repeat scroll 0 0 #3BC2C8;
+    border-radius: 136px 136px 136px 136px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-size: 28px;
+    height: 46px;
+    line-height: 46px;
+    margin-top: 20px;
+    text-align: center;
+    width: 46px;  
+}
+.timeline-item-content {
+    background-color: #F5F5F5;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    margin-left: 15px;
+    padding: 10px 30px;
+    position: relative;
+    width: 70%;
+}
+.timeline-item-content h3 {
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 30px;
+    color: #363636;
+}
+.timeline-arrow {
+    display: block;
+    position: relative;
+}
+.timeline-arrow i {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    display: block;
+    height: 10px;
+    left: 141px;
+    position: absolute;
+    top: 37px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    width: 10px;
+    z-index: 10;
+}
+.timeline-item h4 {
+    margin-bottom: 10px;
+}

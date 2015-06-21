@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Andrea Maglie</title>
+<generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
+<link rel="alternate" type="text/html" href="http://localhost:4000" />
+<updated>2015-06-19T16:54:34+02:00</updated>
+<id>http://localhost:4000/</id>
+<author>
+  <name>Andrea Maglie</name>
+  <uri>http://localhost:4000/</uri>
+  
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[Don't waste your time coding - part 2]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/dont-waste-time-coding-2/" />
+  <id>http://localhost:4000/dont-waste-time-coding-2</id>
+  <published>2015-01-30T00:00:00+01:00</published>
+  <updated>2015-01-30T00:00:00+01:00</updated>
+  <author>
+    <name>Andrea Maglie</name>
+    <uri>http://localhost:4000</uri>
+    <email></email>
+  </author>
+  <content type="html">
+    &lt;p&gt;You can find the first part of this article &lt;a href=&quot;//dont-waste-time-coding-1/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;automatic-code-formatting-and-import-organizing&quot;&gt;Automatic code formatting and import organizing&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Code styling is important. A well formatted piece of code becomes more readable and more comprehensible.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;But sometimes trying to keep the code formatted can be negative: you lose your time and your focus.
+You will soon start to count the number of spaces at the beginning of the current line, or you will think about questions like “should I use 2 or 4 spaces for tabs?” or “should I put a space before this bracket?” or again “lets remove some unused imports because my IDE is saying that I’m not using them”, and you will lose your focus on that great algorithm that sits in your mind waiting to become the core of a great application. Then you have to spend some other time trying to get to the point, and restart writing code.&lt;/p&gt;
+
+&lt;p&gt;I think that it’s better to leave all the annoying stuff about code formatting to your IDE.
+Every modern IDE has an automatic formatting function, that can be triggered automatically when the file is saved or when it’s committed. And the same functionality exists for automatic imports organizing.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Eclipse&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Settings: Java -&amp;gt; Code style -&amp;gt; Formatter&lt;/li&gt;
+  &lt;li&gt;Auto format code: CTRL + SHIFT + F&lt;/li&gt;
+  &lt;li&gt;Auto organize imports: CTRL + SHIFT + O&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Android Studio&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Settings: Code style -&amp;gt; Formatter -&amp;gt; Java&lt;/li&gt;
+  &lt;li&gt;Auto format code: CTRL + ALT + L&lt;/li&gt;
+  &lt;li&gt;Auto organize imports: CTRL + ALT + O&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With Android Studio I prefer to let the IDE reformat my code before committing, as you can see in the following screenshot:
+&lt;img src=&quot;/images/studio_commit_dialog.png&quot; alt=&quot;Android Studio commit dialog&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;When you’re writing code, think about writing code&lt;/em&gt;, no matter how beautiful it is. You can think about formatting later, or even don’t think about formatting at all because your IDE will do it for you.
+But also don’t forget to produce well formatted code!&lt;/p&gt;
+
+&lt;p&gt;Bonus: don’t waste your time formatting JSON strings or long SQL queries! Ask Google for “json formatter” or “sql formatter”, and try some online time-saving tools.&lt;/p&gt;
+
+&lt;h2 id=&quot;online-tools-for-code-generation&quot;&gt;Online tools for code generation&lt;/h2&gt;
+&lt;p&gt;Talkin’ about boilerplate code, you can find many tools that will take care to generate code for you. This leads to time saving, less annoyances, and (most important) less bugs.&lt;/p&gt;
+
+&lt;p&gt;Here are some tools that I love to use in my activity as Android developer:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://andreamaglie.com/android-fragment-generator/&quot;&gt;Android Fragment Code Generator&lt;/a&gt; (self-promotion, sorry!)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.parcelabler.com/&quot;&gt;parcelabler&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.buzzingandroid.com/tools/android-layout-finder/&quot;&gt;Android Layout Finder&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Do you know some other useful tool? Don’t forget to write a comment about it!&lt;/p&gt;
+
+&lt;p&gt;Again, &lt;em&gt;don’t waste your time coding!&lt;/em&gt; Type just what you need to type, you’ll become more productive and less stressed.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/dont-waste-time-coding-2/&quot;&gt;Don't waste your time coding - part 2&lt;/a&gt; was originally published by Andrea Maglie at &lt;a href=&quot;http://localhost:4000&quot;&gt;Andrea Maglie&lt;/a&gt; on January 30, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Access Storage Framework and the URI permissions nightmare]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/access-storage-framework-uri-permission/" />
+  <id>http://localhost:4000/access-storage-framework-uri-permission</id>
+  <published>2015-01-09T00:00:00+01:00</published>
+  <updated>2015-01-09T00:00:00+01:00</updated>
+  <author>
+    <name>Andrea Maglie</name>
+    <uri>http://localhost:4000</uri>
+    <email></email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I’ve been working with the &lt;strong&gt;Access Storage Framework&lt;/strong&gt; introduced with Android KitKat, a feature that I’ve been waiting for a long time.&lt;/p&gt;
+
+&lt;p&gt;Everything seemed to be alright, quite easy to implement, until I faced a strange issue.&lt;/p&gt;
+
+&lt;p&gt;Once the file has been selected by the user, I wanted to store the file’s URI and re-open that URI the next time application is started. To do this, I’ve followed what the &lt;a href=&quot;https://developer.android.com/guide/topics/providers/document-provider.html&quot;&gt;official documentation&lt;/a&gt; says:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;When your app opens a file for reading or writing, the system gives your app a URI permission grant for that file. It lasts until the user’s device restarts. But suppose your app is an image-editing app, and you want users to be able to access the last 5 images they edited, directly from your app. If the user’s device has restarted, you’d have to send the user back to the system picker to find the files, which is obviously not ideal.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;To prevent this from happening, you can persist the permissions the system gives your app. Effectively, your app “takes” the persistable URI permission grant that the system is offering. This gives the user continued access to the files through your app, even if the device has been restarted:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;takeFlags&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getFlags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FLAG_GRANT_READ_URI_PERMISSION&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FLAG_GRANT_WRITE_URI_PERMISSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Check for the freshest data.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;getContentResolver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;takePersistableUriPermission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;takeFlags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It didn’t work. &lt;em&gt;Doh!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I was getting a &lt;code&gt;java.lang.SecurityException&lt;/code&gt; while trying to open the URI using &lt;code&gt;getContentResolver().openInputStream(uri)&lt;/code&gt; or &lt;code&gt;getContentResolver().openAssetFileDescriptor(uri, &quot;r&quot;)&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SecurityException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Permission&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;Denial:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;opening&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;provider&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;providers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;MediaDocumentsProvider&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ProcessRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;430&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b1748&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4572&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u0a88&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4572&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10078&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requires&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;permission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;MANAGE_DOCUMENTS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;permission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;MANAGE_DOCUMENTS&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Adding &lt;code&gt;android.permission.MANAGE_DOCUMENTS&lt;/code&gt; to AndroidManifest.xml didn’t helped, and the many solutions found on &lt;em&gt;stackoverflow.com&lt;/em&gt; didn’t work.&lt;/p&gt;
+
+&lt;p&gt;After taking a deeper look at the APIs and the source code I’ve found a working way to grant URI permissions:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;grantUriPermission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getPackageName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FLAG_GRANT_READ_URI_PERMISSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;place this call before &lt;code&gt;getContentResolver().takePersistableUriPermission(uri, takeFlags)&lt;/code&gt; and read permissions will be granted! Yeah!&lt;/p&gt;
+
+&lt;p&gt;The resulting code will be:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onActivityResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;requestCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MY_REQUEST_CODE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Activity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RESULT_OK&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+      &lt;span class=&quot;n&quot;&gt;Uri&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+      &lt;span class=&quot;n&quot;&gt;mActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;grantUriPermission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getPackageName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FLAG_GRANT_READ_URI_PERMISSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+      &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;takeFlags&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getFlags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FLAG_GRANT_READ_URI_PERMISSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;mActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getContentResolver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;takePersistableUriPermission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;takeFlags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+      &lt;span class=&quot;n&quot;&gt;doSomethingWith&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/access-storage-framework-uri-permission/&quot;&gt;Access Storage Framework and the URI permissions nightmare&lt;/a&gt; was originally published by Andrea Maglie at &lt;a href=&quot;http://localhost:4000&quot;&gt;Andrea Maglie&lt;/a&gt; on January 09, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Don't waste your time coding - part 1]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/dont-waste-time-coding-1/" />
+  <id>http://localhost:4000/dont-waste-time-coding-1</id>
+  <published>2014-12-16T00:00:00+01:00</published>
+  <updated>2014-12-16T00:00:00+01:00</updated>
+  <author>
+    <name>Andrea Maglie</name>
+    <uri>http://localhost:4000</uri>
+    <email></email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Life is too short: please, don’t waste your time writing code!
+I’m not saying that you don’t have to code, but many people tend to waste too much time typing on the keyboard instead of producing code. Mee too.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Following examples relate to Android’s world, but that can be easily adapted to other languages and programming tasks.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;aliases&quot;&gt;Aliases&lt;/h2&gt;
+
+&lt;p&gt;Android developers, how many times do you have to call the command &lt;code&gt;adb&lt;/code&gt;? If your installation directory is something like&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;/opt/android/sdk&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;maybe you’re going to write &lt;code&gt;/opt/android/sdk/platform-tools/adb&lt;/code&gt; many many times a day.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Don’t do it!&lt;/em&gt; Instead add the android &lt;code&gt;/opt/android/sdk/platform-tools/&lt;/code&gt; directory to your path or create an alias so you will only need to write &lt;code&gt;adb&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;I’ve also an alias for writing only &lt;code&gt;logcat&lt;/code&gt; instead of &lt;code&gt;adb logcat&lt;/code&gt;! ;-)&lt;/p&gt;
+
+&lt;p&gt;Some other alias examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[android] &lt;code&gt;alias amstart='adb shell am start -n'&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;[android] &lt;code&gt;alias amkill='adb shell am kill'&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;[android] &lt;code&gt;alias media_scan='adb shell am broadcast -a android.intent.action.MEDIA_MOUNTED -d file:///mnt/sdcard'&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;[android] &lt;code&gt;alias packages='adb shell pm list packages'&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;[android w/ant] &lt;code&gt;alias install='ant debug install'&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;[android w/gradle] &lt;code&gt;alias install='./gradlew installDebug'&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;[svn] &lt;code&gt;alias svnlog='svn log | less'&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;[svn] &lt;code&gt;alias svn_ignore_edit='svn propedit svn:ignore . --editor-cmd nano'&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;[git] &lt;code&gt;alias revert='git checkout --'&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;snippets-and-templates&quot;&gt;Snippets and Templates&lt;/h2&gt;
+&lt;p&gt;Every modern IDE has the support for &lt;em&gt;snippets&lt;/em&gt; and &lt;em&gt;templates&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Explore the built-in snippets and templates included in your IDE and use them as an example to write your own. You can create small blocks like a &lt;em&gt;try/catch&lt;/em&gt; implementation or generate an entire class.&lt;/p&gt;
+
+&lt;p&gt;I’ve changed the default &lt;strong&gt;Android Studio&lt;/strong&gt; template for &lt;em&gt;try/catch&lt;/em&gt; block including exception logging. Go to &lt;em&gt;File -&amp;gt; Settings -&amp;gt; File and Code Templates&lt;/em&gt;, select &lt;em&gt;Catch Statement Body&lt;/em&gt; and change the default implementation with:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Log.d(TAG, &quot;got exception&quot;, ${EXCEPTION});&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If you use &lt;em&gt;Robolectric&lt;/em&gt; you can change the default &lt;em&gt;Junit4 Test Class implementation&lt;/em&gt; with the following, so annotations and basic imports are added automatically:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;junit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.*;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;assertions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Assertions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.*;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.junit.runner.RunWith&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.robolectric.RobolectricTestRunner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.robolectric.annotation.Config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;emulateSdk&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@RunWith&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RobolectricTestRunner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BODY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In &lt;strong&gt;Eclipse&lt;/strong&gt; templates are under &lt;em&gt;Preferences -&amp;gt; Java -&amp;gt; Code Style -&amp;gt; Code Templates&lt;/em&gt; and &lt;em&gt;Preferences -&amp;gt; Java -&amp;gt; Editor -&amp;gt; Templates&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you prefere &lt;strong&gt;Sublime Text&lt;/strong&gt; you can find some useful Android Snippets in this repo: &lt;a href=&quot;https://github.com/ribot/SublimeAndroidSnippets&quot;&gt;http://github.com/ribot/SublimeAndroidSnippets&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/dont-waste-time-coding-1/&quot;&gt;Don't waste your time coding - part 1&lt;/a&gt; was originally published by Andrea Maglie at &lt;a href=&quot;http://localhost:4000&quot;&gt;Andrea Maglie&lt;/a&gt; on December 16, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Auto-increment versionCode in build.gradle file]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/autoincrement-versiocode/" />
+  <id>http://localhost:4000/autoincrement-versiocode</id>
+  <published>2014-11-04T00:00:00+01:00</published>
+  <updated>2014-11-04T00:00:00+01:00</updated>
+  <author>
+    <name>Andrea Maglie</name>
+    <uri>http://localhost:4000</uri>
+    <email></email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Starting from this &lt;a href=&quot;http://bryankrosenbaum.com/2013/11/27/getting-to-know-gradle-auto-increment-version-and-signing-releases/&quot;&gt;blog post by Bryan Rosenbaum&lt;/a&gt;, here is a gradle task to auto increment &lt;strong&gt;versionCode&lt;/strong&gt; inside your build.gradle file.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.regex.Pattern&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;incrementVersionCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;:incrementVersionCode - Incrementing Version Code...&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buildGradleFile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;build.gradle&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;patternVersionCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Pattern&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;versionCode (\\d+)&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buildGradleFileText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buildGradleFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matcherVersionCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;patternVersionCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;matcher&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buildGradleFileText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;matcherVersionCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mVersionCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matcherVersionCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mNextVersionCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mVersionCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;manifestContent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matcherVersionCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;replaceAll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;versionCode &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mNextVersionCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;:incrementVersionCode - current versionCode=&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mVersionCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;:incrementVersionCode - next versionCode=&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mNextVersionCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;buildGradleFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;manifestContent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now run &lt;code&gt;gradle incrementVersionCode&lt;/code&gt; and your build.gradle will be automatically updated.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/autoincrement-versiocode/&quot;&gt;Auto-increment versionCode in build.gradle file&lt;/a&gt; was originally published by Andrea Maglie at &lt;a href=&quot;http://localhost:4000&quot;&gt;Andrea Maglie&lt;/a&gt; on November 04, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Android Fragment Code Generator]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/android-fragment-generator/" />
+  <id>http://localhost:4000/android-fragment-generator</id>
+  <published>2014-09-08T00:00:00+02:00</published>
+  <updated>2014-09-08T00:00:00+02:00</updated>
+  <author>
+    <name>Andrea Maglie</name>
+    <uri>http://localhost:4000</uri>
+    <email></email>
+  </author>
+  <content type="html">
+    &lt;p&gt;There are many ways to create a fragment in Android, but to create a fragment properly you need to follow specific guidelines.&lt;/p&gt;
+
+&lt;p&gt;For example, it’s required that the class has a public zero-parameters constructor. If we need to pass parameters to the fragment, we need to use the method &lt;code&gt;setArguments()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Try to pass some parameters to the constructor as you do with any other class and then look at what happens after a device rotation: parameters will be lost. On screen rotation the fragment is automatically destroyed and re-created, and to do that Android uses the default constructor (public with no parameters). Nevertheless, the arguments will be saved and retrieved from the operating system if these have been set by the method &lt;code&gt;setArguments()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;With the &lt;em&gt;Android Fragment Code Generator&lt;/em&gt; tool you can generate in few seconds the necessary code to successfully implement a fragment, without having to worry too much of the aspects mentioned above.&lt;/p&gt;
+
+&lt;p&gt;Try it here: &lt;a href=&quot;http://www.andreamaglie.com/android-fragment-generator/index.html&quot;&gt;Android Fragment Code Generator&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/android-fragment-generator/&quot;&gt;Android Fragment Code Generator&lt;/a&gt; was originally published by Andrea Maglie at &lt;a href=&quot;http://localhost:4000&quot;&gt;Andrea Maglie&lt;/a&gt; on September 08, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Working with boolean and Parcelables]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/parcel-boolean/" />
+  <id>http://localhost:4000/parcel-boolean</id>
+  <published>2014-06-17T00:00:00+02:00</published>
+  <updated>2014-06-17T00:00:00+02:00</updated>
+  <author>
+    <name>Andrea Maglie</name>
+    <uri>http://localhost:4000</uri>
+    <email></email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Here are two simple methods to write a boolean value into a Parcelable object and read a boolean from a Parcelabe.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/TechIsFun/2990089405796fc32fc8.js&quot;&gt; &lt;/script&gt;
+
+&lt;script src=&quot;https://gist.github.com/TechIsFun/ec4571d44c25b86443af.js&quot;&gt; &lt;/script&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/parcel-boolean/&quot;&gt;Working with boolean and Parcelables&lt;/a&gt; was originally published by Andrea Maglie at &lt;a href=&quot;http://localhost:4000&quot;&gt;Andrea Maglie&lt;/a&gt; on June 17, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+</feed>
