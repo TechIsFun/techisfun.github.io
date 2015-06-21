@@ -15,7 +15,7 @@ comments: false
     <h2>Loopo Android Player</h2>
     <div>
       <a href="{{site.url}}/portfolio/loopo-android-player/index.html" class="portfolio-link">
-         <img src="https://lh5.ggpht.com/KnthGhfNT8F3FEX0r-9iFcN7cHEVPXgmkFuebP9nNpI8sM97AOWZlMUxrdjGPCCAomo=w300-rw" class="img-responsive img-portfolio" alt="Loopo Android Player">
+         <img src="{{site.url}}/images/loopo.png" width="280px" height="280px" class="img-responsive img-portfolio" alt="Loopo Android Player">
       </a>
       <div>
 Loopo is an audio player that lets you easily define bookmarks and play loops, change speed and pitch during playback. Discover how Loopo can be useful for music learning and for language learning!
