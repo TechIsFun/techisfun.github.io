@@ -34,8 +34,13 @@ Loopo is an audio player that lets you easily define bookmarks and play loops, c
     <h2>Setlist for Android</h2>
     <div>
       <a href="https://play.google.com/store/apps/details?id=it.andreamaglie.android.setlistManager&hl=it" class="portfolio-link">
-         <img src="https://lh6.ggpht.com/FpLqL42lQg1aJyQp2Kpd_UY8A0leJchB6eDM3cmh1w7NqkDi6egAb_QZQYrN4ypgjoQ=w300-rw" class="img-responsive img-portfolio" alt="Setlist for Android">
+         <img src="{{site.url}}/images/setlist.png" width="280px" height="280px" class="img-responsive img-portfolio" alt="Setlist for Android">
       </a>
+      <div class="play-store-button">
+        <a href="https://play.google.com/store/apps/details?id=it.andreamaglie.android.setlist">
+          <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png">
+        </a>
+      </div>
     </div>
   </div>
 
