@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Projects
-description: "Projects"
+title: Portfolio
+description: "Portfolio"
 image:
   feature: abstract-11.jpg
 share: true
