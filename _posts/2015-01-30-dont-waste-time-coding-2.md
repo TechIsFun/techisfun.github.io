@@ -3,8 +3,6 @@ layout: post
 title: Don't waste your time coding - part 2
 comments: true
 tags: [android, programming]
-image:
-  feature: sea.png
 ---
 
 You can find the first part of this article [here]({{site.baseurl}}/{% post_url 2014-12-16-dont-waste-time-coding-1 %})
