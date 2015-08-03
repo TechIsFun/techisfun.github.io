@@ -146,6 +146,55 @@ body {
 		min-height: 400px; // match .entry-image min-height
 	}
 }
+
+
+.entry-image-home {
+	position: relative;
+	top: -50%; 
+	left: -50%; 
+	width: 200%; 
+	height: 200%;
+	@media #{$medium} {
+		min-height: 200px;
+	}
+	@media #{$large} {
+		min-height: 400px;
+	}
+	overflow: hidden;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		@media #{$medium} {
+			width: 250%;
+			height: 250%;
+		}
+		@media #{$large} {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	img {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		right: 0; 
+		bottom: 0; 
+		margin: auto; 
+		min-width: 50%;
+
+		// match .entry-image min-height
+		@media #{$medium} {
+			min-height: 200px;
+		}
+		@media #{$large} {
+			min-height: 400px;
+		}
+	}
+}
+
+
 // Feature Image Caption
 .image-credit {
 	position: absolute;
