@@ -26,15 +26,22 @@ I've also an alias for writing only `logcat` instead of `adb logcat`! ;-)
 
 Some other alias examples:
 
-* [android] `alias amstart='adb shell am start -n'`
-* [android] `alias amkill='adb shell am kill'`
-* [android] `alias media_scan='adb shell am broadcast -a android.intent.action.MEDIA_MOUNTED -d file:///mnt/sdcard'`
-* [android] `alias packages='adb shell pm list packages'`
-* [android w/ant] `alias install='ant debug install'`
-* [android w/gradle] `alias install='./gradlew installDebug'`
-* [svn] `alias svnlog='svn log | less'`
-* [svn] `alias svn_ignore_edit='svn propedit svn:ignore . --editor-cmd nano'`
-* [git] `alias revert='git checkout --'`
+{% highlight bash %}
+# android
+alias amstart='adb shell am start -n'
+alias amkill='adb shell am kill'
+alias media_scan='adb shell am broadcast -a android.intent.action.MEDIA_MOUNTED -d file:///mnt/sdcard'
+alias packages='adb shell pm list packages'
+alias install='ant debug install'
+alias install='./gradlew installDebug'
+
+# svn
+alias svnlog='svn log | less'
+alias svn_ignore_edit='svn propedit svn:ignore . --editor-cmd nano'
+
+# git
+alias revert='git checkout --'
+{% endhighlight %}
 
 Snippets and Templates
 ----------------------
