@@ -73,3 +73,20 @@ public class SplashActivity extends Activity {
 {% endhighlight %}
 
 This is very straightforward. The key point here is the `removeCallbacks` method: this is where I'm assuring that MainActivity is not started if the user have pressed back button (explicitly closing the application) or if app has gone in background.
+
+In your AndroidManifest.xml don't forget to declare your activity with the following attributes:
+
+{% highlight xml %}
+
+<activity
+    android:name=".SplashActivity"
+    android:configChanges="orientation|keyboardHidden"
+    android:label="@string/application_name"
+    android:noHistory="true" >
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+
+{% endhighlight %}
