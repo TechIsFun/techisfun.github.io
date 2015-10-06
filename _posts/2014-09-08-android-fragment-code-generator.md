@@ -12,4 +12,4 @@ Try to pass some parameters to the constructor as you do with any other class an
 
 With the *Android Fragment Code Generator* tool you can generate in few seconds the necessary code to successfully implement a fragment, without having to worry too much of the aspects mentioned above.
 
-Try it here: [Android Fragment Code Generator](http://www.andreamaglie.com/android-fragment-generator/index.html)
+Try it here: [Android Fragment Code Generator](http://www.andreamaglie.com/fragment-generator-android/)
