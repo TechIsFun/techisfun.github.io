@@ -8,7 +8,7 @@ _E' da tempo che mi chiedo come mai non esista un Google Developer Group nel Ven
 
 **Perché?** Per costruire una community reale di sviluppatori, designer e esperti di social media marketing con il supporto di Google! Sarà la prima community di questo tipo nel Veneto.
 
-**Cos'è un GDG (Google Developer Group)**? I GDG sono gruppi di sviluppatori (ma non solo) interessati nelle tecnologie Google come Android, Chrome, Drive, Google Cloud, Cast API, Maps API, YouTube API... (ma non solo). Un GDG può attuarsi in diversi modi, da un gruppo ristretto di persone che consultano gli ultimi video tecnici, a eventi più grandi come demo, talk tecnici e hackaton. Il focus di ogni evento è comunque su contenuti tecnici e di sviluppo.
+**Cos'è un GDG (Google Developer Group)?** I GDG sono gruppi di sviluppatori (ma non solo) interessati nelle tecnologie Google come Android, Chrome, Drive, Google Cloud, Cast API, Maps API, YouTube API... (ma non solo). Un GDG può attuarsi in diversi modi, da un gruppo ristretto di persone che consultano gli ultimi video tecnici, a eventi più grandi come demo, talk tecnici e hackaton. Il focus di ogni evento è comunque su contenuti tecnici e di sviluppo.
 
 
 **Chi può partecipare?** Sviluppatori, UI/UX designer, esperti di social media marketing. Il focus è sulle tecnologie made in Google, ma questo non è un limite: sono benvenute tutte le tecnologie!
