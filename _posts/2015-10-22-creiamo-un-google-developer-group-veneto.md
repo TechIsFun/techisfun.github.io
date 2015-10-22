@@ -2,8 +2,6 @@
 layout: post
 title: Creiamo un nuovo Google Developer Group!
 tags: [italiano,gdg]
-image:
-  feature: abstract-12.jpg
 ---
 
 _E' da tempo che mi chiedo come mai non esista un Google Developer Group nel Veneto. Basta dare un'occhiata alla directory dei GDG a [questo link](https://developers.google.com/groups/directory/?hl=it) per vedere che, in Italia, il Nord-Est è abbastanza scoperto. Così, invece di attendere che su quella mappa compaia un nuovo marker più vicino alle mie zone, ho deciso di prendere contatti con Google e attivarmi per creare un GDG nella zona di Venezia-Treviso-Padova._
