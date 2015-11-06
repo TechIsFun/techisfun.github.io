@@ -43,7 +43,7 @@ Talkin' about boilerplate code, you can find many tools that will take care to g
 
 Here are some tools that I love to use in my activity as Android developer:
 
-- [Android Fragment Code Generator](http://andreamaglie.com/android-fragment-generator/) (self-promotion, sorry!)
+- [Android Fragment Code Generator](http://andreamaglie.com/fragment-generator-android/) (self-promotion, sorry!)
 - [parcelabler](http://www.parcelabler.com/)
 - [Android Layout Finder](https://www.buzzingandroid.com/tools/android-layout-finder/)
 
