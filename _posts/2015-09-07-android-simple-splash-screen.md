@@ -13,7 +13,7 @@ I've seen many splash screen implementations, but some of them have <strong>one 
 
 The trick is very simple. Let's take a look at how a very simple SplashActivity could be:
 
-{% highlight java linenos=table %}
+{% highlight java linenos %}
 public class SplashActivity extends Activity {
 
     private static int SPLASH_TIME_OUT = 2000; // 2 seconds
