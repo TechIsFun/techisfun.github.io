@@ -49,7 +49,7 @@ Loopo is an audio player that lets you easily define bookmarks and play loops, c
   <div class="row" align="center">
     <h2>Android Fragment Generator</h2>
     <div>
-      <a href="http://www.andreamaglie.com/android-fragment-generator/index.html" class="portfolio-link">
+      <a href="http://www.andreamaglie.com/fragment-generator-android/index.html" class="portfolio-link">
          <img src="{{site.url}}/images/frag_gen_preview.jpg" alt="Android Fragment Generator">
       </a>
     </div>
