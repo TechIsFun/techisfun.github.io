@@ -7,7 +7,7 @@ tags: [android, gradle]
 Somtimes some fetaures of your app must behave differently for different flavors o build type.
 Think about when you need to enable logging for a specific flavor only, or you have to disable crash reporting for your "dev build". All this behaviours can be configured at compile time, insted of using many <em>if/else blocks</em> that are evaluated at runtime.
 
-In the following example I'll use Gradle and Dagger.
+<em>In the following example I'll use Gradle and Dagger.</em>
 
 ### Use case: enable crash reporting only for production flavor.
 
