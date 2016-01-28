@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OutOfMemoryError while compiling Android projects
-tags: [android, gralde]
+tags: [android, gradle]
 ---
 
 
