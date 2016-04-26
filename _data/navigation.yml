@@ -10,5 +10,6 @@
 - title: Apps On Play Store
   url: http://bit.ly/1bISG1K
 
-- title: Contact Me
-  url: /contact-me/
+# disabled: mandrill needs a payed mailchimp account
+#- title: Contact Me
+#  url: /contact-me/
