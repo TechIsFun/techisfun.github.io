@@ -10,6 +10,21 @@ comments: false
 
 <div class="portfolio">
 
+  <div class="row" align="center">
+    <h2>Musement</h2>
+    <div>
+      <a href="https://play.google.com/store/apps/details?id=com.musement.android" class="portfolio-link">
+         <img src="{{site.url}}/images/musement.png" width="280px" height="280px" class="img-responsive img-portfolio" alt="Musement Android App">
+      </a>
+      <div class="play-store-button">
+        <a href="https://play.google.com/store/apps/details?id=com.musement.android">
+          <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
 
   <div class="row" align="center">
     <h2>Loopo Android Player</h2>
