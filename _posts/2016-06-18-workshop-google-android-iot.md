@@ -5,13 +5,13 @@ tags: [android, google, iot]
 ---
 
 <figure>
-	<img src="images/google_android_iot.png" alt="">
+	<img src="{{site.baseurl}}/images/google_android_iot.png" alt="">
 </figure>
 
 Oggi si è tenuto al FabLab di Padova un [Workshop sull'*Internet of Things*](http://www.officinedigitalizip.it/iot-intel-fablab-officine-digitali), durante il quale ho avuto il piacere di anticipare l'intervento di *Intel* con un intervento dal titolo *#Google, #Android, #IoT*.
 
 <figure>
-	<img src="images/google_android_iot_2.png" alt="">
+	<img src="{{site.baseurl}}/images/google_android_iot_2.png" alt="">
 </figure>
 
 Durante questo intervento ho fornito agli attendenti una panoramica sui servizi che Google mette a disposizione per l'universo dell'Internet of Things e mostrato come è possibile far comunicare una *app Android* con una scheda *Arduino*, sia a corto raggio tramite Bluetooth che da remoto appoggiandosi su un server *Firebase*.
