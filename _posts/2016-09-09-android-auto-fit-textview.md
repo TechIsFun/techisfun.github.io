@@ -7,8 +7,10 @@ tags: [android]
 Android framework provides no support for creating a TextView that can fit its content to its size.
 
 There are some libraries out there that try to solve this problem, like:
-- [AutoFitTextView](github.com/AndroidDeveloperLB/AutoFitTextView)
-- [android-autofittextview](github.com/grantland/android-autofittextview)
+
+* [AutoFitTextView](github.com/AndroidDeveloperLB/AutoFitTextView)
+
+* [android-autofittextview](github.com/grantland/android-autofittextview)
 
 But no one of them seems to work in every situation.
 Looking into <em>stackoverflow</em> I've come to this [post](http://stackoverflow.com/questions/16017165/auto-fit-textview-for-android/21851239) which seems to hold the best working answer that I've tried.
