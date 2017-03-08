@@ -3,9 +3,9 @@ layout: post
 title: Migrate to Android Studio 2.3
 tags: [android, Android Studio, gradle, annotation processor]
 comments: true
-image:
-  feature: Android Logo.png
 --- 
+
+![Android Studio Logo]({{site.baseurl}}/images/android_studio_logo.png)
 
 ### New features
 
