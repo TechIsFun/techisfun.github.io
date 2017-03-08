@@ -10,9 +10,9 @@ comments: true
 ### New features
 
 Android Studio 2.3 has finally been released in the [Stable Channel](http://tools.android.com/download/studio/builds/2-3-0). There are many improvements compared to version 2.2, including:
-- *Instant run*: now there are two different icons, one for restart the app and another one for apply changes without restart
+- *Instant run*: now there are two different icons, one for restart the app and another one for apply changes without restart.
 ![Screen Shot 2017-03-02 at 9.12.10 AM.png]({{site.baseurl}}/images/instant_run_2.3.png)
-- *Build cache*: it's used to have fatster clean builds by caching exploded AARs and predexed external libraries
+- *Build cache*: it's used to have faster clean builds by caching exploded AARs and pre-dexed external libraries.
 - *App Links Assistant* (Tools → App Link Assistant): it allows you to create new intent filters for your URLs, declare your app's website association through a Digital Asset Links file, and test your Android App Links support.
 - Support to *WebP lossless image format*: the WebP format is . Android Studio 2.3 has a new wizard that converts any non-launcher PNG file to WebP (up to 25% smaller than a PNG) and WebP back to PNG.
 - *Constraint Layout* with Chains and Ratios: this new version of Android Studio includes the stable release of ConstraintLayout. You can now chain two or more Android views bi-directionally together to form a group on one dimension (helpful when you want to place two views close together but want to spread them across empty space).
