@@ -5,7 +5,7 @@ tags: [android, Android Studio, gradle, annotation processor]
 comments: true
 --- 
 
-![Android Studio Logo]({{site.baseurl}}/images/android_studio_logo.png)
+![Android Studio Logo]({{site.baseurl}}/images/android_studio_logo.png){: .center-image }
 
 ### New features
 
