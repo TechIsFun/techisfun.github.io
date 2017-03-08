@@ -1,9 +1,11 @@
 ---
-published: false
----
-## Migrate to Android Studio 2.3
-
-![Android Logo.png]({{site.baseurl}}/_posts/Android Logo.png)
+layout: post
+title: Migrate to Android Studio 2.3
+tags: [android, Android Studio, gradle, annotation processor]
+comments: true
+image:
+  feature: Android Logo.png
+--- 
 
 ### New features
 
