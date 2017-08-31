@@ -1,4 +1,8 @@
-## Il prezzo del context-switching
+---
+layout: post
+title: Il prezzo del context-switching
+tags: [italiano, other]
+---
 
 ![“Beh… su cosa stavo lavorando???”](https://cdn-images-1.medium.com/max/1600/1*brjYnVlXwM3j_SWXImT0Rg.png)
 
