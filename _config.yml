@@ -1,6 +1,6 @@
 # Site settings
 title: "Andrea Maglie"
-description: "Java, Android, and other tech stuff"
+description: "Software Engineer, guitar player. Founder of GDG (Google Developer Group) Venice."
 #url: 'http://andreamaglie.com'
 url:  http://localhost:4000
 baseurl: ''
