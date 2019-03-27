@@ -2,13 +2,13 @@
 layout: post
 title: Speed up your builds… without upgrading your hardware
 tags: [android, gradle]
+image: hero-speed-up-builds.png
 ---
 
-Often the only way to (really) speed up slow builds is to add more RAM, replace the old HDD with an SSD or buy a complete new PC (or Laptop). All those solutions requires investing (a lot of) money. What if we can just keep current hardware and delegate the build to another, more powerful, machine?
-
-![I wish every build could look like this :)](https://cdn-images-1.medium.com/max/2000/1*lQW-9dRX_LSBkxClIF9akA.png)
-
 *I wish every build could look like this :)*
+
+
+Often the only way to (really) speed up slow builds is to add more RAM, replace the old HDD with an SSD or buy a complete new PC (or Laptop). All those solutions requires investing (a lot of) money. What if we can just keep current hardware and delegate the build to another, more powerful, machine?
 
 I usually develop for Android, and everyone knows that Android builds are slow. Waiting for a build to complete is one of the things that make me feel like I’m wasting my day. Edit, launch the build, wait 4 to 5 minutes to have the app compiled and installed, run the app, test, edit, launch another build, wait again… no, I really hate it! So what can I do?
 

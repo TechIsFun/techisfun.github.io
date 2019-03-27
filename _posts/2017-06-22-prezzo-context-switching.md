@@ -2,9 +2,8 @@
 layout: post
 title: Il prezzo del context-switching
 tags: [italiano, other]
+image: hero-context-switch.png
 ---
-
-![“Beh… su cosa stavo lavorando???”](https://cdn-images-1.medium.com/max/1600/1*brjYnVlXwM3j_SWXImT0Rg.png)
 
 > _Il prezzo del cambio di contesto (context-switching) si paga sia in termini di tempo che di fatica mentale._
 
