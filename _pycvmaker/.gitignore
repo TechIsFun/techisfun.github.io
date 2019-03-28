@@ -1,6 +1,0 @@
-.idea
-*.iml
-out
-*.pyc
-templates/entries.yaml
-templates/settings.yaml

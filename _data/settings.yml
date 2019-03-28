@@ -1,0 +1,45 @@
+# Change 'comments' to true for Disqus comments
+disqus:
+  comments: true
+  disqus_shortname: 'techisfun'
+
+# If you are not using Google Analytics, please change 'google-ID' to an empty string
+google-ID: 'UA-48681711-2'
+
+menu:
+- {name: 'Informazioni', path: 'menu', url: 'about.html'}
+- {name: 'Post', path: 'menu', url: 'writing.html'}
+- {name: 'Contatti', path: 'menu', url: 'contact.html'}
+
+# Available social icons are powered by Font Awesome, so you can use any icon that they offer
+social:
+- {icon: 'github', link: 'https://www.github.com/techisfun'}
+- {icon: 'twitter', link: 'https://twitter.com/techisfun'}
+- {icon: 'linkedin', link: 'http://www.linkedin.com/in/andreamaglie/'}
+- {icon: 'envelope', link: 'mailto:l.andrea.maglie@gmail.com'}
+- {icon: 'rss-square', link: '/feed.xml'}
+# - {icon: 'rss-square', link: '/rss-feed.xml'}
+
+skills:
+- {image: 'logo-java', title: 'Java', description: ''}
+- {image: 'logo-kotlin', title: 'Kotlin', description: ''}
+- {image: 'logo-android', title: 'Android', description: ''}
+- {image: 'logo-google-assistant', title: 'Google Assistant', description: ''}
+- {image: 'logo-alexa', title: 'Amazon Alexa', description: ''}
+
+jobs:
+- {image: 'musement-logo', text: 'Musement S.p.A.'}
+- {image: 'text-logo', text: 'Texa S.p.A.'}
+- {image: 'misiedo-logo', text: 'Misiedo S.r.l.'}
+- {image: 'previmedical-logo', text: 'Previmedical S.p.A.'}
+
+# Customize site text
+pagination:
+  next_page: 'Post più recenti'
+  previous_page: 'Post più vecchi'
+
+sharing_button_prompt: 'Condividi!'
+
+related_posts: 'Potrebbero interessarti:'
+
+post_date_prefix: 'Pubblicato il'

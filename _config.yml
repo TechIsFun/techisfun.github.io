@@ -1,48 +1,29 @@
-# Site settings
-title: "Andrea Maglie"
-description: "Software Engineer, guitar player. Founder of GDG (Google Developer Group) Venice."
-#url: 'http://andreamaglie.com'
-url:  http://localhost:4000
-baseurl: ''
-google_analytics: 'UA-48681711-2'
-disqus_shortname: 'techisfunit'
+# Site Build Settings
 
-author:
-  name: 'Andrea Maglie'
-  email: andrea.maglie@gmail.com
-  twitter_username: techisfun
-  #facebook_username: joshgerdes
-  github_username:  techisfun
-  linkedin_username:  andreamaglie
-  playstore_link: http://bit.ly/1bISG1K
+# Jekyll-paginate-v2 configuration
+#  pagination:
+#   enabled: true
+#   per_page: 5
+#   permalink: '/page/:num/'
+#   title: ':title - page :num of :max'
+#   limit: 0
+#   sort_field: 'date'
+#   sort_reverse: true
 
-defaults:
-  -
-    scope:
-      path: ''
-      type: 'posts'
-    values:
-        layout: 'post'
+# jekyll-paginate configuration
+paginate:            5
 
 # Build settings
-destination: _site
-paginate: 10
-permalink: /:year/:title/
-markdown: kramdown
-highlighter: rouge
+markdown:            kramdown
+highlighter:         rouge
+permalink:           none
+plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag, jekyll-gist]
 
-sass:
-    sass_dir: _sass
-    style: compressed
+# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+title:		           'ing. Andrea Maglie'
+description:	       ''
+author:              'Andrea Maglie'
 
-kramdown:
-  # use Github Flavored Markdown
-  input: GFM
-  # do not replace newlines by <br>s
-  hard_wrap: false
-
-plugins:
-  - jekyll-gist
-
-gems: ['jekyll-paginate', 'jekyll-gist']
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
+# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#feed:
+#  path: rss-feed.xml
