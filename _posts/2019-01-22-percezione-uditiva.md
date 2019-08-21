@@ -350,3 +350,8 @@ l'orecchio riceve una unica onda sonora; è necessario così estrarre da
 quest'ultima i segnali o le caratteristiche che possano ricreare la
 molteplicità di oggetti, la loro disposizione, il percorso dell'onda
 sonora ed eventuali ostacoli lungo il suo cammino.
+
+Riferimenti
+-----------
+
+{% bibliography --cited %}
