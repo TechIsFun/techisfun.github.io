@@ -10,7 +10,7 @@ _10 anni fa pubblicavo questa tesi per la mia laurea in Ingegneria Informatica a
 # Indice dei capitoli
 
 1. [La percezione aptica]({{ site.baseurl }}{% link _posts/2019-01-15-percezione-aptica.md %})
-2. [La percezione uditiva]({{ site.baseurl }}{% link _posts/2019-01-20-percezione-uditiva.md %})
+2. [La percezione uditiva]({{ site.baseurl }}{% link _posts/2019-01-22-percezione-uditiva.md %})
 3. I modelli audio di rotolamento
 4. Dispositivi aptici
 5. Il Phantom Omni
