@@ -175,6 +175,22 @@ hr {
 }
 
 /*
+ Images
+*/
+figure {
+    display: inline-block;
+    margin: 20px;
+}
+figure img {
+    vertical-align: top;
+}
+figure figcaption {
+    text-align: center;
+    font-style: italic;
+}
+
+
+/*
   Post
 */
 
