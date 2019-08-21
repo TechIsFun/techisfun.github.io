@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      Una piattaforma per il rendering audio aptico di interazioni continue | ing. Andrea Maglie
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+  
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ing. Andrea Maglie" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="ing. Andrea Maglie | "/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48681711-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Una piattaforma per il rendering audio aptico di interazioni continue | ing. Andrea Maglie</title>
+<meta property="og:title" content="Una piattaforma per il rendering audio aptico di interazioni continue" />
+<meta name="author" content="Andrea Maglie" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="10 anni fa pubblicavo questa tesi per la mia laurea in Ingegneria Informatica all’Università di Padova. 9 mesi passati a lavorare su quello che sicuramente è il progetto più complesso e interessante sul quale abbia mai lavorato." />
+<meta property="og:description" content="10 anni fa pubblicavo questa tesi per la mia laurea in Ingegneria Informatica all’Università di Padova. 9 mesi passati a lavorare su quello che sicuramente è il progetto più complesso e interessante sul quale abbia mai lavorato." />
+<meta property="og:site_name" content="ing. Andrea Maglie" />
+<meta property="og:image" content="/hero-phantomomni.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-01-10T00:00:00+01:00" />
+<script type="application/ld+json">
+{"name":null,"description":"10 anni fa pubblicavo questa tesi per la mia laurea in Ingegneria Informatica all’Università di Padova. 9 mesi passati a lavorare su quello che sicuramente è il progetto più complesso e interessante sul quale abbia mai lavorato.","author":{"@type":"Person","name":"Andrea Maglie"},"@type":"BlogPosting","url":"/piattaforma-rendering-audio-aptico-intro.html","publisher":null,"image":"/hero-phantomomni.jpg","headline":"Una piattaforma per il rendering audio aptico di interazioni continue","dateModified":"2019-01-10T00:00:00+01:00","datePublished":"2019-01-10T00:00:00+01:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"/piattaforma-rendering-audio-aptico-intro.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">ing. Andrea Maglie</a>
+    <small class="masthead-subtitle"></small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/about.html">Informazioni</a>
+    
+      <a href="/menu/writing.html">Post</a>
+    
+      <a href="/menu/contact.html">Contatti</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/techisfun" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/techisfun" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="http://www.linkedin.com/in/andreamaglie/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:l.andrea.maglie@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  Una piattaforma per il rendering audio aptico di interazioni continue
+</h1>
+
+
+  <img src="/assets/img/hero-phantomomni.jpg">
+
+
+<p><em>10 anni fa pubblicavo questa tesi per la mia laurea in Ingegneria Informatica all’Università di Padova. 9 mesi passati a lavorare su quello che sicuramente è il progetto più complesso e interessante sul quale abbia mai lavorato.</em></p>
+
+<h1 id="indice-dei-capitoli">Indice dei capitoli</h1>
+
+<ol>
+  <li><a href="/percezione-aptica.html">La percezione aptica</a></li>
+  <li><a href="/percezione-uditiva.html">La percezione uditiva</a></li>
+  <li><a href="/pure-data-modelli-audio.html">Pure Data e i modelli audio</a></li>
+  <li>Dispositivi aptici</li>
+  <li>Il Phantom Omni</li>
+  <li>L’applicazione Phantom Friction</li>
+  <li>Esperimenti sulla percezione audio-aptica</li>
+</ol>
+
+<h1 id="introduzione">Introduzione</h1>
+<p>Se nel campo della computer graphics le tessiture (texture) sono state studiate estensivamente allo scopo di rendere sempre più reali gli ambienti virtuali, altrettanto non si può dire per quanto riguarda la computer haptics, dove con tale termine si intende la scienza che studia la simulazione e lo scambio tra utente e computer di informazioni legate al senso del tatto. Tuttavia, per creare un ambiente virtuale realistico, è indispensabile fornire all’utente un ritorno di suono in corrispondenza al verificarsi di un evento (come un contatto tra oggetti).</p>
+
+<p>Quando tocchiamo la superficie di un oggetto reale ad occhi chiusi, raccogliamo principalmente due tipi di informazione: il primo tipo è costituito dalle informazioni percepite tramite le dita e le mani, ovvero tramite il senso del tatto; il secondo tipo è invece costituito dalle informazioni uditive, catturate dai suoni che vengono generati nel momento in cui muoviamo le nostre dita sulla superficie. La piattaforma descritta è stata realizzata proprio basandosi su questi concetti, estendendoli all’interazione con oggetti simulati.</p>
+
+<p>L’obiettivo a cui mira questa tesi è la realizzazione di un sistema che permetta l’interazione visiva, aptica e sonora con un ambiente virtuale (dove la parola aptica è legata al senso di tocco attivo):
+visiva in quanto l’utente può visualizzare su uno schermo gli oggetti virtuali con cui interagisce;
+aptica perché gli oggetti virtuali possono essere sentiti al tatto;
+audio perché, come in un ambiente reale, sia possibile ascoltare i suoni provocati dalle interazioni.</p>
+
+<p>In particolare l’attenzione viene concentrata sulla realizzazione di tessiture sulle superfici, le quali, attraverso il controllo di alcuni parametri di significato fisico, possano far sentire (sia tramite il tatto che l’udito) all’utente super ci di diverso livello di ruvidità (non ci preoccupiamo invece delle tessiture grafiche). La sintesi dell’audio non ha più come elemento centrale il segnale che viene prodotto e percepito, ma la sorgente del suono: attraverso modelli fisici si cerca quindi di descrivere la sorgente (o le sorgenti) sonore unitamente agli eventi che producono il suono stesso. Variando un insieme ristretto di parametri è così possibile simulare diverse sorgenti; gli stessi parametri possono poi essere utilizzati per controllare la simulazione aptica.</p>
+
+<p>La rappresentazione grafica dell’ambiente tridimensionale virtuale è stata fatta sfruttando le API OpenGL; si è scelto di mantenere questa componente molto semplice, infatti l’ambiente è costituito da un solo oggetto che si presenta liscio e monocromatico alla vista. Per rendere possibile la rappresentazione aptica invece è necessario eseguire un interfacciamento tra l’applicazione grafica e un dispositivo di force feedback (il Phantom® Omni di SensAble Technologies in questo caso); utilizzando tale dispositivo sarà possibile toccare ogni oggetto dell’ambiente virtuale. Infine la sintesi dell’audio è stata realizzata separatamente tramite l’ambiente di programmazione visuale Pure Data, implementando dei modelli fisici la cui validità è già consolidata. Le tre componenti possono essere eseguite contemporaneamente, realizzando una completa simulazione in tempo reale che può prestarsi ad una molteplicità di usi diversi.</p>
+
+<p>Nel primo capitolo si descrive brevemente il senso del tatto, in particolare come il corpo umano raccoglie ed elabora le informazioni tattili; nel secondo invece viene analizzato il modo di percepire da parte dell’uomo i suoni nell’ambiente circostante.</p>
+
+<p>Nel terzo capitolo si illustrano per prima cosa i modelli fisici su cui viene basata la sintesi dell’audio. I modelli comprendono la realizzazione di tessiture stocastiche a partire da un rumore filtrato e il rendering di suoni di contatto tramite una sintesi modale. Successivamente viene descritto il funzionamento dell’ambiente di programmazione Pure Data e dei moduli esterni utilizzati; segue una spiegazione dettagliata su come sono stati implementati i modelli fisici in patch eseguibili in tale ambiente.</p>
+
+<p>Il capitolo 4 riporta una panoramica sui dispositivi aptici, mentre il capitolo successivo illustra nel dettaglio il dispositivo Phantom® Omni , unitamente al toolkit OpenHaptics utilizzato per la programmazione di tale dispositivo.</p>
+
+<p>Nel capitolo 6 si tratta la programmazione dell’interfaccia grafica e dell’interfaccia aptica; viene spiegato come avviene il rendering delle forze e come sono realizzate le tessiture aptiche. Infine si spiega come queste componenti siano state integrate tra loro e come avviene la comunicazione tra l’interfaccia grafica/aptica e l’algoritmo di sintesi audio creato ed eseguito in Pure Data.</p>
+
+<p>La parte finale (capitolo 7) è dedicata agli esperimenti di percezione bimodale audio aptica: dopo aver presentato una panoramica sugli studi che sono già stati condotti in questo campo, vengono illustrate le differenze rispetto a questi e gli aspetti innovativi degli studi svolti in questa tesi. Sono stati svolti tre esperimenti: il primo in condizione di variazione concorde degli stimoli audio e aptico, gli altri in condizioni di variazione discorde dei due stimoli. In conclusione vengono riportati i risultati e le discussioni sulle percezioni avute dai partecipanti.</p>
+
+
+
+<span class="post-date">
+  Pubblicato il
+  
+  January
+  10th,
+  2019
+  by
+  
+    Andrea Maglie
+  
+</span>
+
+<div class="post-date">Condividi!</div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=Una piattaforma per il rendering audio aptico di interazioni continue&amp;url=/piattaforma-rendering-audio-aptico-intro.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/piattaforma-rendering-audio-aptico-intro.html&amp;title=Una piattaforma per il rendering audio aptico di interazioni continue" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/piattaforma-rendering-audio-aptico-intro.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 >Potrebbero interessarti:</h1>
+  
+  <ul class="related-posts">
+    
+      
+        
+          <li>
+            <h3>
+              <a href="/pure-data-modelli-audio.html">
+                Pure Data e i modelli audio
+                <!--<img src="/images/">-->
+                <!--<small>January 29, 2019</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+        
+          <li>
+            <h3>
+              <a href="/percezione-uditiva.html">
+                La percezione uditiva
+                <!--<img src="/images/">-->
+                <!--<small>January 22, 2019</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+        
+          <li>
+            <h3>
+              <a href="/percezione-aptica.html">
+                La percezione aptica
+                <!--<img src="/images/">-->
+                <!--<small>January 15, 2019</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+    
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+    
+  </ul>
+</div>
+
+
+
+  <section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = "techisfun";
+    var disqus_identifier = "/piattaforma-rendering-audio-aptico-intro.html";
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/techisfun" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/techisfun" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="http://www.linkedin.com/in/andreamaglie/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:l.andrea.maglie@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">ing. Andrea Maglie |  by Andrea Maglie</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>
