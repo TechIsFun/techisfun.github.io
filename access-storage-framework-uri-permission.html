@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      Access Storage Framework and the URI permissions nightmare | ing. Andrea Maglie
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+  
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ing. Andrea Maglie" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="ing. Andrea Maglie | "/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48681711-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Access Storage Framework and the URI permissions nightmare | ing. Andrea Maglie</title>
+<meta property="og:title" content="Access Storage Framework and the URI permissions nightmare" />
+<meta name="author" content="Andrea Maglie" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I’ve been working with the Access Storage Framework introduced with Android KitKat, a feature that I’ve been waiting for a long time." />
+<meta property="og:description" content="I’ve been working with the Access Storage Framework introduced with Android KitKat, a feature that I’ve been waiting for a long time." />
+<meta property="og:site_name" content="ing. Andrea Maglie" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-01-09T00:00:00+01:00" />
+<script type="application/ld+json">
+{"name":null,"description":"I’ve been working with the Access Storage Framework introduced with Android KitKat, a feature that I’ve been waiting for a long time.","author":{"@type":"Person","name":"Andrea Maglie"},"@type":"BlogPosting","url":"/access-storage-framework-uri-permission.html","publisher":null,"image":null,"headline":"Access Storage Framework and the URI permissions nightmare","dateModified":"2015-01-09T00:00:00+01:00","datePublished":"2015-01-09T00:00:00+01:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"/access-storage-framework-uri-permission.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">ing. Andrea Maglie</a>
+    <small class="masthead-subtitle"></small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/about.html">Informazioni</a>
+    
+      <a href="/menu/writing.html">Post</a>
+    
+      <a href="/menu/contact.html">Contatti</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/techisfun" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/techisfun" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="http://www.linkedin.com/in/andreamaglie/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:l.andrea.maglie@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  Access Storage Framework and the URI permissions nightmare
+</h1>
+
+
+  <img src="/assets/img/{"feature"=>"android1.png"}">
+
+
+<p>I’ve been working with the <strong>Access Storage Framework</strong> introduced with Android KitKat, a feature that I’ve been waiting for a long time.</p>
+
+<p>Everything seemed to be alright, quite easy to implement, until I faced a strange issue.</p>
+
+<p>Once the file has been selected by the user, I wanted to store the file’s URI and re-open that URI the next time application is started. To do this, I’ve followed what the <a href="https://developer.android.com/guide/topics/providers/document-provider.html">official documentation</a> says:</p>
+
+<blockquote>
+  <p>When your app opens a file for reading or writing, the system gives your app a URI permission grant for that file. It lasts until the user’s device restarts. But suppose your app is an image-editing app, and you want users to be able to access the last 5 images they edited, directly from your app. If the user’s device has restarted, you’d have to send the user back to the system picker to find the files, which is obviously not ideal.</p>
+</blockquote>
+
+<blockquote>
+  <p>To prevent this from happening, you can persist the permissions the system gives your app. Effectively, your app “takes” the persistable URI permission grant that the system is offering. This gives the user continued access to the files through your app, even if the device has been restarted:</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kt">int</span> <span class="n">takeFlags</span> <span class="o">=</span> <span class="n">intent</span><span class="o">.</span><span class="na">getFlags</span><span class="o">()</span>
+            <span class="o">&amp;</span> <span class="o">(</span><span class="n">Intent</span><span class="o">.</span><span class="na">FLAG_GRANT_READ_URI_PERMISSION</span>
+            <span class="o">|</span> <span class="n">Intent</span><span class="o">.</span><span class="na">FLAG_GRANT_WRITE_URI_PERMISSION</span><span class="o">);</span>
+<span class="c1">// Check for the freshest data.</span>
+<span class="n">getContentResolver</span><span class="o">().</span><span class="na">takePersistableUriPermission</span><span class="o">(</span><span class="n">uri</span><span class="o">,</span> <span class="n">takeFlags</span><span class="o">);</span></code></pre></figure>
+
+<p>It didn’t work. <em>Doh!</em></p>
+
+<p>I was getting a <code class="highlighter-rouge">java.lang.SecurityException</code> while trying to open the URI using <code class="highlighter-rouge">getContentResolver().openInputStream(uri)</code> or <code class="highlighter-rouge">getContentResolver().openAssetFileDescriptor(uri, "r")</code>:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">SecurityException</span><span class="o">:</span> <span class="n">Permission</span> <span class="nl">Denial:</span> <span class="n">opening</span> <span class="n">provider</span> <span class="n">com</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">providers</span><span class="o">.</span><span class="na">media</span><span class="o">.</span><span class="na">MediaDocumentsProvider</span> <span class="n">from</span> <span class="n">ProcessRecord</span><span class="o">{</span><span class="mi">430</span><span class="n">b1748</span> <span class="mi">4572</span><span class="o">:</span><span class="n">com</span><span class="o">.</span><span class="na">x</span><span class="o">.</span><span class="na">x</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">u0a88</span><span class="o">}</span> <span class="o">(</span><span class="n">pid</span><span class="o">=</span><span class="mi">4572</span><span class="o">,</span> <span class="n">uid</span><span class="o">=</span><span class="mi">10078</span><span class="o">)</span> <span class="n">requires</span> <span class="n">android</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">MANAGE_DOCUMENTS</span> <span class="n">or</span> <span class="n">android</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">MANAGE_DOCUMENTS</span></code></pre></figure>
+
+<p>Adding <code class="highlighter-rouge">android.permission.MANAGE_DOCUMENTS</code> to AndroidManifest.xml didn’t helped, and the many solutions found on <em>stackoverflow.com</em> didn’t work.</p>
+
+<p>After taking a deeper look at the APIs and the source code I’ve found a working way to grant URI permissions:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">activity</span><span class="o">.</span><span class="na">grantUriPermission</span><span class="o">(</span><span class="n">activity</span><span class="o">.</span><span class="na">getPackageName</span><span class="o">(),</span> <span class="n">uri</span><span class="o">,</span> <span class="n">Intent</span><span class="o">.</span><span class="na">FLAG_GRANT_READ_URI_PERMISSION</span><span class="o">);</span></code></pre></figure>
+
+<p>place this call before <code class="highlighter-rouge">getContentResolver().takePersistableUriPermission(uri, takeFlags)</code> and read permissions will be granted! Yeah!</p>
+
+<p>The resulting code will be:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onActivityResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">requestCode</span> <span class="o">==</span> <span class="n">MY_REQUEST_CODE</span> <span class="o">&amp;&amp;</span> <span class="n">resultCode</span> <span class="o">==</span> <span class="n">Activity</span><span class="o">.</span><span class="na">RESULT_OK</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">data</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+
+      <span class="n">Uri</span> <span class="n">uri</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="na">getData</span><span class="o">();</span>
+
+      <span class="n">mActivity</span><span class="o">.</span><span class="na">grantUriPermission</span><span class="o">(</span><span class="n">mActivity</span><span class="o">.</span><span class="na">getPackageName</span><span class="o">(),</span> <span class="n">uri</span><span class="o">,</span> <span class="n">Intent</span><span class="o">.</span><span class="na">FLAG_GRANT_READ_URI_PERMISSION</span><span class="o">);</span>
+
+      <span class="kd">final</span> <span class="kt">int</span> <span class="n">takeFlags</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="na">getFlags</span><span class="o">()</span> <span class="o">&amp;</span> <span class="o">(</span><span class="n">Intent</span><span class="o">.</span><span class="na">FLAG_GRANT_READ_URI_PERMISSION</span><span class="o">);</span>
+      <span class="n">mActivity</span><span class="o">.</span><span class="na">getContentResolver</span><span class="o">().</span><span class="na">takePersistableUriPermission</span><span class="o">(</span><span class="n">uri</span><span class="o">,</span> <span class="n">takeFlags</span><span class="o">);</span>
+
+      <span class="n">doSomethingWith</span><span class="o">(</span><span class="n">uri</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+
+
+<span class="post-date">
+  Pubblicato il
+  
+  January
+  9th,
+  2015
+  by
+  
+    Andrea Maglie
+  
+</span>
+
+<div class="post-date">Condividi!</div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=Access Storage Framework and the URI permissions nightmare&amp;url=/access-storage-framework-uri-permission.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/access-storage-framework-uri-permission.html&amp;title=Access Storage Framework and the URI permissions nightmare" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/access-storage-framework-uri-permission.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 >Potrebbero interessarti:</h1>
+  
+  <ul class="related-posts">
+    
+      
+        
+          <li>
+            <h3>
+              <a href="/speed-up-your-builds-without-upgrading-your-hardware.html">
+                Speed up your builds… without upgrading your hardware
+                <!--<img src="/images/">-->
+                <!--<small>April 27, 2018</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+        
+          <li>
+            <h3>
+              <a href="/android-studio-2.3-migration.html">
+                Migrate to Android Studio 2.3
+                <!--<img src="/images/">-->
+                <!--<small>March 8, 2017</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+        
+          <li>
+            <h3>
+              <a href="/android-auto-fit-textview.html">
+                Android Auto Fit TextView
+                <!--<img src="/images/">-->
+                <!--<small>September 9, 2016</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+    
+  </ul>
+</div>
+
+
+
+  <section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = "techisfun";
+    var disqus_identifier = "/access-storage-framework-uri-permission.html";
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/techisfun" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/techisfun" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="http://www.linkedin.com/in/andreamaglie/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:l.andrea.maglie@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">ing. Andrea Maglie |  by Andrea Maglie</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>
