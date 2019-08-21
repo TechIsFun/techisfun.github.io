@@ -3,7 +3,18 @@ GEM
   specs:
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    bibtex-ruby (4.4.7)
+      latex-decode (~> 0.0)
+    citeproc (1.0.9)
+      namae (~> 1.0)
+    citeproc-ruby (1.1.10)
+      citeproc (~> 1.0, >= 1.0.9)
+      csl (~> 1.5)
     colorator (1.1.0)
+    csl (1.5.0)
+      namae (~> 1.0)
+    csl-styles (1.0.1.9)
+      csl (~> 1.0)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
@@ -26,6 +37,11 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
+    jekyll-scholar (5.16.0)
+      bibtex-ruby (~> 4.0, >= 4.0.13)
+      citeproc-ruby (~> 1.0)
+      csl-styles (~> 1.0)
+      jekyll (~> 3.0)
     jekyll-seo-tag (2.3.0)
       jekyll (~> 3.3)
     jekyll-sitemap (1.0.0)
@@ -33,6 +49,7 @@ GEM
     jekyll-watch (1.5.1)
       listen (~> 3.0)
     kramdown (1.17.0)
+    latex-decode (0.3.1)
     liquid (4.0.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -42,6 +59,7 @@ GEM
     minima (2.1.1)
       jekyll (~> 3.3)
     multipart-post (2.0.0)
+    namae (1.0.1)
     octokit (4.13.0)
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
@@ -70,6 +88,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-gist
   jekyll-paginate
+  jekyll-scholar
   jekyll-seo-tag
   jekyll-sitemap
   jekyll-watch
@@ -77,4 +96,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.17.1
+   1.17.3
