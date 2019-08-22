@@ -2,6 +2,7 @@
 layout: post
 title: Dispositivi Aptici
 tags: [haptic feedback, pure data]
+permalink: dispositivi-aptici
 ---
 
 {% include tesi-disclaimer.html %}
