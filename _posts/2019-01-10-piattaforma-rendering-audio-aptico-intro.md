@@ -12,7 +12,7 @@ _10 anni fa pubblicavo questa tesi per la mia laurea in Ingegneria Informatica a
 1. [La percezione aptica]({{ site.baseurl }}{% link _posts/2019-01-15-percezione-aptica.md %})
 2. [La percezione uditiva]({{ site.baseurl }}{% link _posts/2019-01-22-percezione-uditiva.md %})
 3. [Pure Data e i modelli audio]({{ site.baseurl }}{% link _posts/2019-01-29-pure-data-modelli-audio.md %})
-4. Dispositivi aptici
+4. [Dispositivi aptici]({{ site.baseurl }}{% link _posts/2019-02-05-dispositivi-aptici.md %})
 5. Il Phantom Omni
 6. L'applicazione Phantom Friction
 7. Esperimenti sulla percezione audio-aptica

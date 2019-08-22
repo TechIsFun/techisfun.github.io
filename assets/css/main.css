@@ -178,7 +178,8 @@ hr {
  Images
 */
 figure {
-    display: inline-block;
+    text-align: center;
+    display: block;
     margin: 20px;
 }
 figure img {
