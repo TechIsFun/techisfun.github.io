@@ -15,7 +15,7 @@ _Nel 2006 pubblicavo questa tesi dal titolo "Una piattaforma per il rendering au
 4. [Dispositivi aptici]({{ site.baseurl }}{% link _posts/2019-02-05-dispositivi-aptici.md %})
 5. [Il Phantom Omni]({{ site.baseurl }}{% link _posts/2019-02-12-phantom-omni.md %})
 6. [L'applicazione Phantom Friction]({{ site.baseurl }}{% link _posts/2019-02-19-applicazione-phantom-friction.md %})
-7. Esperimenti sulla percezione audio-aptica
+7. [Esperimenti sulla percezione audio-aptica]({{ site.baseurl }}{% link _posts/2019-02-26-esperimenti-percezione-audio-aptica.md %})
 
 # Introduzione
 Se nel campo della computer graphics le tessiture (texture) sono state studiate estensivamente allo scopo di rendere sempre più reali gli ambienti virtuali, altrettanto non si può dire per quanto riguarda la computer haptics, dove con tale termine si intende la scienza che studia la simulazione e lo scambio tra utente e computer di informazioni legate al senso del tatto. Tuttavia, per creare un ambiente virtuale realistico, è indispensabile fornire all’utente un ritorno di suono in corrispondenza al verificarsi di un evento (come un contatto tra oggetti).
