@@ -115,43 +115,13 @@
       
 <div class="posts">
   <h1>
-    <a href="/rxjava-listener-to-observable.html">RxJava&#58; convert a listener into an Observable</a>
+    <a href="/android-enable-app-feature-compile-time.html">Android - Enable app features at compile time</a>
   </h1>
   
   <p>
-    In Java it’s common to work with listeners. And if you work with RxJava, you will prefer to use an Observable instead of listeners. But what if you have to deal with a library and you cannot change the source code?
-
-There’s a simple way to create an Observable around a listener.
-
-Suppose we have an interface ValueUpdateListener and an object Val... <a href="/rxjava-listener-to-observable.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 28 Aug 2015 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-  
-    1 minute read
-  
-
-
-
-</span>
-  </p>
-</div>
-
-<div class="posts">
-  <h1>
-    <a href="/rxjava-android-where-to-start.html">ReactiveX, RxJava and RxAndroid - where to start</a>
-  </h1>
-  
-  <p>
-    The next library you will learn should definetly be ReactiveX.
-
-What is ReactiveX?
-From the website: ReactiveX is a combination of the best ideas from
-the Observer pattern, the Iterator pattern, and functional programming.
-
-(But it’s a lot more.)
-
-The key concept to start with ReactiveX is: think reactive programming as operating on a stream of ... <a href="/rxjava-android-where-to-start.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 30 Jul 2015 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+    Sometimes some fetaures of your app must behave differently for different flavors o build type.
+Think about when you need to enable logging for a specific flavor only, or you have to disable crash reporting for your “dev build”. All this behaviours can be configured at compile time, insted of using many if/else blocks that are evaluated at runti... <a href="/android-enable-app-feature-compile-time.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 28 Jan 2016 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     3 minute read
@@ -165,21 +135,25 @@ The key concept to start with ReactiveX is: think reactive programming as operat
 
 <div class="posts">
   <h1>
-    <a href="/dont-waste-time-coding-2.html">Don't waste your time coding - part 2</a>
+    <a href="/android-gradle-outofmemoryerror.html">OutOfMemoryError while compiling Android projects</a>
   </h1>
   
   <p>
-    You can find the first part of this article here
+    Have you ever got a OutOfMemoryError while compiling an Android project, just like this?
 
-Automatic code formatting and import organizing
-Code styling is important. A well formatted piece of code becomes more readable and more comprehensible.
+:app:dexDebug
+Unknown source file : Uncaught translation error: java.util.concurrent.ExecutionException: java.lang.OutOfMemoryError: Java heap space
+Unknown source file : 1 error; aborting
 
-But sometimes trying to keep the code formatted can be negative: you lose your time and your focus.
-You will soon start to count the number of ... <a href="/dont-waste-time-coding-2.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 30 Jan 2015 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+:app:dexDebug FAILED
+
+FAILURE: Build failed with an exception.
+
+* W... <a href="/android-gradle-outofmemoryerror.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 15 Nov 2015 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
-    2 minute read
+    less than 1 minute read
   
 
 
@@ -190,20 +164,12 @@ You will soon start to count the number of ... <a href="/dont-waste-time-coding-
 
 <div class="posts">
   <h1>
-    <a href="/access-storage-framework-uri-permission.html">Access Storage Framework and the URI permissions nightmare</a>
+    <a href="/creiamo-un-google-developer-group-veneto.html">Creiamo un nuovo Google Developer Group!</a>
   </h1>
   
-  <div class="thumbnail-container">
-    <a href="/access-storage-framework-uri-permission.html"><img src="/assets/img/{"feature"=>"android1.png"}" style="width: 100%"></a>
-  </div>
-  
   <p>
-    I’ve been working with the Access Storage Framework introduced with Android KitKat, a feature that I’ve been waiting for a long time.
-
-Everything seemed to be alright, quite easy to implement, until I faced a strange issue.
-
-Once the file has been selected by the user, I wanted to store the file’s URI and re-open that URI the next time applicati... <a href="/access-storage-framework-uri-permission.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 09 Jan 2015 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+    E’ da tempo che mi chiedo come mai non esista un Google Developer Group nel Veneto. Basta dare un’occhiata alla directory dei GDG a questo link per vedere che, in Italia, il Nord-Est è abbastanza scoperto. Così, invece di attendere che su quella mappa compaia un nuovo marker più vicino alle mie zone, ho deciso di prendere contatti con Google e a... <a href="/creiamo-un-google-developer-group-veneto.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 22 Oct 2015 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     1 minute read
@@ -217,19 +183,38 @@ Once the file has been selected by the user, I wanted to store the file’s URI 
 
 <div class="posts">
   <h1>
-    <a href="/dont-waste-time-coding-1.html">Don't waste your time coding - part 1</a>
+    <a href="/android-simple-splash-screen.html">A simple splash screen in Android</a>
   </h1>
   
   <p>
-    Life is too short: please, don’t waste your time writing code!
-I’m not saying that you don’t have to code, but many people tend to waste too much time typing on the keyboard instead of producing code. Mee too.
+    Splash screens are not so popular in Android development. But wait: now Google started to put splash screens in its apps???
+Take a look at Google Drive app for example. Does it mean that now we have a new standard?
 
-Following examples relate to Android’s world, but that can be easily adapted to other languages and programming tasks.
+This is not the right post to talk about if splash screen in Android is good or bad. Let’s think only about code: implementing a sp... <a href="/android-simple-splash-screen.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 07 Sep 2015 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    1 minute read
+  
 
-Aliases
 
-Android... <a href="/dont-waste-time-coding-1.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 16 Dec 2014 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/rxjava-listener-to-observable.html">RxJava&#58; convert a listener into an Observable</a>
+  </h1>
+  
+  <p>
+    In Java it’s common to work with listeners. And if you work with RxJava, you will prefer to use an Observable instead of listeners. But what if you have to deal with a library and you cannot change the source code?
+
+There’s a simple way to create an Observable around a listener.
+
+Suppose we have an interface ValueUpdateListener and an object Val... <a href="/rxjava-listener-to-observable.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 28 Aug 2015 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     1 minute read

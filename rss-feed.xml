@@ -7,10 +7,77 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Esperimenti sulla percezione audio--aptica</title>
+				
+				
+					<description>&lt;hr /&gt;
+
+&lt;p&gt;&lt;i&gt;Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.&lt;/i&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+</description>
+				
+				<pubDate>Tue, 26 Feb 2019 00:00:00 +0100</pubDate>
+				<link>/esperimenti-percezione-audio-aptica.html</link>
+				<guid isPermaLink="true">/esperimenti-percezione-audio-aptica.html</guid>
+			</item>
+		
+			<item>
+				<title>L'applicazione Phantom Friction</title>
+				
+				
+					<description>&lt;hr /&gt;
+
+&lt;p&gt;&lt;i&gt;Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.&lt;/i&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+</description>
+				
+				<pubDate>Tue, 19 Feb 2019 00:00:00 +0100</pubDate>
+				<link>/applicazione-phantom-friction.html</link>
+				<guid isPermaLink="true">/applicazione-phantom-friction.html</guid>
+			</item>
+		
+			<item>
+				<title>Il Phantom  Omni</title>
+				
+				
+					<description>&lt;hr /&gt;
+
+&lt;p&gt;&lt;i&gt;Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.&lt;/i&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+</description>
+				
+				<pubDate>Tue, 12 Feb 2019 00:00:00 +0100</pubDate>
+				<link>/phantom-omni.html</link>
+				<guid isPermaLink="true">/phantom-omni.html</guid>
+			</item>
+		
+			<item>
+				<title>Dispositivi Aptici</title>
+				
+				
+					<description>&lt;hr /&gt;
+
+&lt;p&gt;&lt;i&gt;Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.&lt;/i&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+</description>
+				
+				<pubDate>Tue, 05 Feb 2019 00:00:00 +0100</pubDate>
+				<link>/dispositivi-aptici.html</link>
+				<guid isPermaLink="true">/dispositivi-aptici.html</guid>
+			</item>
+		
+			<item>
 				<title>Pure Data e i modelli audio</title>
 				
 				
-					<description>&lt;h2 id=&quot;il-modello-di-rotolamento&quot;&gt;Il modello di rotolamento&lt;/h2&gt;
+					<description>&lt;hr /&gt;
+
+&lt;p&gt;&lt;i&gt;Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.&lt;/i&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 </description>
 				
@@ -23,14 +90,10 @@
 				<title>La percezione uditiva</title>
 				
 				
-					<description>&lt;p&gt;I suoni che percepiamo ogni giorno nascono da interazioni tra oggetti
-(un martello che colpisce un metallo, una moneta che cade) o da
-cambiamenti nelle proprietà di un singolo oggetto (come un palloncino
-che scoppia). Ma siamo in grado di riconoscere tali eventi fisici e le
-loro proprietà solo sulla base del suono prodotto? Per rispondere a
-questa domanda sono stati svolti numerosi studi, utilizzando diversi
-approcci. Uno di questi consiste nel dividere l’oggetto di studio in tre
-livelli:&lt;/p&gt;
+					<description>&lt;hr /&gt;
+
+&lt;p&gt;&lt;i&gt;Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.&lt;/i&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 </description>
 				
@@ -43,7 +106,10 @@ livelli:&lt;/p&gt;
 				<title>La percezione aptica</title>
 				
 				
-					<description>&lt;h2 id=&quot;il-tatto&quot;&gt;Il tatto&lt;/h2&gt;
+					<description>&lt;hr /&gt;
+
+&lt;p&gt;&lt;i&gt;Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.&lt;/i&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 </description>
 				
@@ -56,7 +122,7 @@ livelli:&lt;/p&gt;
 				<title>Una piattaforma per il rendering audio aptico di interazioni continue</title>
 				
 				
-					<description>&lt;p&gt;&lt;em&gt;10 anni fa pubblicavo questa tesi per la mia laurea in Ingegneria Informatica all’Università di Padova. 9 mesi passati a lavorare su quello che sicuramente è il progetto più complesso e interessante sul quale abbia mai lavorato.&lt;/em&gt;&lt;/p&gt;
+					<description>&lt;p&gt;&lt;em&gt;Nel 2006 pubblicavo questa tesi dal titolo “Una piattaforma per il rendering audio aptico di interazioni continue” per la mia laurea in Ingegneria Informatica all’Università di Padova. 9 mesi passati a lavorare su quello che sicuramente è il progetto più complesso e interessante sul quale abbia mai lavorato.&lt;/em&gt;&lt;/p&gt;
 
 </description>
 				
@@ -92,62 +158,6 @@ Ecco qui di seguito l’elenco completo.&lt;/p&gt;
 				<pubDate>Fri, 27 Apr 2018 00:00:00 +0200</pubDate>
 				<link>/speed-up-your-builds-without-upgrading-your-hardware.html</link>
 				<guid isPermaLink="true">/speed-up-your-builds-without-upgrading-your-hardware.html</guid>
-			</item>
-		
-			<item>
-				<title>Il prezzo del context-switching</title>
-				
-				
-					<description>&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;Il prezzo del cambio di contesto (context-switching) si paga sia in termini di tempo che di fatica mentale.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-</description>
-				
-				<pubDate>Thu, 22 Jun 2017 00:00:00 +0200</pubDate>
-				<link>/prezzo-context-switching.html</link>
-				<guid isPermaLink="true">/prezzo-context-switching.html</guid>
-			</item>
-		
-			<item>
-				<title>Migrate to Android Studio 2.3</title>
-				
-				
-					<description>&lt;p&gt;&lt;img src=&quot;/images/android_studio_logo.png&quot; alt=&quot;Android Studio Logo&quot; /&gt;&lt;/p&gt;
-
-</description>
-				
-				<pubDate>Wed, 08 Mar 2017 00:00:00 +0100</pubDate>
-				<link>/android-studio-2.3-migration.html</link>
-				<guid isPermaLink="true">/android-studio-2.3-migration.html</guid>
-			</item>
-		
-			<item>
-				<title>Android Auto Fit TextView</title>
-				
-				
-					<description>&lt;p&gt;Android framework provides no support for creating a TextView that can fit its content to its size.&lt;/p&gt;
-
-</description>
-				
-				<pubDate>Fri, 09 Sep 2016 00:00:00 +0200</pubDate>
-				<link>/android-auto-fit-textview.html</link>
-				<guid isPermaLink="true">/android-auto-fit-textview.html</guid>
-			</item>
-		
-			<item>
-				<title>Workshop su Google, Android e IoT</title>
-				
-				
-					<description>&lt;figure&gt;
-	&lt;img src=&quot;/images/google_android_iot.png&quot; alt=&quot;&quot; /&gt;
-&lt;/figure&gt;
-
-</description>
-				
-				<pubDate>Sat, 18 Jun 2016 00:00:00 +0200</pubDate>
-				<link>/workshop-google-android-iot.html</link>
-				<guid isPermaLink="true">/workshop-google-android-iot.html</guid>
 			</item>
 		
 	</channel>

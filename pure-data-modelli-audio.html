@@ -49,14 +49,14 @@
 <meta property="og:title" content="Pure Data e i modelli audio" />
 <meta name="author" content="Andrea Maglie" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Il modello di rotolamento" />
-<meta property="og:description" content="Il modello di rotolamento" />
+<meta name="description" content="Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia." />
+<meta property="og:description" content="Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia." />
 <meta property="og:site_name" content="ing. Andrea Maglie" />
 <meta property="og:image" content="/patchsliding1.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-01-29T00:00:00+01:00" />
 <script type="application/ld+json">
-{"name":null,"description":"Il modello di rotolamento","author":{"@type":"Person","name":"Andrea Maglie"},"@type":"BlogPosting","url":"/pure-data-modelli-audio.html","publisher":null,"image":"/patchsliding1.jpg","headline":"Pure Data e i modelli audio","dateModified":"2019-01-29T00:00:00+01:00","datePublished":"2019-01-29T00:00:00+01:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"/pure-data-modelli-audio.html"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.","author":{"@type":"Person","name":"Andrea Maglie"},"@type":"BlogPosting","url":"/pure-data-modelli-audio.html","publisher":null,"image":"/patchsliding1.jpg","headline":"Pure Data e i modelli audio","dateModified":"2019-01-29T00:00:00+01:00","datePublished":"2019-01-29T00:00:00+01:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"/pure-data-modelli-audio.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -122,6 +122,11 @@
 
   <img src="/assets/img/patchsliding1.jpg">
 
+
+<hr />
+
+<p><i>Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.</i></p>
+<hr />
 
 <h2 id="il-modello-di-rotolamento">Il modello di rotolamento</h2>
 
@@ -875,9 +880,7 @@ rispettivi inlet.</p>
 per ogni metodo che deve essere lanciato ogni volta che un dato viene
 ricevuto: ciò avviene tramite l’istruzione
 <code class="highlighter-rouge">FLEXT_CALLBACK_1(m_float, float)</code>. Con l’ultimo comando si informa il
-sistema riguardo al nome della classe e ai suoi argomenti di creazione.
-In <a href="#fig:flext">1.9</a>{reference-type=”ref” reference=”fig:flext”} è
-riportato un esempio di utilizzo di questo external.</p>
+sistema riguardo al nome della classe e ai suoi argomenti di creazione.</p>
 
 <h3 id="implementazione-della-patch-generatrice-di-rumore-frattale">Implementazione della patch generatrice di rumore frattale</h3>
 
@@ -928,8 +931,7 @@ tramite lo slider:</p>
 </figure>
 
 <p>Il modulo <em>_cascade</em> invece è una subpatch nella quale viene
-implementata una cascata di tre filtri, come è possibile vedere in
-<a href="#fig:cascade">1.12</a>{reference-type=”ref” reference=”fig:cascade”}; ogni
+implementata una cascata di tre filtri; ogni
 oggetto <code class="highlighter-rouge">biquad~</code> è un filtro biquadro a due poli e due zeri; ognuno di
 questi filtri calcola le seguenti equazioni differenziali:</p>
 
@@ -983,17 +985,12 @@ caratteristiche periodiche nel suono. Tutto ciò è valido se la
 dimensione del corpo è sufficientemente grande rispetto alla tessitura
 della superficie sulla quale si muove.</p>
 
-<p>La patch che implementa la generazione di rumore di sfregamento,
-mostrata in
-<a href="#fig:patchsliding1">[fig:patchsliding1]</a>{reference-type=”ref”
-reference=”fig:patchsliding1”}, è stata quindi elaborata a partire dalla
+<p>La patch che implementa la generazione di rumore di sfregamento è stata quindi elaborata a partire dalla
 patch che implementa il modello di rotolamento.</p>
 
 <h4 id="holy-rollersim">holy-roller<script type="math/tex">\sim</script></h4>
 
-<p>Il cuore della computazione viene svolto dalla subpatch <code class="highlighter-rouge">holy_roller~</code>
-(<a href="#fig:patchsliding2">[fig:patchsliding2]</a>{reference-type=”ref”
-reference=”fig:patchsliding2”}); l’oggetto <code class="highlighter-rouge">holy_roller~</code> possiede 13
+<p>Il cuore della computazione viene svolto dalla subpatch <code class="highlighter-rouge">holy_roller~</code>; l’oggetto <code class="highlighter-rouge">holy_roller~</code> possiede 13
 inlet:</p>
 
 <ul>
@@ -1201,9 +1198,7 @@ superficie in base al segnale ricevuto al primo inlet.</p>
 <h4 id="_surface_tracersim">_surface_tracer<script type="math/tex">\sim</script></h4>
 
 <p>Il file con estensione <code class="highlighter-rouge">.wav</code> contenente il rumore frattale viene letto
-dalla subpatch <code class="highlighter-rouge">_surface_tracer~</code>
-(<a href="#fig:surfacetracer">[fig:surfacetracer]</a>{reference-type=”ref”
-reference=”fig:surfacetracer”}). Questa subpatch, assieme alle subpatch
+dalla subpatch <code class="highlighter-rouge">_surface_tracer~</code>. Questa subpatch, assieme alle subpatch
 in essa contenute quali <code class="highlighter-rouge">pd tracer+calculation~</code>, <code class="highlighter-rouge">soundfiler_tracer~</code> e
 <code class="highlighter-rouge">table_tracer~</code>, legge il file audio e lo scrive in un array;
 successivamente, per inviare i campioni in output, esegue una ricerca di
@@ -1351,15 +1346,12 @@ gli oggetti in figura:</p>
     
       
         
-        
-      
-        
           <li>
             <h3>
-              <a href="/percezione-uditiva.html">
-                La percezione uditiva
+              <a href="/esperimenti-percezione-audio-aptica.html">
+                Esperimenti sulla percezione audio--aptica
                 <!--<img src="/images/">-->
-                <!--<small>January 22, 2019</small>-->
+                <!--<small>February 26, 2019</small>-->
               </a>
             </h3>
           </li>
@@ -1369,10 +1361,23 @@ gli oggetti in figura:</p>
         
           <li>
             <h3>
-              <a href="/percezione-aptica.html">
-                La percezione aptica
+              <a href="/applicazione-phantom-friction.html">
+                L'applicazione Phantom Friction
                 <!--<img src="/images/">-->
-                <!--<small>January 15, 2019</small>-->
+                <!--<small>February 19, 2019</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+        
+          <li>
+            <h3>
+              <a href="/phantom-omni.html">
+                Il Phantom  Omni
+                <!--<img src="/images/">-->
+                <!--<small>February 12, 2019</small>-->
               </a>
             </h3>
           </li>
