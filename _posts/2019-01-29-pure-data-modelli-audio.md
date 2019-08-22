@@ -715,8 +715,6 @@ per ogni metodo che deve essere lanciato ogni volta che un dato viene
 ricevuto: ciò avviene tramite l'istruzione
 `FLEXT_CALLBACK_1(m_float, float)`. Con l'ultimo comando si informa il
 sistema riguardo al nome della classe e ai suoi argomenti di creazione.
-In [1.9](#fig:flext){reference-type="ref" reference="fig:flext"} è
-riportato un esempio di utilizzo di questo external.
 
 ### Implementazione della patch generatrice di rumore frattale
 
@@ -754,8 +752,7 @@ tramite lo slider:
 {% include image-cap.html url="images/surfacemodeler4.jpg" description="Il modulo (subpatch) _initialize_fractal_noise" %}
 
 Il modulo *\_cascade* invece è una subpatch nella quale viene
-implementata una cascata di tre filtri, come è possibile vedere in
-[1.12](#fig:cascade){reference-type="ref" reference="fig:cascade"}; ogni
+implementata una cascata di tre filtri; ogni
 oggetto `biquad~` è un filtro biquadro a due poli e due zeri; ognuno di
 questi filtri calcola le seguenti equazioni differenziali:
 
@@ -800,17 +797,12 @@ caratteristiche periodiche nel suono. Tutto ciò è valido se la
 dimensione del corpo è sufficientemente grande rispetto alla tessitura
 della superficie sulla quale si muove.
 
-La patch che implementa la generazione di rumore di sfregamento,
-mostrata in
-[\[fig:patchsliding1\]](#fig:patchsliding1){reference-type="ref"
-reference="fig:patchsliding1"}, è stata quindi elaborata a partire dalla
+La patch che implementa la generazione di rumore di sfregamento è stata quindi elaborata a partire dalla
 patch che implementa il modello di rotolamento.
 
 #### holy-roller$$\sim$$
 
-Il cuore della computazione viene svolto dalla subpatch `holy_roller~`
-([\[fig:patchsliding2\]](#fig:patchsliding2){reference-type="ref"
-reference="fig:patchsliding2"}); l'oggetto `holy_roller~` possiede 13
+Il cuore della computazione viene svolto dalla subpatch `holy_roller~`; l'oggetto `holy_roller~` possiede 13
 inlet:
 
 - inlet 0 -- accetta un oggetto di tipo messaggio contente il nome di un file `.wav`; tale file è stato precedentemente ottenuto registrando per circa 10 secondi l'output della patch generatrice di rumore frattale (e pertanto contiene a sua volta un rumore frattale);
@@ -1009,9 +1001,7 @@ superficie in base al segnale ricevuto al primo inlet.
 #### \_surface\_tracer$$\sim$$
 
 Il file con estensione `.wav` contenente il rumore frattale viene letto
-dalla subpatch `_surface_tracer~`
-([\[fig:surfacetracer\]](#fig:surfacetracer){reference-type="ref"
-reference="fig:surfacetracer"}). Questa subpatch, assieme alle subpatch
+dalla subpatch `_surface_tracer~`. Questa subpatch, assieme alle subpatch
 in essa contenute quali `pd tracer+calculation~`, `soundfiler_tracer~` e
 `table_tracer~`, legge il file audio e lo scrive in un array;
 successivamente, per inviare i campioni in output, esegue una ricerca di
