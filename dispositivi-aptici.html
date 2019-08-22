@@ -1,0 +1,814 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      Dispositivi Aptici | ing. Andrea Maglie
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+  
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ing. Andrea Maglie" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="ing. Andrea Maglie | "/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48681711-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Dispositivi Aptici | ing. Andrea Maglie</title>
+<meta property="og:title" content="Dispositivi Aptici" />
+<meta name="author" content="Andrea Maglie" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia." />
+<meta property="og:description" content="Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia." />
+<meta property="og:site_name" content="ing. Andrea Maglie" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-05T00:00:00+01:00" />
+<script type="application/ld+json">
+{"name":null,"description":"Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.","author":{"@type":"Person","name":"Andrea Maglie"},"@type":"BlogPosting","url":"/dispositivi-aptici.html","publisher":null,"image":null,"headline":"Dispositivi Aptici","dateModified":"2019-02-05T00:00:00+01:00","datePublished":"2019-02-05T00:00:00+01:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"/dispositivi-aptici.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">ing. Andrea Maglie</a>
+    <small class="masthead-subtitle"></small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/about.html">Informazioni</a>
+    
+      <a href="/menu/writing.html">Post</a>
+    
+      <a href="/menu/contact.html">Contatti</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/techisfun" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/techisfun" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="http://www.linkedin.com/in/andreamaglie/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:l.andrea.maglie@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  Dispositivi Aptici
+</h1>
+
+
+
+<hr />
+
+<p><i>Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.</i></p>
+<hr />
+
+<h2 id="cosa-sono-i-dispositivi-aptici">Cosa sono i dispositivi aptici</h2>
+
+<p>Negli anni settanta e ottanta la ricerca nel campo della robotica ha
+iniziato a dirigere la sua attenzione verso la percezione e la
+manipolazione tattile per la creazione di robot autonomi; negli anni
+novanta invece la presenza di nuove tecnologie ha permesso la nascita
+della <em>computer haptics</em>, cioè una virtualizzazione che, come nella
+computer graphics, permette di simulare oggetti in maniera interattiva.
+Sebbene Knoll abbia dimostrato già negli anni sessanta la possibilità di
+eseguire una interazione aptica con semplici oggetti, solo le tecnologie
+recenti hanno reso possibile la realizzazione di tale interazione con
+oggetti sempre più complessi, combinando insieme dispositivi ad alte
+prestazioni, modelli di calcolo geometrici, tecniche di rilevamento
+delle collisioni e comprensione del sistema tattile umano.</p>
+
+<p>I dispositivi aptici si comportano come piccoli robot che effettuano uno
+scambio di energia con l’utente; in particolare permettono all’utente di
+interagire con un ambiente virtuale ricevendo un feedback tattile,
+ottenuto applicando delle forze opposte al movimento dell’utente lungo i
+tre assi <script type="math/tex">x</script>, <script type="math/tex">y</script> e <script type="math/tex">z</script>. La caratteristica principale che li distingue
+dalle altre tipologie di dispositivi è la loro <em>bidirezionalità</em>, cioè
+la possibilità di ricevere informazioni dall’utente e di inviare
+informazioni all’utente. Infatti, durante il normale utilizzo di un tale
+dispositivo, l’uomo imprime una forza al meccanismo aptico (uno stilo,
+un ditale o un altro componente diverso a seconda del tipo di
+interfaccia) e ne cambia la posizione; successivamente è il dispositivo
+a riflettere una forza calcolata in base al movimento al quale è stato
+sottoposto.</p>
+
+<p>I <em>Bilateral Master–Slave Manipulator</em> (MSMs) fanno parte dei primi
+dispositivi aptici sviluppati e venivano impiegati nell’industria
+nucleare per manipolare in modo sicuro e remoto il materiale irradiato.
+Il termine MSMs deriva dal fatto che il braccio meccanico <em>master</em> è
+tipicamente una riproduzione di un braccio remoto <em>slave</em>, e i due sono
+legati da catene, cavi o altri sistemi elettromeccanici. Un altro dei
+primi usi dei bracci meccanici master è avvenuto nell’ambito della
+realtà virtuale per la manipolazione delle molecole e l’interazione
+aptica con la simulazione della forza elettrostatica
+molecola–substrato; un esempio di questo è mostrato in figura  <a class="citation" href="#art:stone">(Stone, R. J., 2000)</a>:</p>
+
+<figure class="image">
+  <img src="images/molecole.jpg" alt="Uso di un braccio meccanico per la manipolazione di molecole in un ambiente di realtà virtuale." />
+  <figcaption>Uso di un braccio meccanico per la manipolazione di molecole in un ambiente di realtà virtuale.</figcaption>
+</figure>
+
+<p>Altri progetti importanti sono stati sviluppati nel campo
+del force feedback per la chirurgia, come il progetto IERAPSI dello
+European Union Framework, un ambiente per le prove e la pianificazione
+degli interventi chirurgici, oppure nel campo militare per il training
+sul rilevamento e disinnesco delle mine.</p>
+
+<figure class="image">
+  <img src="images/chirurgia.jpg" alt="Sistema di feedback aptico usato per la pianificazione di interventi chirurgici." />
+  <figcaption>Sistema di feedback aptico usato per la pianificazione di interventi chirurgici.</figcaption>
+</figure>
+
+<p>Il termine <em>aptico</em> (dal greco <em>haptesthai</em> che significa <em>toccare</em>)
+indica la parte di fisiologia inerente il senso del tatto, mentre con
+<em>feedback aptico</em> (haptic feedback) si indica sia la consapevolezza
+degli stimoli ricevuti in conseguenza di un contatto con una superficie,
+sia le informazioni cinetiche ricevute in base alla posizione e al
+movimento del corpo. Lo scambio bidirezionale di informazioni con un
+dispositivo aptico viene chiamato <em>percezione aptica</em> (haptic
+perception).</p>
+
+<p>In figura è riportato lo schema di un’interazione aptica:</p>
+
+<figure class="image">
+  <img src="images/interazione_aptica.jpg" alt="Interazione aptica tra utente e dispositivo." />
+  <figcaption>Interazione aptica tra utente e dispositivo.</figcaption>
+</figure>
+
+<p>nella parte sinistra si vede come avvengono le
+elaborazioni all’interno del corpo umano: i recettori posti sulla pelle
+ricevono le informazioni sulla forza e le trasmettono al cervello, il
+quale comanda poi i muscoli del braccio e della mano. Il dispositivo
+invece (parte destra) rileva il moto attraverso dei sensori che inviano
+i dati sulla posizione al computer al quale il dispositivo stesso è
+collegato; quest’ultimo elabora i dati ricevuti e invia i comandi di
+torsione agli attuatori che generano la forza di resistenza nel
+dispositivo.</p>
+
+<h2 id="tipi-di-dispositivi">Tipi di dispositivi</h2>
+
+<p>I dispositivi aptici possono essere distinti in base al loro
+posizionamento:</p>
+
+<p><em>Dispositivi ground based</em></p>
+
+<p>I dispositivi <em>ground based</em> sono quelli che vengono appoggiati ad
+un tavolo di lavoro e includono i joystick che riflettono le forze e
+le interfacce aptiche desktop, come il Phantom  Omni  o il Phantom 
+Desktop di SensAble Tecnologies.</p>
+
+<figure class="image">
+  <img src="images/PhantomDesktop.jpg" alt="Dispositivo aptico Phantom Desktop di SensAble Technologies." />
+  <figcaption>Dispositivo aptico Phantom Desktop di SensAble Technologies.</figcaption>
+</figure>
+
+<p><em>Esoscheletri meccanici</em></p>
+
+<p>Gli <em>esoscheletri meccanici</em> sono dei dispositivi che vengono
+indossati dall’utente su braccia o gambe.</p>
+
+<figure class="image">
+  <img src="images/esoscheletro.jpg" alt="Dispositivo aptico CyberForce composto da un esoscheletro poggiato direttamente al suolo, [www.immersion.com](www.immersion.com)" />
+  <figcaption>Dispositivo aptico CyberForce composto da un esoscheletro poggiato direttamente al suolo, [www.immersion.com](www.immersion.com)</figcaption>
+</figure>
+
+<p><em>Guanti force feedback</em></p>
+
+<p>I <em>guanti force feedback</em> leggono le informazioni di contatto delle
+singole dita e restituiscono le forze di resistenza, ma non possono
+riprodurre sensazioni di oggetti pesanti o inerzie</p>
+
+<figure class="image">
+  <img src="images/cybergrasp.jpg" alt="" />
+  <figcaption></figcaption>
+</figure>
+
+<p>Un altro tipo di distinzione è tra dispositivi a <em>impedenza</em> o
+<em>ammettenza</em>: i primi leggono informazioni relative alla posizione e
+inviano in output informazioni sulle forze, i secondi leggono le forze e
+inviano i dati sulla posizione. Il terzo modo di classificare i
+dispositivi è in base ai gradi di libertà che caratterizzano il loro
+movimento:</p>
+
+<p><em>Dispositivi ad un grado di libertà</em></p>
+
+<p>Misurano e applicano le forze lungo una sola direzione. Esempi di
+movimenti reali ad un grado di libertà includono l’apertura di una
+porta, l’uso di un paio di forbici o la pressione del pistone di una
+siringa. La simulazione aptica ad un grado di libertà più comune è
+il <em>muro virtuale</em>, che corrisponde al rendering di una forza che si
+manifesta al contatto con una superficie molto rigida.</p>
+
+<p><em>Dispositivi a due gradi di libertà</em></p>
+
+<p>Il mouse è un semplice esempio di dispositivo a due gradi di
+libertà; possono essere utilizzati per interagire con oggetti
+tridimensionali mappando opportunamente i punti di contatto a tre
+gradi di libertà su un piano.</p>
+
+<p><em>Dispositivi a tre gradi di libertà</em></p>
+
+<p>In questo caso la mappatura dallo spazio tridimensionale del
+dispositivo a quello virtuale è più immediata, in quanto ogni
+componente della posizione nel sistema di riferimento solidale al
+dispositivo deve essere trasformata nella corrispondente componente
+nel sistema di riferimento virtuale. Nell’interazione con gli
+oggetti virtuali il modulo della forza è calcolato in base a quanto
+il dispositivo penetra l’oggetto, mentre per il calcolo della
+direzione sono stati sviluppati vari metodi, tra i quali quello
+maggiormente utilizzato è l’algoritmo del <em>proxy</em>.</p>
+
+<p><em>Dispositivi a più di tre gradi di libertà</em></p>
+
+<p>Per rendere più realistici gli scenari virtuali si è reso necessario
+introdurre la possibilità di effettuare torsioni. Barbagli
+<a class="citation" href="#art:barbagli1">(Barbagli, F., Salisbury, K., &amp; Devengenzo, R., 2003)</a> ha scritto un algoritmo che supporta l’interazione
+con un punto di contatto con frizione e momenti per simulare quattro
+gradi di libertà; la simulazione di cinque gradi di libertà (come
+nel caso del contatto tra un segmento e un oggetto) è stata
+implementata da Basdogan <a class="citation" href="#art:basdogan1">(Basdogan, C., Ho, C. H., &amp; Srinivasan, M. A., 1997)</a>, mentre studi sulle
+interazioni a sei gradi di libertà sono stati eseguiti da McNeely
+<a class="citation" href="#art:mcneely">(McNeely, W., Puterbaugh, K., &amp; Troy, J., 1999)</a> e Otaduy e Lin <a class="citation" href="#art:otaduy">(Otaduy, M.A. &amp; Lin, M., 2003)</a>.</p>
+
+<h4 id="caratteristiche-e-prestazioni-dei-dispositivi">Caratteristiche e prestazioni dei dispositivi</h4>
+
+<p>Le prestazioni dei vari tipi di dispositivi dipendono dalle abilità e
+limitazioni umane e dell’utente; le simulazioni di oggetti e ambienti
+virtuali sono sempre basate su calcoli approssimati, e sono proprio le
+limitazioni della sensibilità dell’utente a determinare se tali
+approssimazioni sono sufficienti. Le caratteristiche che un’interfaccia
+aptica dovrebbe possedere sono <a class="citation" href="#art:basdogan2">(Srinivasan, M. A. &amp; Basdogan, C., 1997)</a>:</p>
+
+<ul>
+  <li>
+    <p>Livelli di inerzia e frizione bassi, assieme ad assenza di
+costrizioni cinematiche imposte dal dispositivo, in modo tale che il
+movimento libero sia avvertito effettivamente come tale (in altre
+parole, l’utente non deve avvertire forze di resistenza quando
+queste non vengono simulate dall’applicazione).</p>
+  </li>
+  <li>
+    <p>La risoluzione, sia in termini di posizione che di forza riflessa,
+deve corrispondere a quella del sistema tattile umano e dipende dal
+processo nel quale viene impiegato il dispositivo. In particolare
+l’utente:</p>
+
+    <ul>
+      <li>
+        <p>non deve poter attraversare gli oggetti applicando una forza
+eccessiva;</p>
+      </li>
+      <li>
+        <p>non deve avvertire vibrazioni non volute (come quelle dovute a
+quantizzazioni);</p>
+      </li>
+      <li>
+        <p>non deve avvertire come elastici gli oggetti che invece sono
+rigidi e viceversa.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Ergonomia e comfort: i dispositivi non devono arrecare disturbi
+all’utente che li indossa o li utilizza, in quanto tali disturbi
+potrebbero sovrastare tutte le altre sensazioni, in particolare
+quelle aptiche.</p>
+  </li>
+</ul>
+
+<h2 id="sec:rendering_aptico">Struttura di una pipeline di rendering aptico</h2>
+
+<p>La struttura di una pipeline di rendering aptico è relativamente
+semplice.</p>
+
+<figure class="image">
+  <img src="images/renderingaptico.jpg" alt="Processo associato al rendering delle forze. Le linee in grassetto rappresentano i flussi del processo, mentre quelle tratteggiate rappresentano lo scambio di informazioni." />
+  <figcaption>Processo associato al rendering delle forze. Le linee in grassetto rappresentano i flussi del processo, mentre quelle tratteggiate rappresentano lo scambio di informazioni.</figcaption>
+</figure>
+
+<p>Quando l’utente muove la sonda del
+dispositivo, i nuovi valori di posizione e orientazione vengono
+catturati dai codificatori; successivamente vengono rilevate le
+eventuali collisioni con gli oggetti virtuali: se la sonda entra in
+contatto con un oggetto, viene calcolata la forza di reazione in base
+alla profondità della penetrazione della sonda nell’oggetto. La forza
+calcolata viene poi mappata sulla superficie dell’oggetto in modo da
+tenere in considerazione i dettagli di quest’ultimo; il vettore delle
+forze così modificato viene inviato al dispositivo e, tramite questo,
+all’utente.</p>
+
+<p>Le diverse tecniche di rendering possono essere distinte a seconda del
+tipo di interazione in <em>point based</em> e <em>ray based</em>:</p>
+
+<figure class="image">
+  <img src="images/pointray.jpg" alt="Interazioni aptiche point--based e ray--based." />
+  <figcaption>Interazioni aptiche point--based e ray--based.</figcaption>
+</figure>
+
+<ul>
+  <li>
+    <p>Con l’interazione point–based solo l’estremità del dispositivo
+(<em>HIP</em>, haptic interface point) entra in contatto con gli oggetti.
+Dato che questi hanno una rigidità finita, il punto HIP li penetra e
+la profondità della penetrazione è calcolata come la minima distanza
+tra HIP e superficie dell’oggetto virtuale.</p>
+  </li>
+  <li>
+    <p>Nell’interazione ray–based la sonda è modellata come un raggio
+finito; l’algoritmo di collisione individua come punto di contatto
+l’intersezione tra il raggio e la superficie dell’oggetto, mentre
+come profondità della penetrazione si considera la distanza tra HIP
+e punto di collisione lungo la normale alla superficie.</p>
+  </li>
+</ul>
+
+<p>In entrambi i casi la forza è calcolata usando la legge di Hooke <script type="math/tex">F=kx</script>,
+dove <script type="math/tex">x</script> è la stessa direzione lungo la quale viene calcolata la
+profondità di penetrazione; se le interazioni sono prive di forze di
+frizione, la forza di reazione è normale alla superficie nel punto di
+contatto.</p>
+
+<p>Zilles e Salisbury <a class="citation" href="#art:zilles">(Zilles, C. B. &amp; Salisbury, J. K., 1995)</a> hanno sviluppato un algoritmo più
+sofisticato per il rendering delle forze basato sulla tecnica
+point–based; hanno definito un nuovo punto, detto <em>god–object</em> o
+<em>proxy</em>, rappresentante la locazione sulla superficie del punto di
+contatto che viene calcolato ogni volta che il dispositivo viene mosso,
+con il vincolo ulteriore che la distanza tra god–object e HIP deve
+essere minimizzata, mentre il god–object resta sempre sulla superficie
+dell’oggetto anche quando il punto HIP lo penetra.</p>
+
+<p>Un approccio più semplice consiste nel calcolare un’approssimazione
+della superficie come un piano tangente al punto di contatto; tale piano
+viene aggiornato ad una frequenza inferiore a quella propria del
+rendering delle forze, pertanto può portare a sentire delle
+discontinuità se il dispositivo viene mosso su grandi distanze prima che
+il piano venga aggiornato.</p>
+
+<p>Un’altra tecnica consiste nel considerare gli oggetti virtuali come
+volumi formati da <em>voxel</em> (elementi di volume rappresentanti un valore
+su una griglia regolare nello spazio tridimensionale); ad ogni voxel
+vengono associati otto byte di informazioni, includenti i valori di
+densità del materiale, gradiente di densità, colore e altre proprietà
+aptiche come viscosità ed elasticità. Quando il punto HIP si trova
+all’interno dell’oggetto, il valore scalare di densità al punto di
+contatto viene usato per calcolare la forza di reazione attraverso delle
+trasformazioni lineari, mentre il valore di gradiente della densità
+viene usato per determinare la direzione normale alla superficie.</p>
+
+<p>Basdogan ha sviluppato una tecnica di rendering ray–based
+<a class="citation" href="#art:basdogan1">(Basdogan, C., Ho, C. H., &amp; Srinivasan, M. A., 1997)</a> nella quale le coordinate delle due estremità della
+sonda vengono aggiornate ad ogni movimento, rilevando ogni collisione
+tra il raggio e l’oggetto virtuale e calcolando la forza secondo la
+legge di Hooke. Il rilevamento delle collisioni avviene in tre passi:
+per prima cosa viene rilevata la collisione tra il raggio e lo spazio
+rettangolare contenente l’oggetto virtuale, poi tra il raggio e lo
+spazio che circonda un qualsiasi elemento triangolare; infine viene
+rilevato il contatto tra il raggio e l’elemento triangolare usando
+calcoli geometrici. La divisione in più passi porta ad un aumento di
+prestazioni consentendo di lavorare a frame rate più elevati.</p>
+
+<h2 id="rendering-dei-dettagli-della-superficie">Rendering dei dettagli della superficie</h2>
+
+<figure class="image">
+  <img src="images/forcedetail.jpg" alt="Tecniche di rendering aptico dei dettagli di una superficie; le frecce rappresentano i vettori delle forze riflesse. L'area in grigio rappresenta la geometria dell'oggetto mentre la linea nera indica la geometria della superficie come viene percepita dall'utente." />
+  <figcaption>Tecniche di rendering aptico dei dettagli di una superficie; le frecce rappresentano i vettori delle forze riflesse. L'area in grigio rappresenta la geometria dell'oggetto mentre la linea nera indica la geometria della superficie come viene percepita dall'utente.</figcaption>
+</figure>
+
+<p>Esistono diverse tecniche per effettuare il rendering dei dettagli della
+superficie, diverse a seconda del tipo di sensazione che deve essere
+data: superficie smussata, superficie con tessitura o superficie con
+frizione.</p>
+
+<h3 id="rendering-di-superfici-smussate">Rendering di superfici smussate</h3>
+
+<p>Quando gli oggetti vengono rappresentati tramite insiemi di poligoni,
+l’utente non percepisce la forma che si intendeva rappresentare, ma
+avverte i lati e gli angoli dei vari poligoni. Per minimizzare tale
+effetto Morgenbesser e Srinivasan <a class="citation" href="#art:srinivasan2">(Srinivasan, M. A. &amp; Morgenbesser, H. B., 1996)</a> hanno elaborato una
+tecnica chiamata <em>force shading</em>: con tale metodo il vettore della forza
+viene interpolato lungo la superficie in modo che la sua direzione vari
+con continuità, di conseguenza l’utente avverte una
+superficie più smussata rispetto alla sua rappresentazione originale.
+Diventa così possibile sviluppare modelli geometrici di diverso livello
+di dettaglio ed effettuare poi il rendering con il modello di forza
+dettagliato o con il modello force–shaded a seconda dei requisiti
+dell’applicazione.</p>
+
+<p>Il force shading potrebbe diventare poco efficiente quando gli angoli
+tra i poligoni che rappresentano una superficie sono al di sotto di un
+certo valore; in questo caso è sufficiente diminuire il numero di
+poligoni utilizzati fino a quando gli angoli tra questi sono tutti
+maggiori del valore critico.</p>
+
+<h3 id="sec:rendering_tessiture">Rendering delle tessiture aptiche</h3>
+
+<p>Srinivasan e Basdogan <a class="citation" href="#art:basdogan2">(Srinivasan, M. A. &amp; Basdogan, C., 1997)</a> hanno sviluppato due metodologie
+per il rendering delle tessiture di superfici tridimensionali che
+prendono spunto da quelle usate nella computer graphics:</p>
+
+<ul>
+  <li>
+    <p><em>Perturbazione delle forze</em>: La perturbazione delle forze consiste nel modificare la direzione e
+  il modulo del vettore delle forze per generare effetti sulla
+  superficie (come la ruvidità). Max e Becker <a class="citation" href="#art:max">(Max, N. L. &amp; Becker, B. G., 1994)</a> hanno
+  sviluppato una formula che permette di generare delle ruvidità
+  visuali, basandosi sulla normale alla superficie originale:
+  <script type="math/tex">M = N - \nabla h + (\nabla h \cdot N)N</script> dove <script type="math/tex">M</script> è la normale
+  modificata, <script type="math/tex">N</script> è la normale originale e <script type="math/tex">\nabla h</script> è il gradiente
+  della profondità della tessitura. Lo stesso metodo può essere usato
+  per generare la ruvidità aptica.</p>
+  </li>
+  <li>
+    <p><em>Displacement mapping</em>:  In questo caso, invece di modificare il vettore delle forze, viene
+  modificata la geometria della superficie. Per generare micro–tessiture è
+  necessario che la superficie sia composta da un numero elevato di
+  poligoni, in modo tale da rendere possibile la sua modifica punto
+  per punto; tutto ciò però incrementa considerevolmente il carico
+  computazionale. Usare questa tecnica per il rendering aptico
+  comporta ulteriori problemi: gli oggetti virtuali non possono essere
+  infinitamente rigidi, perciò il dispositivo penetra all’interno
+  della superficie; oppure il rilevamento delle collisioni o la
+  localizzazione dei punti sulla superficie ogni volta che la sonda
+  viene mossa crea ambiguità dovute all’esistenza di micro–dettagli,
+  portando a delle discontinuità delle forze. Si capisce come il
+  displacement mapping sia più indicato per il rendering di
+  macro–tessiture.</p>
+  </li>
+</ul>
+
+<p>Altre tecniche invece si basano sull’uso della frequenza e della
+profondità delle tessiture:</p>
+
+<ul>
+  <li>
+    <p><em>Tessiture aptiche basate sulle immagini</em>: L’idea consiste nell’utilizzare le informazioni dell’immagine
+  bidimensionale usata come texture dell’oggetto virtuale; assumendo
+  che le intensità di grigio dell’immagine possano essere usate
+  direttamente come indicatori della profondità della tessitura
+  aptica, possiamo associare ogni coordinata della texture <script type="math/tex">(u,v)</script>
+  alle coordinate di ogni vertice <script type="math/tex">(x,y,z)</script>. Viene poi calcolato il
+  gradiente della profondità al punto di collisione e il vettore della
+  forza è perturbato di conseguenza.</p>
+  </li>
+  <li>
+    <p><em>Tessiture aptiche procedurali</em>: L’obiettivo è generare le tessiture aptiche mediante funzioni
+  matematiche, usandole poi per modificare il gradiente <script type="math/tex">\nabla h</script> e
+  la forza di reazione al punto di contatto, o per modificare la
+  geometria dell’oggetto; un esempio è la simulazione di tessiture
+  stocastiche <a class="citation" href="#art:fritz">(Fritz, J. P. &amp; Barner, K. E., 1996)</a>.</p>
+  </li>
+</ul>
+
+<h3 id="rendering-delle-superfici-con-frizione">Rendering delle superfici con frizione</h3>
+
+<p>L’aggiunta di forze di frizione rende la simulazione aptica più
+realistica; ad esempio, senza frizione non saremmo in grado di premere
+un pulsante virtuale in quanto il dispositivo scivolerebbe su di esso.</p>
+
+<p>Molti ricercatori hanno proposto l’utilizzo di frizioni di Coulomb o
+frizioni viscose; le prime hanno una componente di frizione statica e
+una di frizione dinamica, mentre le altre sono dipendenti dalla
+velocità. Entrambi i tipi esercitano una forza opposta e tangenziale al
+punto di contatto. Se la misurazione della velocità di contatto è
+affetta da rumore o i cambiamenti di posizione sono troppo veloci,
+l’interazione aptica potrebbe diventare instabile.</p>
+
+<h2 id="sec:tessiture_stocastiche">Generazione di tessiture casuali con il metodo stocastico</h2>
+
+<p>Definiamo <em>spazio di tessitura</em> un volume di tessitura rappresentato da
+vettori tridimensionali; un campione in un punto qualsiasi è un vettore
+tridimensionale senza vincoli su modulo o direzione. Questo spazio
+continuo viene generato tramite vari processi che possono essere
+deterministici, stocastici o misti.</p>
+
+<p>Le caratteristiche di una tessitura possono essere descritte tramite il
+suo spettro di potenza, e variando lo spettro si ottengono diverse
+tessiture.</p>
+
+<h3 id="modelli-stocastici">Modelli stocastici</h3>
+
+<p>I modelli stocastici sono caratterizzati da misure statistiche di una
+immagine di texture; spesso sono sufficienti le misure di basso ordine.
+Il pattern della texture viene sintetizzato applicando ad un rumore
+bianco un filtro basato sulla funzione di autocorrelazione.</p>
+
+<p>Dato che l’obiettivo non è simulare tessiture reali, bensì tessiture che
+siano percettibilmente diverse l’una dall’altra, è possibile generare le
+texture proprio processando un rumore tramite un filtro. Il rumore deve
+essere a banda limitata (rumore rosa), stazionario (invariante rispetto
+alla traslazione), isotropico e non deve essere periodico; il rumore
+bianco filtrato possiede queste proprietà. In particolare si considera
+il <em>rumore bianco gaussiano</em>: una trasformazione di un vettore casuale
+gaussiano resta gaussiano ed è completamente definito dalle sue
+statistiche di primo e secondo ordine. Semplicemente modificando la
+varianza (e di conseguenza lo spettro di potenza) è possibile ottenere
+tessiture che vanno da lisce a ruvide <a class="citation" href="#art:siira">(Siira, J. &amp; Pai, D. K., 1996)</a>.</p>
+
+<p>Per tessiture complesse si può utilizzare una <em>pdf</em> (probability density
+function) ottenuta da varie pdf gaussiane:
+<script type="math/tex">f(x) = \sum_{i=1}^{M} a_i N({\mu}_i,C_i),</script> dove
+<script type="math/tex">\sum_{i=1}^{M} a_i = 1</script> e <script type="math/tex">N(\cdot)</script> è l’i-esima pdf gaussiana con
+media <script type="math/tex">{\mu}_i</script> e matrice di covarianza <script type="math/tex">C_i</script>; i termini <script type="math/tex">a_i</script> possono
+essere variati arbitrariamente, o modellati in base a tessiture reali.
+In figura è rappresentata una texture bidimensionale
+composta da due pdf gaussiane.</p>
+
+<figure class="image">
+  <img src="images/gaussianpdf.jpg" alt="Texture bidimensionale composta da due pdf
+gaussiane." />
+  <figcaption>Texture bidimensionale composta da due pdf
+gaussiane.</figcaption>
+</figure>
+
+<p>Tutte queste metodologie producono campioni indipendenti e identicamente
+distribuiti, ottenendo così uno spettro di potenza costante; per
+modificare tale spettro è sufficiente filtrarlo con tecniche che
+affiancano trasformazioni statistiche al normale filtraggio. Un esempio
+è costituito dal moto Browniano visto nel paragrafo
+<a href="#sec:tessiture_superficie">[sec:tessiture_superficie]</a>{reference-type=”ref”
+reference=”sec:tessiture_superficie”}, un processo invariante rispetto
+alla scala descritto da un parametro di auto–similarità <script type="math/tex">h</script> e uno
+spettro di potenza di tipo <script type="math/tex">1/f</script> <a class="citation" href="#art:ebert">(Ebert, D. S., Musgrave, F. K., Peachey, D., Perlin, K., &amp; Worley, S., 1994)</a> <a class="citation" href="#art:haruyama">(Haruyama, S. &amp; Barsky, B. A., 1984)</a>.</p>
+
+<h3 id="procedure-implicite-e-sintesi-spettrale-di-fourier">Procedure implicite e sintesi spettrale di Fourier</h3>
+
+<p>La creazione di uno spettro di potenza è possibile anche tramite
+procedure implicite, usando ad esempio delle sinusoidi, che nel dominio
+della frequenza diventano degli impulsi. Dalla teoria di Fourier si sa
+che ogni segnale periodico può essere visto come somma di infinite
+sinusoidi: così la creazione di una texture diventa un procedimento di
+sintesi spettrale di Fourier. Le caratteristiche dello spettro vengono
+modificate modulando l’ampiezza e la frequenza delle sinusoidi, mentre
+altri effetti spaziali possono essere ottenuti con variazioni di fase.
+Possono essere utilizzate anche altre funzioni, come dente di sega o
+onde quadre, le quali aggiungono componenti in alta frequenza ad
+intervalli armonici; segnali di questo tipo diventano delle vibrazioni
+in un’interfaccia aptica, fatto che può rendere più realistica la
+tessitura.</p>
+
+<p>Se il periodo dei segnali è sufficientemente ampio, le funzioni
+periodiche possono essere usate per creare tessiture che appaiono
+casuali. Un altro modo per creare tessiture casuali con funzioni
+periodiche è l’uso di un processo stocastico: il vettore delle forze
+della tessitura <script type="math/tex">F_t</script> alla posizione <script type="math/tex">p</script> può essere espresso tramite la
+seguente equazione: <script type="math/tex">F_t(p) = Sg(p)+N,</script> dove <script type="math/tex">g(p)</script> è una funzione
+implicita e deterministica, <script type="math/tex">S</script> è un rumore moltiplicativo e <script type="math/tex">N</script>
+rappresenta un rumore sovrapposto. Il rumore moltiplicativo può essere
+usato per scalare casualmente una funzione deterministica apportando
+ulteriori variazioni alla tessitura.</p>
+
+<h3 id="filtraggio">Filtraggio</h3>
+
+<figure class="image">
+  <img src="images/filtraggio.jpg" alt="Schema a blocchi per modellare una texture tramite filtraggio; H(z) è la funzione di trasferimento complessiva." />
+  <figcaption>Schema a blocchi per modellare una texture tramite filtraggio; H(z) è la funzione di trasferimento complessiva.</figcaption>
+</figure>
+
+<p>Il filtraggio viene usato per modellare lo spettro di potenza allo scopo
+di ottenere una tessitura con determinate caratteristiche. Una
+classificazione qualitativa delle tessiture può così essere tradotta in
+una descrizione spettrale. Ad esempio, le tessiture possono essere
+ruvide, lisce, fini, granulate, regolari o irregolari; alcune di queste
+caratteristiche denotano periodicità, mentre altre comportano delle
+amplificazioni a determinate frequenze. Così, manipolando lo spettro di
+potenza delle primitive in input è possibile cambiare questi descrittori
+qualitativi. Diverse tecniche di filtraggio possono essere impiegate a
+tale scopo:</p>
+
+<ul>
+  <li>
+    <p>I filtri lineari FIR sono filtri facili da progettare e implementare
+e offrono una certa flessibilità. Il modellamento di un rumore
+bianco può ad esempio essere fatto mediante un banco di filtri FIR
+passabanda (equalizzatore parametrico), nel quale i parametri
+impostabili sono la frequenza centrale, la larghezza di banda e il
+guadagno.</p>
+  </li>
+  <li>
+    <p>I filtri IIR consentono un miglior controllo spettrale, pur essendo
+più complessi da progettare. Quando in input ad un filtro IIR viene
+dato un rumore, il sistema è anche noto come modello ARMA
+(autoregressive moving average).</p>
+  </li>
+</ul>
+
+<p>L’implementazione del filtraggio è computazionalmente piuttosto costosa.
+Tale problema può essere ovviato utilizzando un pre–filtraggio, il
+quale permette di risparmiare tempo durante la simulazione consumando
+però più memoria.</p>
+
+<h2 id="riferimenti">Riferimenti</h2>
+
+<ol class="bibliography"><li><span id="art:stone">Stone, R. J. (2000). Haptic Feedback: A Potted History, From Telepresence to Virtual Reality. In S. Berlin (Ed.), <i>Haptic Human-Computer Interaction: First International Workshop, Glasgow, UK</i>.</span></li>
+<li><span id="art:barbagli1">Barbagli, F., Salisbury, K., &amp; Devengenzo, R. (2003). Enabling Multifinger, Multihand Virtualized Grasping. <i>Proc. IEEE Int’l Conf. Robotics and Automation (ICRA 03), Vol. 1</i>, 806–815.</span></li>
+<li><span id="art:basdogan1">Basdogan, C., Ho, C. H., &amp; Srinivasan, M. A. (1997). A Ray-Based Haptic Rendering Technique for Displaying Shape and Texture of 3D Objects in Virtual Environments. <i>Proc. ASME Dynamic Systems and Control Division</i>, <i>61</i>, 77–84.</span></li>
+<li><span id="art:mcneely">McNeely, W., Puterbaugh, K., &amp; Troy, J. (1999). Six Degree-of-Freedom Haptic Rendering Using Voxel Sampling. <i>Proc. ACM Siggraph</i>, 401–408.</span></li>
+<li><span id="art:otaduy">Otaduy, M.A., &amp; Lin, M. (2003). Sensation Preserving Simplification for Haptic Rendering. <i>Proc. ACM Siggraph</i>, 543–553.</span></li>
+<li><span id="art:basdogan2">Srinivasan, M. A., &amp; Basdogan, C. (1997). Haptics In Virtual Enviroments: Taxonomy, Research Status, and Challenges. <i>Comput &amp; Graphics</i>, <i>21</i>(4), 393–404.</span></li>
+<li><span id="art:zilles">Zilles, C. B., &amp; Salisbury, J. K. (1995). A constraint based god-object method for haptic display. <i>IEEE International Conference on Intelligent Robots and Systems</i>.</span></li>
+<li><span id="art:srinivasan2">Srinivasan, M. A., &amp; Morgenbesser, H. B. (1996). Force Shading for Haptic Shape Perception. <i>Proceedings of the ASME Dynamic System and Control Division</i>, <i>58</i>, 407–412.</span></li>
+<li><span id="art:max">Max, N. L., &amp; Becker, B. G. (1994). Bump shading for volume texture. <i>IEEE Computer Graphics and Applications</i>, (14), 18–20.</span></li>
+<li><span id="art:fritz">Fritz, J. P., &amp; Barner, K. E. (1996). Stochastic Models For Haptic Texture. <i>Proceedings of SPIE’s International Symposium on Intelligent System and Advanced Manufactoring - Telemanipulator and Telepresence Technologies III</i>.</span></li>
+<li><span id="art:siira">Siira, J., &amp; Pai, D. K. (1996). Haptic texturing - a stochastic approach. <i>International Conference on Robotics and Automation</i>.</span></li>
+<li><span id="art:ebert">Ebert, D. S., Musgrave, F. K., Peachey, D., Perlin, K., &amp; Worley, S. (1994). Texturing and Modeling: a procedural approach. <i>AP Professional</i>.</span></li>
+<li><span id="art:haruyama">Haruyama, S., &amp; Barsky, B. A. (1984). Using stochastic modeling for texture generation. <i>IEEE Computer Graphics and Applications</i>, 7–19.</span></li></ol>
+
+
+<span class="post-date">
+  Pubblicato il
+  
+  February
+  5th,
+  2019
+  by
+  
+    Andrea Maglie
+  
+</span>
+
+<div class="post-date">Condividi!</div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=Dispositivi Aptici&amp;url=/dispositivi-aptici.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/dispositivi-aptici.html&amp;title=Dispositivi Aptici" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/dispositivi-aptici.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 >Potrebbero interessarti:</h1>
+  
+  <ul class="related-posts">
+    
+      
+        
+          <li>
+            <h3>
+              <a href="/esperimenti-percezione-audio-aptica.html">
+                Esperimenti sulla percezione audio--aptica
+                <!--<img src="/images/">-->
+                <!--<small>February 26, 2019</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+        
+          <li>
+            <h3>
+              <a href="/applicazione-phantom-friction.html">
+                L'applicazione Phantom Friction
+                <!--<img src="/images/">-->
+                <!--<small>February 19, 2019</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+        
+          <li>
+            <h3>
+              <a href="/phantom-omni.html">
+                Il Phantom  Omni
+                <!--<img src="/images/">-->
+                <!--<small>February 12, 2019</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+    
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+    
+  </ul>
+</div>
+
+
+
+  <section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = "techisfun";
+    var disqus_identifier = "/dispositivi-aptici.html";
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/techisfun" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/techisfun" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="http://www.linkedin.com/in/andreamaglie/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:l.andrea.maglie@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">ing. Andrea Maglie |  by Andrea Maglie</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>
