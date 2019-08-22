@@ -14,7 +14,7 @@ _Nel 2006 pubblicavo questa tesi dal titolo "Una piattaforma per il rendering au
 3. [Pure Data e i modelli audio]({{ site.baseurl }}{% link _posts/2019-01-29-pure-data-modelli-audio.md %})
 4. [Dispositivi aptici]({{ site.baseurl }}{% link _posts/2019-02-05-dispositivi-aptici.md %})
 5. [Il Phantom Omni]({{ site.baseurl }}{% link _posts/2019-02-12-phantom-omni.md %})
-6. L'applicazione Phantom Friction
+6. [L'applicazione Phantom Friction]({{ site.baseurl }}{% link _posts/2019-02-19-applicazione-phantom-friction.md %})
 7. Esperimenti sulla percezione audio-aptica
 
 # Introduzione
