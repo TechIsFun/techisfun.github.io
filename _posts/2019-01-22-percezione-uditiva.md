@@ -2,8 +2,9 @@
 layout: post
 title: La percezione uditiva
 tags: [haptic feedback, pure data]
-bibliography: 'LaTex/bibliografia.bib'
 ---
+
+{% include tesi-disclaimer.html %}
 
 I suoni che percepiamo ogni giorno nascono da interazioni tra oggetti
 (un martello che colpisce un metallo, una moneta che cade) o da

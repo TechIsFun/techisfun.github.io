@@ -5,7 +5,7 @@ tags: [haptic feedback, pure data]
 image: hero-phantomomni.jpg
 ---
 
-_10 anni fa pubblicavo questa tesi per la mia laurea in Ingegneria Informatica all’Università di Padova. 9 mesi passati a lavorare su quello che sicuramente è il progetto più complesso e interessante sul quale abbia mai lavorato._
+_Nel 2006 pubblicavo questa tesi dal titolo "Una piattaforma per il rendering audio aptico di interazioni continue" per la mia laurea in Ingegneria Informatica all’Università di Padova. 9 mesi passati a lavorare su quello che sicuramente è il progetto più complesso e interessante sul quale abbia mai lavorato._
 
 # Indice dei capitoli
 
@@ -13,7 +13,7 @@ _10 anni fa pubblicavo questa tesi per la mia laurea in Ingegneria Informatica a
 2. [La percezione uditiva]({{ site.baseurl }}{% link _posts/2019-01-22-percezione-uditiva.md %})
 3. [Pure Data e i modelli audio]({{ site.baseurl }}{% link _posts/2019-01-29-pure-data-modelli-audio.md %})
 4. [Dispositivi aptici]({{ site.baseurl }}{% link _posts/2019-02-05-dispositivi-aptici.md %})
-5. Il Phantom Omni
+5. [Il Phantom Omni]({{ site.baseurl }}{% link _posts/2019-02-12-phantom-omni.md %})
 6. L'applicazione Phantom Friction
 7. Esperimenti sulla percezione audio-aptica
 

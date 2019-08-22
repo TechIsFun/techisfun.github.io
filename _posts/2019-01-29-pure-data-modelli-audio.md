@@ -5,6 +5,8 @@ tags: [haptic feedback, pure data]
 image: patchsliding1.jpg
 ---
 
+{% include tesi-disclaimer.html %}
+
 Il modello di rotolamento
 -------------------------
 

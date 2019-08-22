@@ -4,6 +4,8 @@ title: La percezione aptica
 tags: [haptic feedback, pure data]
 ---
 
+{% include tesi-disclaimer.html %}
+
 Il tatto
 --------
 

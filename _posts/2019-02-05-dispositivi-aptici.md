@@ -2,8 +2,9 @@
 layout: post
 title: Dispositivi Aptici
 tags: [haptic feedback, pure data]
-bibliography: 'LaTex/bibliografia.bib'
 ---
+
+{% include tesi-disclaimer.html %}
 
 Cosa sono i dispositivi aptici
 ------------------------------
