@@ -2,6 +2,9 @@
 
 # Script per generare il sito e pubblicare il sito statico così generato su master
 
+echo "> Bundle install..."
+bundle install --path vendor/bundle
+
 echo "> Generate static site..."
 bundle exec jekyll build
 
