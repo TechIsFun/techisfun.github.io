@@ -45,42 +45,42 @@ User user = null;
 
 serviceEndpoint.login(username, password, new Callback<AccessToken>() {
 
-    @Override
-    public void success(User user, Response response) {
+  @Override
+  public void success(User user, Response response) {
 
-    	// store accessToken somewhere
+    // store accessToken somewhere
 
-        serviceEndpoint.getUser(new Callback<User>() {
-            @Override
-            public void success(User userResponse, Response response) {
+    serviceEndpoint.getUser(new Callback<User>() {
+      @Override
+      public void success(User userResponse, Response response) {
 
-            	user = userResponse;
+        user = userResponse;
 
-                serviceEndpoint.getUserContact(user.getId(), new Callback<Contact>() {
-                    @Override
-                    public Contact success(Contact contact, Response response) {
-                    	user.setContact(contact);
-                    }
+        serviceEndpoint.getUserContact(user.getId(), new Callback<Contact>() {
+          @Override
+          public Contact success(Contact contact, Response response) {
+        	user.setContact(contact);
+          }
 
-                    @Override
-                    public void failure(RetrofitError error) {
-                    	// handle error here...
-                    }
-                });
-            }
-
-            @Override
-            public void failure(RetrofitError error) {
-                // handle error here...
-            }
+          @Override
+          public void failure(RetrofitError error) {
+        	// handle error here...
+          }
         });
+      }
 
-    }
-
-    @Override
-    public void failure(RetrofitError error) {
+      @Override
+      public void failure(RetrofitError error) {
         // handle error here...
-    }
+      }
+    });
+
+  }
+
+  @Override
+  public void failure(RetrofitError error) {
+    // handle error here...
+  }
 });
 {% endhighlight %}
 
@@ -89,12 +89,10 @@ Ok, maybe these APIs are not well designed, but sometimes you have to deal with 
 If we use RxJava + Retrofit (Retrofit is already compatible with RxJava), the code above will become:
 
 {% highlight java %}
-
- 	serviceEndpoint.login()
-            .doOnNext(accessToken -> storeCredentials(accessToken))
-            .flatMap(accessToken -> serviceEndpoint.getUser())
-            .flatMap(user -> serviceEndpoint.getUserContact(user.getId()))
-
+serviceEndpoint.login()
+    .doOnNext(accessToken -> storeCredentials(accessToken))
+    .flatMap(accessToken -> serviceEndpoint.getUser())
+    .flatMap(user -> serviceEndpoint.getUserContact(user.getId()))
 {% endhighlight %}
 
 Cool, right?
@@ -104,16 +102,14 @@ There are actually many ways to achieve the same result using RxJava, but they'r
 
 For Android developers, it gets even better. RxJava (and it's extension RxAndroid) can handle all the stuff about running long tasks in a background thread and present results on the main thread. Starting from the example above, if we want to login the user and display it's name, we can write just some lines of code:
 
-{% highlight java linenos=table %}
-// this code il placed inside an Activity
-
-AppObservable.bindActivity(this,
+{% highlight java %}
+AppObservable.bindActivity(
+    this,
     serviceEndpoint.login()
                 .doOnNext(accessToken -> storeCredentials(accessToken))
                 .flatMap(accessToken -> serviceEndpoint.getUser())
                 .flatMap(user -> serviceEndpoint.getUserContact(user.getId()))
-    ).subscribe(user -> mUserNameTextView.setText(user.getName()));
-
+).subscribe(user -> mUserNameTextView.setText(user.getName()));
 {% endhighlight %}
 
 Ok, I know, it seems hard to understand at first. But _AppObservable.bindActivity_ will make the network call (line 4 to 7) in a background thread, while the result will be delivered in the main thread, so we can change the view (line 8). Plus, the method is automatically binded to the activity lifecycle, so the result will not be delivered if the activity is paused.
@@ -124,7 +120,9 @@ _This is super!_
 ## Good, I think I will learn it! Where should I start?
 You can find many articles about ReactiveX, but only a few of them are easy to understand for a newbie.
 
-- I can suggest you to start from this: [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754). I've found it very clear and comprehensive of many aspects of reactive programming.
+- I suggest you to start from my book [*Reactive Java Programming*, available on Amazon](https://amzn.to/30hejXq).
+
+[<img src="/assets/img/rxjava-book.jpg">](https://amzn.to/30hejXq)
 
 - Here is a good talk about RxJava by *Ivan Morgillo* at droidconDE 2015. It's focused on Android programming only in the last part. The most of the talk covers aspects of reactive programming that can be applied to all languages.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JCLZ55M2gVo" frameborder="0" allowfullscreen></iframe>
