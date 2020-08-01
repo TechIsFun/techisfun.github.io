@@ -55,7 +55,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-07-30T00:00:00+02:00" />
 <script type="application/ld+json">
-{"name":null,"description":"The next library you will learn should definetly be ReactiveX.","author":{"@type":"Person","name":"Andrea Maglie"},"@type":"BlogPosting","url":"/rxjava-android-where-to-start.html","publisher":null,"image":null,"headline":"ReactiveX, RxJava and RxAndroid - where to start","dateModified":"2015-07-30T00:00:00+02:00","datePublished":"2015-07-30T00:00:00+02:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"/rxjava-android-where-to-start.html"},"@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/rxjava-android-where-to-start.html"},"url":"/rxjava-android-where-to-start.html","publisher":null,"name":null,"author":{"@type":"Person","name":"Andrea Maglie"},"description":"The next library you will learn should definetly be ReactiveX.","headline":"ReactiveX, RxJava and RxAndroid - where to start","dateModified":"2015-07-30T00:00:00+02:00","datePublished":"2015-07-30T00:00:00+02:00","sameAs":null,"image":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -161,52 +161,52 @@ Tipically we would have to write nested API calls like this:</p>
 
 <span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">login</span><span class="o">(</span><span class="n">username</span><span class="o">,</span> <span class="n">password</span><span class="o">,</span> <span class="k">new</span> <span class="n">Callback</span><span class="o">&lt;</span><span class="n">AccessToken</span><span class="o">&gt;()</span> <span class="o">{</span>
 
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">success</span><span class="o">(</span><span class="n">User</span> <span class="n">user</span><span class="o">,</span> <span class="n">Response</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">success</span><span class="o">(</span><span class="n">User</span> <span class="n">user</span><span class="o">,</span> <span class="n">Response</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
 
-    	<span class="c1">// store accessToken somewhere</span>
+    <span class="c1">// store accessToken somewhere</span>
 
-        <span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">getUser</span><span class="o">(</span><span class="k">new</span> <span class="n">Callback</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;()</span> <span class="o">{</span>
-            <span class="nd">@Override</span>
-            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">success</span><span class="o">(</span><span class="n">User</span> <span class="n">userResponse</span><span class="o">,</span> <span class="n">Response</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">getUser</span><span class="o">(</span><span class="k">new</span> <span class="n">Callback</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;()</span> <span class="o">{</span>
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">success</span><span class="o">(</span><span class="n">User</span> <span class="n">userResponse</span><span class="o">,</span> <span class="n">Response</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
 
-            	<span class="n">user</span> <span class="o">=</span> <span class="n">userResponse</span><span class="o">;</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="n">userResponse</span><span class="o">;</span>
 
-                <span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">getUserContact</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="k">new</span> <span class="n">Callback</span><span class="o">&lt;</span><span class="n">Contact</span><span class="o">&gt;()</span> <span class="o">{</span>
-                    <span class="nd">@Override</span>
-                    <span class="kd">public</span> <span class="n">Contact</span> <span class="nf">success</span><span class="o">(</span><span class="n">Contact</span> <span class="n">contact</span><span class="o">,</span> <span class="n">Response</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
-                    	<span class="n">user</span><span class="o">.</span><span class="na">setContact</span><span class="o">(</span><span class="n">contact</span><span class="o">);</span>
-                    <span class="o">}</span>
+        <span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">getUserContact</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="k">new</span> <span class="n">Callback</span><span class="o">&lt;</span><span class="n">Contact</span><span class="o">&gt;()</span> <span class="o">{</span>
+          <span class="nd">@Override</span>
+          <span class="kd">public</span> <span class="n">Contact</span> <span class="nf">success</span><span class="o">(</span><span class="n">Contact</span> <span class="n">contact</span><span class="o">,</span> <span class="n">Response</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
+        	<span class="n">user</span><span class="o">.</span><span class="na">setContact</span><span class="o">(</span><span class="n">contact</span><span class="o">);</span>
+          <span class="o">}</span>
 
-                    <span class="nd">@Override</span>
-                    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">failure</span><span class="o">(</span><span class="n">RetrofitError</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
-                    	<span class="c1">// handle error here...</span>
-                    <span class="o">}</span>
-                <span class="o">});</span>
-            <span class="o">}</span>
-
-            <span class="nd">@Override</span>
-            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">failure</span><span class="o">(</span><span class="n">RetrofitError</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
-                <span class="c1">// handle error here...</span>
-            <span class="o">}</span>
+          <span class="nd">@Override</span>
+          <span class="kd">public</span> <span class="kt">void</span> <span class="nf">failure</span><span class="o">(</span><span class="n">RetrofitError</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
+        	<span class="c1">// handle error here...</span>
+          <span class="o">}</span>
         <span class="o">});</span>
+      <span class="o">}</span>
 
-    <span class="o">}</span>
-
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">failure</span><span class="o">(</span><span class="n">RetrofitError</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">failure</span><span class="o">(</span><span class="n">RetrofitError</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// handle error here...</span>
-    <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">});</span>
+
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">failure</span><span class="o">(</span><span class="n">RetrofitError</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// handle error here...</span>
+  <span class="o">}</span>
 <span class="o">});</span></code></pre></figure>
 
 <p>Ok, maybe these APIs are not well designed, but sometimes you have to deal with it! ;-)</p>
 
 <p>If we use RxJava + Retrofit (Retrofit is already compatible with RxJava), the code above will become:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"> 	<span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">login</span><span class="o">()</span>
-            <span class="o">.</span><span class="na">doOnNext</span><span class="o">(</span><span class="n">accessToken</span> <span class="o">-&gt;</span> <span class="n">storeCredentials</span><span class="o">(</span><span class="n">accessToken</span><span class="o">))</span>
-            <span class="o">.</span><span class="na">flatMap</span><span class="o">(</span><span class="n">accessToken</span> <span class="o">-&gt;</span> <span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">getUser</span><span class="o">())</span>
-            <span class="o">.</span><span class="na">flatMap</span><span class="o">(</span><span class="n">user</span> <span class="o">-&gt;</span> <span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">getUserContact</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getId</span><span class="o">()))</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">login</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">doOnNext</span><span class="o">(</span><span class="n">accessToken</span> <span class="o">-&gt;</span> <span class="n">storeCredentials</span><span class="o">(</span><span class="n">accessToken</span><span class="o">))</span>
+    <span class="o">.</span><span class="na">flatMap</span><span class="o">(</span><span class="n">accessToken</span> <span class="o">-&gt;</span> <span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">getUser</span><span class="o">())</span>
+    <span class="o">.</span><span class="na">flatMap</span><span class="o">(</span><span class="n">user</span> <span class="o">-&gt;</span> <span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">getUserContact</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getId</span><span class="o">()))</span></code></pre></figure>
 
 <p>Cool, right?
 There are actually many ways to achieve the same result using RxJava, but they’re all better than using nested calls.</p>
@@ -215,22 +215,13 @@ There are actually many ways to achieve the same result using RxJava, but they�
 
 <p>For Android developers, it gets even better. RxJava (and it’s extension RxAndroid) can handle all the stuff about running long tasks in a background thread and present results on the main thread. Starting from the example above, if we want to login the user and display it’s name, we can write just some lines of code:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="code"><pre><span class="c1">// this code il placed inside an Activity</span>
-
-<span class="n">AppObservable</span><span class="o">.</span><span class="na">bindActivity</span><span class="o">(</span><span class="k">this</span><span class="o">,</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">AppObservable</span><span class="o">.</span><span class="na">bindActivity</span><span class="o">(</span>
+    <span class="k">this</span><span class="o">,</span>
     <span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">login</span><span class="o">()</span>
                 <span class="o">.</span><span class="na">doOnNext</span><span class="o">(</span><span class="n">accessToken</span> <span class="o">-&gt;</span> <span class="n">storeCredentials</span><span class="o">(</span><span class="n">accessToken</span><span class="o">))</span>
                 <span class="o">.</span><span class="na">flatMap</span><span class="o">(</span><span class="n">accessToken</span> <span class="o">-&gt;</span> <span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">getUser</span><span class="o">())</span>
                 <span class="o">.</span><span class="na">flatMap</span><span class="o">(</span><span class="n">user</span> <span class="o">-&gt;</span> <span class="n">serviceEndpoint</span><span class="o">.</span><span class="na">getUserContact</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getId</span><span class="o">()))</span>
-    <span class="o">).</span><span class="na">subscribe</span><span class="o">(</span><span class="n">user</span> <span class="o">-&gt;</span> <span class="n">mUserNameTextView</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getName</span><span class="o">()));</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">).</span><span class="na">subscribe</span><span class="o">(</span><span class="n">user</span> <span class="o">-&gt;</span> <span class="n">mUserNameTextView</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getName</span><span class="o">()));</span></code></pre></figure>
 
 <p>Ok, I know, it seems hard to understand at first. But <em>AppObservable.bindActivity</em> will make the network call (line 4 to 7) in a background thread, while the result will be delivered in the main thread, so we can change the view (line 8). Plus, the method is automatically binded to the activity lifecycle, so the result will not be delivered if the activity is paused.</p>
 
@@ -240,12 +231,13 @@ There are actually many ways to achieve the same result using RxJava, but they�
 <p>You can find many articles about ReactiveX, but only a few of them are easy to understand for a newbie.</p>
 
 <ul>
-  <li>
-    <p>I can suggest you to start from this: <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754">The introduction to Reactive Programming you’ve been missing</a>. I’ve found it very clear and comprehensive of many aspects of reactive programming.</p>
-  </li>
-  <li>
-    <p>Here is a good talk about RxJava by <em>Ivan Morgillo</em> at droidconDE 2015. It’s focused on Android programming only in the last part. The most of the talk covers aspects of reactive programming that can be applied to all languages.</p>
-  </li>
+  <li>I suggest you to start from my book <a href="https://amzn.to/30hejXq"><em>Reactive Java Programming</em>, available on Amazon</a>.</li>
+</ul>
+
+<p><a href="https://amzn.to/30hejXq"><img src="/assets/img/rxjava-book.jpg" /></a></p>
+
+<ul>
+  <li>Here is a good talk about RxJava by <em>Ivan Morgillo</em> at droidconDE 2015. It’s focused on Android programming only in the last part. The most of the talk covers aspects of reactive programming that can be applied to all languages.</li>
 </ul>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JCLZ55M2gVo" frameborder="0" allowfullscreen=""></iframe>
 
