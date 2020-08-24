@@ -1,4 +1,184 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-08-01T19:44:26+02:00</updated><id>/</id><title type="html">ing. Andrea Maglie</title><subtitle></subtitle><author><name>Andrea Maglie</name></author><entry><title type="html">Esperimenti sulla percezione audio–aptica</title><link href="/esperimenti-percezione-audio-aptica.html" rel="alternate" type="text/html" title="Esperimenti sulla percezione audio--aptica" /><published>2019-02-26T00:00:00+01:00</published><updated>2019-02-26T00:00:00+01:00</updated><id>/esperimenti-percezione-audio-aptica</id><content type="html" xml:base="/esperimenti-percezione-audio-aptica.html">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-08-24T15:26:57+02:00</updated><id>/</id><title type="html">ing. Andrea Maglie</title><subtitle></subtitle><author><name>Andrea Maglie</name></author><entry><title type="html">Get Started with Flutter Mobile Development: All You Need to Know</title><link href="/flutter-how-to-start.html" rel="alternate" type="text/html" title="Get Started with Flutter Mobile Development: All You Need to Know" /><published>2020-08-22T00:00:00+02:00</published><updated>2020-08-22T00:00:00+02:00</updated><id>/flutter-how-to-start</id><content type="html" xml:base="/flutter-how-to-start.html">&lt;p&gt;&lt;em&gt;Flutter&lt;/em&gt; is an open-source mobile UI framework by Google. It was released in May 2017 and the purpose behind creating Flutter was to enable users to create native mobile applications with only one codebase. In summary, it means to use a single programming language to create two different apps, one for iOS and one for Android.&lt;/p&gt;
+
+&lt;p&gt;Flutter is a framework that uses the programming language called &lt;em&gt;Dart&lt;/em&gt;. The language is a lot older than the framework itself and it was first created by Google in October 2011. It has improved a lot in the past few years and a major reason behind that is the continuous development by Google.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-learn-flutter&quot;&gt;Why Learn Flutter?&lt;/h2&gt;
+
+&lt;p&gt;The reason behind learning Flutter is because of the following reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is simple to learn. Since it is based on a framework, you don’t have to start everything from scratch. The best part about Flutter is that it is a comprehensive documentation available and a great community around it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You can publish to iOS and Android with the same course. No need to develop two different code bases for publishing your app.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Google Code labs offer guided tutorials for getting started with Flutter and launching your first project without any external help.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Flutter can increase user productivity exponentially through performance-focused code and a powerful UI experience made possiblebecause of Flutter widgets.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The popularity of Flutter can be easily gauged through this diagram.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./images/flutter-interest-over-time.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see in the past few years many people have started using Flutter because of its ease of use. Google, GROUPON, eBay, and Alibaba Group are also using Flutter to improve the robustness of their apps in a short time.&lt;/p&gt;
+
+&lt;h2 id=&quot;install-and-configure-flutter-sdk&quot;&gt;Install and configure Flutter SDK&lt;/h2&gt;
+
+&lt;p&gt;Now that we are familiar with Flutter, it is time to get started with this programming framework.&lt;/p&gt;
+
+&lt;p&gt;To get started, download Flutter SDK for your platform (Windows, macOS, Linux or Chrome OS) from this link: https://flutter.dev/docs/get-started/install. We will be using Mac to go through the whole installation process.&lt;/p&gt;
+
+&lt;p&gt;1 - Extract the files to your desired location (for example: &lt;code class=&quot;highlighter-rouge&quot;&gt;~/development&lt;/code&gt;)&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/development
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;unzip ~/Downloads/flutter_macos_1.20.2-stable.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;2 - Add Flutter tool to your path.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pwd&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/flutter/bin&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;3 - Download Flutter pre-development binaries by running the following code:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;flutter precache
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;4 - Check if you have missed anything during the installation of Flutter SDK with the following command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;flutter doctor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This command tells how and what dependencies need to be added to Flutter to make it work without any error. For example, you can find out if there’s a configuration error, like missing command-line tools in Android SDK:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[!] Android toolchain - develop for Android devices
+    • Android SDK at /usr/local/Caskroom/android-platform-tools/27.0.1
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • ANDROID_HOME = /usr/local/Caskroom/android-sdk/3859397
+    ✗ Android SDK is missing command line tools;
+    • Try re-installing or updating your Android SDK,
+      visit https://flutter.io/setup/#android-setup for detailed instructions.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This error means that you won’t be able to build any Flutter project until you fix it. The following output contains some warning that can be ignored:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, 1.20.2, on Mac OS X 10.15.5 19F101, locale it)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 29.0.3)
+[✓] Xcode - develop for iOS and macOS (Xcode 11.6)
+[✓] Android Studio (version 4.0)
+[!] IntelliJ IDEA Ultimate Edition (version 2020.2)
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    ✗ Dart plugin not installed; this adds Dart specific functionality.
+[!] VS Code (version 1.44.2)
+    ✗ Flutter extension not installed; install from
+      https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
+[!] Connected device
+    ! No devices available
+
+! Doctor found issues in 3 categories.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this case the sdk is correctly configured supposing that we work with Android Studio and not with IntelliJ or Visual Studio code.&lt;/p&gt;
+
+&lt;p&gt;The message &lt;code class=&quot;highlighter-rouge&quot;&gt;! No devices available&lt;/code&gt; just means that no physical device is actually connected and no emulator is running. We can continue to develop and build our application without any attached device; we’ll need to attach a device (or start emulator) only when we want to launch the app.&lt;/p&gt;
+
+&lt;h3 id=&quot;assign-the-same-path-to-flutter--dart&quot;&gt;Assign the Same Path to Flutter &amp;amp; Dart&lt;/h3&gt;
+
+&lt;p&gt;Starting from release 1.19.0, the Flutter SDK already contains the &lt;code class=&quot;highlighter-rouge&quot;&gt;dart&lt;/code&gt; command alongside the &lt;code class=&quot;highlighter-rouge&quot;&gt;flutter&lt;/code&gt; command. But if you installed Flutter and Dart at different times, you need to double check paths. Xcode won’t work if the assigned path of Flutter and Dart programming language is different. So you need to assign the same path to both of them. Here is an example of the wrong assigned path.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;which flutter dart
+
+/path-to-flutter-sdk/bin/flutter
+/usr/local/bin/dart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As you can see, files are placed in different &lt;code class=&quot;highlighter-rouge&quot;&gt;bin&lt;/code&gt; directories.&lt;/p&gt;
+
+&lt;p&gt;Fix your path env variable until you get an output like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;which flutter dart
+
+/path-to-flutter-sdk/bin/flutter
+/path-to-flutter-sdk/bin/dart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;install-xcode-on-mac&quot;&gt;Install Xcode on Mac&lt;/h3&gt;
+
+&lt;p&gt;Mac needs to install &lt;a href=&quot;https://developer.apple.com/xcode/&quot;&gt;Xcode&lt;/a&gt; to run the Flutter framework. So, download and install Xcode on your Mac system.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;xcode-select &lt;span class=&quot;se&quot;&gt;\-&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-switch&lt;/span&gt; /Applications/Xcode.app/Contents/Developer
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;xcodebuild &lt;span class=&quot;nt&quot;&gt;-runFirstLaunch&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Make sure that Xcode license agreement is signed, or else your mobile application won’t reach the build stage. To do so, type:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;xcodebuild &lt;span class=&quot;nt&quot;&gt;-license&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;xcode-emulator&quot;&gt;Xcode Emulator&lt;/h3&gt;
+
+&lt;p&gt;Xcode offers a mobile application emulator so that you can test the apps that you have created in a virtual environment. Type the following command to run the Xcode emulator.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;open &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; Simulator
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once you successfully run your Xcode simulator, you can start creating your first Flutter app.&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-your-first-flutter-app&quot;&gt;Creating Your First Flutter App&lt;/h2&gt;
+
+&lt;p&gt;Type the following command to start creating your app.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;flutter create my_flutter_app
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You will see a directory created. Enter this directory by typing the folder name in the console.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;my_flutter_app
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once you have created your first app, you can launch it on the iOS emulator using the following command.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;flutter run
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;more-resources-to-learn-flutter&quot;&gt;More Resources to Learn Flutter&lt;/h2&gt;
+
+&lt;p&gt;If you are interested in developing your web project using Flutter, you will need to learn everything about how Flutter works. Here are some of the best resources that can help you do that.&lt;/p&gt;
+
+&lt;h3 id=&quot;dartdev&quot;&gt;&lt;a href=&quot;https://dart.dev/&quot;&gt;Dart.dev&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;This is the official documentation for learning everything about the Dart programming language. The documentation covers every aspect of Dart language, from &lt;a href=&quot;https://dart.dev/samples&quot;&gt;Hello World&lt;/a&gt; to more advanced concepts like &lt;a href=&quot;https://dart.dev/guides/language/effective-dart&quot;&gt;Effective Dart&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;flutter-gallery&quot;&gt;Flutter Gallery&lt;/h3&gt;
+
+&lt;p&gt;Want to create an app but don’t want to start from scratch? That’s where the Flutter gallery comes in. It offers bits and pieces that you can join together to create what you want. Just like Lego.&lt;/p&gt;
+
+&lt;h3 id=&quot;flutters-for-beginners&quot;&gt;Flutters for Beginners&lt;/h3&gt;
+
+&lt;p&gt;So you want to start learning Flutter? The best way to learn a new framework is through a proper book. Books offer comprehensive experience and they cover the whole subject from top to bottom making it easier for users to easily grasp new concepts without worry. &lt;a href=&quot;https://amzn.to/3kDTk99&quot;&gt;Flutter for Beginners&lt;/a&gt; is a great book to learn Flutter.&lt;/p&gt;
+
+&lt;h3 id=&quot;flutter-development-free-course&quot;&gt;Flutter Development Free Course&lt;/h3&gt;
+
+&lt;p&gt;I personally love free courses on anything that can create value in my life. As a developer, I love all courses related to Flutter that can enhance my knowledge. The &lt;a href=&quot;https://resocoder.com/2019/08/27/flutter-tdd-clean-architecture-course-1-explanation-project-structure/&quot;&gt;Flutter development course&lt;/a&gt; by Reso Coder is a great resource for beginners.&lt;/p&gt;
+
+&lt;h3 id=&quot;flutter-newsletter&quot;&gt;Flutter Newsletter&lt;/h3&gt;
+
+&lt;p&gt;Finally, another great resource for learning all about the Flutter framework and staying updated on the latest developments is the &lt;a href=&quot;https://flutterweekly.net/&quot;&gt;Flutter newsletter&lt;/a&gt;. Simply subscribe to the newsletter if you already know Flutter but want to stay up to date on the latest happenings about the programming framework in the digital arena.&lt;/p&gt;
+
+&lt;h2 id=&quot;ready-to-start-flutter-development&quot;&gt;Ready to Start Flutter Development?&lt;/h2&gt;
+
+&lt;p&gt;Feeling excited? So am I!&lt;/p&gt;
+
+&lt;p&gt;Flutter development opens many new opportunities for users who would like to stay at the edge of their game. With Flutter, people can cut their costs of developing applications. Where they were building multiple applications, they can now use a single application that will work cross-platform without a problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If you still have any questions left, please feel free to ask us in the comment box below.&lt;/em&gt;&lt;/p&gt;</content><author><name>Andrea Maglie</name></author><category term="flutter" /><category term="mobile" /><summary type="html">Flutter is an open-source mobile UI framework by Google. It was released in May 2017 and the purpose behind creating Flutter was to enable users to create native mobile applications with only one codebase. In summary, it means to use a single programming language to create two different apps, one for iOS and one for Android.</summary></entry><entry><title type="html">Esperimenti sulla percezione audio–aptica</title><link href="/esperimenti-percezione-audio-aptica.html" rel="alternate" type="text/html" title="Esperimenti sulla percezione audio--aptica" /><published>2019-02-26T00:00:00+01:00</published><updated>2019-02-26T00:00:00+01:00</updated><id>/esperimenti-percezione-audio-aptica</id><content type="html" xml:base="/esperimenti-percezione-audio-aptica.html">&lt;hr /&gt;
 
 &lt;p&gt;&lt;i&gt;Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.&lt;/i&gt;&lt;/p&gt;
 &lt;hr /&gt;
@@ -5503,109 +5683,4 @@ Ecco qui di seguito l’elenco completo.&lt;/p&gt;
 
 &lt;h2 id=&quot;introduzione-a-machine-learning&quot;&gt;Introduzione a Machine Learning&lt;/h2&gt;
 &lt;p&gt;Speaker: &lt;em&gt;Cesare Montresor&lt;/em&gt;, Software Developer, Tarallucci, Vino e Machine Learning&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/SFdC80gC06A&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Andrea Maglie</name></author><category term="devfest" /><category term="gdg" /><summary type="html">L’edizione 2018 della DevFest Veneto, organizzata da noi del GDG Venezia, si è tenuta il 24 Novembre. Si tratta della nostra 2° DevFest e, come la prima edizione tenutasi un anno fa, abbiamo registrato il tutto esaurito, grazie sia ad uno schedule fatto da speaker di alto livello, sia alla location e organizzazione fornita da Fabrica. Vi siete persi qualcosa? Buone notizie: tutti gli speech sono stati registrati e sono disponibili su YouTube! Ecco qui di seguito l’elenco completo.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/hero-devfest-veneto-2018.png" /></entry><entry><title type="html">Speed up your builds… without upgrading your hardware</title><link href="/speed-up-your-builds-without-upgrading-your-hardware.html" rel="alternate" type="text/html" title="Speed up your builds… without upgrading your hardware" /><published>2018-04-27T00:00:00+02:00</published><updated>2018-04-27T00:00:00+02:00</updated><id>/speed-up-your-builds-without-upgrading-your-hardware</id><content type="html" xml:base="/speed-up-your-builds-without-upgrading-your-hardware.html">&lt;p&gt;&lt;em&gt;I wish every build could look like this :)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Often the only way to (really) speed up slow builds is to add more RAM, replace the old HDD with an SSD or buy a complete new PC (or Laptop). All those solutions requires investing (a lot of) money. What if we can just keep current hardware and delegate the build to another, more powerful, machine?&lt;/p&gt;
-
-&lt;p&gt;I usually develop for Android, and everyone knows that Android builds are slow. Waiting for a build to complete is one of the things that make me feel like I’m wasting my day. Edit, launch the build, wait 4 to 5 minutes to have the app compiled and installed, run the app, test, edit, launch another build, wait again… no, I really hate it! So what can I do?&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(I won’t write here about all the fine tunings that can be done inside your gradle configurations files, they’re not in the scope of this article)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;test-driven-development&quot;&gt;Test Driven Development&lt;/h2&gt;
-
-&lt;p&gt;I’m a fan of &lt;em&gt;TDD&lt;/em&gt;, so I try to skip many of those cycle of builds + manual testing by writing unit tests. The cycle becomes: write test, implement your code, build and run tests. You’ll skip the time-consuming manual testing (and you’ll gain all the well-known benefits of TDD).&lt;/p&gt;
-
-&lt;p&gt;But sometimes it’s not enough, for example when you’re fine-tuning the layout of the app, or when you need to debug a specific use-case. If the project is quite big, also running unit tests can become time consuming.&lt;/p&gt;
-
-&lt;h2 id=&quot;hardware-upgrade-or&quot;&gt;Hardware upgrade or…?&lt;/h2&gt;
-
-&lt;p&gt;So, should I upgrade my hardware? But my hardware is quite enough for everything that I do every day, except for code compiling! I’d like to have a machine just for compiling. Maybe a &lt;em&gt;Virtual Machine&lt;/em&gt;, that can be launched only when I need it, and than I’ll pay just for the time I use it…&lt;/p&gt;
-
-&lt;h2 id=&quot;welcome-to-mainframer&quot;&gt;…welcome to Mainframer&lt;/h2&gt;
-
-&lt;p&gt;Then I’ve discovered a great tool: &lt;a href=&quot;https://github.com/gojuno/mainframer&quot;&gt;Mainframer&lt;/a&gt;. It’s a command line tool that lets you easily launch your build on a remote machine! No need to buy a new laptop anymore!(*)&lt;/p&gt;
-
-&lt;p&gt;When you launch a build through Mainframer, it will:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Establish a &lt;em&gt;ssh&lt;/em&gt; connection with the remote machine.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Use &lt;em&gt;rsync&lt;/em&gt; to sync current directory with the remote machine.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Lunch the build command on the remote machine.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sync back the directory when build finishes.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Here are the steps I’ve taken for my configuration:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Create a Linux Virtual Machine on AWS&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Launch the Virtual Machine, ssh into it and install all the build tools that you need. For Android I’ve installed just the JDK and Android SDK (more details on configurations of the remote machine &lt;a href=&quot;https://github.com/gojuno/mainframer/blob/development/docs/SETUP_REMOTE.md&quot;&gt;here&lt;/a&gt;). Configure the Virtual Machine with the hardware features that fits your needs.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Configure ssh on your local machine (more info &lt;a href=&quot;https://github.com/gojuno/mainframer/blob/development/docs/SETUP_LOCAL.md&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Download a copy of mainframer.sh in the root of your project.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Test that everything is configured correctly with the following command:&lt;/p&gt;
-
-    &lt;p&gt;./mainframer echo “It works!” &amp;gt; success.txt&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Yeah, just this simple one-time setup! Now you can launch your build like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./mainframer ./gradle assembleDebug
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;end enjoy a faster compilation!&lt;/p&gt;
-
-&lt;p&gt;Another great advantage of this approach is that, if the build still requires “long time”, your local machine won’t be overloaded by the build process and you can use it for other stuff.&lt;/p&gt;
-
-&lt;p&gt;Mainframer supports the following build systems:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/gojuno/mainframer/blob/development/samples/gradle&quot;&gt;Gradle&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/gojuno/mainframer/blob/development/samples/gradle-android&quot;&gt;Gradle Android&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/gojuno/mainframer/blob/development/samples/rust&quot;&gt;Rust&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/gojuno/mainframer/blob/development/samples/clang&quot;&gt;Clang&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/gojuno/mainframer/blob/development/samples/gcc&quot;&gt;GCC&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/gojuno/mainframer/blob/development/samples/mvn&quot;&gt;Maven&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/gojuno/mainframer/blob/development/samples/buck&quot;&gt;Buck&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/gojuno/mainframer/blob/development/samples/go&quot;&gt;Go&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And there’s also an &lt;a href=&quot;https://github.com/elpassion/mainframer-intellij-plugin&quot;&gt;IntelliJ Plugin&lt;/a&gt;!&lt;/p&gt;
-
-&lt;h2 id=&quot;bonus&quot;&gt;Bonus&lt;/h2&gt;
-
-&lt;p&gt;You can get the maximum boost to your development process by applying both TDD and Mainframer!&lt;/p&gt;
-
-&lt;p&gt;(*)Yes, I know, you don’t have to pay for a new laptop but you have to pay for VM usage. But it’s much cheaper, and you can upgrade or throw away the VM according to your budget and your needs.&lt;/p&gt;</content><author><name>Andrea Maglie</name></author><category term="android" /><category term="gradle" /><summary type="html">I wish every build could look like this :)</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/hero-speed-up-builds.png" /></entry></feed>
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/SFdC80gC06A&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Andrea Maglie</name></author><category term="devfest" /><category term="gdg" /><summary type="html">L’edizione 2018 della DevFest Veneto, organizzata da noi del GDG Venezia, si è tenuta il 24 Novembre. Si tratta della nostra 2° DevFest e, come la prima edizione tenutasi un anno fa, abbiamo registrato il tutto esaurito, grazie sia ad uno schedule fatto da speaker di alto livello, sia alla location e organizzazione fornita da Fabrica. Vi siete persi qualcosa? Buone notizie: tutti gli speech sono stati registrati e sono disponibili su YouTube! Ecco qui di seguito l’elenco completo.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/hero-devfest-veneto-2018.png" /></entry></feed>
