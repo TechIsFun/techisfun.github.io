@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-08-24T15:37:11+02:00</updated><id>/</id><title type="html">ing. Andrea Maglie</title><subtitle></subtitle><author><name>Andrea Maglie</name></author><entry><title type="html">Get Started with Flutter Mobile Development: All You Need to Know</title><link href="/flutter-how-to-start.html" rel="alternate" type="text/html" title="Get Started with Flutter Mobile Development: All You Need to Know" /><published>2020-08-22T00:00:00+02:00</published><updated>2020-08-22T00:00:00+02:00</updated><id>/flutter-how-to-start</id><content type="html" xml:base="/flutter-how-to-start.html">&lt;p&gt;&lt;em&gt;Flutter&lt;/em&gt; is an open-source mobile framework by Google. It was released in May 2017 and the purpose behind creating Flutter was to enable users to create native mobile applications with only one codebase. In summary, it means to use a single programming language to create apps for multiple platforms (iOS, Android, Web).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-10-01T13:40:34+02:00</updated><id>/</id><title type="html">ing. Andrea Maglie</title><subtitle></subtitle><author><name>Andrea Maglie</name></author><entry><title type="html">DevFest 2020</title><link href="/devfest-2020.html" rel="alternate" type="text/html" title="DevFest 2020" /><published>2020-10-01T00:00:00+02:00</published><updated>2020-10-01T00:00:00+02:00</updated><id>/devfest-2020</id><content type="html" xml:base="/devfest-2020.html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/z-Wdaw0VRak&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Quest’anno la Dev Fest Veneto lascia lo spazio ad un evento tutto nuovo: la &lt;strong&gt;Devfest 2020&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;Non sai ancora cos’è una DevFest?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Le DevFest sono degli eventi organizzati una volta l’anno dalle diverse community GDG in tutto il mondo, e si differenziano dagli altri eventi in quanto hanno una durata di uno o più giorni, un bacino di utenza molto più elevato e la possibilità di avere interventi di altissima qualità sostenuti da aziende specializzate, professionisti o GDE (Google Developer Expert) provenienti da diverse parti d’Italia.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Questa DevFest si distingue dalle precedenti perché nasce dalla collaborazione di diversi GDG Italiani (tra cui il &lt;strong&gt;GDG Venezia&lt;/strong&gt; naturalmente) e sarà &lt;strong&gt;completamente on-line&lt;/strong&gt;. Sarà quindi un unico evento nazionale che va a sostituire (per quest’anno) i singoli eventi regionali, in modo da rendere più semplice la partecipazione di tutti nel pieno rispetto delle norme anti COVID-19.&lt;/p&gt;
+
+&lt;h2 id=&quot;quando&quot;&gt;Quando?&lt;/h2&gt;
+
+&lt;p&gt;🗓️ La DevFest 2020 si terrà il 17 il 18 ottobre.&lt;/p&gt;
+
+&lt;h2 id=&quot;di-cosa-si-parlerà&quot;&gt;Di cosa si parlerà?&lt;/h2&gt;
+
+&lt;p&gt;Si pronunciano dei talk di ottima qualità su 7 aree tematiche:&lt;/p&gt;
+
+&lt;p&gt;☁ Cloud Computing&lt;/p&gt;
+
+&lt;p&gt;🤖 Machine Learning&lt;/p&gt;
+
+&lt;p&gt;💻 Front-end&lt;/p&gt;
+
+&lt;p&gt;📱 Mobile&lt;/p&gt;
+
+&lt;p&gt;📊 Marketing&lt;/p&gt;
+
+&lt;p&gt;🌍 Diversity &amp;amp; Inclusion&lt;/p&gt;
+
+&lt;p&gt;😎 Soft Skill&lt;/p&gt;
+
+&lt;p&gt;Il programma completo lo trovi nel sito web ufficiale:  &lt;a href=&quot;http://devfest.it/&quot;&gt;devfest.it&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;come-mi-posso-iscrivere&quot;&gt;Come mi posso iscrivere?&lt;/h1&gt;
+
+&lt;p&gt;L’iscrizione è completamente gratuita. Per prenotare il tuo posto virtuale vai a &lt;a href=&quot;http://gdg.community.dev/e/mjmb5j/&quot;&gt;questo link&lt;/a&gt; e registrati!&lt;/p&gt;
+
+&lt;h1 id=&quot;aiutaci-a-diffondere-la-devfest&quot;&gt;Aiutaci a diffondere la DevFest!&lt;/h1&gt;
+
+&lt;p&gt;Per diffondere la DevFest condividi i link presenti in questo articolo e ricordati di usare gli hashtag ufficiali: #devfestitalia #devfestita20 #devfest2020 #gdgfun&lt;/p&gt;
+
+&lt;p&gt;Se vuoi scoprire invece quali altri DevFest sono organizzate nel resto dell’Europa  ➡ &lt;a href=&quot;devfesteurope.com&quot;&gt;devfesteurope.com&lt;/a&gt;&lt;/p&gt;</content><author><name>Andrea Maglie</name></author><category term="devfest" /><summary type="html"></summary></entry><entry><title type="html">Get Started with Flutter Mobile Development: All You Need to Know</title><link href="/flutter-how-to-start.html" rel="alternate" type="text/html" title="Get Started with Flutter Mobile Development: All You Need to Know" /><published>2020-08-22T00:00:00+02:00</published><updated>2020-08-22T00:00:00+02:00</updated><id>/flutter-how-to-start</id><content type="html" xml:base="/flutter-how-to-start.html">&lt;p&gt;&lt;em&gt;Flutter&lt;/em&gt; is an open-source mobile UI framework by Google. It was released in May 2017 and the purpose behind creating Flutter was to enable users to create native mobile applications with only one codebase. In summary, it means to use a single programming language to create two different apps, one for iOS and one for Android.&lt;/p&gt;
 
 &lt;p&gt;Flutter is a framework that uses the programming language called &lt;em&gt;Dart&lt;/em&gt;. The language is a lot older than the framework itself and it was first created by Google in October 2011. It has improved a lot in the past few years and a major reason behind that is the continuous development by Google.&lt;/p&gt;
 
@@ -178,7 +222,7 @@
 
 &lt;p&gt;Flutter development opens many new opportunities for users who would like to stay at the edge of their game. With Flutter, people can cut their costs of developing applications. Where they were building multiple applications, they can now use a single application that will work cross-platform without a problem.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;If you still have any questions left, please feel free to ask us in the comment box below.&lt;/em&gt;&lt;/p&gt;</content><author><name>Andrea Maglie</name></author><category term="flutter" /><category term="mobile" /><summary type="html">Flutter is an open-source mobile framework by Google. It was released in May 2017 and the purpose behind creating Flutter was to enable users to create native mobile applications with only one codebase. In summary, it means to use a single programming language to create apps for multiple platforms (iOS, Android, Web).</summary></entry><entry><title type="html">Esperimenti sulla percezione audio–aptica</title><link href="/esperimenti-percezione-audio-aptica.html" rel="alternate" type="text/html" title="Esperimenti sulla percezione audio--aptica" /><published>2019-02-26T00:00:00+01:00</published><updated>2019-02-26T00:00:00+01:00</updated><id>/esperimenti-percezione-audio-aptica</id><content type="html" xml:base="/esperimenti-percezione-audio-aptica.html">&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;If you still have any questions left, please feel free to ask us in the comment box below.&lt;/em&gt;&lt;/p&gt;</content><author><name>Andrea Maglie</name></author><category term="flutter" /><category term="mobile" /><summary type="html">Flutter is an open-source mobile UI framework by Google. It was released in May 2017 and the purpose behind creating Flutter was to enable users to create native mobile applications with only one codebase. In summary, it means to use a single programming language to create two different apps, one for iOS and one for Android.</summary></entry><entry><title type="html">Esperimenti sulla percezione audio–aptica</title><link href="/esperimenti-percezione-audio-aptica.html" rel="alternate" type="text/html" title="Esperimenti sulla percezione audio--aptica" /><published>2019-02-26T00:00:00+01:00</published><updated>2019-02-26T00:00:00+01:00</updated><id>/esperimenti-percezione-audio-aptica</id><content type="html" xml:base="/esperimenti-percezione-audio-aptica.html">&lt;hr /&gt;
 
 &lt;p&gt;&lt;i&gt;Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.&lt;/i&gt;&lt;/p&gt;
 &lt;hr /&gt;
@@ -5644,43 +5688,4 @@ audio perché, come in un ambiente reale, sia possibile ascoltare i suoni provo
 
 &lt;p&gt;Nel capitolo 6 si tratta la programmazione dell’interfaccia grafica e dell’interfaccia aptica; viene spiegato come avviene il rendering delle forze e come sono realizzate le tessiture aptiche. Infine si spiega come queste componenti siano state integrate tra loro e come avviene la comunicazione tra l’interfaccia grafica/aptica e l’algoritmo di sintesi audio creato ed eseguito in Pure Data.&lt;/p&gt;
 
-&lt;p&gt;La parte finale (capitolo 7) è dedicata agli esperimenti di percezione bimodale audio aptica: dopo aver presentato una panoramica sugli studi che sono già stati condotti in questo campo, vengono illustrate le differenze rispetto a questi e gli aspetti innovativi degli studi svolti in questa tesi. Sono stati svolti tre esperimenti: il primo in condizione di variazione concorde degli stimoli audio e aptico, gli altri in condizioni di variazione discorde dei due stimoli. In conclusione vengono riportati i risultati e le discussioni sulle percezioni avute dai partecipanti.&lt;/p&gt;</content><author><name>Andrea Maglie</name></author><category term="haptic feedback" /><category term="pure data" /><summary type="html">Nel 2006 pubblicavo questa tesi dal titolo “Una piattaforma per il rendering audio aptico di interazioni continue” per la mia laurea in Ingegneria Informatica all’Università di Padova. 9 mesi passati a lavorare su quello che sicuramente è il progetto più complesso e interessante sul quale abbia mai lavorato.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/hero-phantomomni.jpg" /></entry><entry><title type="html">DevFest Veneto 2018</title><link href="/devfest-veneto-2018-recap.html" rel="alternate" type="text/html" title="DevFest Veneto 2018" /><published>2018-12-01T00:00:00+01:00</published><updated>2018-12-01T00:00:00+01:00</updated><id>/devfest-veneto-2018-recap</id><content type="html" xml:base="/devfest-veneto-2018-recap.html">&lt;p&gt;L’edizione 2018 della DevFest Veneto, organizzata da noi del GDG Venezia, si è tenuta il 24 Novembre. 
-Si tratta della nostra 2° DevFest e, come la prima edizione tenutasi un anno fa, abbiamo registrato il tutto esaurito, grazie sia ad uno schedule fatto da speaker di alto livello, sia alla location e organizzazione fornita da &lt;a href=&quot;http://www.fabrica.it/?lang=it_it&quot;&gt;Fabrica&lt;/a&gt;.
-Vi siete persi qualcosa? Buone notizie: tutti gli speech sono stati registrati e sono disponibili su YouTube!
-Ecco qui di seguito l’elenco completo.&lt;/p&gt;
-
-&lt;h2 id=&quot;serverless-event-driven-architecture-with-kotlin-the-pixartprinting-use-case&quot;&gt;Serverless Event-driven Architecture with Kotlin: the Pixartprinting use case&lt;/h2&gt;
-&lt;p&gt;Speaker: &lt;em&gt;Marco Falcier&lt;/em&gt;, Software Engineer, Pixartprinting S.P.A.&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/4vsduSesG6U&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;do-it-yourselfie-an-android-things-photo-booth&quot;&gt;Do-it-yourselfie, an Android Things photo booth&lt;/h2&gt;
-&lt;p&gt;Speaker: &lt;em&gt;Daniele Bonaldo&lt;/em&gt;, Android Developer, Novoda&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/FoegZ2PnshM&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;la-morte-nera-e-se-fosse-prototipizzata-con-firebase-e-react&quot;&gt;La Morte Nera, e se fosse prototipizzata con Firebase e React?&lt;/h2&gt;
-&lt;p&gt;Speaker: &lt;em&gt;Michel Murabito&lt;/em&gt;, Web Developer, Spindox&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/D-8S9c2t1FY&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;everydays---why-you-need-to-create-daily&quot;&gt;EVERYDAYS - why you need to create daily&lt;/h2&gt;
-&lt;p&gt;Speaker: &lt;em&gt;Riccardo Giorato&lt;/em&gt;, Student&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/oTxLNxppMUM&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;android-jet-navigation&quot;&gt;Android JET Navigation&lt;/h2&gt;
-&lt;p&gt;Speaker: &lt;em&gt;Matteo Bonifazi&lt;/em&gt;, Android Developer, Sisal&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/UUDNKjHXQMg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;frameworkless-frontend-development&quot;&gt;Frameworkless Frontend Development&lt;/h2&gt;
-&lt;p&gt;Speaker: &lt;em&gt;Francesco Strazzullo&lt;/em&gt;, Web Developer, ideato&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/q_WGYGsRHQg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;the-build-time-of-my-life&quot;&gt;The (build) time of my life&lt;/h2&gt;
-&lt;p&gt;Speaker: &lt;em&gt;Lorenzo Quiroli&lt;/em&gt;, Senior Android Developer, busuu&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Oila7PK27LE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;blockchain-la-non-rivoluzione-ci-aspetta&quot;&gt;BlockChain, la (non) rivoluzione ci aspetta!&lt;/h2&gt;
-&lt;p&gt;Speaker: &lt;em&gt;Thomas Rossetto&lt;/em&gt;, Fullstack Dev, Seesaw&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/QPJnaIBWHSA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;introduzione-a-machine-learning&quot;&gt;Introduzione a Machine Learning&lt;/h2&gt;
-&lt;p&gt;Speaker: &lt;em&gt;Cesare Montresor&lt;/em&gt;, Software Developer, Tarallucci, Vino e Machine Learning&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/SFdC80gC06A&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Andrea Maglie</name></author><category term="devfest" /><category term="gdg" /><summary type="html">L’edizione 2018 della DevFest Veneto, organizzata da noi del GDG Venezia, si è tenuta il 24 Novembre. Si tratta della nostra 2° DevFest e, come la prima edizione tenutasi un anno fa, abbiamo registrato il tutto esaurito, grazie sia ad uno schedule fatto da speaker di alto livello, sia alla location e organizzazione fornita da Fabrica. Vi siete persi qualcosa? Buone notizie: tutti gli speech sono stati registrati e sono disponibili su YouTube! Ecco qui di seguito l’elenco completo.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/hero-devfest-veneto-2018.png" /></entry></feed>
+&lt;p&gt;La parte finale (capitolo 7) è dedicata agli esperimenti di percezione bimodale audio aptica: dopo aver presentato una panoramica sugli studi che sono già stati condotti in questo campo, vengono illustrate le differenze rispetto a questi e gli aspetti innovativi degli studi svolti in questa tesi. Sono stati svolti tre esperimenti: il primo in condizione di variazione concorde degli stimoli audio e aptico, gli altri in condizioni di variazione discorde dei due stimoli. In conclusione vengono riportati i risultati e le discussioni sulle percezioni avute dai partecipanti.&lt;/p&gt;</content><author><name>Andrea Maglie</name></author><category term="haptic feedback" /><category term="pure data" /><summary type="html">Nel 2006 pubblicavo questa tesi dal titolo “Una piattaforma per il rendering audio aptico di interazioni continue” per la mia laurea in Ingegneria Informatica all’Università di Padova. 9 mesi passati a lavorare su quello che sicuramente è il progetto più complesso e interessante sul quale abbia mai lavorato.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/hero-phantomomni.jpg" /></entry></feed>

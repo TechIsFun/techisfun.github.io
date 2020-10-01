@@ -5,7 +5,7 @@
 
   <title>
     
-      OutOfMemoryError while compiling Android projects | ing. Andrea Maglie
+      DevFest 2020 | ing. Andrea Maglie
     
   </title>
 
@@ -45,17 +45,15 @@
 
   <!-- Use Jekyll SEO plugin -->
   <!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>OutOfMemoryError while compiling Android projects | ing. Andrea Maglie</title>
-<meta property="og:title" content="OutOfMemoryError while compiling Android projects" />
+<title>DevFest 2020 | ing. Andrea Maglie</title>
+<meta property="og:title" content="DevFest 2020" />
 <meta name="author" content="Andrea Maglie" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Have you ever got a OutOfMemoryError while compiling an Android project, just like this?" />
-<meta property="og:description" content="Have you ever got a OutOfMemoryError while compiling an Android project, just like this?" />
 <meta property="og:site_name" content="ing. Andrea Maglie" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2015-11-15T00:00:00+01:00" />
+<meta property="article:published_time" content="2020-10-01T00:00:00+02:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/android-gradle-outofmemoryerror.html"},"url":"/android-gradle-outofmemoryerror.html","publisher":null,"name":null,"author":{"@type":"Person","name":"Andrea Maglie"},"description":"Have you ever got a OutOfMemoryError while compiling an Android project, just like this?","headline":"OutOfMemoryError while compiling Android projects","dateModified":"2015-11-15T00:00:00+01:00","datePublished":"2015-11-15T00:00:00+01:00","sameAs":null,"image":null,"@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/devfest-2020.html"},"url":"/devfest-2020.html","publisher":null,"name":null,"author":{"@type":"Person","name":"Andrea Maglie"},"description":null,"headline":"DevFest 2020","dateModified":"2020-10-01T00:00:00+02:00","datePublished":"2020-10-01T00:00:00+02:00","sameAs":null,"image":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -115,47 +113,65 @@
 
     <div class="post-container">
       <h1>
-  OutOfMemoryError while compiling Android projects
+  DevFest 2020
 </h1>
 
 
 
-<p>Have you ever got a <code class="highlighter-rouge">OutOfMemoryError</code> while compiling an Android project, just like this?</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/z-Wdaw0VRak" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:app:dexDebug
-Unknown source file : Uncaught translation error: java.util.concurrent.ExecutionException: java.lang.OutOfMemoryError: Java heap space
-Unknown source file : 1 error; aborting
+<p>Quest’anno la Dev Fest Veneto lascia lo spazio ad un evento tutto nuovo: la <strong>Devfest 2020</strong>!</p>
 
-:app:dexDebug FAILED
+<p>Non sai ancora cos’è una DevFest?</p>
 
-FAILURE: Build failed with an exception.
+<blockquote>
+  <p>Le DevFest sono degli eventi organizzati una volta l’anno dalle diverse community GDG in tutto il mondo, e si differenziano dagli altri eventi in quanto hanno una durata di uno o più giorni, un bacino di utenza molto più elevato e la possibilità di avere interventi di altissima qualità sostenuti da aziende specializzate, professionisti o GDE (Google Developer Expert) provenienti da diverse parti d’Italia.</p>
+</blockquote>
 
-* What went wrong:
-Execution failed for task ':app:dexDebug'.
-&gt; com.android.ide.common.process.ProcessException: org.gradle.process.internal.ExecException: Process 'command '/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/bin/java'' finished with non-zero exit value 1
-</code></pre></div></div>
+<p>Questa DevFest si distingue dalle precedenti perché nasce dalla collaborazione di diversi GDG Italiani (tra cui il <strong>GDG Venezia</strong> naturalmente) e sarà <strong>completamente on-line</strong>. Sarà quindi un unico evento nazionale che va a sostituire (per quest’anno) i singoli eventi regionali, in modo da rendere più semplice la partecipazione di tutti nel pieno rispetto delle norme anti COVID-19.</p>
 
-<p>The quick solution is: add <code class="highlighter-rouge">javaMaxHeapSize</code> to <code class="highlighter-rouge">dexOptions</code> in your build.gradle, adjusting the value on your needs.</p>
+<h2 id="quando">Quando?</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android {
-	...
+<p>🗓️ La DevFest 2020 si terrà il 17 il 18 ottobre.</p>
 
-    dexOptions {
-        javaMaxHeapSize "2g"
-    }
+<h2 id="di-cosa-si-parlerà">Di cosa si parlerà?</h2>
 
-    ...
-}
-</code></pre></div></div>
+<p>Si pronunciano dei talk di ottima qualità su 7 aree tematiche:</p>
 
+<p>☁ Cloud Computing</p>
+
+<p>🤖 Machine Learning</p>
+
+<p>💻 Front-end</p>
+
+<p>📱 Mobile</p>
+
+<p>📊 Marketing</p>
+
+<p>🌍 Diversity &amp; Inclusion</p>
+
+<p>😎 Soft Skill</p>
+
+<p>Il programma completo lo trovi nel sito web ufficiale:  <a href="http://devfest.it/">devfest.it</a></p>
+
+<h1 id="come-mi-posso-iscrivere">Come mi posso iscrivere?</h1>
+
+<p>L’iscrizione è completamente gratuita. Per prenotare il tuo posto virtuale vai a <a href="http://gdg.community.dev/e/mjmb5j/">questo link</a> e registrati!</p>
+
+<h1 id="aiutaci-a-diffondere-la-devfest">Aiutaci a diffondere la DevFest!</h1>
+
+<p>Per diffondere la DevFest condividi i link presenti in questo articolo e ricordati di usare gli hashtag ufficiali: #devfestitalia #devfestita20 #devfest2020 #gdgfun</p>
+
+<p>Se vuoi scoprire invece quali altri DevFest sono organizzate nel resto dell’Europa  ➡ <a href="devfesteurope.com">devfesteurope.com</a></p>
 
 
 <span class="post-date">
   Pubblicato il
   
-  November
-  15th,
-  2015
+  October
+  1st
+    ,
+  2020
   by
   
     Andrea Maglie
@@ -164,9 +180,9 @@ Execution failed for task ':app:dexDebug'.
 
 <div class="post-date">Condividi!</div>
   <div class="sharing-icons">
-    <a href="https://twitter.com/intent/tweet?text=OutOfMemoryError while compiling Android projects&amp;url=/android-gradle-outofmemoryerror.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=/android-gradle-outofmemoryerror.html&amp;title=OutOfMemoryError while compiling Android projects" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-    <a href="https://plus.google.com/share?url=/android-gradle-outofmemoryerror.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+    <a href="https://twitter.com/intent/tweet?text=DevFest 2020&amp;url=/devfest-2020.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/devfest-2020.html&amp;title=DevFest 2020" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/devfest-2020.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
   </div>
 </div>
 
@@ -178,59 +194,15 @@ Execution failed for task ':app:dexDebug'.
     
       
         
-          <li>
-            <h3>
-              <a href="/speed-up-your-builds-without-upgrading-your-hardware.html">
-                Speed up your builds… without upgrading your hardware
-                <!--<img src="/images/">-->
-                <!--<small>April 27, 2018</small>-->
-              </a>
-            </h3>
-          </li>
-          
         
       
         
           <li>
             <h3>
-              <a href="/android-studio-2.3-migration.html">
-                Migrate to Android Studio 2.3
+              <a href="/devfest-veneto-2018-recap.html">
+                DevFest Veneto 2018
                 <!--<img src="/images/">-->
-                <!--<small>March 8, 2017</small>-->
-              </a>
-            </h3>
-          </li>
-          
-        
-      
-        
-          <li>
-            <h3>
-              <a href="/android-auto-fit-textview.html">
-                Android Auto Fit TextView
-                <!--<img src="/images/">-->
-                <!--<small>September 9, 2016</small>-->
-              </a>
-            </h3>
-          </li>
-          
-        
-      
-    
-      
-        
-        
-      
-        
-        
-      
-        
-          <li>
-            <h3>
-              <a href="/android-enable-app-feature-compile-time.html">
-                Android - Enable app features at compile time
-                <!--<img src="/images/">-->
-                <!--<small>January 28, 2016</small>-->
+                <!--<small>December 1, 2018</small>-->
               </a>
             </h3>
           </li>
@@ -247,7 +219,7 @@ Execution failed for task ':app:dexDebug'.
   <div id="disqus_thread"></div>
   <script type="text/javascript">
     var disqus_shortname = "techisfun";
-    var disqus_identifier = "/android-gradle-outofmemoryerror.html";
+    var disqus_identifier = "/devfest-2020.html";
     (function() {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

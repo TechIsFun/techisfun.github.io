@@ -7,10 +7,23 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>DevFest 2020</title>
+				
+				
+					<description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/z-Wdaw0VRak&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+</description>
+				
+				<pubDate>Thu, 01 Oct 2020 00:00:00 +0200</pubDate>
+				<link>/devfest-2020.html</link>
+				<guid isPermaLink="true">/devfest-2020.html</guid>
+			</item>
+		
+			<item>
 				<title>Get Started with Flutter Mobile Development: All You Need to Know</title>
 				
 				
-					<description>&lt;p&gt;&lt;em&gt;Flutter&lt;/em&gt; is an open-source mobile framework by Google. It was released in May 2017 and the purpose behind creating Flutter was to enable users to create native mobile applications with only one codebase. In summary, it means to use a single programming language to create apps for multiple platforms (iOS, Android, Web).&lt;/p&gt;
+					<description>&lt;p&gt;&lt;em&gt;Flutter&lt;/em&gt; is an open-source mobile UI framework by Google. It was released in May 2017 and the purpose behind creating Flutter was to enable users to create native mobile applications with only one codebase. In summary, it means to use a single programming language to create two different apps, one for iOS and one for Android.&lt;/p&gt;
 
 </description>
 				
@@ -142,22 +155,6 @@
 				<pubDate>Thu, 10 Jan 2019 00:00:00 +0100</pubDate>
 				<link>/piattaforma-rendering-audio-aptico-intro.html</link>
 				<guid isPermaLink="true">/piattaforma-rendering-audio-aptico-intro.html</guid>
-			</item>
-		
-			<item>
-				<title>DevFest Veneto 2018</title>
-				
-				
-					<description>&lt;p&gt;L’edizione 2018 della DevFest Veneto, organizzata da noi del GDG Venezia, si è tenuta il 24 Novembre. 
-Si tratta della nostra 2° DevFest e, come la prima edizione tenutasi un anno fa, abbiamo registrato il tutto esaurito, grazie sia ad uno schedule fatto da speaker di alto livello, sia alla location e organizzazione fornita da &lt;a href=&quot;http://www.fabrica.it/?lang=it_it&quot;&gt;Fabrica&lt;/a&gt;.
-Vi siete persi qualcosa? Buone notizie: tutti gli speech sono stati registrati e sono disponibili su YouTube!
-Ecco qui di seguito l’elenco completo.&lt;/p&gt;
-
-</description>
-				
-				<pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate>
-				<link>/devfest-veneto-2018-recap.html</link>
-				<guid isPermaLink="true">/devfest-veneto-2018-recap.html</guid>
 			</item>
 		
 	</channel>
