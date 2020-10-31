@@ -1,1 +1,1 @@
-Sitemap: andreamaglie.com/sitemap.xml
+Sitemap: http://andreamaglie.com/sitemap.xml
