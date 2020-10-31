@@ -19,7 +19,7 @@
   <!-- Use Atom -->
   <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ing. Andrea Maglie" />
   <!-- Use RSS-2.0 -->
-  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="ing. Andrea Maglie | "/>
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="ing. Andrea Maglie | A blog about Software Engineering, with a focus on Java, Kotlin, Flutter and architecture"/>
   //-->
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
@@ -44,8 +44,9 @@
 
 
   <!-- Use Jekyll SEO plugin -->
-  <!-- Begin Jekyll SEO tag v2.3.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Pure Data e i modelli audio | ing. Andrea Maglie</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Pure Data e i modelli audio" />
 <meta name="author" content="Andrea Maglie" />
 <meta property="og:locale" content="en_US" />
@@ -55,8 +56,13 @@
 <meta property="og:image" content="/patchsliding1.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-01-29T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:image" content="/patchsliding1.jpg" />
+<meta property="twitter:title" content="Pure Data e i modelli audio" />
+<meta name="twitter:site" content="@techisfun" />
+<meta name="twitter:creator" content="@Andrea Maglie" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/pure-data-modelli-audio.html"},"url":"/pure-data-modelli-audio.html","publisher":null,"name":null,"author":{"@type":"Person","name":"Andrea Maglie"},"description":"Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.","headline":"Pure Data e i modelli audio","dateModified":"2019-01-29T00:00:00+01:00","datePublished":"2019-01-29T00:00:00+01:00","sameAs":null,"image":"/patchsliding1.jpg","@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"Andrea Maglie"},"mainEntityOfPage":{"@type":"WebPage","@id":"/pure-data-modelli-audio.html"},"url":"/pure-data-modelli-audio.html","image":"/patchsliding1.jpg","headline":"Pure Data e i modelli audio","dateModified":"2019-01-29T00:00:00+01:00","datePublished":"2019-01-29T00:00:00+01:00","description":"Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -69,7 +75,7 @@
     <header class="masthead">
   <h3 class="masthead-title">
     <a href="/">ing. Andrea Maglie</a>
-    <small class="masthead-subtitle"></small>
+    <small class="masthead-subtitle">A blog about Software Engineering, with a focus on Java, Kotlin, Flutter and architecture</small>
     <div class="menu">
   <nav class="menu-content">
     
@@ -181,17 +187,17 @@ calcolato con un modello di impatto unidimensionale con la curva in figura 1. I
 punti di contatto e la traiettoria risultante, che idealmente dovrebbe
 essere applicata al modello di impatto unidimensionale, sono
 rappresentati in figura 2. Il calcolo esatto dei punti di contatto è
-dispendioso in termini di risorse computazionali: in ogni punto <script type="math/tex">x</script>
+dispendioso in termini di risorse computazionali: in ogni punto \(x\)
 lungo la curva della superficie, cioè per ogni punto di campionamento
 nel caso discreto (dove la frequenza del campionamento è la stessa del
 campionamento audio), deve essere calcolata la seguente funzione che
-descrive l’attuale punto <script type="math/tex">p_x</script> :</p>
+descrive l’attuale punto \(p_x\) :</p>
 
-<script type="math/tex; mode=display">f_x(p_x) \stackrel{!}{=} max_{q\in[x-r,x+r]}f_x(q) \hspace{0,5cm}, \label{eq:rolling1}</script>
+\[f_x(p_x) \stackrel{!}{=} max_{q\in[x-r,x+r]}f_x(q) \hspace{0,5cm}, \label{eq:rolling1}\]
 
 <p>dove</p>
 
-<script type="math/tex; mode=display">f_x(q) = s(q) + \sqrt{r^2 - (q-x)^2} \hspace{0,5cm},\hspace{0,5cm} q \in [x-r, x+r] \hspace{0,5cm}. \label{eq:rolling2}</script>
+\[f_x(q) = s(q) + \sqrt{r^2 - (q-x)^2} \hspace{0,5cm},\hspace{0,5cm} q \in [x-r, x+r] \hspace{0,5cm}. \label{eq:rolling2}\]
 
 <p>La curva ideale viene poi calcolata da questi punti di contatto. Una tecnica più semplice (e quindi anche meno dispendiosa in termini di risorse di calcolo) è rappresentata in figura 3.
 La traiettoria in figura 2 converge alla curva ideale di figura 3 per raggi molto grandi se comparati alla ruvidità della superficie. 
@@ -229,8 +235,8 @@ efficientemente generare segnali per i vari attributi.</p>
 <p>E’ comune nella computer graphics descrivere le superfici tramite metodi
 frattali. L’applicazione di questa idea al nostro modello
 unidimensionale conduce all’utilizzo di un segnale di rumore con spettro
-di potenza <script type="math/tex">1/f^{\beta}</script>, o equivalentemente rumore bianco filtrato con
-queste caratteristiche. Il parametro reale <script type="math/tex">\beta</script> riflette la
+di potenza \(1/f^{\beta}\), o equivalentemente rumore bianco filtrato con
+queste caratteristiche. Il parametro reale \(\beta\) riflette la
 dimensione frattale (o ruvidità). I risultati pratici di questo tipo di
 modello sono diventati più convincenti quando la banda del segnale della
 superficie è stata fortemente limitata; ciò non deve sorprendere se
@@ -240,7 +246,7 @@ tagliare pezzi di pietra per pavimentazioni) corrisponde ad un
 filtraggio passa–alto, mentre smussare a livello microscopico (come
 lucidare una pietra) può essere visto come un filtraggio di tipo
 passa–basso. Tramite queste elaborazioni però si possono perdere le
-caratteristiche del rumore <script type="math/tex">1/f^{\beta}</script> di partenza. Perciò optiamo per
+caratteristiche del rumore \(1/f^{\beta}\) di partenza. Perciò optiamo per
 una approssimazione di questa curva con un filtro del secondo ordine la
 cui ripidità è proporzionale al grado di ruvidità a livello
 microscopico.</p>
@@ -248,7 +254,7 @@ microscopico.</p>
 <p>Tutte le frequenze in questo modello di basso livello devono variare
 proporzionalmente ai parametri di velocità, perciò l’ampiezza del
 segnale di superficie deve essere mantenuta costante. Naturalmente i
-parametri dell’impatto, in particolare la costante di elasticità <script type="math/tex">k</script>,
+parametri dell’impatto, in particolare la costante di elasticità \(k\),
 devono essere variati opportunamente a seconda della superficie che si
 vuole simulare (cioè in base alle proprietà del materiale), in quanto
 contribuiscono fortemente alla espressività del modello.</p>
@@ -259,26 +265,25 @@ contribuiscono fortemente alla espressività del modello.</p>
 risonante e uno per l’oggetto percussore. Supposto che la superficie di
 contatto sia piccola, la forza di contatto viene espressa come:</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-f(x(t),v(t)) = \left\{
+\[f(x(t),v(t)) = \left\{
                                             \begin{array}{ll}
-                                            kx(t)^{\alpha}+\lambda x(t)^{\alpha}\cdot v(t) = kx(t)^{\alpha}(1+\mu v(t)) & x > 0\\
-                                            0 & x \leq 0
+                                            kx(t)^{\alpha}+\lambda x(t)^{\alpha}\cdot v(t) = kx(t)^{\alpha}(1+\mu v(t)) &amp; x &gt; 0\\
+                                            0 &amp; x \leq 0
                                             \end{array}
                                 \right.
-\hspace{0,5cm}, \label{eq:impact1} %]]></script>
+\hspace{0,5cm}, \label{eq:impact1}\]
 
-<p>dove <script type="math/tex">v(t) = \dot{x}(t)</script> è la velocità di compressione, <script type="math/tex">k</script> è il
-coefficiente di rigidità, <script type="math/tex">\alpha</script> è un parametro che descrive la
+<p>dove \(v(t) = \dot{x}(t)\) è la velocità di compressione, \(k\) è il
+coefficiente di rigidità, \(\alpha\) è un parametro che descrive la
 geometria locale dell’impatto (nel caso di due perfette sfere vale 1.5),
-<script type="math/tex">\lambda</script> è un coefficiente di smorzamento e <script type="math/tex">\mu = \lambda/k</script> è un
+\(\lambda\) è un coefficiente di smorzamento e \(\mu = \lambda/k\) è un
 termine matematico (senza significato fisico) detto <em>caratteristica
 viscoelastica</em>.</p>
 
 <p>Il percussore è considerato una massa ideale, quindi l’unico parametro
 che lo caratterizza è la massa; il risonatore invece è un oggetto modale
 ed è caratterizzato dai parametri di frequenza, tempi di decadimento,
-<script type="math/tex">k</script>, <script type="math/tex">\alpha</script> e <script type="math/tex">\lambda</script>. Si assume inoltre che il percussore abbia un
+\(k\), \(\alpha\) e \(\lambda\). Si assume inoltre che il percussore abbia un
 elevato coefficiente di smorzamento: in tal modo diventa trascurabile
 l’energia acustica delle sue vibrazioni, e l’energia viene trasferita al
 risonatore che emette il suono. Per una descrizione matematica vengono
@@ -342,76 +347,75 @@ formalmente, un processo frattale unidimensionale può essere definito
 come una generalizzazione della definizione di moto standard Browniano
 <a class="citation" href="#book:brownian">(Resnick, S., 1992)</a>.</p>
 
-<p>Il processo stocastico <script type="math/tex">x = \{x(t),t \geq 0\}</script> è un moto standard Browniano se:</p>
+<p>Il processo stocastico \(x = \{x(t),t \geq 0\}\) è un moto standard Browniano se:</p>
 
 <ol>
-  <li>il processo stocastico <script type="math/tex">x</script> ha incrementi indipendenti;</li>
+  <li>il processo stocastico \(x\) ha incrementi indipendenti;</li>
   <li>vale la proprietà
-<script type="math/tex">% <![CDATA[
-x(t) - x(s) \sim N(0,t-s) \hspace{0,5cm} per \hspace{0,5cm} 0 \leq s < t; %]]></script>
-cioè l’incremento <script type="math/tex">x(t) - x(s)</script> è normalmente distribuito con media
-nulla e varianza <script type="math/tex">(t-s)</script>;</li>
-  <li>è vero che <script type="math/tex">x(0) = 0.</script></li>
+\(x(t) - x(s) \sim N(0,t-s) \hspace{0,5cm} per \hspace{0,5cm} 0 \leq s &lt; t;\)
+cioè l’incremento \(x(t) - x(s)\) è normalmente distribuito con media
+nulla e varianza \((t-s)\);</li>
+  <li>è vero che \(x(0) = 0.\)</li>
 </ol>
 
 <p>La definizione di moto standard Browniano può essere generalizzata alla
-definizione di <em>processo frattale</em> se l’incremento <script type="math/tex">x(t)-x(s)</script> è
+definizione di <em>processo frattale</em> se l’incremento \(x(t)-x(s)\) è
 normalmente distribuito con media 0 e varianza proporzionale a
-<script type="math/tex">(t-s)^{2H}</script>. Il parametro <em>H</em> è chiamato <em>esponente di Hurst</em> e
+\((t-s)^{2H}\). Il parametro <em>H</em> è chiamato <em>esponente di Hurst</em> e
 caratterizza il comportamento del processo frattale rispetto alla
-scalatura: se <script type="math/tex">x=\{x(t),t \geq 0\}</script> è un processo frattale con esponente
-di Hurst <script type="math/tex">H</script>, allora, per ogni reale <script type="math/tex">a > 0</script>, obbedisce alla seguente
+scalatura: se \(x=\{x(t),t \geq 0\}\) è un processo frattale con esponente
+di Hurst \(H\), allora, per ogni reale \(a &gt; 0\), obbedisce alla seguente
 relazione di scala:</p>
 
-<script type="math/tex; mode=display">x(t) \stackrel{P}{=} a^{-H}x(at) \hspace{0,5cm} , \label{eq:surface1}</script>
+\[x(t) \stackrel{P}{=} a^{-H}x(at) \hspace{0,5cm} , \label{eq:surface1}\]
 
-<p>dove <script type="math/tex">\stackrel{P}{=}</script> denota l’uguaglianza statistica. Questa è la
+<p>dove \(\stackrel{P}{=}\) denota l’uguaglianza statistica. Questa è la
 definizione formale di <em>auto–similirarità statistica</em>. La famiglia di
-processi <script type="math/tex">1/f</script> statisticamente auto–simili, nota anche come rumore <script type="math/tex">1/f</script>, è
-composta da processi aventi densità di spettro di potenza <script type="math/tex">S_x(\omega)</script>
-proporzionale a <script type="math/tex">1/ \omega^{\beta}</script>, con <script type="math/tex">\beta</script> legato all’esponente di
-Hurst <script type="math/tex">H</script> dalla relazione <script type="math/tex">\beta = 2H + 1</script>. Per <script type="math/tex">\beta = 0</script> la
-definizione corrisponde al rumore bianco, per <script type="math/tex">\beta = 2</script> si ottiene il
-rumore Browniano, e per <script type="math/tex">\beta = 1</script> il rumore risultante è rumore rosa.
-Il parametro <script type="math/tex">\beta</script> è in relazione anche con la dimensione frattale. La
+processi \(1/f\) statisticamente auto–simili, nota anche come rumore \(1/f\), è
+composta da processi aventi densità di spettro di potenza \(S_x(\omega)\)
+proporzionale a \(1/ \omega^{\beta}\), con \(\beta\) legato all’esponente di
+Hurst \(H\) dalla relazione \(\beta = 2H + 1\). Per \(\beta = 0\) la
+definizione corrisponde al rumore bianco, per \(\beta = 2\) si ottiene il
+rumore Browniano, e per \(\beta = 1\) il rumore risultante è rumore rosa.
+Il parametro \(\beta\) è in relazione anche con la dimensione frattale. La
 dimensione frattale <a class="citation" href="#book:wornell">(Wornell, G. W., 1998)</a> di una funzione è un parametro reale
 che determina l’irregolarità di un oggetto frattale, è legata al grafico
 della funzione ed è usata nella computer graphics per controllare la
-ruvidità percepita <a class="citation" href="#art:pentland">(Pentland, A. P., 1988)</a>. Per i processi <script type="math/tex">1/f</script>, tale dimensione
-è inversamente proporzionale all’esponente di Hurst <script type="math/tex">H</script>: valori maggiori
-di <script type="math/tex">H</script> corrispondono a valori minori della dimensione frattale; <script type="math/tex">H</script> è
-proporzionale a <script type="math/tex">\beta</script>. Perciò, incrementando <script type="math/tex">\beta</script> possiamo
+ruvidità percepita <a class="citation" href="#art:pentland">(Pentland, A. P., 1988)</a>. Per i processi \(1/f\), tale dimensione
+è inversamente proporzionale all’esponente di Hurst \(H\): valori maggiori
+di \(H\) corrispondono a valori minori della dimensione frattale; \(H\) è
+proporzionale a \(\beta\). Perciò, incrementando \(\beta\) possiamo
 raggiungere una redistribuzione della potenza dalle alte alle basse
 frequenze, con uno smussamento complessivo della forma d’onda.</p>
 
-<p>Il problema di generare il rumore <script type="math/tex">1/f</script> è stato trattato estensivamente.
+<p>Il problema di generare il rumore \(1/f\) è stato trattato estensivamente.
 Uno degli approcci più comuni risulta quello di filtrare una sorgente di
-rumore bianco per ottenere lo spettro <script type="math/tex">1/f</script>; seguendo questo procedimento
+rumore bianco per ottenere lo spettro \(1/f\); seguendo questo procedimento
 utilizzeremo il modello riportato in <a class="citation" href="#art:saletti">(Saletti, R., Novembre 1986)</a> e <a class="citation" href="#art:corsini">(Corsini, G. &amp; Saletti, R., Dicembre 1988)</a>. Il
 filtro è una cascata di N filtri del primo ordine, ognuno con una coppia
-di poli e zeri; la funzione di trasferimento <script type="math/tex">H(s)</script> nel dominio di
+di poli e zeri; la funzione di trasferimento \(H(s)\) nel dominio di
 Laplace è la seguente:</p>
 
-<script type="math/tex; mode=display">H(s)=A\frac{\prod_{i=1}^{N}(s-s_{0i})}{\prod_{i=1}^{N}(s-s_{pi})} \hspace{0,5cm} ,  \label{eq:surface2}</script>
+\[H(s)=A\frac{\prod_{i=1}^{N}(s-s_{0i})}{\prod_{i=1}^{N}(s-s_{pi})} \hspace{0,5cm} ,  \label{eq:surface2}\]
 
-<p>dove <script type="math/tex">A</script> è una costante. Il generatore di rumore frattale è ottenuto
+<p>dove \(A\) è una costante. Il generatore di rumore frattale è ottenuto
 impostando opportunamente i poli e gli zeri dei filtri nella cascata
 <a class="citation" href="#art:saletti">(Saletti, R., Novembre 1986)</a>. In particolare, il polo e lo zero alle frequenze
-<script type="math/tex">f_{pi}</script> e <script type="math/tex">f_{0i}</script> possono essere computati come funzioni di <script type="math/tex">\beta</script>
+\(f_{pi}\) e \(f_{0i}\) possono essere computati come funzioni di \(\beta\)
 con le seguenti formule:</p>
 
-<script type="math/tex; mode=display">f_{pi} = -\frac{s_{pi}}{2\pi} = f_{p(i-1)}10^{\frac{1}{h}} \hspace{0,5cm} , \label{eq:surface3a}</script>
+\[f_{pi} = -\frac{s_{pi}}{2\pi} = f_{p(i-1)}10^{\frac{1}{h}} \hspace{0,5cm} , \label{eq:surface3a}\]
 
-<script type="math/tex; mode=display">f_{0i} = - \frac{s_{0i}}{2\pi} = f_{pi}10^{\frac{\beta}{2h}} \hspace{0,5cm} , \label{eq:surface3b}</script>
+\[f_{0i} = - \frac{s_{0i}}{2\pi} = f_{pi}10^{\frac{\beta}{2h}} \hspace{0,5cm} , \label{eq:surface3b}\]
 
-<p>dove <script type="math/tex">f_{p1}</script> è il polo di frequenza più bassa del filtro; perciò il
+<p>dove \(f_{p1}\) è il polo di frequenza più bassa del filtro; perciò il
 limite inferiore della banda di frequenza per l’approssimazione è
-<script type="math/tex">f_{p1}</script>. La densità <script type="math/tex">h</script> (densità dei poli per decade di frequenze) può
+\(f_{p1}\). La densità \(h\) (densità dei poli per decade di frequenze) può
 essere usata per controllare l’errore tra lo spettro desiderato e lo
 spettro approssimato ottenuto dal filtraggio del rumore bianco. La
 dipendenza dell’errore in relazione alla densità dei poli del filtro è
-discussa in <a class="citation" href="#art:corsini">(Corsini, G. &amp; Saletti, R., Dicembre 1988)</a>. La figura mostra uno spettro <script type="math/tex">1/f^{\beta}</script> ottenuto usando
-il filtro <script type="math/tex">f_{pi}</script>, con due diversi valori per <script type="math/tex">h</script>.</p>
+discussa in <a class="citation" href="#art:corsini">(Corsini, G. &amp; Saletti, R., Dicembre 1988)</a>. La figura mostra uno spettro \(1/f^{\beta}\) ottenuto usando
+il filtro \(f_{pi}\), con due diversi valori per \(h\).</p>
 
 <figure class="image">
   <img src="images/noise.jpg" alt="Spettro di ampiezza del rumore frattale generato con $$\beta=1.81$$, $$h=2$$ a sinistra e $$h=6$$ a destra." />
@@ -421,33 +425,32 @@ il filtro <script type="math/tex">f_{pi}</script>, con due diversi valori per <s
 <p>La funzione di trasferimento nel dominio discreto del tempo può essere
 computata con il metodo della varianza della risposta all’impulso
  <a class="citation" href="#book:mitra">(Mitra, S. K., 1998)</a>; ciò corrisponde a mappare poli e zeri della funzione di
-trasferimento <script type="math/tex">H(s)</script> su poli e zeri della funzione di trasferimento
-<script type="math/tex">H(z)</script> nel dominio discreto del tempo attraverso la seguente
+trasferimento \(H(s)\) su poli e zeri della funzione di trasferimento
+\(H(z)\) nel dominio discreto del tempo attraverso la seguente
 sostituzione:</p>
 
-<script type="math/tex; mode=display">s-s_x \rightarrow 1-e^{s_xT_s}z^{-1} \hspace{0,5cm} , \label{eq:surface4}</script>
+\[s-s_x \rightarrow 1-e^{s_xT_s}z^{-1} \hspace{0,5cm} , \label{eq:surface4}\]
 
-<p>dove <script type="math/tex">T_s</script> è il periodo di campionamento e <script type="math/tex">s_x</script> indica un polo <script type="math/tex">s_{pi}</script>
-o uno zero <script type="math/tex">s_{0i}</script>. Si ottiene la seguente funzione di trasferimento
+<p>dove \(T_s\) è il periodo di campionamento e \(s_x\) indica un polo \(s_{pi}\)
+o uno zero \(s_{0i}\). Si ottiene la seguente funzione di trasferimento
 discreta:</p>
 
-<script type="math/tex; mode=display">H(z)=A' \frac { \prod^{N}_{i=1}1-e^{s_{0i}T}z^{-1} }{ \prod^{N}_{i=1}1-e^{s_{pi}T}z^{-1} } \hspace{0,5cm} , \label{eq:surface5}</script>
+\[H(z)=A' \frac { \prod^{N}_{i=1}1-e^{s_{0i}T}z^{-1} }{ \prod^{N}_{i=1}1-e^{s_{pi}T}z^{-1} } \hspace{0,5cm} , \label{eq:surface5}\]
 
-<p>dove <script type="math/tex">A'</script> è una costante di normalizzazione. In conclusione, lo spettro
-<script type="math/tex">1/f^{\beta}</script> è approssimato da una cascata di filtri del primo ordine,
+<p>dove \(A'\) è una costante di normalizzazione. In conclusione, lo spettro
+\(1/f^{\beta}\) è approssimato da una cascata di filtri del primo ordine,
 ognuno con la seguente funzione di trasferimento discreta:</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-H^{(i)}(z)=\frac{1+b_iz^{-1}}{1+a_iz^{-1}} \hspace{0,5cm} , \hspace{0,5cm} con \hspace{0,5cm}
+\[H^{(i)}(z)=\frac{1+b_iz^{-1}}{1+a_iz^{-1}} \hspace{0,5cm} , \hspace{0,5cm} con \hspace{0,5cm}
  \left\{
  \begin{array}{ll}
- a_i=e^{-2{\pi}f_{pi}T}, & b_i=e^{-2{\pi}f_{0i}T} \\
+ a_i=e^{-2{\pi}f_{pi}T}, &amp; b_i=e^{-2{\pi}f_{0i}T} \\
  \\
- f_{pi}=f_{p(i-1)}10^{\frac{1}{h}}, & f_{0i}=f_{pi}10^{\frac{\beta}{2h}} \\
+ f_{pi}=f_{p(i-1)}10^{\frac{1}{h}}, &amp; f_{0i}=f_{pi}10^{\frac{\beta}{2h}} \\
  \end{array}
  %\hspace{0,5cm}
  \right .
- \label{eq:surface6} %]]></script>
+ \label{eq:surface6}\]
 
 <hr />
 
@@ -550,16 +553,16 @@ incapsulamento:</p>
 
 <ul>
   <li>
-    <p>one–off subpatch – se l’oggetto viene chiamato <code class="highlighter-rouge">pd</code> o <code class="highlighter-rouge">pd my-name</code>, viene creata una subpatch il cui contenuto viene salvato come parte della patch genitore che può essere riutilizzata e modificata più volte all’interno di quest’ultima;</p>
+    <p>one–off subpatch – se l’oggetto viene chiamato <code class="language-plaintext highlighter-rouge">pd</code> o <code class="language-plaintext highlighter-rouge">pd my-name</code>, viene creata una subpatch il cui contenuto viene salvato come parte della patch genitore che può essere riutilizzata e modificata più volte all’interno di quest’ultima;</p>
   </li>
   <li>
-    <p>astrazione – se l’oggetto ha il nome di una patch già presente come file (omettendo l’estensione <code class="highlighter-rouge">.pd</code>), PD caricherà il contenuto del file all’interno della subpatch; in tal caso un cambiamento alla patch si propaga a tutte le chiamate alla sua astrazione.</p>
+    <p>astrazione – se l’oggetto ha il nome di una patch già presente come file (omettendo l’estensione <code class="language-plaintext highlighter-rouge">.pd</code>), PD caricherà il contenuto del file all’interno della subpatch; in tal caso un cambiamento alla patch si propaga a tutte le chiamate alla sua astrazione.</p>
   </li>
 </ul>
 
 <p>Per definire il numero di inlet e outlet che deve possedere l’oggetto
 contenente la subpatch è sufficiente utilizzare all’interno di
-quest’ultima i blocchi <code class="highlighter-rouge">inlet</code> e <code class="highlighter-rouge">outlet</code> (oppure <code class="highlighter-rouge">inlet~</code> e <code class="highlighter-rouge">outlet~</code>
+quest’ultima i blocchi <code class="language-plaintext highlighter-rouge">inlet</code> e <code class="language-plaintext highlighter-rouge">outlet</code> (oppure <code class="language-plaintext highlighter-rouge">inlet~</code> e <code class="language-plaintext highlighter-rouge">outlet~</code>
 per i collegamenti di segnale).</p>
 
 <h3 id="gestione-dei-segnali-audio">Gestione dei segnali audio</h3>
@@ -577,7 +580,7 @@ due limiti. La frequenza di campionamento di default è 44100 Hz
 (modificabile da riga di comando o nel menù <em>audio setup</em>).</p>
 
 <p>Le computazioni audio vengono eseguite dai <em>blocchi tilde</em>, cioè quelli
-che, per convenzione, hanno il nome seguito da una tilde, come <code class="highlighter-rouge">sc~</code>;
+che, per convenzione, hanno il nome seguito da una tilde, come <code class="language-plaintext highlighter-rouge">sc~</code>;
 essi comunicano attraverso connessioni di segnale. All’avvio della
 computazione, o quando vengono cambiati i collegamenti, gli oggetti
 tilde vengono ordinati secondo un ordine di esecuzione lineare; tale
@@ -586,8 +589,8 @@ significa che l’intera rete di blocchi audio viene eseguita una volta
 ogni 1.45 millisecondi). Le connessioni nella rete audio devono essere
 acicliche; la presenza di eventuali cicli viene rilevata al momento del
 riordino dei blocchi. Ogni subpatch può avere dei collegamenti di
-segnale in entrata e in uscita tramite i blocchi “inlet<script type="math/tex">\sim</script>” e
-“outlet<script type="math/tex">\sim</script>”.</p>
+segnale in entrata e in uscita tramite i blocchi “inlet\(\sim\)” e
+“outlet\(\sim\)”.</p>
 
 <p>La computazione dei segnali non avviene in <em>real time</em>, ma in <em>logical
 time</em>: quest’ultimo è definito come l’istante del successivo campione
@@ -602,25 +605,25 @@ figura si vede come la computazione dell’audio
 viene svolta rispetto all’elaborazione dei segnali di controllo: i
 campioni audio vengono calcolati a scadenze regolari, ma prima di ogni
 scadenza devono essere effettuati tutti i calcoli di controllo che
-possono influenzare il campione audio in quella scadenza. Se <script type="math/tex">N</script> è il
+possono influenzare il campione audio in quella scadenza. Se \(N\) è il
 numero di campioni in un blocco, la prima computazione audio riguarda i
-campioni da <script type="math/tex">0</script> a <script type="math/tex">N-1</script>, i quali vengono inviati in output tutti insieme
-all’istante <script type="math/tex">N</script> (logical time); prima di questo istante vengono
-effettuate tutte le elaborazioni di controllo per gli <script type="math/tex">N</script> campioni.</p>
+campioni da \(0\) a \(N-1\), i quali vengono inviati in output tutti insieme
+all’istante \(N\) (logical time); prima di questo istante vengono
+effettuate tutte le elaborazioni di controllo per gli \(N\) campioni.</p>
 
 <h4 id="conversione-tra-segnali-audio-e-segnali-di-controllo">Conversione tra segnali audio e segnali di controllo</h4>
 
 <p>La conversione da segnale di controllo a segnale audio è possibile
-utilizzando l’oggetto <code class="highlighter-rouge">sig~</code>. Per quanto riguarda la conversione inversa
+utilizzando l’oggetto <code class="language-plaintext highlighter-rouge">sig~</code>. Per quanto riguarda la conversione inversa
 (da segnale a controllo) deve essere specificato l’istante nel quale il
 segnale viene campionato; questo può essere gestito tramite l’oggetto
-<code class="highlighter-rouge">snapshot~</code> che campiona il segnale ogni volta che riceve in input un
-<em>bang</em>. Gli oggetti <code class="highlighter-rouge">+~</code>, <code class="highlighter-rouge">-~</code>, <code class="highlighter-rouge">*~</code>, <code class="highlighter-rouge">/~</code>, <code class="highlighter-rouge">osc~</code> e <code class="highlighter-rouge">phasor~</code> possono
+<code class="language-plaintext highlighter-rouge">snapshot~</code> che campiona il segnale ogni volta che riceve in input un
+<em>bang</em>. Gli oggetti <code class="language-plaintext highlighter-rouge">+~</code>, <code class="language-plaintext highlighter-rouge">-~</code>, <code class="language-plaintext highlighter-rouge">*~</code>, <code class="language-plaintext highlighter-rouge">/~</code>, <code class="language-plaintext highlighter-rouge">osc~</code> e <code class="language-plaintext highlighter-rouge">phasor~</code> possono
 essere configurati per accettare entrambi i tipi di segnale.</p>
 
 <h4 id="selettori-e-blocchi">Selettori e blocchi</h4>
 
-<p>Gli oggetti <code class="highlighter-rouge">switch~</code> e <code class="highlighter-rouge">block~</code> sono utilizzati per attivare o
+<p>Gli oggetti <code class="language-plaintext highlighter-rouge">switch~</code> e <code class="language-plaintext highlighter-rouge">block~</code> sono utilizzati per attivare o
 disattivare parti della computazione audio e per controllare la
 dimensione dei blocchi di calcolo; deve essere presente uno solo dei due
 oggetti per ogni finestra della patch e il suo effetto verrà esteso a
@@ -628,7 +631,7 @@ tutte le subpatch. Entrambi accettano due argomenti per la loro
 costruzione: il primo è la dimensione del blocco e il secondo un fattore
 di sovrapposizione.</p>
 
-<p>L’oggetto <code class="highlighter-rouge">switch~</code> può essere usato per ridurre il carico
+<p>L’oggetto <code class="language-plaintext highlighter-rouge">switch~</code> può essere usato per ridurre il carico
 computazionale scegliendo, ad esempio, uno tra diversi algoritmi di
 sintesi da utilizzare: per farlo è sufficiente che ogni algoritmo sia
 implementato in una subpatch diversa.</p>
@@ -642,23 +645,23 @@ retroazione. Questo può essere implementato attraverso tre coppie di
 oggetti:</p>
 
 <dl>
-  <dt>throw<script type="math/tex">\sim</script>/catch<script type="math/tex">\sim</script> –</dt>
+  <dt>throw\(\sim\)/catch\(\sim\) –</dt>
   <dd>
-    <p><code class="highlighter-rouge">throw~</code> accumula dati in un bus, mentre <code class="highlighter-rouge">catch~</code> legge i dati
+    <p><code class="language-plaintext highlighter-rouge">throw~</code> accumula dati in un bus, mentre <code class="language-plaintext highlighter-rouge">catch~</code> legge i dati
 accumulati e riazzera il bus per il ciclo successivo;</p>
   </dd>
-  <dt>send<script type="math/tex">\sim</script>/receive<script type="math/tex">\sim</script> –</dt>
+  <dt>send\(\sim\)/receive\(\sim\) –</dt>
   <dd>
-    <p><code class="highlighter-rouge">send~</code> salva un segnale che può essere ricevuto più volte da un
-blocco <code class="highlighter-rouge">receive~</code>, il quale però può leggere un solo <code class="highlighter-rouge">send~</code> alla
+    <p><code class="language-plaintext highlighter-rouge">send~</code> salva un segnale che può essere ricevuto più volte da un
+blocco <code class="language-plaintext highlighter-rouge">receive~</code>, il quale però può leggere un solo <code class="language-plaintext highlighter-rouge">send~</code> alla
 volta;</p>
   </dd>
-  <dt>delread<script type="math/tex">\sim</script>/delwrite<script type="math/tex">\sim</script> –</dt>
+  <dt>delread\(\sim\)/delwrite\(\sim\) –</dt>
   <dd>
     <p>se viene inviato un segnale ad un punto precedente nella rete audio,
 esso viene ricevuto solo al ciclo successivo, con un ritardo quindi
 di 1.45 millisecondi (con le impostazioni di default). Gli oggetti
-<code class="highlighter-rouge">delread~</code> e <code class="highlighter-rouge">delwrite~</code> permettono di ridurre al minimo tale
+<code class="language-plaintext highlighter-rouge">delread~</code> e <code class="language-plaintext highlighter-rouge">delwrite~</code> permettono di ridurre al minimo tale
 ritardo.</p>
   </dd>
 </dl>
@@ -691,8 +694,8 @@ memoria, non è più distinguibile dagli internal. Una libreria è una
 collezione di external compilati all’interno di un unico file binario;
 il nome di una libreria varia a seconda del sistema operativo per la
 quale viene implementata: ad esempio, se viene creata la libreria
-<code class="highlighter-rouge">my_lib</code>, essa dovrà essere chiamata <code class="highlighter-rouge">my_lib.pd_linux</code> nei sistemi
-Linux, <code class="highlighter-rouge">my_lib.pd_irix</code> e <code class="highlighter-rouge">my_lib.dll</code> nei sistemi Win32. Una libreria
+<code class="language-plaintext highlighter-rouge">my_lib</code>, essa dovrà essere chiamata <code class="language-plaintext highlighter-rouge">my_lib.pd_linux</code> nei sistemi
+Linux, <code class="language-plaintext highlighter-rouge">my_lib.pd_irix</code> e <code class="language-plaintext highlighter-rouge">my_lib.dll</code> nei sistemi Win32. Una libreria
 elementare include esattamente un external avente lo stesso nome della
 libreria.</p>
 
@@ -701,14 +704,14 @@ modi:</p>
 
 <ul>
   <li>
-    <p>tramite opzione da riga di comando: <code class="highlighter-rouge">-lib my_lib</code> (così la libreria e tutti gli external in essa contenuti vengono caricati all’avvio di PD);</p>
+    <p>tramite opzione da riga di comando: <code class="language-plaintext highlighter-rouge">-lib my_lib</code> (così la libreria e tutti gli external in essa contenuti vengono caricati all’avvio di PD);</p>
   </li>
   <li>
-    <p>creando un oggetto <code class="highlighter-rouge">my_lib</code> (consigliabile quando la libreria contiene un solo oggetto con il nome della libreria stessa).</p>
+    <p>creando un oggetto <code class="language-plaintext highlighter-rouge">my_lib</code> (consigliabile quando la libreria contiene un solo oggetto con il nome della libreria stessa).</p>
   </li>
 </ul>
 
-<p>In entrambi i casi PD prima controlla se una libreria <code class="highlighter-rouge">my_lib</code> è già
+<p>In entrambi i casi PD prima controlla se una libreria <code class="language-plaintext highlighter-rouge">my_lib</code> è già
 stata caricata; se così non è, viene cercato il file corrispondente e,
 se trovato, tutti gli external inclusi vengono caricati.</p>
 
@@ -717,7 +720,7 @@ questo linguaggio di programmazione; il codice per un semplice external
 che stampa il messaggio “hello world!” è riportato di seguito
  <a class="citation" href="#pdexternal">(Zmölnig, J. M., n.d.)</a>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #include "m_pd.h"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #include "m_pd.h"
 
     static t_class *helloworld_class;
 
@@ -748,9 +751,9 @@ che stampa il messaggio “hello world!” è riportato di seguito
 
 <p>Inizialmente viene definita la nuova <em>classe</em> (qui il termine “classe”
 viene usato con un significato diverso da quello usuale della
-programmazione ad oggetti), dove <code class="highlighter-rouge">hello_worldclass</code> è un puntatore alla
-nuova classe e la struttura <code class="highlighter-rouge">t_helloworld</code> costituisce il <em>dataspace</em>
-della classe; la variabile <code class="highlighter-rouge">t_object</code> è assolutamente necessaria e serve
+programmazione ad oggetti), dove <code class="language-plaintext highlighter-rouge">hello_worldclass</code> è un puntatore alla
+nuova classe e la struttura <code class="language-plaintext highlighter-rouge">t_helloworld</code> costituisce il <em>dataspace</em>
+della classe; la variabile <code class="language-plaintext highlighter-rouge">t_object</code> è assolutamente necessaria e serve
 a memorizzare le proprietà dell’oggetto, come la sua rappresentazione
 grafica e le informazioni su inlet e outlet.</p>
 
@@ -760,8 +763,8 @@ metodo; ogni metodo è associato ad un inlet. La funzione implementata
 viene eseguita solo quando un nuovo dato arriva a tale inlet.</p>
 
 <p>Al caricamento della libreria, PD richiama la funzione
-<code class="highlighter-rouge">helloworld_setup()</code>: tale funzione dichiara la nuova classe e le sue
-proprietà. L’istruzione <code class="highlighter-rouge">class_new</code> crea una nuova classe e ritorna un
+<code class="language-plaintext highlighter-rouge">helloworld_setup()</code>: tale funzione dichiara la nuova classe e le sue
+proprietà. L’istruzione <code class="language-plaintext highlighter-rouge">class_new</code> crea una nuova classe e ritorna un
 puntatore ad essa: il primo argomento è il nome simbolico della classe;
 il secondo e il terzo definiscono il costruttore e il distruttore; il
 quarto definisce la dimensione della struttura dati; il quinto determina
@@ -770,8 +773,8 @@ dell’oggetto. L’istruzione successiva serve per aggiungere i metodi alla
 classe (il primo argomento è la classe, il secondo è il metodo).</p>
 
 <p>L’inizializzazione dell’oggetto avviene tramite la funzione
-<code class="highlighter-rouge">helloworld_new()</code>, i cui argomenti dipendono dalla definizione data con
-<code class="highlighter-rouge">class_new</code>.</p>
+<code class="language-plaintext highlighter-rouge">helloworld_new()</code>, i cui argomenti dipendono dalla definizione data con
+<code class="language-plaintext highlighter-rouge">class_new</code>.</p>
 
 <h3 id="sec:librerie_pd">Librerie utili per Pure Data</h3>
 
@@ -802,7 +805,7 @@ piattaforme (Windows, Linux, OSX) e compilatori.</p>
 
 <p>Un semplice esempio di external basato su flext è il seguente.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // inclusione del header file
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // inclusione del header file
     #include &lt;flext.h&gt;
 
     // controllo sulla versione
@@ -879,7 +882,7 @@ rispettivi inlet.</p>
 <p>Un <em>callback wrapper</em> è necessario per stabilire un collegamento con PD
 per ogni metodo che deve essere lanciato ogni volta che un dato viene
 ricevuto: ciò avviene tramite l’istruzione
-<code class="highlighter-rouge">FLEXT_CALLBACK_1(m_float, float)</code>. Con l’ultimo comando si informa il
+<code class="language-plaintext highlighter-rouge">FLEXT_CALLBACK_1(m_float, float)</code>. Con l’ultimo comando si informa il
 sistema riguardo al nome della classe e ai suoi argomenti di creazione.</p>
 
 <h3 id="implementazione-della-patch-generatrice-di-rumore-frattale">Implementazione della patch generatrice di rumore frattale</h3>
@@ -887,14 +890,13 @@ sistema riguardo al nome della classe e ai suoi argomenti di creazione.</p>
 <p>Nella realizzazione della patch per Pure Data che implementa l’algoritmo
 di generazione di rumore frattale, per convenienze implementative, i
 filtri sono stati riscritti come cascata di biquadri: perciò la cascata
-è formata da <script type="math/tex">N/2</script> filtri del secondo ordine, ognuno con le seguenti
+è formata da \(N/2\) filtri del secondo ordine, ognuno con le seguenti
 funzioni di trasferimento:</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{aligned}
-H^{(i)}(z) = H^{j}H^{j-1}(z) & = & \frac{(1+b_jz^{-1})(1+b_{j-1}z^{-1})}{(1+a_jz^{-1})(1+a_{j-1}z^{-1})} \label{eq:surface7} \\
-                             & = &\mbox{} \frac{1+(b_j+b_{j-1})z^{-1}+(b_jb_{j-1})z^{-2}}{1+(a_j+a_{j-1})z^{-1}+(a_ja_{j-1})z^{-2}}\\
-                                             &   & con~ j=2\cdot i, i=1...N/2.\end{aligned} %]]></script>
+\[\begin{aligned}
+H^{(i)}(z) = H^{j}H^{j-1}(z) &amp; = &amp; \frac{(1+b_jz^{-1})(1+b_{j-1}z^{-1})}{(1+a_jz^{-1})(1+a_{j-1}z^{-1})} \label{eq:surface7} \\
+                             &amp; = &amp;\mbox{} \frac{1+(b_j+b_{j-1})z^{-1}+(b_jb_{j-1})z^{-2}}{1+(a_j+a_{j-1})z^{-1}+(a_ja_{j-1})z^{-2}}\\
+                                             &amp;   &amp; con~ j=2\cdot i, i=1...N/2.\end{aligned}\]
 
 <figure class="image">
   <img src="images/surface_modeler1.jpg" alt="La patch surface_modeler che implementa la generazione di rumore frattale." />
@@ -902,10 +904,10 @@ H^{(i)}(z) = H^{j}H^{j-1}(z) & = & \frac{(1+b_jz^{-1})(1+b_{j-1}z^{-1})}{(1+a_jz
 </figure>
 
 <p>Il parametro di controllo più importante impostabile dall’utente è
-<script type="math/tex">\beta</script>, che definisce lo spettro <script type="math/tex">1/f^{\beta}</script>; deve essere impostato
+\(\beta\), che definisce lo spettro \(1/f^{\beta}\); deve essere impostato
 anche il numero di poli della cascata di filtri assieme alla frequenza
 del primo polo: con questi parametri viene controllata l’accuratezza
-dell’approssimazione <script type="math/tex">1/f^{\beta}</script>.</p>
+dell’approssimazione \(1/f^{\beta}\).</p>
 
 <p>Nella figura precedente è riportata la patch <em>surface_modeler</em>
 che implementa la generazione di rumore frattale. Per avviare la
@@ -917,7 +919,7 @@ computazione è sufficiente cliccare sul blocco (in modalità <em>running</em>):
 </figure>
 
 <p>subito dopo si seleziona il numero di poli desiderato (due, quattro o
-sei). Il controllo sulla patch avviene variando il parametro <script type="math/tex">\beta</script>
+sei). Il controllo sulla patch avviene variando il parametro \(\beta\)
 tramite lo slider:</p>
 
 <figure class="image">
@@ -932,15 +934,15 @@ tramite lo slider:</p>
 
 <p>Il modulo <em>_cascade</em> invece è una subpatch nella quale viene
 implementata una cascata di tre filtri; ogni
-oggetto <code class="highlighter-rouge">biquad~</code> è un filtro biquadro a due poli e due zeri; ognuno di
+oggetto <code class="language-plaintext highlighter-rouge">biquad~</code> è un filtro biquadro a due poli e due zeri; ognuno di
 questi filtri calcola le seguenti equazioni differenziali:</p>
 
-<script type="math/tex; mode=display">\begin{array}{ll}
+\[\begin{array}{ll}
 y(n) = ff1 \cdot w(n) + ff2 \cdot w(n-1) + ff3 \cdot w(n-2) \\
 w(n) = x(n) + fb1 \cdot w(n-1) + fb2 \cdot w(n-2)
-\end{array}</script>
+\end{array}\]
 
-<p>I valori <script type="math/tex">fb1, fb2, ff1, ff2, ff3</script> vengono dati, in
+<p>I valori \(fb1, fb2, ff1, ff2, ff3\) vengono dati, in
 quest’ordine, come argomenti di creazione dell’oggetto.</p>
 
 <figure class="image">
@@ -969,7 +971,7 @@ rotolamento.</p>
 <p>Una prima distinzione si ha nella velocità con cui avviene il contatto:
 se per il modello di rotolamento deve essere presa in considerazione la
 velocità angolare dell’oggetto che rotola (che nel caso di una sfera si
-calcola come <script type="math/tex">\omega = v/r</script>, con <script type="math/tex">r</script> raggio della sfera), per un corpo
+calcola come \(\omega = v/r\), con \(r\) raggio della sfera), per un corpo
 che striscia si deve considerare la velocità tangenziale, cioè la
 velocità lungo il piano sul quale giace la superficie. In secondo luogo
 il suono di un moto di rotolamento è spesso caratterizzato da
@@ -988,14 +990,14 @@ della superficie sulla quale si muove.</p>
 <p>La patch che implementa la generazione di rumore di sfregamento è stata quindi elaborata a partire dalla
 patch che implementa il modello di rotolamento.</p>
 
-<h4 id="holy-rollersim">holy-roller<script type="math/tex">\sim</script></h4>
+<h4 id="holy-rollersim">holy-roller\(\sim\)</h4>
 
-<p>Il cuore della computazione viene svolto dalla subpatch <code class="highlighter-rouge">holy_roller~</code>; l’oggetto <code class="highlighter-rouge">holy_roller~</code> possiede 13
+<p>Il cuore della computazione viene svolto dalla subpatch <code class="language-plaintext highlighter-rouge">holy_roller~</code>; l’oggetto <code class="language-plaintext highlighter-rouge">holy_roller~</code> possiede 13
 inlet:</p>
 
 <ul>
   <li>
-    <p>inlet 0 – accetta un oggetto di tipo messaggio contente il nome di un file <code class="highlighter-rouge">.wav</code>; tale file è stato precedentemente ottenuto registrando per circa 10 secondi l’output della patch generatrice di rumore frattale (e pertanto contiene a sua volta un rumore frattale);</p>
+    <p>inlet 0 – accetta un oggetto di tipo messaggio contente il nome di un file <code class="language-plaintext highlighter-rouge">.wav</code>; tale file è stato precedentemente ottenuto registrando per circa 10 secondi l’output della patch generatrice di rumore frattale (e pertanto contiene a sua volta un rumore frattale);</p>
   </li>
   <li>
     <p>inlet 1 e 2 – non utilizzati in questa implementazione; accettano entrambi un segnale utilizzato poi come forza aggiuntiva da applicare all’oggetto rotolante;</p>
@@ -1007,16 +1009,16 @@ inlet:</p>
     <p>inlet 4 – assumendo che l’oggetto che si muove sulla superficie sia una sfera, questo inlet riceve un numero in virgola mobile corrispondente al diametro della sfera in centimetri; sarà poi utilizzato per calcolarne la massa;</p>
   </li>
   <li>
-    <p>inlet 5 – riceve un numero in virgola mobile indicante la velocità (in <script type="math/tex">m/s</script>) dell’oggetto che si muove;</p>
+    <p>inlet 5 – riceve un numero in virgola mobile indicante la velocità (in \(m/s\)) dell’oggetto che si muove;</p>
   </li>
   <li>
-    <p>inlet 6, 7, 8 e 9 – ricevono tutti dei segnali di controllo per l’impostazione delle frequenze e i tempi di decadimento degli oggetti modali usati nel modello di impatto (il tempo di decadimento è definito come il tempo richiesto affinché l’ampiezza decresca di un fattore <script type="math/tex">1/e</script> rispetto al suo valore iniziale);</p>
+    <p>inlet 6, 7, 8 e 9 – ricevono tutti dei segnali di controllo per l’impostazione delle frequenze e i tempi di decadimento degli oggetti modali usati nel modello di impatto (il tempo di decadimento è definito come il tempo richiesto affinché l’ampiezza decresca di un fattore \(1/e\) rispetto al suo valore iniziale);</p>
   </li>
   <li>
-    <p>inlet 10 – riceve un numero in virgola mobile (<script type="math/tex">k</script>) proporzionale alla rigidità dell’oggetto;</p>
+    <p>inlet 10 – riceve un numero in virgola mobile (\(k\)) proporzionale alla rigidità dell’oggetto;</p>
   </li>
   <li>
-    <p>inlet 11 e 12 – ricevono due numeri in virgola mobile (<script type="math/tex">\alpha</script> e <script type="math/tex">\lambda</script>) utilizzati nel modulo <code class="highlighter-rouge">impact_modalb~</code> per il calcolo della forza di impatto.</p>
+    <p>inlet 11 e 12 – ricevono due numeri in virgola mobile (\(\alpha\) e \(\lambda\)) utilizzati nel modulo <code class="language-plaintext highlighter-rouge">impact_modalb~</code> per il calcolo della forza di impatto.</p>
   </li>
 </ul>
 
@@ -1026,36 +1028,36 @@ inlet:</p>
 calcolare dei valori indicanti il volume e la massa dell’oggetto
 rotolante.</p>
 
-<p>Il modulo <code class="highlighter-rouge">_smoother</code> ha lo scopo di trasformare una variazione
+<p>Il modulo <code class="language-plaintext highlighter-rouge">_smoother</code> ha lo scopo di trasformare una variazione
 istantanea del valore del diametro secondo una rampa lineare della
 durata di un millisecondo.</p>
 
 <p>Il valore di velocità invece viene inviato in input all’oggetto
-<code class="highlighter-rouge">_clip_velo+fade</code>; tale oggetto invia al primo outlet il valore di input
+<code class="language-plaintext highlighter-rouge">_clip_velo+fade</code>; tale oggetto invia al primo outlet il valore di input
 se questo è maggiore del valore dato come primo argomento di costruzione
-(che nell’implementazione è <script type="math/tex">0.01</script>), altrimenti viene inviato
+(che nell’implementazione è \(0.01\)), altrimenti viene inviato
 quest’ultimo. Il ruolo di questo outlet è impedire che alla patch
-successiva <code class="highlighter-rouge">clip_exp~</code> venga inviato costantemente un segnale di
+successiva <code class="language-plaintext highlighter-rouge">clip_exp~</code> venga inviato costantemente un segnale di
 controllo nullo; se ciò si verificasse infatti si creerebbe un ciclo
 infinito che porterebbe ad un funzionamento non corretto della patch. Al
 secondo outlet viene inviato il valore ricevuto all’inlet opportunamente
 scalato nell’intervallo delimitato dai due argomenti.</p>
 
-<h4 id="clip_expsim">clip_exp<script type="math/tex">\sim</script></h4>
+<h4 id="clip_expsim">clip_exp\(\sim\)</h4>
 
 <p>I valori di raggio (in metri) e di velocità (in metri al secondo)
-vengono inviati ai due oggetti <code class="highlighter-rouge">clip_exp~</code>, la cui funzione è quella di
+vengono inviati ai due oggetti <code class="language-plaintext highlighter-rouge">clip_exp~</code>, la cui funzione è quella di
 limitare la variazione logaritmica dei segnali in input. Più
 precisamente, in ognuno dei due oggetti viene per prima cosa calcolato
 il rapporto tra due campioni in input a distanza di un millisecondo
-l’uno dall’altro; se tale rapporto è maggiore di <code class="highlighter-rouge">maxfact</code> o minore di
-<code class="highlighter-rouge">minfact</code> (calcolati a partire dal parametro di costruzione), il valore
+l’uno dall’altro; se tale rapporto è maggiore di <code class="language-plaintext highlighter-rouge">maxfact</code> o minore di
+<code class="language-plaintext highlighter-rouge">minfact</code> (calcolati a partire dal parametro di costruzione), il valore
 del campione corrente viene limitato e inviato all’outlet. Se il
 rapporto è minore del valore predeterminato, il campione viene inviato
 in output invariato. Il codice seguente mostra come questo algoritmo sia
 implementato (per ragioni di efficienza) in C.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    static t_int *clip_exp_tilde_perform(t_int *w)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    static t_int *clip_exp_tilde_perform(t_int *w)
     {
       t_float *in = (t_float *)(w[1]);
       t_float *out = (t_float *)(w[2]);
@@ -1095,9 +1097,9 @@ implementato (per ragioni di efficienza) in C.</p>
     }
 </code></pre></div></div>
 
-<p>I valori <code class="highlighter-rouge">maxfact</code> e <code class="highlighter-rouge">minfact</code> vengono calcolati nel seguente modo:</p>
+<p>I valori <code class="language-plaintext highlighter-rouge">maxfact</code> e <code class="language-plaintext highlighter-rouge">minfact</code> vengono calcolati nel seguente modo:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    static void set_expmax(t_clip_exp_tilde *x, t_floatarg expmax)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    static void set_expmax(t_clip_exp_tilde *x, t_floatarg expmax)
     {
       t_clip_exp_tilde_ctl *c = x-&gt;x_ctl;
 
@@ -1118,18 +1120,18 @@ implementato (per ragioni di efficienza) in C.</p>
     }
 </code></pre></div></div>
 
-<h4 id="circ_max_filtersim">circ_max_filter<script type="math/tex">\sim</script></h4>
+<h4 id="circ_max_filtersim">circ_max_filter\(\sim\)</h4>
 
-<p>Gli outlet dei due moduli <code class="highlighter-rouge">clip_exp~</code> sono collegati al secondo e terzo
-inlet dell’oggetto <code class="highlighter-rouge">circ_max_filter~</code>:</p>
+<p>Gli outlet dei due moduli <code class="language-plaintext highlighter-rouge">clip_exp~</code> sono collegati al secondo e terzo
+inlet dell’oggetto <code class="language-plaintext highlighter-rouge">circ_max_filter~</code>:</p>
 
 <p>la sua funzione è quella di tracciare il profilo della superficie sulla
 quale l’oggetto rotola e calcolare i punti di contatto tra i due. Nel
 primo inlet entra il controllo di segnale ottenuto dalla moltiplicazione
-del rumore frattale per il fattore di amplificazione <code class="highlighter-rouge">surface_depth</code>. Il
+del rumore frattale per il fattore di amplificazione <code class="language-plaintext highlighter-rouge">surface_depth</code>. Il
 ciclo principale svolto dal modulo è il seguente:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>static t_int *circ_max_filter_perform(t_int *w)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>static t_int *circ_max_filter_perform(t_int *w)
 {
     t_float *in1 = (t_float *)(w[1]);
     t_float *in2 = (t_float *)(w[2]);
@@ -1170,16 +1172,16 @@ ciclo principale svolto dal modulo è il seguente:</p>
 
 <p>In particolare si può notare come l’istruzione</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    *out++ = up_circle(velocity * range / *p_samprate, radius)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    *out++ = up_circle(velocity * range / *p_samprate, radius)
             + bottom_fvalue_circ_buff_1float2int(c-&gt;p_peaks);
 </code></pre></div></div>
 
-<p>calcola i punti di contatto svolgendo la computazione della funzione <script type="math/tex">f_x(q)</script>.</p>
+<p>calcola i punti di contatto svolgendo la computazione della funzione \(f_x(q)\).</p>
 
-<p>La funzione <code class="highlighter-rouge">up_circle</code> richiede due argomenti; dopo aver calcolato i
+<p>La funzione <code class="language-plaintext highlighter-rouge">up_circle</code> richiede due argomenti; dopo aver calcolato i
 quadrati di questi, ritorna la radice quadrata della differenza dei due:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    static INLINE t_float up_circle(t_float x, t_float radius)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    static INLINE t_float up_circle(t_float x, t_float radius)
     {
         t_float x_2 = x*x, radius_2 = radius*radius;
 
@@ -1192,15 +1194,15 @@ quadrati di questi, ritorna la radice quadrata della differenza dei due:</p>
     }
 </code></pre></div></div>
 
-<p>La funzione <code class="highlighter-rouge">to_buffer</code> si occupa di aggiornare il profilo della
+<p>La funzione <code class="language-plaintext highlighter-rouge">to_buffer</code> si occupa di aggiornare il profilo della
 superficie in base al segnale ricevuto al primo inlet.</p>
 
-<h4 id="_surface_tracersim">_surface_tracer<script type="math/tex">\sim</script></h4>
+<h4 id="_surface_tracersim">_surface_tracer\(\sim\)</h4>
 
-<p>Il file con estensione <code class="highlighter-rouge">.wav</code> contenente il rumore frattale viene letto
-dalla subpatch <code class="highlighter-rouge">_surface_tracer~</code>. Questa subpatch, assieme alle subpatch
-in essa contenute quali <code class="highlighter-rouge">pd tracer+calculation~</code>, <code class="highlighter-rouge">soundfiler_tracer~</code> e
-<code class="highlighter-rouge">table_tracer~</code>, legge il file audio e lo scrive in un array;
+<p>Il file con estensione <code class="language-plaintext highlighter-rouge">.wav</code> contenente il rumore frattale viene letto
+dalla subpatch <code class="language-plaintext highlighter-rouge">_surface_tracer~</code>. Questa subpatch, assieme alle subpatch
+in essa contenute quali <code class="language-plaintext highlighter-rouge">pd tracer+calculation~</code>, <code class="language-plaintext highlighter-rouge">soundfiler_tracer~</code> e
+<code class="language-plaintext highlighter-rouge">table_tracer~</code>, legge il file audio e lo scrive in un array;
 successivamente, per inviare i campioni in output, esegue una ricerca di
 tipo <em>table look–up</em> con frequenza dipendente dalla velocità di
 movimento dell’oggetto sulla superficie.</p>
@@ -1210,10 +1212,10 @@ movimento dell’oggetto sulla superficie.</p>
   <figcaption></figcaption>
 </figure>
 
-<h4 id="impact_modalbsim">impact_modalb<script type="math/tex">\sim</script></h4>
+<h4 id="impact_modalbsim">impact_modalb\(\sim\)</h4>
 
 <p>Le successive elaborazioni dei segnali finora calcolati sono svolte dal
-modulo <code class="highlighter-rouge">impact_modalb~</code>, un oggetto che implementa il modello descritto
+modulo <code class="language-plaintext highlighter-rouge">impact_modalb~</code>, un oggetto che implementa il modello descritto
 in  <a class="citation" href="#art:soundobj">(Avanzini, F., Rath, M., &amp; Rocchesso, D., 2003)</a> per i suoni di impatto.</p>
 
 <figure class="image">
@@ -1230,12 +1232,12 @@ interazione.</p>
 </figure>
 
 <p>I parametri della forza di contatto e della massa vengono ricevuti dalla
-subpatch <code class="highlighter-rouge">interaction+mass</code> e la subpatch in essa contenuta
-<code class="highlighter-rouge">_par_to_list4</code>; in output (secondo outlet) viene mandata
+subpatch <code class="language-plaintext highlighter-rouge">interaction+mass</code> e la subpatch in essa contenuta
+<code class="language-plaintext highlighter-rouge">_par_to_list4</code>; in output (secondo outlet) viene mandata
 una lista contenente queste informazioni. Nei quattro inlet vengono
-ricevuti, in ordine: <script type="math/tex">k</script>, <script type="math/tex">\alpha</script>, <script type="math/tex">\lambda</script> e la massa del percussore.</p>
+ricevuti, in ordine: \(k\), \(\alpha\), \(\lambda\) e la massa del percussore.</p>
 
-<p>La subpatch <code class="highlighter-rouge">_modal_object_parameters3_2</code>, dove 3 è il numero di modi e
+<p>La subpatch <code class="language-plaintext highlighter-rouge">_modal_object_parameters3_2</code>, dove 3 è il numero di modi e
 2 il numero di punti di interazione, raccoglie i parametri del
 risonatore. Nei primi tre inlet entrano i fattori moltiplicativi per
 frequenza, tempo di decadimento e guadagno; ai successivi tre inlet sono
@@ -1247,18 +1249,18 @@ outlet: il primo per la lista dei fattori, il secondo per la lista delle
 frequenze, il terzo per la lista dei tempi di decadimento e un outlet
 per ogni punto di interazione con l’indice del punto di interazione
 seguito dalla lista dei livelli (con l’eventuale fattore di phase
-reverse). Infine l’oggetto <code class="highlighter-rouge">_modal_object_parameters3_2</code> deve essere
+reverse). Infine l’oggetto <code class="language-plaintext highlighter-rouge">_modal_object_parameters3_2</code> deve essere
 inizializzato con la seguente lista di argomenti: lista dei valori delle
 frequenze, lista dei valori dei tempi di decadimento, valori dei punti
 di interazione e del phase–reverse; un valore 1 per il livello
 corrisponde ad una impostazione del relativo slider a 100, dato che
 quest’ultimo viene convertito in dB RMS.</p>
 
-<p>L’oggetto <code class="highlighter-rouge">impact_modalb~</code> possiede i seguenti argomenti di costruzione:</p>
+<p>L’oggetto <code class="language-plaintext highlighter-rouge">impact_modalb~</code> possiede i seguenti argomenti di costruzione:</p>
 
 <ul>
   <li>
-    <p>valori di default di <script type="math/tex">k</script>, <script type="math/tex">\alpha</script>, <script type="math/tex">\lambda</script> e massa del
+    <p>valori di default di \(k\), \(\alpha\), \(\lambda\) e massa del
 percussore;</p>
   </li>
   <li>
@@ -1292,12 +1294,12 @@ dai valori dei livelli.</p>
 <p>Secondo studi svolti da Van Den Doel, Kry e Pai [@art:vandendoel], nei
 contatti che avvengono tra due corpi e che coinvolgono forze di
 frizione, queste ultime sono calcolabili come:
-<script type="math/tex">F_{frizione} = \mu F_{normale}</script> e il volume del suono prodotto da
-ogni contatto è proporzionale a <script type="math/tex">\sqrt{v \cdot F_{normale}}</script>, dove <script type="math/tex">v</script> è
+\(F_{frizione} = \mu F_{normale}\) e il volume del suono prodotto da
+ogni contatto è proporzionale a \(\sqrt{v \cdot F_{normale}}\), dove \(v\) è
 la velocità alla quale avviene il contatto; in questo calcolo si assume
 che l’energia acustica sia proporzionale alla perdita di capacità da
 parte della superficie di opporre una resistenza (di frizione) al moto.
-Nella subpatch <code class="highlighter-rouge">holy_roller~</code> tale caratteristica è implementata tramite
+Nella subpatch <code class="language-plaintext highlighter-rouge">holy_roller~</code> tale caratteristica è implementata tramite
 gli oggetti in figura:</p>
 
 <figure class="image">
@@ -1447,7 +1449,7 @@ gli oggetti in figura:</p>
     <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
   
 
-  <div class="post-date"><a href="/menu/about.html">ing. Andrea Maglie |  by Andrea Maglie</a></div>
+  <div class="post-date"><a href="/menu/about.html">ing. Andrea Maglie | A blog about Software Engineering, with a focus on Java, Kotlin, Flutter and architecture by Andrea Maglie</a></div>
 </footer>
 
   </div>

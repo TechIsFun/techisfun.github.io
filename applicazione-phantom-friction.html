@@ -19,7 +19,7 @@
   <!-- Use Atom -->
   <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ing. Andrea Maglie" />
   <!-- Use RSS-2.0 -->
-  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="ing. Andrea Maglie | "/>
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="ing. Andrea Maglie | A blog about Software Engineering, with a focus on Java, Kotlin, Flutter and architecture"/>
   //-->
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
@@ -44,8 +44,9 @@
 
 
   <!-- Use Jekyll SEO plugin -->
-  <!-- Begin Jekyll SEO tag v2.3.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>L’applicazione Phantom Friction | ing. Andrea Maglie</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="L’applicazione Phantom Friction" />
 <meta name="author" content="Andrea Maglie" />
 <meta property="og:locale" content="en_US" />
@@ -54,8 +55,12 @@
 <meta property="og:site_name" content="ing. Andrea Maglie" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-02-19T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="L’applicazione Phantom Friction" />
+<meta name="twitter:site" content="@techisfun" />
+<meta name="twitter:creator" content="@Andrea Maglie" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/applicazione-phantom-friction.html"},"url":"/applicazione-phantom-friction.html","publisher":null,"name":null,"author":{"@type":"Person","name":"Andrea Maglie"},"description":"Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.","headline":"L’applicazione Phantom Friction","dateModified":"2019-02-19T00:00:00+01:00","datePublished":"2019-02-19T00:00:00+01:00","sameAs":null,"image":null,"@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"Andrea Maglie"},"mainEntityOfPage":{"@type":"WebPage","@id":"/applicazione-phantom-friction.html"},"url":"/applicazione-phantom-friction.html","headline":"L’applicazione Phantom Friction","dateModified":"2019-02-19T00:00:00+01:00","datePublished":"2019-02-19T00:00:00+01:00","description":"Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -68,7 +73,7 @@
     <header class="masthead">
   <h3 class="masthead-title">
     <a href="/">ing. Andrea Maglie</a>
-    <small class="masthead-subtitle"></small>
+    <small class="masthead-subtitle">A blog about Software Engineering, with a focus on Java, Kotlin, Flutter and architecture</small>
     <div class="menu">
   <nav class="menu-content">
     
@@ -186,9 +191,9 @@ librerie sono state precompilate per essere usate con l’ambiente di
 programmazione <em>Visual Studio .NET</em> di Microsoft, è necessario
 ricompilarle se devono essere usate con un altro ambiente. Nel nostro
 caso l’applicazione è stata sviluppata in <em>Visual Studio 2005</em>: perciò è
-stato necessario effettuare il download del pacchetto <code class="highlighter-rouge">glui_v2_2.zip</code>
+stato necessario effettuare il download del pacchetto <code class="language-plaintext highlighter-rouge">glui_v2_2.zip</code>
 (<a href="http://glui.sourceforge.net/">http://glui.sourceforge.net/</a>); una volta scompattato il file, sarà
-presente una directory <code class="highlighter-rouge">msvc</code> contenente i file dei progetti da aprire
+presente una directory <code class="language-plaintext highlighter-rouge">msvc</code> contenente i file dei progetti da aprire
 con Visual Studio e ricompilare.</p>
 
 <h3 id="rappresentazione-della-scena">Rappresentazione della scena</h3>
@@ -201,7 +206,7 @@ condizione secondo la quale non devono essere dati suggerimenti visivi
 sul tipo di superficie. Il parallelepipedo viene creato come lista
 composta da un solo oggetto:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DraggableObject dro;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DraggableObject dro;
 dro.displayList = glGenLists(1);
 dro.transform = hduMatrix::createTranslation(surfx,surfy,surfz);
 glNewList(dro.displayList, GL_COMPILE);
@@ -210,13 +215,13 @@ glEndList();
 draggableObjects.push_back(dro);
 </code></pre></div></div>
 
-<p>dove il metodo <code class="highlighter-rouge">drawSurface</code> costruisce il parallelepipedo
+<p>dove il metodo <code class="language-plaintext highlighter-rouge">drawSurface</code> costruisce il parallelepipedo
 specificandone i vertici, accettando come argomenti le dimensioni del
-parallelepipedo lungo gli assi <script type="math/tex">x</script>, <script type="math/tex">z</script> e <script type="math/tex">y</script> e un valore booleano che
+parallelepipedo lungo gli assi \(x\), \(z\) e \(y\) e un valore booleano che
 indica se all’oggetto deve essere applicata la texture grafica associata
 (tale valore è sempre impostato a falso nell’attuale implementazione).
 Il comando</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glCallList(obj.displayList);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glCallList(obj.displayList);
 </code></pre></div></div>
 <p>effettua il rendering a video della superficie. E’ possibile aggiungere
 alla lista altri oggetti, nel caso ad esempio si volessero rappresentare
@@ -226,14 +231,14 @@ effettuate sulla lista verranno propagate contemporaneamente a tutti gli
 oggetti della lista. Anche il cursore, rappresentato da un cono, viene
 disegnato come una lista costituita da un oggetto singolo tramite la
 funzione:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>redrawCursor(const boolean&amp; h, const int&amp; nShadow);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>redrawCursor(const boolean&amp; h, const int&amp; nShadow);
 </code></pre></div></div>
-<p>il parametro booleano <code class="highlighter-rouge">h</code> deve essere impostato a 1 se si vuole che
+<p>il parametro booleano <code class="language-plaintext highlighter-rouge">h</code> deve essere impostato a 1 se si vuole che
 venga fatto sia il rendering grafico che aptico del cursore, mentre
 impostandolo a 0 verrà fatto solo il rendering grafico; il secondo
 parametro è utilizzato nel calcolo delle ombre. Le istruzioni per il
 rendering grafico sono le seguenti:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gCursorDisplayList = glGenLists(1);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gCursorDisplayList = glGenLists(1);
 glNewList(gCursorDisplayList, GL_COMPILE);
 qobj = gluNewQuadric();
 gluQuadricDrawStyle(qobj,GLU_FILL);
@@ -247,12 +252,12 @@ gluDeleteQuadric(qobj);
 glEndList();
 </code></pre></div></div>
 <p>Dal momento che il proxy è rappresentato da un unico punto nello spazio,
-l’istruzione <code class="highlighter-rouge">glTranslatef(0, 0, 15)</code> permette di traslare il cono lungo
-l’asse <script type="math/tex">y</script> in modo tale che la sua punta coincida con la posizione del
+l’istruzione <code class="language-plaintext highlighter-rouge">glTranslatef(0, 0, 15)</code> permette di traslare il cono lungo
+l’asse \(y\) in modo tale che la sua punta coincida con la posizione del
 proxy.</p>
 
 <p>Tramite i comandi:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glBlendFunc(GL_SR_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glBlendFunc(GL_SR_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 glEnable(GL_BLEND);
 glEnable(GL_POINT_SMOOTH);
 glHint(GL_POINT_SMOOTH_HINT, GL_NICEST);
@@ -261,7 +266,7 @@ glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
 glEnable(GL_POLYGON_SMOOTH);
 glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
 </code></pre></div></div>
-<p>contenuti all’interno della routine <code class="highlighter-rouge">initGL()</code> è stato aggiunto il
+<p>contenuti all’interno della routine <code class="language-plaintext highlighter-rouge">initGL()</code> è stato aggiunto il
 supporto all’anti–aliasing; l’effettivo uso di tale tecnica di
 rendering dipende tuttavia dalle impostazioni dell’hardware grafico.</p>
 
@@ -292,13 +297,13 @@ focalizzata su due di questi.</p>
 trasposizione per farla giacere sullo stesso piano sul quale giace
 l’oggetto; la forma e la dimensione di questa trasposizione sono
 determinate dalla posizione della fonte di luce. Nelle librerie
-<code class="highlighter-rouge">glTools</code> <a class="citation" href="#book:openglsuperbible">(Wright, R. S. Jr. &amp; Lipchak, B., 2004)</a> è contenuta la funzione
-<code class="highlighter-rouge">gltMakeShadowMatrix</code> che calcola la matrice di trasposizione sul piano
+<code class="language-plaintext highlighter-rouge">glTools</code> <a class="citation" href="#book:openglsuperbible">(Wright, R. S. Jr. &amp; Lipchak, B., 2004)</a> è contenuta la funzione
+<code class="language-plaintext highlighter-rouge">gltMakeShadowMatrix</code> che calcola la matrice di trasposizione sul piano
 bidimensionale; richiede in input un vettore di tre punti giacenti sul
 piano sul quale si vuole far apparire l’ombra, un vettore contenente la
 posizione della sorgente di luce e un puntatore alla matrice di
 trasformazione che deve essere creata.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void gltMakeShadowMatrix(GLTVector3 vPoints[3], GLTVector4 vLightPos, GLTMatrix destMat)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void gltMakeShadowMatrix(GLTVector3 vPoints[3], GLTVector4 vLightPos, GLTMatrix destMat)
 {
     GLTVector4 vPlaneEquation;
     GLfloat dot;
@@ -339,10 +344,10 @@ trasformazione che deve essere creata.</p>
 </code></pre></div></div>
 <p>Moltiplicando la matrice ottenuta per la matrice della vista corrente,
 tutte le modifiche successive vengono trasposte sul piano. Nella nostra
-applicazione la sorgente di luce ha coordinate <script type="math/tex">x</script> e <script type="math/tex">z</script> nulle, quindi è
+applicazione la sorgente di luce ha coordinate \(x\) e \(z\) nulle, quindi è
 stato necessario effettuare i calcoli relativi solo alla seconda colonna
 della matrice (infatti i calcoli relativi alle altre colonne
-restituiscono sempre <script type="math/tex">0</script>).</p>
+restituiscono sempre \(0\)).</p>
 
 <p>Come si può ben capire, questa tecnica può essere utilizzata solo in
 rendering di scene nelle quali è presente un solo oggetto su un piano,
@@ -378,15 +383,15 @@ per determinare le zone di ombra.</p>
 
 <p>Nell’applicazione Phantom Friction la tecnica di shadow mapping non
 viene utilizzata di default; per attivarla è sufficiente compilare il
-codice specificando la direttiva <code class="highlighter-rouge">_SHADOWMAPPING_</code> per il preprocessore.
-L’inizializzazione è contenuta nella routine <code class="highlighter-rouge">ShadowMappingInit()</code>, la
+codice specificando la direttiva <code class="language-plaintext highlighter-rouge">_SHADOWMAPPING_</code> per il preprocessore.
+L’inizializzazione è contenuta nella routine <code class="language-plaintext highlighter-rouge">ShadowMappingInit()</code>, la
 quale comprende il caricamento delle texture che non devono essere
-modificate e l’abilitazione dell’estensione <code class="highlighter-rouge">GL_ARB_shadow</code> (se
+modificate e l’abilitazione dell’estensione <code class="language-plaintext highlighter-rouge">GL_ARB_shadow</code> (se
 disponibile, questa estensione consente di eseguire un passaggio in meno
 nel calcolo delle ombre). La funzione di callback per il ridisegno della
 scena è:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void glutDisplay()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void glutDisplay()
 { 
   ShadowMappingFirst(gCameraPosWC);
   drawScene();
@@ -397,14 +402,14 @@ scena è:</p>
 
 <p>Per prima cosa vengono impostate le luci:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glLightfv(GL_LIGHT0, GL_AMBIENT, ambientLight);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glLightfv(GL_LIGHT0, GL_AMBIENT, ambientLight);
 glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuseLight);
 </code></pre></div></div>
 
 <p>si effettua un confronto sulle ombre e si imposta il piano della visuale
 corrente:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glEnable(TEXTURETYPE);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glEnable(TEXTURETYPE);
 glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 glTexParameteri(TEXTURETYPE, GL_TEXTURE_COMPARE_MODE, 
                                         GL_COMPARE_R_TO_TEXTURE);
@@ -423,7 +428,7 @@ glTexGenfv(GL_Q, GL_EYE_PLANE, qPlane);
 
 <p>Tramite i comandi:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glMatrixMode(GL_MODELVIEW);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glMatrixMode(GL_MODELVIEW);
 glLoadIdentity();
 gluLookAt(light[0], light[1], light[2], 
                     0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
@@ -435,13 +440,13 @@ glViewport(0, 0, shadowsize, shadowsize)
 luce. Si copia il contenuto del depth buffer in una texture
 bidimensionale:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glCopyTexImage2D(TEXTURETYPE, 0, GL_DEPTH_COMPONENT,
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glCopyTexImage2D(TEXTURETYPE, 0, GL_DEPTH_COMPONENT,
                   0, 0, shadowsize, shadowsize, 0);
 </code></pre></div></div>
 
 <p>Al successivo rendering della scena si torna alla prospettiva originale
 con i comandi:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glMatrixMode(GL_PROJECTION);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glMatrixMode(GL_PROJECTION);
 glLoadIdentity();
 gluPerspective(40.0f, 1.0f, 274.0f, 1899.0f);
 glMatrixMode(GL_MODELVIEW);
@@ -467,13 +472,13 @@ tecnica è meno dispendiosa in termini di risorse di calcolo rispetto
 allo shadow mapping, e quindi è meno probabile che causi il verificarsi
 di latenze. Il cursore viene disegnato tramite il comando:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>redrawCursor(true,0);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>redrawCursor(true,0);
 </code></pre></div></div>
 
 <p>poi viene trasposto e disegnato una seconda volta, questa volta come
 ombra:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glMultMatrixf((GLfloat *)shadowMat);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glMultMatrixf((GLfloat *)shadowMat);
 redrawCursor(true,1);
 </code></pre></div></div>
 
@@ -503,19 +508,19 @@ negli scopi dell’applicazione in quanto la percezione visiva di una
 tessitura distoglie l’utente dalle percezioni aptiche e uditive; tale
 caratteristica è disattivata per default, e per attivarla occorre
 procedere alla ricompilazione del codice sorgente includendo la stringa
-<code class="highlighter-rouge">_TEXTURE</code> tra le direttive del preprocessore.</p>
+<code class="language-plaintext highlighter-rouge">_TEXTURE</code> tra le direttive del preprocessore.</p>
 
 <p>La funzione:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>loadTexture();
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>loadTexture();
 </code></pre></div></div>
 
-<p>carica in memoria tutte le texture indicate nell’array <code class="highlighter-rouge">textureFiles</code>; è
+<p>carica in memoria tutte le texture indicate nell’array <code class="language-plaintext highlighter-rouge">textureFiles</code>; è
 sufficiente effettuare il caricamento durante l’inizializzazione
 dell’applicazione, successivamente le texture resteranno disponibili in
 memoria fino alla chiusura dell’applicazione stessa. Il comando:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glBindTexture(GL_TEXTURE_2D,textures[n]);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glBindTexture(GL_TEXTURE_2D,textures[n]);
 </code></pre></div></div>
 
 <p>è utilizzato per applicare effettivamente la texture in posizione $n$
@@ -531,7 +536,7 @@ impostare le proprietà aptiche degli oggetti virtuali e per gestire i
 frame; ad esempio, per effettuare il rendering aptico della superficie
 sono sufficienti le seguenti istruzioni:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hlBeginShape(HL_SHAPE_FEEDBACK_BUFFER, obj.shapeId);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hlBeginShape(HL_SHAPE_FEEDBACK_BUFFER, obj.shapeId);
 
 hlMaterialf(HL_FRONT_AND_BACK, HL_STIFFNESS, obj.hap_stiffness);
 hlMaterialf(HL_FRONT, HL_DAMPING, obj.hap_damping);
@@ -548,21 +553,21 @@ smorzamento, frizione statica e frizione dinamica. Le primitive grafiche
 utilizzate sono davvero poche, e ciò consiglia l’utilizzo del feedback
 buffer per il rendering aptico (e di conseguenza anche per il rendering
 grafico); questo viene impostato tramite il primo argomento di
-<code class="highlighter-rouge">hlBeginShape</code>.</p>
+<code class="language-plaintext highlighter-rouge">hlBeginShape</code>.</p>
 
 <p>Nella rappresentazione del cursore non devono essere impostate proprietà
 aptiche, ma è necessario calcolare le traslazioni e le trasformazioni
 del proxy:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hlGetDoublev(HL_PROXY_TRANSFORM, proxytransform);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hlGetDoublev(HL_PROXY_TRANSFORM, proxytransform);
 glMultMatrixd(proxytransform);
 </code></pre></div></div>
 
 <p>Tutti i comandi riguardanti il rendering grafico della superficie, del
 cursore e delle ombre sono contenuti all’interno di un blocco
-<code class="highlighter-rouge">hlBeginFrame</code>–<code class="highlighter-rouge">hlEndFrame</code>:</p>
+<code class="language-plaintext highlighter-rouge">hlBeginFrame</code>–<code class="language-plaintext highlighter-rouge">hlEndFrame</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hlBeginFrame();
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hlBeginFrame();
 
 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -599,11 +604,11 @@ hlEndFrame();
 
 <p>Sempre utilizzando le HLAPI è stata abilitata l’ottimizzazione <em>haptic
 camera view</em>:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hlEnable(HL_HAPTIC_CAMERA_VIEW);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hlEnable(HL_HAPTIC_CAMERA_VIEW);
 </code></pre></div></div>
 <p>in modo che venga effettuato il rendering aptico anche della porzione di
 superficie non visibile nella scena. Con l’istruzione:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hlHinti(HL_SHAPE_FEEDBACK_BUFFER_VERTICES, 100);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hlHinti(HL_SHAPE_FEEDBACK_BUFFER_VERTICES, 100);
 </code></pre></div></div>
 <p>viene allocata memoria per 100 vertici, sufficienti per la
 rappresentazione in feedback buffer delle poche primitive usate; ciò si
@@ -685,26 +690,26 @@ simulazione di superfici lisce o poco lisce. Per le superfici ruvide i
 coefficienti vengono mantenuti ad un valore basso (0.2) e incrementati
 solo in alcuni punti, determinati in base alle coordinate geometriche
 del punto stesso: se il cursore si trova a contatto con la superficie e
-la sua posizione lungo l’asse <script type="math/tex">x</script> soddisfa la condizione:</p>
+la sua posizione lungo l’asse \(x\) soddisfa la condizione:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(( (int)posHD[0]*10  ) % 2) != 0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(( (int)posHD[0]*10  ) % 2) != 0
 </code></pre></div></div>
 
-<p>(dove <code class="highlighter-rouge">posHD[0]</code> indica la posizione del proxy lungo l’asse <script type="math/tex">x</script>) allora
+<p>(dove <code class="language-plaintext highlighter-rouge">posHD[0]</code> indica la posizione del proxy lungo l’asse \(x\)) allora
 la frizione viene impostata ad un valore tanto più elevato quanto più
 ruvida deve risultare la superficie. Dal momento che si considera solo
-l’asse <script type="math/tex">x</script>, le asperità vengono posizionate lungo linee parallele
-all’asse <script type="math/tex">z</script> e giacenti sullo stesso piano della superficie (ovvero
-quello determinato dagli assi <script type="math/tex">x</script> e <script type="math/tex">z</script>).</p>
+l’asse \(x\), le asperità vengono posizionate lungo linee parallele
+all’asse \(z\) e giacenti sullo stesso piano della superficie (ovvero
+quello determinato dagli assi \(x\) e \(z\)).</p>
 
 <p>Se la precedente condizione viene sostituita dalla seguente:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>( (int)( sqrt(posHD[0]*posHD[0]+posHD[2]*posHD[2])*10  ) % 2) != 0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>( (int)( sqrt(posHD[0]*posHD[0]+posHD[2]*posHD[2])*10  ) % 2) != 0
 </code></pre></div></div>
 
-<p>(dove <code class="highlighter-rouge">posHD[0]</code> indica ancora la posizione del proxy lungo l’asse <script type="math/tex">x</script>,
-mentre <code class="highlighter-rouge">posHD[2]</code> indica la posizione lungo l’asse <script type="math/tex">z</script>), le asperità
-vengono posizionate secondo cerchi concentrici giacenti sul piano <script type="math/tex">xz</script>.</p>
+<p>(dove <code class="language-plaintext highlighter-rouge">posHD[0]</code> indica ancora la posizione del proxy lungo l’asse \(x\),
+mentre <code class="language-plaintext highlighter-rouge">posHD[2]</code> indica la posizione lungo l’asse \(z\)), le asperità
+vengono posizionate secondo cerchi concentrici giacenti sul piano \(xz\).</p>
 
 <p>Possono essere implementati facilmente altri pattern geometrici; i
 micro–contatti dei quali viene simulato il suono emesso non sono però
@@ -723,7 +728,7 @@ appesantimento nel carico computazionale, senza garantire che il pattern
 generato nella patch per PD e quello implementato nell’applicazione
 varino concordemente. Il metodo più semplice e più efficiente risulta
 invece quello di utilizzare i dati calcolati nella subpatch
-<code class="highlighter-rouge">holy-roller~</code>. Il blocco <code class="highlighter-rouge">circ_max_filter~</code> calcola il
+<code class="language-plaintext highlighter-rouge">holy-roller~</code>. Il blocco <code class="language-plaintext highlighter-rouge">circ_max_filter~</code> calcola il
 profilo della superficie sulla quale avvengono i micro–contatti; il
 valore inviato in output viene letto dall’applicazione Phantom Friction
 (vedremo nella prossima sezione come avviene questa lettura) e,
@@ -740,9 +745,9 @@ superficie calcolato nelle patch in Pure Data.</p>
 
 <p>Per implementare questo procedimento sono state utilizzate tre funzioni
 di callback. La prima rileva il verificarsi del primo contatto tra proxy
-e superficie e imposta a <code class="highlighter-rouge">true</code> un valore booleano:</p>
+e superficie e imposta a <code class="language-plaintext highlighter-rouge">true</code> un valore booleano:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void HLCALLBACK touchCallback(HLenum event, 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void HLCALLBACK touchCallback(HLenum event, 
                               HLuint object, 
                               HLenum thread,HLcache *cache, 
                               void *userdata)
@@ -751,9 +756,9 @@ e superficie e imposta a <code class="highlighter-rouge">true</code> un valore b
 }
 </code></pre></div></div>
 
-<p>La seconda invece imposta questo valore a <code class="highlighter-rouge">false</code> quando il proxy non è
+<p>La seconda invece imposta questo valore a <code class="language-plaintext highlighter-rouge">false</code> quando il proxy non è
 più in contatto con la superficie:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void HLCALLBACK untouchCallback(HLenum event, 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void HLCALLBACK untouchCallback(HLenum event, 
                                 HLuint object, 
                                 HLenum thread, 
                                 HLcache *cache, 
@@ -768,7 +773,7 @@ condizione di abilitazione del calcolo (e del conseguente invio alla
 patch in PD) della velocità corrente e del fattore di amplificazione
 proporzionale alla forza normale.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HDCallbackCode HDCALLBACK velocitaCallback(void *pUserData)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HDCallbackCode HDCALLBACK velocitaCallback(void *pUserData)
 {
     if ( touching )
     {
@@ -814,24 +819,24 @@ tale funzione deve essere eseguita alla velocità propria del rendering
 aptico, applicando l’effetto ad ogni iterazione del servo loop.
 L’istruzione</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hap_static_friction = ( pdSurface - a )/ ( b );
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hap_static_friction = ( pdSurface - a )/ ( b );
 </code></pre></div></div>
 
 <p>imposta i coefficienti di frizione al valore ricevuto da PD
-(<code class="highlighter-rouge">pdSurface</code>) e opportunamente scalato nell’intervallo <code class="highlighter-rouge">(a,b)</code>, dove <code class="highlighter-rouge">a</code>
-è impostato a <script type="math/tex">0</script> (si suppone che la superficie abbia sempre un valore
-positivo) e <code class="highlighter-rouge">b</code> corrisponde a <script type="math/tex">0.04</script> (calcolato empiricamente). La
-velocità viene calcolata come modulo delle componenti lungo gli assi <script type="math/tex">x</script>
-e <script type="math/tex">z</script> (il piano su cui giace la superficie) e viene divisa per 1000 per
-adeguarla alle unità di misura usate dalla patch <code class="highlighter-rouge">sliding.pd</code>: in
-quest’ultima la velocità è assunta in <script type="math/tex">m/s</script>, mentre le HDAPI ritornano
-tale valore in <script type="math/tex">mm/s</script>. Tramite l’istruzione:</p>
+(<code class="language-plaintext highlighter-rouge">pdSurface</code>) e opportunamente scalato nell’intervallo <code class="language-plaintext highlighter-rouge">(a,b)</code>, dove <code class="language-plaintext highlighter-rouge">a</code>
+è impostato a \(0\) (si suppone che la superficie abbia sempre un valore
+positivo) e <code class="language-plaintext highlighter-rouge">b</code> corrisponde a \(0.04\) (calcolato empiricamente). La
+velocità viene calcolata come modulo delle componenti lungo gli assi \(x\)
+e \(z\) (il piano su cui giace la superficie) e viene divisa per 1000 per
+adeguarla alle unità di misura usate dalla patch <code class="language-plaintext highlighter-rouge">sliding.pd</code>: in
+quest’ultima la velocità è assunta in \(m/s\), mentre le HDAPI ritornano
+tale valore in \(mm/s\). Tramite l’istruzione:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sqrt( abs(velocita * forceHD[1]) ),
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sqrt( abs(velocita * forceHD[1]) ),
 </code></pre></div></div>
 
-<p>dove <code class="highlighter-rouge">forceHD[1]</code> è la componente della forza esercitata dal dispositivo
-aptico lungo l’asse <script type="math/tex">y</script>, viene calcolato il fattore di proporzionalità
+<p>dove <code class="language-plaintext highlighter-rouge">forceHD[1]</code> è la componente della forza esercitata dal dispositivo
+aptico lungo l’asse \(y\), viene calcolato il fattore di proporzionalità
 dell’ampiezza del suono rispetto alla forza normale (vedi pagina ).</p>
 
 <h2 id="scambio-dei-dati-tra-lapplicazione-phantom-friction-e-le-patch-in-pure-data">Scambio dei dati tra l’applicazione Phantom Friction e le patch in Pure Data</h2>
@@ -894,7 +899,7 @@ tre <a class="citation" href="#phd:crosato">(Crosato, P., 2006)</a>.</p>
 <h4 id="protocollo-di-rete">Protocollo di rete</h4>
 
 <p>Dato che in Pure Data è supportata la lettura dei dati (via protocollo
-TCP e UDP) tramite l’oggetto <code class="highlighter-rouge">netreceive~</code>, sarebbe sufficiente
+TCP e UDP) tramite l’oggetto <code class="language-plaintext highlighter-rouge">netreceive~</code>, sarebbe sufficiente
 implementare la lettura/scrittura dei dati nell’applicazione Phantom
 Friction tramite l’uso dei socket. Il vantaggio è che i due processi
 potrebbero così comunicare anche in remoto, facendo eseguire la
@@ -934,7 +939,7 @@ avvengono le operazioni di lettura e scrittura.</p>
 valori che dovranno essere trasferiti dall’applicazione Phantom Friction
 a Pure Data:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>typedef struct
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>typedef struct
 {
     double nForce;
     double velocita;
@@ -946,43 +951,43 @@ a Pure Data:</p>
 }  OpeData;
 </code></pre></div></div>
 
-<p>I valori che costituiscono la struttura <code class="highlighter-rouge">OpeData</code> sono i seguenti:</p>
+<p>I valori che costituiscono la struttura <code class="language-plaintext highlighter-rouge">OpeData</code> sono i seguenti:</p>
 
 <ul>
   <li>
-    <p><code class="highlighter-rouge">nForce</code> è la radice quadrata del prodotto tra forza normale e
+    <p><code class="language-plaintext highlighter-rouge">nForce</code> è la radice quadrata del prodotto tra forza normale e
 velocità;</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">velocita</code> indica la velocità corrente del proxy in $m/s$;</p>
+    <p><code class="language-plaintext highlighter-rouge">velocita</code> indica la velocità corrente del proxy in $m/s$;</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">kappa</code> è il coefficiente di elasticità della superficie;</p>
+    <p><code class="language-plaintext highlighter-rouge">kappa</code> è il coefficiente di elasticità della superficie;</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">depth</code> è il fattore di amplificazione del segnale di rumore
+    <p><code class="language-plaintext highlighter-rouge">depth</code> è il fattore di amplificazione del segnale di rumore
 frattale;</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">statFr</code> è il coefficiente di frizione statica;</p>
+    <p><code class="language-plaintext highlighter-rouge">statFr</code> è il coefficiente di frizione statica;</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">dynFr</code> è il coefficiente di frizione dinamica;</p>
+    <p><code class="language-plaintext highlighter-rouge">dynFr</code> è il coefficiente di frizione dinamica;</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">noiseFile</code> è un numero intero che indica l’indice del file
+    <p><code class="language-plaintext highlighter-rouge">noiseFile</code> è un numero intero che indica l’indice del file
 contenente il rumore frattale.</p>
   </li>
 </ul>
 
-<p>Nell’implementazione attuale solo i valori <code class="highlighter-rouge">nForce</code>, <code class="highlighter-rouge">velocita</code>, <code class="highlighter-rouge">depth</code>
-e <code class="highlighter-rouge">noiseFile</code> vengono effettivamente utilizzati. Infatti la patch in PD
+<p>Nell’implementazione attuale solo i valori <code class="language-plaintext highlighter-rouge">nForce</code>, <code class="language-plaintext highlighter-rouge">velocita</code>, <code class="language-plaintext highlighter-rouge">depth</code>
+e <code class="language-plaintext highlighter-rouge">noiseFile</code> vengono effettivamente utilizzati. Infatti la patch in PD
 non ha bisogno di conoscere i coefficienti di frizione statica e
 dinamica, mentre il coefficiente di elasticità resta invariato per
 scelte implementative. E’ possibile modificare i valori che fanno parte
 della struttura dati tramite la funzione:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void setOpeData(OpeData *data, double nForce, 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void setOpeData(OpeData *data, double nForce, 
                                 double velocita, float kappa, 
                                 float depth, float statFr, 
                                 float dynFr, int noiseFile)
@@ -997,11 +1002,11 @@ della struttura dati tramite la funzione:</p>
 }
 </code></pre></div></div>
 
-<p>La gestione della memoria è implementata nel file <code class="highlighter-rouge">PhantomMemory.h</code>.
+<p>La gestione della memoria è implementata nel file <code class="language-plaintext highlighter-rouge">PhantomMemory.h</code>.
 Tramite la seguente funzione avviene la creazione dell’area di memoria
 condivisa tra i processi:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HANDLE hFile;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HANDLE hFile;
 
 int CreatePhantomMemory()
 {
@@ -1024,15 +1029,15 @@ int CreatePhantomMemory()
 }
 </code></pre></div></div>
 
-<p>E’ importante fare attenzione al parametro <code class="highlighter-rouge">sizeMem</code>, il quale indica la
+<p>E’ importante fare attenzione al parametro <code class="language-plaintext highlighter-rouge">sizeMem</code>, il quale indica la
 dimensione dell’area di memoria condivisa e viene utilizzato anche per
 calcolare la posizione dei diversi dati in memoria; un valore errato di
-<code class="highlighter-rouge">sizeMem</code> porta alla scrittura e lettura di dati errati.</p>
+<code class="language-plaintext highlighter-rouge">sizeMem</code> porta alla scrittura e lettura di dati errati.</p>
 
 <p>Il codice seguente si occupa dell’apertura e chiusura dell’area di
 memoria:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int OpenPhantomMemory(void)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int OpenPhantomMemory(void)
 {
     hFile = OpenFileMappingW(FILE_MAP_ALL_ACCESS,FALSE,
                             (LPCWSTR)"PhantomMemory");
@@ -1066,12 +1071,12 @@ int ClosePhantomMemory(void)
 }
 </code></pre></div></div>
 
-<p>Un oggetto <code class="highlighter-rouge">OpeData</code> può essere scritto in memoria e letto dalla memoria
-usando le due funzioni <code class="highlighter-rouge">WriteOpeData(OpeData *elemento)</code> e
-<code class="highlighter-rouge">ReadOpeData()</code> (nella prima deve essere passato come parametro un
+<p>Un oggetto <code class="language-plaintext highlighter-rouge">OpeData</code> può essere scritto in memoria e letto dalla memoria
+usando le due funzioni <code class="language-plaintext highlighter-rouge">WriteOpeData(OpeData *elemento)</code> e
+<code class="language-plaintext highlighter-rouge">ReadOpeData()</code> (nella prima deve essere passato come parametro un
 puntatore all’oggetto):</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void WriteOpeData(OpeData *elemento)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void WriteOpeData(OpeData *elemento)
 {
     hookOped-&gt;nForce = elemento-&gt;nForce;
     hookOped-&gt;velocita = elemento-&gt;velocita;
@@ -1090,9 +1095,9 @@ OpeData ReadOpeData()
 
 <p>Con semplici modifiche a questi due comandi si implementano la scrittura
 e lettura del valore della superficie generata dall’oggetto
-<code class="highlighter-rouge">circ_max_exp~</code>:</p>
+<code class="language-plaintext highlighter-rouge">circ_max_exp~</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void WriteSurface(float *elemento)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void WriteSurface(float *elemento)
 {
     *hookSurface = *elemento;
 }
@@ -1107,20 +1112,20 @@ float ReadSurface()
 
 <p>E’ l’applicazione Phantom Friction che si occupa di creare l’area di
 memoria condivisa, e lo fa non appena viene avviata; subito dopo la
-memoria viene aperta e si crea un oggetto <code class="highlighter-rouge">data</code> di tipo <code class="highlighter-rouge">OpeData</code>
-contenente tutti i valori impostati a <script type="math/tex">0</script>, il quale viene scritto
-assieme ad un valore nullo di <code class="highlighter-rouge">pdSurface</code> allo scopo di effettuare
+memoria viene aperta e si crea un oggetto <code class="language-plaintext highlighter-rouge">data</code> di tipo <code class="language-plaintext highlighter-rouge">OpeData</code>
+contenente tutti i valori impostati a \(0\), il quale viene scritto
+assieme ad un valore nullo di <code class="language-plaintext highlighter-rouge">pdSurface</code> allo scopo di effettuare
 un’inizializzazione della memoria stessa, cancellando eventuali dati
-presenti. All’interno della callback asincrona <code class="highlighter-rouge">velocitaCallback</code>, dopo
+presenti. All’interno della callback asincrona <code class="language-plaintext highlighter-rouge">velocitaCallback</code>, dopo
 aver calcolato i valori necessari alla impostazione corretta
-dell’oggetto <code class="highlighter-rouge">data</code>, avvengono in sequenza le seguenti operazioni:</p>
+dell’oggetto <code class="language-plaintext highlighter-rouge">data</code>, avvengono in sequenza le seguenti operazioni:</p>
 
 <ul>
   <li>
-    <p>viene scritto in memoria l’oggetto <code class="highlighter-rouge">data</code>;</p>
+    <p>viene scritto in memoria l’oggetto <code class="language-plaintext highlighter-rouge">data</code>;</p>
   </li>
   <li>
-    <p>viene letto dalla memoria il valore <code class="highlighter-rouge">pdSurface</code>;</p>
+    <p>viene letto dalla memoria il valore <code class="language-plaintext highlighter-rouge">pdSurface</code>;</p>
   </li>
   <li>
     <p>vengono calcolati i coefficienti di frizione statica e dinamica
@@ -1143,7 +1148,7 @@ scende a tempi dell’ordine di pochi millisecondi.</p>
 <p>Per consentire alle patch in Pure Data di leggere e scrivere dati in RAM
 è stato necessario scrivere un external; per semplicità ci si è
 appoggiati alla libreria <em>flext</em> discussa nel <a href="/pure-data-modelli-audio.html">post sui modelli audio</a>. 
-Tale oggetto è stato chiamato <code class="highlighter-rouge">ReadOperativo</code>; non necessita di argomenti di
+Tale oggetto è stato chiamato <code class="language-plaintext highlighter-rouge">ReadOperativo</code>; non necessita di argomenti di
 costruzione e possiede 2 inlet e 5 outlet: i due inlet ricevono
 rispettivamente un bang e il valore della superficie, mentre vengono
 mandati in output, in ordine:</p>
@@ -1173,7 +1178,7 @@ mandati in output, in ordine:</p>
 
 <p>Tutto ciò viene inizializzato tramite il costruttore:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ReadOperativo::ReadOperativo()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ReadOperativo::ReadOperativo()
 {
     // aggiunta degli inlet
     AddInAnything("bang");//(0)
@@ -1198,7 +1203,7 @@ mandati in output, in ordine:</p>
 }
 </code></pre></div></div>
 
-<p>Un oggetto <code class="highlighter-rouge">metro</code> invia un bang all’oggetto <code class="highlighter-rouge">ReadOperativo</code> ogni 0.5
+<p>Un oggetto <code class="language-plaintext highlighter-rouge">metro</code> invia un bang all’oggetto <code class="language-plaintext highlighter-rouge">ReadOperativo</code> ogni 0.5
 millisecondi. Al primo bang ricevuto avviene l’apertura dell’area di
 memoria condivisa. Un ciclo di lettura e scrittura avviene ogni volta
 che viene ricevuto un bang, quindi la frequenza con la quale avvengono
@@ -1220,9 +1225,9 @@ aliasing.</p>
 
 <p>Infine il distruttore si occupa della chiusura della memoria condivisa,
 che pertanto viene effettivamente chiusa solo alla chiusura della patch
-<code class="highlighter-rouge">sliding.pd</code> (e solo se era stata aperta):</p>
+<code class="language-plaintext highlighter-rouge">sliding.pd</code> (e solo se era stata aperta):</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ReadOperativo::~ReadOperativo()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ReadOperativo::~ReadOperativo()
 {
   if(open)
   ClosePhantomMemory();   
@@ -1369,7 +1374,7 @@ permettendo l’uso della simulazione anche su PC meno potenti.</p>
     <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
   
 
-  <div class="post-date"><a href="/menu/about.html">ing. Andrea Maglie |  by Andrea Maglie</a></div>
+  <div class="post-date"><a href="/menu/about.html">ing. Andrea Maglie | A blog about Software Engineering, with a focus on Java, Kotlin, Flutter and architecture by Andrea Maglie</a></div>
 </footer>
 
   </div>

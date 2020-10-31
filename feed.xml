@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-10-31T10:22:23+01:00</updated><id>/</id><title type="html">ing. Andrea Maglie</title><subtitle></subtitle><author><name>Andrea Maglie</name></author><entry><title type="html">Clean Architecture: una introduzione</title><link href="/clean-architecture-introduction.html" rel="alternate" type="text/html" title="Clean Architecture: una introduzione" /><published>2020-10-28T00:00:00+01:00</published><updated>2020-10-28T00:00:00+01:00</updated><id>/clean-architecture-introduction</id><content type="html" xml:base="/clean-architecture-introduction.html">&lt;h1 id=&quot;cosè-la-clean-architecture&quot;&gt;Cos’è la Clean Architecture?&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-10-31T11:06:48+01:00</updated><id>/</id><title type="html">ing. Andrea Maglie</title><subtitle>A blog about Software Engineering, with a focus on Java, Kotlin, Flutter and architecture</subtitle><author><name>Andrea Maglie</name></author><entry><title type="html">Clean Architecture: una introduzione</title><link href="/clean-architecture-introduction.html" rel="alternate" type="text/html" title="Clean Architecture: una introduzione" /><published>2020-10-28T00:00:00+01:00</published><updated>2020-10-28T00:00:00+01:00</updated><id>/clean-architecture-introduction</id><content type="html" xml:base="/clean-architecture-introduction.html">&lt;h1 id=&quot;cosè-la-clean-architecture&quot;&gt;Cos’è la Clean Architecture?&lt;/h1&gt;
 
 &lt;p&gt;Il termine &lt;em&gt;Clean Architecture&lt;/em&gt; deriva dall’omonimo &lt;a href=&quot;https://amzn.to/31MI9n1&quot;&gt;libro di Robert C. Martin&lt;/a&gt;. Questo libro è uno di quelli che ti consiglio assolutamente di leggere se sei uno sviluppatore o se vuoi diventarlo, non deve assolutamente mancare nella biblioteca di un &lt;em&gt;dev&lt;/em&gt; che si rispetti!&lt;/p&gt;
 
@@ -75,11 +75,11 @@
 
 &lt;p&gt;Significa aver la possibilità, in fase di progettazione così come in fase di sviluppo, di non preoccuparsi di “dettagli implementativi” che ancora non conosciamo.&lt;/p&gt;
 
-&lt;p&gt;Provo a fare un piccolo esempio (affronterò un caso pratico completo nei prossimi articoli). Supponi di dover progettare una app di ricerca ristoranti; un aspetto fondamentale è sapere quale sarà la sorgente dei dati, ovvero da dove andrai a prendere i ristoranti da mostrare all’utente. E’ verosimile che i dati saranno forniti da un backend attraverso una API REST,  ma al momento non è disponibile ancora questa informazione; come puoi procedere? Potresti creare una interfaccia &lt;code class=&quot;highlighter-rouge&quot;&gt;Repository&lt;/code&gt; in un modo simile al seguente:&lt;/p&gt;
+&lt;p&gt;Provo a fare un piccolo esempio (affronterò un caso pratico completo nei prossimi articoli). Supponi di dover progettare una app di ricerca ristoranti; un aspetto fondamentale è sapere quale sarà la sorgente dei dati, ovvero da dove andrai a prendere i ristoranti da mostrare all’utente. E’ verosimile che i dati saranno forniti da un backend attraverso una API REST,  ma al momento non è disponibile ancora questa informazione; come puoi procedere? Potresti creare una interfaccia &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Repository&lt;/code&gt; in un modo simile al seguente:&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Repository&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
-  &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Restaurant&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Restaurant&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -194,7 +194,7 @@
 
 &lt;p&gt;To get started, download Flutter SDK for your platform (Windows, macOS, Linux or Chrome OS) from this link: https://flutter.dev/docs/get-started/install. We will be using Mac to go through the whole installation process.&lt;/p&gt;
 
-&lt;p&gt;1 - Extract the files to your desired location (for example: &lt;code class=&quot;highlighter-rouge&quot;&gt;~/development&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;1 - Extract the files to your desired location (for example: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/development&lt;/code&gt;)&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/development
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;unzip ~/Downloads/flutter_macos_1.20.2-stable.zip
@@ -248,11 +248,11 @@
 
 &lt;p&gt;In this case the sdk is correctly configured supposing that we work with Android Studio and not with IntelliJ or Visual Studio code.&lt;/p&gt;
 
-&lt;p&gt;The message &lt;code class=&quot;highlighter-rouge&quot;&gt;! No devices available&lt;/code&gt; just means that no physical device is actually connected and no emulator is running. We can continue to develop and build our application without any attached device; we’ll need to attach a device (or start emulator) only when we want to launch the app.&lt;/p&gt;
+&lt;p&gt;The message &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;! No devices available&lt;/code&gt; just means that no physical device is actually connected and no emulator is running. We can continue to develop and build our application without any attached device; we’ll need to attach a device (or start emulator) only when we want to launch the app.&lt;/p&gt;
 
 &lt;h3 id=&quot;assign-the-same-path-to-flutter--dart&quot;&gt;Assign the Same Path to Flutter &amp;amp; Dart&lt;/h3&gt;
 
-&lt;p&gt;Starting from release 1.19.0, the Flutter SDK already contains the &lt;code class=&quot;highlighter-rouge&quot;&gt;dart&lt;/code&gt; command alongside the &lt;code class=&quot;highlighter-rouge&quot;&gt;flutter&lt;/code&gt; command. But if you installed Flutter and Dart at different times, you need to double check paths. Xcode won’t work if the assigned path of Flutter and Dart programming language is different. So you need to assign the same path to both of them. Here is an example of the wrong assigned path.&lt;/p&gt;
+&lt;p&gt;Starting from release 1.19.0, the Flutter SDK already contains the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dart&lt;/code&gt; command alongside the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flutter&lt;/code&gt; command. But if you installed Flutter and Dart at different times, you need to double check paths. Xcode won’t work if the assigned path of Flutter and Dart programming language is different. So you need to assign the same path to both of them. Here is an example of the wrong assigned path.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;which flutter dart
 
@@ -260,7 +260,7 @@
 /usr/local/bin/dart
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;As you can see, files are placed in different &lt;code class=&quot;highlighter-rouge&quot;&gt;bin&lt;/code&gt; directories.&lt;/p&gt;
+&lt;p&gt;As you can see, files are placed in different &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bin&lt;/code&gt; directories.&lt;/p&gt;
 
 &lt;p&gt;Fix your path env variable until you get an output like this:&lt;/p&gt;
 
@@ -660,7 +660,7 @@ esperimento, l’utente ha avuto la possibilità di esplorare la superficie
 virtuale per il tempo che credeva necessario; terminata l’esplorazione
 doveva scegliere dal pannello a destra un grado per la ruvidità
 percepita e il grado di sicurezza della risposta. Successivamente,
-cliccando sul pulsante &lt;code class=&quot;highlighter-rouge&quot;&gt;Avanti&lt;/code&gt; si passa allo scenario successivo:
+cliccando sul pulsante &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Avanti&lt;/code&gt; si passa allo scenario successivo:
 graficamente non varia nulla, ma vengono variate le proprietà aptiche
 della superficie e i parametri di generazione del suono. Per fare in
 modo che l’utente si renda conto dell’effettivo cambiamento, è stato
@@ -685,45 +685,45 @@ ciò. Successivamente vengono presentate tre serie composte dagli stessi
 scenari in ordine sparso.&lt;/p&gt;
 
 &lt;p&gt;I nove stimoli sono stati scelti empiricamente, valutando nove diverse
-combinazioni tra l’esponente &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; del rumore &lt;script type=&quot;math/tex&quot;&gt;1/f^\beta&lt;/script&gt; e il fattore
+combinazioni tra l’esponente \(\beta\) del rumore \(1/f^\beta\) e il fattore
 di amplificazione tali da produrre una sensazione di ruvidità crescente:&lt;/p&gt;
 
 &lt;dl&gt;
   &lt;dt&gt;scenario 1:&lt;/dt&gt;
   &lt;dd&gt;
-    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\beta=0.2&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;fattore~di~amplificazione=0.0010;&lt;/script&gt;&lt;/p&gt;
+    &lt;p&gt;\(\beta=0.2\), \(fattore~di~amplificazione=0.0010;\)&lt;/p&gt;
   &lt;/dd&gt;
   &lt;dt&gt;scenario 2:&lt;/dt&gt;
   &lt;dd&gt;
-    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\beta=1.2&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;fattore~di~amplificazione=0.0012;&lt;/script&gt;&lt;/p&gt;
+    &lt;p&gt;\(\beta=1.2\), \(fattore~di~amplificazione=0.0012;\)&lt;/p&gt;
   &lt;/dd&gt;
   &lt;dt&gt;scenario 3:&lt;/dt&gt;
   &lt;dd&gt;
-    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\beta=2.0&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;fattore~di~amplificazione=0.0030;&lt;/script&gt;&lt;/p&gt;
+    &lt;p&gt;\(\beta=2.0\), \(fattore~di~amplificazione=0.0030;\)&lt;/p&gt;
   &lt;/dd&gt;
   &lt;dt&gt;scenario 4:&lt;/dt&gt;
   &lt;dd&gt;
-    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\beta=0.6&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;fattore~di~amplificazione=0.0080;&lt;/script&gt;&lt;/p&gt;
+    &lt;p&gt;\(\beta=0.6\), \(fattore~di~amplificazione=0.0080;\)&lt;/p&gt;
   &lt;/dd&gt;
   &lt;dt&gt;scenario 5:&lt;/dt&gt;
   &lt;dd&gt;
-    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\beta=1.4&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;fattore~di~amplificazione=0.0100;&lt;/script&gt;&lt;/p&gt;
+    &lt;p&gt;\(\beta=1.4\), \(fattore~di~amplificazione=0.0100;\)&lt;/p&gt;
   &lt;/dd&gt;
   &lt;dt&gt;scenario 6:&lt;/dt&gt;
   &lt;dd&gt;
-    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\beta=1.8&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;fattore~di~amplificazione=0.0120;&lt;/script&gt;&lt;/p&gt;
+    &lt;p&gt;\(\beta=1.8\), \(fattore~di~amplificazione=0.0120;\)&lt;/p&gt;
   &lt;/dd&gt;
   &lt;dt&gt;scenario 7:&lt;/dt&gt;
   &lt;dd&gt;
-    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\beta=1.6&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;fattore~di~amplificazione=0.0160;&lt;/script&gt;&lt;/p&gt;
+    &lt;p&gt;\(\beta=1.6\), \(fattore~di~amplificazione=0.0160;\)&lt;/p&gt;
   &lt;/dd&gt;
   &lt;dt&gt;scenario 8:&lt;/dt&gt;
   &lt;dd&gt;
-    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\beta=1.8&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;fattore~di~amplificazione=0.0180;&lt;/script&gt;&lt;/p&gt;
+    &lt;p&gt;\(\beta=1.8\), \(fattore~di~amplificazione=0.0180;\)&lt;/p&gt;
   &lt;/dd&gt;
   &lt;dt&gt;scenario 9:&lt;/dt&gt;
   &lt;dd&gt;
-    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\beta=2.0&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;fattore~di~amplificazione=0.0210;&lt;/script&gt;&lt;/p&gt;
+    &lt;p&gt;\(\beta=2.0\), \(fattore~di~amplificazione=0.0210;\)&lt;/p&gt;
   &lt;/dd&gt;
 &lt;/dl&gt;
 
@@ -841,7 +841,7 @@ saputo utilizzare pienamente la scala a disposizione.&lt;/p&gt;
 età compresa tra i 19 e i 30 anni, dei quali 14 ragazzi e 6 ragazze. Lo
 stimolo acustico viene variato mentre
 quello aptico viene mantenuto costante ad un livello tale da simulare
-una superficie ruvida o poco ruvida (&lt;script type=&quot;math/tex&quot;&gt;\beta=0.8&lt;/script&gt;, nessuna
+una superficie ruvida o poco ruvida (\(\beta=0.8\), nessuna
 amplificazione).&lt;/p&gt;
 
 &lt;p&gt;Anche in questo caso è stata confermata l’utilità del training implicito
@@ -918,7 +918,7 @@ saputo utilizzare correttamente la scala a disposizione.&lt;/p&gt;
 compresa tra i 20 e i 35 anni, 10 ragazzi e 4 ragazze. A differenza
 degli esperimenti precedenti, in questo caso viene variato solo lo
 stimolo aptico, mentre
-lo stimolo acustico resta costante (&lt;script type=&quot;math/tex&quot;&gt;\beta=0.8&lt;/script&gt;, nessuna
+lo stimolo acustico resta costante (\(\beta=0.8\), nessuna
 amplificazione). Nuovamente il training implicito si è rivelato utile.
 Rispetto alla seconda serie di esperimenti, la variazione discorde degli
 stimoli ha indotto meno confusione nei partecipanti: alcuni di loro sono
@@ -1182,9 +1182,9 @@ librerie sono state precompilate per essere usate con l’ambiente di
 programmazione &lt;em&gt;Visual Studio .NET&lt;/em&gt; di Microsoft, è necessario
 ricompilarle se devono essere usate con un altro ambiente. Nel nostro
 caso l’applicazione è stata sviluppata in &lt;em&gt;Visual Studio 2005&lt;/em&gt;: perciò è
-stato necessario effettuare il download del pacchetto &lt;code class=&quot;highlighter-rouge&quot;&gt;glui_v2_2.zip&lt;/code&gt;
+stato necessario effettuare il download del pacchetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;glui_v2_2.zip&lt;/code&gt;
 (&lt;a href=&quot;http://glui.sourceforge.net/&quot;&gt;http://glui.sourceforge.net/&lt;/a&gt;); una volta scompattato il file, sarà
-presente una directory &lt;code class=&quot;highlighter-rouge&quot;&gt;msvc&lt;/code&gt; contenente i file dei progetti da aprire
+presente una directory &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;msvc&lt;/code&gt; contenente i file dei progetti da aprire
 con Visual Studio e ricompilare.&lt;/p&gt;
 
 &lt;h3 id=&quot;rappresentazione-della-scena&quot;&gt;Rappresentazione della scena&lt;/h3&gt;
@@ -1197,7 +1197,7 @@ condizione secondo la quale non devono essere dati suggerimenti visivi
 sul tipo di superficie. Il parallelepipedo viene creato come lista
 composta da un solo oggetto:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DraggableObject dro;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DraggableObject dro;
 dro.displayList = glGenLists(1);
 dro.transform = hduMatrix::createTranslation(surfx,surfy,surfz);
 glNewList(dro.displayList, GL_COMPILE);
@@ -1206,13 +1206,13 @@ glEndList();
 draggableObjects.push_back(dro);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;dove il metodo &lt;code class=&quot;highlighter-rouge&quot;&gt;drawSurface&lt;/code&gt; costruisce il parallelepipedo
+&lt;p&gt;dove il metodo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drawSurface&lt;/code&gt; costruisce il parallelepipedo
 specificandone i vertici, accettando come argomenti le dimensioni del
-parallelepipedo lungo gli assi &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;z&lt;/script&gt; e &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; e un valore booleano che
+parallelepipedo lungo gli assi \(x\), \(z\) e \(y\) e un valore booleano che
 indica se all’oggetto deve essere applicata la texture grafica associata
 (tale valore è sempre impostato a falso nell’attuale implementazione).
 Il comando&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glCallList(obj.displayList);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glCallList(obj.displayList);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;effettua il rendering a video della superficie. E’ possibile aggiungere
 alla lista altri oggetti, nel caso ad esempio si volessero rappresentare
@@ -1222,14 +1222,14 @@ effettuate sulla lista verranno propagate contemporaneamente a tutti gli
 oggetti della lista. Anche il cursore, rappresentato da un cono, viene
 disegnato come una lista costituita da un oggetto singolo tramite la
 funzione:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;redrawCursor(const boolean&amp;amp; h, const int&amp;amp; nShadow);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;redrawCursor(const boolean&amp;amp; h, const int&amp;amp; nShadow);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;il parametro booleano &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt; deve essere impostato a 1 se si vuole che
+&lt;p&gt;il parametro booleano &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;h&lt;/code&gt; deve essere impostato a 1 se si vuole che
 venga fatto sia il rendering grafico che aptico del cursore, mentre
 impostandolo a 0 verrà fatto solo il rendering grafico; il secondo
 parametro è utilizzato nel calcolo delle ombre. Le istruzioni per il
 rendering grafico sono le seguenti:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gCursorDisplayList = glGenLists(1);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gCursorDisplayList = glGenLists(1);
 glNewList(gCursorDisplayList, GL_COMPILE);
 qobj = gluNewQuadric();
 gluQuadricDrawStyle(qobj,GLU_FILL);
@@ -1243,12 +1243,12 @@ gluDeleteQuadric(qobj);
 glEndList();
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Dal momento che il proxy è rappresentato da un unico punto nello spazio,
-l’istruzione &lt;code class=&quot;highlighter-rouge&quot;&gt;glTranslatef(0, 0, 15)&lt;/code&gt; permette di traslare il cono lungo
-l’asse &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; in modo tale che la sua punta coincida con la posizione del
+l’istruzione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;glTranslatef(0, 0, 15)&lt;/code&gt; permette di traslare il cono lungo
+l’asse \(y\) in modo tale che la sua punta coincida con la posizione del
 proxy.&lt;/p&gt;
 
 &lt;p&gt;Tramite i comandi:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glBlendFunc(GL_SR_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glBlendFunc(GL_SR_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 glEnable(GL_BLEND);
 glEnable(GL_POINT_SMOOTH);
 glHint(GL_POINT_SMOOTH_HINT, GL_NICEST);
@@ -1257,7 +1257,7 @@ glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
 glEnable(GL_POLYGON_SMOOTH);
 glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;contenuti all’interno della routine &lt;code class=&quot;highlighter-rouge&quot;&gt;initGL()&lt;/code&gt; è stato aggiunto il
+&lt;p&gt;contenuti all’interno della routine &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;initGL()&lt;/code&gt; è stato aggiunto il
 supporto all’anti–aliasing; l’effettivo uso di tale tecnica di
 rendering dipende tuttavia dalle impostazioni dell’hardware grafico.&lt;/p&gt;
 
@@ -1288,13 +1288,13 @@ focalizzata su due di questi.&lt;/p&gt;
 trasposizione per farla giacere sullo stesso piano sul quale giace
 l’oggetto; la forma e la dimensione di questa trasposizione sono
 determinate dalla posizione della fonte di luce. Nelle librerie
-&lt;code class=&quot;highlighter-rouge&quot;&gt;glTools&lt;/code&gt; &lt;a class=&quot;citation&quot; href=&quot;#book:openglsuperbible&quot;&gt;(Wright, R. S. Jr. &amp;amp; Lipchak, B., 2004)&lt;/a&gt; è contenuta la funzione
-&lt;code class=&quot;highlighter-rouge&quot;&gt;gltMakeShadowMatrix&lt;/code&gt; che calcola la matrice di trasposizione sul piano
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;glTools&lt;/code&gt; &lt;a class=&quot;citation&quot; href=&quot;#book:openglsuperbible&quot;&gt;(Wright, R. S. Jr. &amp;amp; Lipchak, B., 2004)&lt;/a&gt; è contenuta la funzione
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gltMakeShadowMatrix&lt;/code&gt; che calcola la matrice di trasposizione sul piano
 bidimensionale; richiede in input un vettore di tre punti giacenti sul
 piano sul quale si vuole far apparire l’ombra, un vettore contenente la
 posizione della sorgente di luce e un puntatore alla matrice di
 trasformazione che deve essere creata.&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void gltMakeShadowMatrix(GLTVector3 vPoints[3], GLTVector4 vLightPos, GLTMatrix destMat)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void gltMakeShadowMatrix(GLTVector3 vPoints[3], GLTVector4 vLightPos, GLTMatrix destMat)
 {
     GLTVector4 vPlaneEquation;
     GLfloat dot;
@@ -1335,10 +1335,10 @@ trasformazione che deve essere creata.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Moltiplicando la matrice ottenuta per la matrice della vista corrente,
 tutte le modifiche successive vengono trasposte sul piano. Nella nostra
-applicazione la sorgente di luce ha coordinate &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; e &lt;script type=&quot;math/tex&quot;&gt;z&lt;/script&gt; nulle, quindi è
+applicazione la sorgente di luce ha coordinate \(x\) e \(z\) nulle, quindi è
 stato necessario effettuare i calcoli relativi solo alla seconda colonna
 della matrice (infatti i calcoli relativi alle altre colonne
-restituiscono sempre &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt;).&lt;/p&gt;
+restituiscono sempre \(0\)).&lt;/p&gt;
 
 &lt;p&gt;Come si può ben capire, questa tecnica può essere utilizzata solo in
 rendering di scene nelle quali è presente un solo oggetto su un piano,
@@ -1374,15 +1374,15 @@ per determinare le zone di ombra.&lt;/p&gt;
 
 &lt;p&gt;Nell’applicazione Phantom Friction la tecnica di shadow mapping non
 viene utilizzata di default; per attivarla è sufficiente compilare il
-codice specificando la direttiva &lt;code class=&quot;highlighter-rouge&quot;&gt;_SHADOWMAPPING_&lt;/code&gt; per il preprocessore.
-L’inizializzazione è contenuta nella routine &lt;code class=&quot;highlighter-rouge&quot;&gt;ShadowMappingInit()&lt;/code&gt;, la
+codice specificando la direttiva &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_SHADOWMAPPING_&lt;/code&gt; per il preprocessore.
+L’inizializzazione è contenuta nella routine &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ShadowMappingInit()&lt;/code&gt;, la
 quale comprende il caricamento delle texture che non devono essere
-modificate e l’abilitazione dell’estensione &lt;code class=&quot;highlighter-rouge&quot;&gt;GL_ARB_shadow&lt;/code&gt; (se
+modificate e l’abilitazione dell’estensione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GL_ARB_shadow&lt;/code&gt; (se
 disponibile, questa estensione consente di eseguire un passaggio in meno
 nel calcolo delle ombre). La funzione di callback per il ridisegno della
 scena è:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void glutDisplay()
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void glutDisplay()
 { 
   ShadowMappingFirst(gCameraPosWC);
   drawScene();
@@ -1393,14 +1393,14 @@ scena è:&lt;/p&gt;
 
 &lt;p&gt;Per prima cosa vengono impostate le luci:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glLightfv(GL_LIGHT0, GL_AMBIENT, ambientLight);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glLightfv(GL_LIGHT0, GL_AMBIENT, ambientLight);
 glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuseLight);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;si effettua un confronto sulle ombre e si imposta il piano della visuale
 corrente:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glEnable(TEXTURETYPE);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glEnable(TEXTURETYPE);
 glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 glTexParameteri(TEXTURETYPE, GL_TEXTURE_COMPARE_MODE, 
                                         GL_COMPARE_R_TO_TEXTURE);
@@ -1419,7 +1419,7 @@ glTexGenfv(GL_Q, GL_EYE_PLANE, qPlane);
 
 &lt;p&gt;Tramite i comandi:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glMatrixMode(GL_MODELVIEW);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glMatrixMode(GL_MODELVIEW);
 glLoadIdentity();
 gluLookAt(light[0], light[1], light[2], 
                     0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
@@ -1431,13 +1431,13 @@ glViewport(0, 0, shadowsize, shadowsize)
 luce. Si copia il contenuto del depth buffer in una texture
 bidimensionale:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glCopyTexImage2D(TEXTURETYPE, 0, GL_DEPTH_COMPONENT,
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glCopyTexImage2D(TEXTURETYPE, 0, GL_DEPTH_COMPONENT,
                   0, 0, shadowsize, shadowsize, 0);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Al successivo rendering della scena si torna alla prospettiva originale
 con i comandi:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glMatrixMode(GL_PROJECTION);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glMatrixMode(GL_PROJECTION);
 glLoadIdentity();
 gluPerspective(40.0f, 1.0f, 274.0f, 1899.0f);
 glMatrixMode(GL_MODELVIEW);
@@ -1463,13 +1463,13 @@ tecnica è meno dispendiosa in termini di risorse di calcolo rispetto
 allo shadow mapping, e quindi è meno probabile che causi il verificarsi
 di latenze. Il cursore viene disegnato tramite il comando:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;redrawCursor(true,0);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;redrawCursor(true,0);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;poi viene trasposto e disegnato una seconda volta, questa volta come
 ombra:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glMultMatrixf((GLfloat *)shadowMat);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glMultMatrixf((GLfloat *)shadowMat);
 redrawCursor(true,1);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -1499,19 +1499,19 @@ negli scopi dell’applicazione in quanto la percezione visiva di una
 tessitura distoglie l’utente dalle percezioni aptiche e uditive; tale
 caratteristica è disattivata per default, e per attivarla occorre
 procedere alla ricompilazione del codice sorgente includendo la stringa
-&lt;code class=&quot;highlighter-rouge&quot;&gt;_TEXTURE&lt;/code&gt; tra le direttive del preprocessore.&lt;/p&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_TEXTURE&lt;/code&gt; tra le direttive del preprocessore.&lt;/p&gt;
 
 &lt;p&gt;La funzione:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;loadTexture();
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;loadTexture();
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;carica in memoria tutte le texture indicate nell’array &lt;code class=&quot;highlighter-rouge&quot;&gt;textureFiles&lt;/code&gt;; è
+&lt;p&gt;carica in memoria tutte le texture indicate nell’array &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;textureFiles&lt;/code&gt;; è
 sufficiente effettuare il caricamento durante l’inizializzazione
 dell’applicazione, successivamente le texture resteranno disponibili in
 memoria fino alla chiusura dell’applicazione stessa. Il comando:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glBindTexture(GL_TEXTURE_2D,textures[n]);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;glBindTexture(GL_TEXTURE_2D,textures[n]);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;è utilizzato per applicare effettivamente la texture in posizione $n$
@@ -1527,7 +1527,7 @@ impostare le proprietà aptiche degli oggetti virtuali e per gestire i
 frame; ad esempio, per effettuare il rendering aptico della superficie
 sono sufficienti le seguenti istruzioni:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlBeginShape(HL_SHAPE_FEEDBACK_BUFFER, obj.shapeId);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlBeginShape(HL_SHAPE_FEEDBACK_BUFFER, obj.shapeId);
 
 hlMaterialf(HL_FRONT_AND_BACK, HL_STIFFNESS, obj.hap_stiffness);
 hlMaterialf(HL_FRONT, HL_DAMPING, obj.hap_damping);
@@ -1544,21 +1544,21 @@ smorzamento, frizione statica e frizione dinamica. Le primitive grafiche
 utilizzate sono davvero poche, e ciò consiglia l’utilizzo del feedback
 buffer per il rendering aptico (e di conseguenza anche per il rendering
 grafico); questo viene impostato tramite il primo argomento di
-&lt;code class=&quot;highlighter-rouge&quot;&gt;hlBeginShape&lt;/code&gt;.&lt;/p&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlBeginShape&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Nella rappresentazione del cursore non devono essere impostate proprietà
 aptiche, ma è necessario calcolare le traslazioni e le trasformazioni
 del proxy:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlGetDoublev(HL_PROXY_TRANSFORM, proxytransform);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlGetDoublev(HL_PROXY_TRANSFORM, proxytransform);
 glMultMatrixd(proxytransform);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Tutti i comandi riguardanti il rendering grafico della superficie, del
 cursore e delle ombre sono contenuti all’interno di un blocco
-&lt;code class=&quot;highlighter-rouge&quot;&gt;hlBeginFrame&lt;/code&gt;–&lt;code class=&quot;highlighter-rouge&quot;&gt;hlEndFrame&lt;/code&gt;:&lt;/p&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlBeginFrame&lt;/code&gt;–&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlEndFrame&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlBeginFrame();
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlBeginFrame();
 
 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -1595,11 +1595,11 @@ hlEndFrame();
 
 &lt;p&gt;Sempre utilizzando le HLAPI è stata abilitata l’ottimizzazione &lt;em&gt;haptic
 camera view&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlEnable(HL_HAPTIC_CAMERA_VIEW);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlEnable(HL_HAPTIC_CAMERA_VIEW);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;in modo che venga effettuato il rendering aptico anche della porzione di
 superficie non visibile nella scena. Con l’istruzione:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlHinti(HL_SHAPE_FEEDBACK_BUFFER_VERTICES, 100);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlHinti(HL_SHAPE_FEEDBACK_BUFFER_VERTICES, 100);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;viene allocata memoria per 100 vertici, sufficienti per la
 rappresentazione in feedback buffer delle poche primitive usate; ciò si
@@ -1681,26 +1681,26 @@ simulazione di superfici lisce o poco lisce. Per le superfici ruvide i
 coefficienti vengono mantenuti ad un valore basso (0.2) e incrementati
 solo in alcuni punti, determinati in base alle coordinate geometriche
 del punto stesso: se il cursore si trova a contatto con la superficie e
-la sua posizione lungo l’asse &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; soddisfa la condizione:&lt;/p&gt;
+la sua posizione lungo l’asse \(x\) soddisfa la condizione:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(( (int)posHD[0]*10  ) % 2) != 0
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(( (int)posHD[0]*10  ) % 2) != 0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;(dove &lt;code class=&quot;highlighter-rouge&quot;&gt;posHD[0]&lt;/code&gt; indica la posizione del proxy lungo l’asse &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;) allora
+&lt;p&gt;(dove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;posHD[0]&lt;/code&gt; indica la posizione del proxy lungo l’asse \(x\)) allora
 la frizione viene impostata ad un valore tanto più elevato quanto più
 ruvida deve risultare la superficie. Dal momento che si considera solo
-l’asse &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, le asperità vengono posizionate lungo linee parallele
-all’asse &lt;script type=&quot;math/tex&quot;&gt;z&lt;/script&gt; e giacenti sullo stesso piano della superficie (ovvero
-quello determinato dagli assi &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; e &lt;script type=&quot;math/tex&quot;&gt;z&lt;/script&gt;).&lt;/p&gt;
+l’asse \(x\), le asperità vengono posizionate lungo linee parallele
+all’asse \(z\) e giacenti sullo stesso piano della superficie (ovvero
+quello determinato dagli assi \(x\) e \(z\)).&lt;/p&gt;
 
 &lt;p&gt;Se la precedente condizione viene sostituita dalla seguente:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;( (int)( sqrt(posHD[0]*posHD[0]+posHD[2]*posHD[2])*10  ) % 2) != 0
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;( (int)( sqrt(posHD[0]*posHD[0]+posHD[2]*posHD[2])*10  ) % 2) != 0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;(dove &lt;code class=&quot;highlighter-rouge&quot;&gt;posHD[0]&lt;/code&gt; indica ancora la posizione del proxy lungo l’asse &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;,
-mentre &lt;code class=&quot;highlighter-rouge&quot;&gt;posHD[2]&lt;/code&gt; indica la posizione lungo l’asse &lt;script type=&quot;math/tex&quot;&gt;z&lt;/script&gt;), le asperità
-vengono posizionate secondo cerchi concentrici giacenti sul piano &lt;script type=&quot;math/tex&quot;&gt;xz&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;(dove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;posHD[0]&lt;/code&gt; indica ancora la posizione del proxy lungo l’asse \(x\),
+mentre &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;posHD[2]&lt;/code&gt; indica la posizione lungo l’asse \(z\)), le asperità
+vengono posizionate secondo cerchi concentrici giacenti sul piano \(xz\).&lt;/p&gt;
 
 &lt;p&gt;Possono essere implementati facilmente altri pattern geometrici; i
 micro–contatti dei quali viene simulato il suono emesso non sono però
@@ -1719,7 +1719,7 @@ appesantimento nel carico computazionale, senza garantire che il pattern
 generato nella patch per PD e quello implementato nell’applicazione
 varino concordemente. Il metodo più semplice e più efficiente risulta
 invece quello di utilizzare i dati calcolati nella subpatch
-&lt;code class=&quot;highlighter-rouge&quot;&gt;holy-roller~&lt;/code&gt;. Il blocco &lt;code class=&quot;highlighter-rouge&quot;&gt;circ_max_filter~&lt;/code&gt; calcola il
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;holy-roller~&lt;/code&gt;. Il blocco &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;circ_max_filter~&lt;/code&gt; calcola il
 profilo della superficie sulla quale avvengono i micro–contatti; il
 valore inviato in output viene letto dall’applicazione Phantom Friction
 (vedremo nella prossima sezione come avviene questa lettura) e,
@@ -1736,9 +1736,9 @@ superficie calcolato nelle patch in Pure Data.&lt;/p&gt;
 
 &lt;p&gt;Per implementare questo procedimento sono state utilizzate tre funzioni
 di callback. La prima rileva il verificarsi del primo contatto tra proxy
-e superficie e imposta a &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; un valore booleano:&lt;/p&gt;
+e superficie e imposta a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt; un valore booleano:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void HLCALLBACK touchCallback(HLenum event, 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void HLCALLBACK touchCallback(HLenum event, 
                               HLuint object, 
                               HLenum thread,HLcache *cache, 
                               void *userdata)
@@ -1747,9 +1747,9 @@ e superficie e imposta a &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;La seconda invece imposta questo valore a &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; quando il proxy non è
+&lt;p&gt;La seconda invece imposta questo valore a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;false&lt;/code&gt; quando il proxy non è
 più in contatto con la superficie:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void HLCALLBACK untouchCallback(HLenum event, 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void HLCALLBACK untouchCallback(HLenum event, 
                                 HLuint object, 
                                 HLenum thread, 
                                 HLcache *cache, 
@@ -1764,7 +1764,7 @@ condizione di abilitazione del calcolo (e del conseguente invio alla
 patch in PD) della velocità corrente e del fattore di amplificazione
 proporzionale alla forza normale.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;HDCallbackCode HDCALLBACK velocitaCallback(void *pUserData)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;HDCallbackCode HDCALLBACK velocitaCallback(void *pUserData)
 {
     if ( touching )
     {
@@ -1810,24 +1810,24 @@ tale funzione deve essere eseguita alla velocità propria del rendering
 aptico, applicando l’effetto ad ogni iterazione del servo loop.
 L’istruzione&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hap_static_friction = ( pdSurface - a )/ ( b );
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hap_static_friction = ( pdSurface - a )/ ( b );
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;imposta i coefficienti di frizione al valore ricevuto da PD
-(&lt;code class=&quot;highlighter-rouge&quot;&gt;pdSurface&lt;/code&gt;) e opportunamente scalato nell’intervallo &lt;code class=&quot;highlighter-rouge&quot;&gt;(a,b)&lt;/code&gt;, dove &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt;
-è impostato a &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; (si suppone che la superficie abbia sempre un valore
-positivo) e &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; corrisponde a &lt;script type=&quot;math/tex&quot;&gt;0.04&lt;/script&gt; (calcolato empiricamente). La
-velocità viene calcolata come modulo delle componenti lungo gli assi &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;
-e &lt;script type=&quot;math/tex&quot;&gt;z&lt;/script&gt; (il piano su cui giace la superficie) e viene divisa per 1000 per
-adeguarla alle unità di misura usate dalla patch &lt;code class=&quot;highlighter-rouge&quot;&gt;sliding.pd&lt;/code&gt;: in
-quest’ultima la velocità è assunta in &lt;script type=&quot;math/tex&quot;&gt;m/s&lt;/script&gt;, mentre le HDAPI ritornano
-tale valore in &lt;script type=&quot;math/tex&quot;&gt;mm/s&lt;/script&gt;. Tramite l’istruzione:&lt;/p&gt;
+(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdSurface&lt;/code&gt;) e opportunamente scalato nell’intervallo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(a,b)&lt;/code&gt;, dove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;
+è impostato a \(0\) (si suppone che la superficie abbia sempre un valore
+positivo) e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt; corrisponde a \(0.04\) (calcolato empiricamente). La
+velocità viene calcolata come modulo delle componenti lungo gli assi \(x\)
+e \(z\) (il piano su cui giace la superficie) e viene divisa per 1000 per
+adeguarla alle unità di misura usate dalla patch &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sliding.pd&lt;/code&gt;: in
+quest’ultima la velocità è assunta in \(m/s\), mentre le HDAPI ritornano
+tale valore in \(mm/s\). Tramite l’istruzione:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sqrt( abs(velocita * forceHD[1]) ),
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sqrt( abs(velocita * forceHD[1]) ),
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;dove &lt;code class=&quot;highlighter-rouge&quot;&gt;forceHD[1]&lt;/code&gt; è la componente della forza esercitata dal dispositivo
-aptico lungo l’asse &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;, viene calcolato il fattore di proporzionalità
+&lt;p&gt;dove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;forceHD[1]&lt;/code&gt; è la componente della forza esercitata dal dispositivo
+aptico lungo l’asse \(y\), viene calcolato il fattore di proporzionalità
 dell’ampiezza del suono rispetto alla forza normale (vedi pagina ).&lt;/p&gt;
 
 &lt;h2 id=&quot;scambio-dei-dati-tra-lapplicazione-phantom-friction-e-le-patch-in-pure-data&quot;&gt;Scambio dei dati tra l’applicazione Phantom Friction e le patch in Pure Data&lt;/h2&gt;
@@ -1890,7 +1890,7 @@ tre &lt;a class=&quot;citation&quot; href=&quot;#phd:crosato&quot;&gt;(Crosato, 
 &lt;h4 id=&quot;protocollo-di-rete&quot;&gt;Protocollo di rete&lt;/h4&gt;
 
 &lt;p&gt;Dato che in Pure Data è supportata la lettura dei dati (via protocollo
-TCP e UDP) tramite l’oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;netreceive~&lt;/code&gt;, sarebbe sufficiente
+TCP e UDP) tramite l’oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;netreceive~&lt;/code&gt;, sarebbe sufficiente
 implementare la lettura/scrittura dei dati nell’applicazione Phantom
 Friction tramite l’uso dei socket. Il vantaggio è che i due processi
 potrebbero così comunicare anche in remoto, facendo eseguire la
@@ -1930,7 +1930,7 @@ avvengono le operazioni di lettura e scrittura.&lt;/p&gt;
 valori che dovranno essere trasferiti dall’applicazione Phantom Friction
 a Pure Data:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;typedef struct
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;typedef struct
 {
     double nForce;
     double velocita;
@@ -1942,43 +1942,43 @@ a Pure Data:&lt;/p&gt;
 }  OpeData;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;I valori che costituiscono la struttura &lt;code class=&quot;highlighter-rouge&quot;&gt;OpeData&lt;/code&gt; sono i seguenti:&lt;/p&gt;
+&lt;p&gt;I valori che costituiscono la struttura &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OpeData&lt;/code&gt; sono i seguenti:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nForce&lt;/code&gt; è la radice quadrata del prodotto tra forza normale e
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nForce&lt;/code&gt; è la radice quadrata del prodotto tra forza normale e
 velocità;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;velocita&lt;/code&gt; indica la velocità corrente del proxy in $m/s$;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;velocita&lt;/code&gt; indica la velocità corrente del proxy in $m/s$;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;kappa&lt;/code&gt; è il coefficiente di elasticità della superficie;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kappa&lt;/code&gt; è il coefficiente di elasticità della superficie;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;depth&lt;/code&gt; è il fattore di amplificazione del segnale di rumore
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;depth&lt;/code&gt; è il fattore di amplificazione del segnale di rumore
 frattale;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;statFr&lt;/code&gt; è il coefficiente di frizione statica;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;statFr&lt;/code&gt; è il coefficiente di frizione statica;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dynFr&lt;/code&gt; è il coefficiente di frizione dinamica;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dynFr&lt;/code&gt; è il coefficiente di frizione dinamica;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;noiseFile&lt;/code&gt; è un numero intero che indica l’indice del file
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;noiseFile&lt;/code&gt; è un numero intero che indica l’indice del file
 contenente il rumore frattale.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Nell’implementazione attuale solo i valori &lt;code class=&quot;highlighter-rouge&quot;&gt;nForce&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;velocita&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;depth&lt;/code&gt;
-e &lt;code class=&quot;highlighter-rouge&quot;&gt;noiseFile&lt;/code&gt; vengono effettivamente utilizzati. Infatti la patch in PD
+&lt;p&gt;Nell’implementazione attuale solo i valori &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nForce&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;velocita&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;depth&lt;/code&gt;
+e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;noiseFile&lt;/code&gt; vengono effettivamente utilizzati. Infatti la patch in PD
 non ha bisogno di conoscere i coefficienti di frizione statica e
 dinamica, mentre il coefficiente di elasticità resta invariato per
 scelte implementative. E’ possibile modificare i valori che fanno parte
 della struttura dati tramite la funzione:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void setOpeData(OpeData *data, double nForce, 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void setOpeData(OpeData *data, double nForce, 
                                 double velocita, float kappa, 
                                 float depth, float statFr, 
                                 float dynFr, int noiseFile)
@@ -1993,11 +1993,11 @@ della struttura dati tramite la funzione:&lt;/p&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;La gestione della memoria è implementata nel file &lt;code class=&quot;highlighter-rouge&quot;&gt;PhantomMemory.h&lt;/code&gt;.
+&lt;p&gt;La gestione della memoria è implementata nel file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PhantomMemory.h&lt;/code&gt;.
 Tramite la seguente funzione avviene la creazione dell’area di memoria
 condivisa tra i processi:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;HANDLE hFile;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;HANDLE hFile;
 
 int CreatePhantomMemory()
 {
@@ -2020,15 +2020,15 @@ int CreatePhantomMemory()
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;E’ importante fare attenzione al parametro &lt;code class=&quot;highlighter-rouge&quot;&gt;sizeMem&lt;/code&gt;, il quale indica la
+&lt;p&gt;E’ importante fare attenzione al parametro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sizeMem&lt;/code&gt;, il quale indica la
 dimensione dell’area di memoria condivisa e viene utilizzato anche per
 calcolare la posizione dei diversi dati in memoria; un valore errato di
-&lt;code class=&quot;highlighter-rouge&quot;&gt;sizeMem&lt;/code&gt; porta alla scrittura e lettura di dati errati.&lt;/p&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sizeMem&lt;/code&gt; porta alla scrittura e lettura di dati errati.&lt;/p&gt;
 
 &lt;p&gt;Il codice seguente si occupa dell’apertura e chiusura dell’area di
 memoria:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int OpenPhantomMemory(void)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int OpenPhantomMemory(void)
 {
     hFile = OpenFileMappingW(FILE_MAP_ALL_ACCESS,FALSE,
                             (LPCWSTR)&quot;PhantomMemory&quot;);
@@ -2062,12 +2062,12 @@ int ClosePhantomMemory(void)
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Un oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;OpeData&lt;/code&gt; può essere scritto in memoria e letto dalla memoria
-usando le due funzioni &lt;code class=&quot;highlighter-rouge&quot;&gt;WriteOpeData(OpeData *elemento)&lt;/code&gt; e
-&lt;code class=&quot;highlighter-rouge&quot;&gt;ReadOpeData()&lt;/code&gt; (nella prima deve essere passato come parametro un
+&lt;p&gt;Un oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OpeData&lt;/code&gt; può essere scritto in memoria e letto dalla memoria
+usando le due funzioni &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WriteOpeData(OpeData *elemento)&lt;/code&gt; e
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ReadOpeData()&lt;/code&gt; (nella prima deve essere passato come parametro un
 puntatore all’oggetto):&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void WriteOpeData(OpeData *elemento)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void WriteOpeData(OpeData *elemento)
 {
     hookOped-&amp;gt;nForce = elemento-&amp;gt;nForce;
     hookOped-&amp;gt;velocita = elemento-&amp;gt;velocita;
@@ -2086,9 +2086,9 @@ OpeData ReadOpeData()
 
 &lt;p&gt;Con semplici modifiche a questi due comandi si implementano la scrittura
 e lettura del valore della superficie generata dall’oggetto
-&lt;code class=&quot;highlighter-rouge&quot;&gt;circ_max_exp~&lt;/code&gt;:&lt;/p&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;circ_max_exp~&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void WriteSurface(float *elemento)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void WriteSurface(float *elemento)
 {
     *hookSurface = *elemento;
 }
@@ -2103,20 +2103,20 @@ float ReadSurface()
 
 &lt;p&gt;E’ l’applicazione Phantom Friction che si occupa di creare l’area di
 memoria condivisa, e lo fa non appena viene avviata; subito dopo la
-memoria viene aperta e si crea un oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt; di tipo &lt;code class=&quot;highlighter-rouge&quot;&gt;OpeData&lt;/code&gt;
-contenente tutti i valori impostati a &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt;, il quale viene scritto
-assieme ad un valore nullo di &lt;code class=&quot;highlighter-rouge&quot;&gt;pdSurface&lt;/code&gt; allo scopo di effettuare
+memoria viene aperta e si crea un oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data&lt;/code&gt; di tipo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OpeData&lt;/code&gt;
+contenente tutti i valori impostati a \(0\), il quale viene scritto
+assieme ad un valore nullo di &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdSurface&lt;/code&gt; allo scopo di effettuare
 un’inizializzazione della memoria stessa, cancellando eventuali dati
-presenti. All’interno della callback asincrona &lt;code class=&quot;highlighter-rouge&quot;&gt;velocitaCallback&lt;/code&gt;, dopo
+presenti. All’interno della callback asincrona &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;velocitaCallback&lt;/code&gt;, dopo
 aver calcolato i valori necessari alla impostazione corretta
-dell’oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt;, avvengono in sequenza le seguenti operazioni:&lt;/p&gt;
+dell’oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data&lt;/code&gt;, avvengono in sequenza le seguenti operazioni:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;viene scritto in memoria l’oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt;;&lt;/p&gt;
+    &lt;p&gt;viene scritto in memoria l’oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data&lt;/code&gt;;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;viene letto dalla memoria il valore &lt;code class=&quot;highlighter-rouge&quot;&gt;pdSurface&lt;/code&gt;;&lt;/p&gt;
+    &lt;p&gt;viene letto dalla memoria il valore &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdSurface&lt;/code&gt;;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;vengono calcolati i coefficienti di frizione statica e dinamica
@@ -2139,7 +2139,7 @@ scende a tempi dell’ordine di pochi millisecondi.&lt;/p&gt;
 &lt;p&gt;Per consentire alle patch in Pure Data di leggere e scrivere dati in RAM
 è stato necessario scrivere un external; per semplicità ci si è
 appoggiati alla libreria &lt;em&gt;flext&lt;/em&gt; discussa nel &lt;a href=&quot;/pure-data-modelli-audio.html&quot;&gt;post sui modelli audio&lt;/a&gt;. 
-Tale oggetto è stato chiamato &lt;code class=&quot;highlighter-rouge&quot;&gt;ReadOperativo&lt;/code&gt;; non necessita di argomenti di
+Tale oggetto è stato chiamato &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ReadOperativo&lt;/code&gt;; non necessita di argomenti di
 costruzione e possiede 2 inlet e 5 outlet: i due inlet ricevono
 rispettivamente un bang e il valore della superficie, mentre vengono
 mandati in output, in ordine:&lt;/p&gt;
@@ -2169,7 +2169,7 @@ mandati in output, in ordine:&lt;/p&gt;
 
 &lt;p&gt;Tutto ciò viene inizializzato tramite il costruttore:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ReadOperativo::ReadOperativo()
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ReadOperativo::ReadOperativo()
 {
     // aggiunta degli inlet
     AddInAnything(&quot;bang&quot;);//(0)
@@ -2194,7 +2194,7 @@ mandati in output, in ordine:&lt;/p&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Un oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;metro&lt;/code&gt; invia un bang all’oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;ReadOperativo&lt;/code&gt; ogni 0.5
+&lt;p&gt;Un oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;metro&lt;/code&gt; invia un bang all’oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ReadOperativo&lt;/code&gt; ogni 0.5
 millisecondi. Al primo bang ricevuto avviene l’apertura dell’area di
 memoria condivisa. Un ciclo di lettura e scrittura avviene ogni volta
 che viene ricevuto un bang, quindi la frequenza con la quale avvengono
@@ -2216,9 +2216,9 @@ aliasing.&lt;/p&gt;
 
 &lt;p&gt;Infine il distruttore si occupa della chiusura della memoria condivisa,
 che pertanto viene effettivamente chiusa solo alla chiusura della patch
-&lt;code class=&quot;highlighter-rouge&quot;&gt;sliding.pd&lt;/code&gt; (e solo se era stata aperta):&lt;/p&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sliding.pd&lt;/code&gt; (e solo se era stata aperta):&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ReadOperativo::~ReadOperativo()
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ReadOperativo::~ReadOperativo()
 {
   if(open)
   ClosePhantomMemory();   
@@ -2312,7 +2312,7 @@ l’utente sia in grado di attraversarlo.&lt;/p&gt;
 &lt;p&gt;Il Phantom  Omni  è una delle interfacce aptiche più economiche
 attualmente disponibili sul mercato. Si tratta di un dispositivo aptico
 ground–based a sei gradi di libertà in input, in grado di leggere la
-posizione sui tre assi principali &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; e &lt;script type=&quot;math/tex&quot;&gt;z&lt;/script&gt; e di computare le forze
+posizione sui tre assi principali \(x\), \(y\) e \(z\) e di computare le forze
 lungo gli stessi. E’ compatibile con tutti i PC intel–based ed è dotato
 di una connessione FireWire  IEEE-1394a che assicura un trasferimento
 dei dati ad alta velocità.&lt;/p&gt;
@@ -2396,34 +2396,34 @@ movimento del dispositivo aptico; tali forze sono:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Forza elastica: La forza elastica può essere calcolata usando la legge di Hooke
-  &lt;script type=&quot;math/tex&quot;&gt;F=kx ,&lt;/script&gt; dove &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; è la costante elastica e &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; è il vettore della
+  \(F=kx ,\) dove \(k\) è la costante elastica e \(x\) è il vettore della
   posizione. La molla che rappresenta la forza è attaccata, ad una
-  estremità, ad un punto fisso &lt;script type=&quot;math/tex&quot;&gt;p_0&lt;/script&gt;, solitamente collocato sulla
+  estremità, ad un punto fisso \(p_0\), solitamente collocato sulla
   superficie dell’oggetto che l’utente sta toccando, mentre l’altra
-  estremità coincide con la posizione &lt;script type=&quot;math/tex&quot;&gt;p_1&lt;/script&gt; del dispositivo; il
-  vettore &lt;script type=&quot;math/tex&quot;&gt;x=p_0-p_1&lt;/script&gt; è orientato in modo tale che la forza elastica
+  estremità coincide con la posizione \(p_1\) del dispositivo; il
+  vettore \(x=p_0-p_1\) è orientato in modo tale che la forza elastica
   sia sempre diretta verso il punto fisso.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Frizione viscosa: L’utilità principale della frizione viscosa è ridurre la vibrazione
   opponendosi al moto; in generale tale forza è proporzionale alla
-  velocità del dispositivo: &lt;script type=&quot;math/tex&quot;&gt;F=-bv&lt;/script&gt;, dove &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; è la costante di
-  smorzamento e &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; la velocità del dispositivo.&lt;/p&gt;
+  velocità del dispositivo: \(F=-bv\), dove \(b\) è la costante di
+  smorzamento e \(v\) la velocità del dispositivo.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Frizione statica: E’ una forza che si oppone alla direzione del moto con modulo
-  costante: &lt;script type=&quot;math/tex&quot;&gt;F=-c\cdot sgn(v) ,&lt;/script&gt; dove &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; è la velocità del
-  dispositivo e &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; è la costante di frizione, dipendente dalla forza
+  costante: \(F=-c\cdot sgn(v) ,\) dove \(v\) è la velocità del
+  dispositivo e \(c\) è la costante di frizione, dipendente dalla forza
   normale. Può essere utile per creare una transizione smorzata nei
   cambiamenti di direzione.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Frizione dinamica: E’ simile alla frizione viscosa, e pertanto viene calcolata mediante
-  la formula &lt;script type=&quot;math/tex&quot;&gt;F=-bv&lt;/script&gt;, dove &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; dipende dalla forza normale.&lt;/p&gt;
+  la formula \(F=-bv\), dove \(b\) dipende dalla forza normale.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Inerzia: E’ associata alla massa in movimento e si calcola, una volta nota la
-  traiettoria, con la legge di Newton &lt;script type=&quot;math/tex&quot;&gt;F=ma&lt;/script&gt;.&lt;/p&gt;
+  traiettoria, con la legge di Newton \(F=ma\).&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -2477,12 +2477,12 @@ penetrare ulteriormente la superficie, usando un controllo di
 elasticità–smorzamento; più precisamente, il punto SCP è un punto che
 segue la posizione dell’end–effector pur essendo costretto a restare
 sulla superficie dell’oggetto. Nello spazio libero l’SCP si trova nella
-stessa posizione dell’end–effector (&lt;script type=&quot;math/tex&quot;&gt;t_0&lt;/script&gt; in figura); al
+stessa posizione dell’end–effector (\(t_0\) in figura); al
 momento del contatto con un oggetto l’SCP può essere calcolato muovendo
 l’ultimo SCP verso la posizione dell’end–effector senza oltrepassare la
 superficie. La forza viene calcolata simulando una molla collegata da un
-lato all’SCP e dall’altro alla posizione dell’end–effector: in figura &lt;script type=&quot;math/tex&quot;&gt;t_1&lt;/script&gt;
-indica la penetrazione nell’oggetto e &lt;script type=&quot;math/tex&quot;&gt;t_2&lt;/script&gt; mostra una penetrazione
+lato all’SCP e dall’altro alla posizione dell’end–effector: in figura \(t_1\)
+indica la penetrazione nell’oggetto e \(t_2\) mostra una penetrazione
 ulteriore (la molla è maggiormente allungata facendo sentire una
 maggiore resistenza all’utente).&lt;/p&gt;
 
@@ -2616,12 +2616,12 @@ utilizzando le callback dello scheduler.&lt;/p&gt;
   solo scheduler.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Dispositivo corrente: Nel caso in cui vengano utilizzati più dispositivi, uno deve essere impostato come il dispositivo corrente; per fare ciò viene usato il comando &lt;code class=&quot;highlighter-rouge&quot;&gt;mdMakeCurrentDevice(hHD)&lt;/code&gt;. Nell’utilizzo di un singolo dispositivo tale comando non deve mai essere utilizzato.&lt;/p&gt;
+    &lt;p&gt;Dispositivo corrente: Nel caso in cui vengano utilizzati più dispositivi, uno deve essere impostato come il dispositivo corrente; per fare ciò viene usato il comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mdMakeCurrentDevice(hHD)&lt;/code&gt;. Nell’utilizzo di un singolo dispositivo tale comando non deve mai essere utilizzato.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Caratteristiche del dispositivo: Alcune caratteristiche del dispositivo possono essere abilitate o
-  disabilitate a seconda delle necessità, usando i comandi &lt;code class=&quot;highlighter-rouge&quot;&gt;hdEnable&lt;/code&gt;
-  e &lt;code class=&quot;highlighter-rouge&quot;&gt;hdDisable&lt;/code&gt;. Tali istruzioni devono essere utilizzate con
+  disabilitate a seconda delle necessità, usando i comandi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hdEnable&lt;/code&gt;
+  e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hdDisable&lt;/code&gt;. Tali istruzioni devono essere utilizzate con
   attenzione e sempre tramite callback dello scheduler.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -2674,8 +2674,8 @@ dispositivi, questi condividono lo stesso thread.&lt;/p&gt;
 &lt;h4 id=&quot;ottenimento-dello-stato&quot;&gt;Ottenimento dello stato&lt;/h4&gt;
 
 &lt;p&gt;Lo stato del dispositivo (assieme ad altre informazioni) può essere
-richiesto tramite l’uso delle funzioni della famiglia &lt;code class=&quot;highlighter-rouge&quot;&gt;hdGet&lt;/code&gt;, come ad
-esempio &lt;code class=&quot;highlighter-rouge&quot;&gt;hdGetDoublev&lt;/code&gt;. Tali funzioni richiedono un parametro valido ed
+richiesto tramite l’uso delle funzioni della famiglia &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hdGet&lt;/code&gt;, come ad
+esempio &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hdGetDoublev&lt;/code&gt;. Tali funzioni richiedono un parametro valido ed
 un singolo indirizzo di ritorno o un array. Le richieste possono essere
 fatte al frame corrente o al precedente; in generale, se vengono
 eseguite all’esterno di un frame, vengono riferite a quello precedente.
@@ -2786,13 +2786,13 @@ prosegue tornando alla cattura degli eventi.&lt;/p&gt;
 &lt;h3 id=&quot;setup-del-dispositivo&quot;&gt;Setup del dispositivo&lt;/h3&gt;
 
 &lt;p&gt;Come con le HDAPI, l’inizializzazione del dispositivo avviene tramite il
-comando &lt;code class=&quot;highlighter-rouge&quot;&gt;hdInitDevice&lt;/code&gt;, seguito dal comando &lt;code class=&quot;highlighter-rouge&quot;&gt;hlCreateContext&lt;/code&gt;, il quale
+comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hdInitDevice&lt;/code&gt;, seguito dal comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlCreateContext&lt;/code&gt;, il quale
 crea il contesto aptico. Infine il contesto viene impostato come
-corrente con l’istruzione &lt;code class=&quot;highlighter-rouge&quot;&gt;hlMakeCurrent&lt;/code&gt; (ciò è richiesto da tutti i
+corrente con l’istruzione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlMakeCurrent&lt;/code&gt; (ciò è richiesto da tutti i
 comandi delle HLAPI). Il rendering del contesto deve essere attivo per
 un solo thread alla volta, in quanto le routine HLAPI, come quelle
 OpenGL, non sono &lt;em&gt;thread safe&lt;/em&gt;; ciò può essere implementato con l’uso di
-un &lt;em&gt;mutex&lt;/em&gt; per sincronizzare le chiamate a &lt;code class=&quot;highlighter-rouge&quot;&gt;hlMakeCurrent&lt;/code&gt; per i
+un &lt;em&gt;mutex&lt;/em&gt; per sincronizzare le chiamate a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlMakeCurrent&lt;/code&gt; per i
 contesti condivisi.&lt;/p&gt;
 
 &lt;h3 id=&quot;frame-aptici-1&quot;&gt;Frame aptici&lt;/h3&gt;
@@ -2804,22 +2804,22 @@ contesti condivisi.&lt;/p&gt;
 
 &lt;p&gt;Tutti i comandi implementati dalle HLAPI devono essere inseriti
 all’interno di un &lt;em&gt;frame aptico&lt;/em&gt;, delimitato dalle chiamate a
-&lt;code class=&quot;highlighter-rouge&quot;&gt;hlBeginFrame&lt;/code&gt; (posta all’inizio del ciclo di rendering) e &lt;code class=&quot;highlighter-rouge&quot;&gt;hlEndFrame&lt;/code&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlBeginFrame&lt;/code&gt; (posta all’inizio del ciclo di rendering) e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlEndFrame&lt;/code&gt;
 (alla fine del ciclo di rendering), come evidenziato in
 &lt;a href=&quot;#fig:hlapiframe&quot;&gt;1.4&lt;/a&gt;{reference-type=”ref” reference=”fig:hlapiframe”}.
 In generale sarà presente un frame aptico per ogni frame grafico. Ciò è
 molto diverso rispetto alla programmazione con le HDAPI, perché in
 questo caso il frame grafico viene aggiornato alla stessa frequenza di
 quello aptico: le chiamate avvengono nel thread dato che entrambi
-accedono alle medesime informazioni geometriche. &lt;code class=&quot;highlighter-rouge&quot;&gt;hlBeginFrame&lt;/code&gt; campiona
+accedono alle medesime informazioni geometriche. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlBeginFrame&lt;/code&gt; campiona
 lo stato corrente del rendering aptico dal thread aptico;
-successivamente &lt;code class=&quot;highlighter-rouge&quot;&gt;hlEndFrame&lt;/code&gt; aggiorna la posizione del proxy in base ai
-cambiamenti nella dinamica degli oggetti. In aggiunta &lt;code class=&quot;highlighter-rouge&quot;&gt;hlBeginFrame&lt;/code&gt; si
+successivamente &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlEndFrame&lt;/code&gt; aggiorna la posizione del proxy in base ai
+cambiamenti nella dinamica degli oggetti. In aggiunta &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlBeginFrame&lt;/code&gt; si
 occupa di aggiornare le coordinate globali usate dal motore di rendering
 aptico. Tutte le richieste dello stato del dispositivo o del proxy
 effettuate all’interno di uno stesso frame riportano lo stesso
 risultato, ovvero lo stato presente al momento in cui è stato richiamato
-&lt;code class=&quot;highlighter-rouge&quot;&gt;hlBeginFrame&lt;/code&gt;. Alla fine del frame, tutti i cambiamenti allo stato che
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlBeginFrame&lt;/code&gt;. Alla fine del frame, tutti i cambiamenti allo stato che
 sono intervenuti vengono trasmessi al rendering aptico. Ciò fa si che
 più cambiamenti allo scenario all’interno di uno stesso frame vengano
 trasmessi ai cicli aptico e grafico simultaneamente alla fine del frame.&lt;/p&gt;
@@ -2833,7 +2833,7 @@ insieme più primitive grafiche come linee e poligoni.&lt;/p&gt;
 &lt;h4 id=&quot;inizio-e-fine-di-una-forma&quot;&gt;Inizio e fine di una forma&lt;/h4&gt;
 
 &lt;p&gt;Le forme geometriche vengono specificate attraverso istruzioni OpenGL
-racchiuse tra le chiamate a &lt;code class=&quot;highlighter-rouge&quot;&gt;hlBeginShape&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;hlEndShape&lt;/code&gt;. Le HLAPI
+racchiuse tra le chiamate a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlBeginShape&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlEndShape&lt;/code&gt;. Le HLAPI
 catturano tali geometrie per calcolare il rendering aptico.&lt;/p&gt;
 
 &lt;h4 id=&quot;identificatori-delle-forme&quot;&gt;Identificatori delle forme&lt;/h4&gt;
@@ -2846,7 +2846,7 @@ può essere rilasciato quando la forma non è più usata.&lt;/p&gt;
 &lt;h4 id=&quot;depth-buffer&quot;&gt;Depth buffer&lt;/h4&gt;
 
 &lt;p&gt;La geometria degli oggetti può essere catturata dal &lt;em&gt;depth buffer&lt;/em&gt; usato
-dalle OpenGL: quando viene richiamata l’istruzione &lt;code class=&quot;highlighter-rouge&quot;&gt;hlEndShape&lt;/code&gt; le API
+dalle OpenGL: quando viene richiamata l’istruzione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlEndShape&lt;/code&gt; le API
 leggono un’immagine da tale buffer, immagine che viene poi passata al
 collision thread e usata per calcolare le collisioni con il proxy. Ogni
 modifica al depth buffer verrà riconosciuta come modifica di un oggetto
@@ -2859,13 +2859,13 @@ quale le HLAPI correggono automaticamente i parametri di visualizzazione
 OpenGL in base alla mappatura del dispositivo aptico sulla scena; il
 comando corrispondente è&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlEnable(HL_HAPTIC_CAMERA_VIEW)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlEnable(HL_HAPTIC_CAMERA_VIEW)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Grazie al &lt;em&gt;depth buffer&lt;/em&gt; è possibile effettuare il rendering aptico e
 grafico delle forme in un unico ciclo, semplicemente includendo il
-codice di rendering grafico all’interno di un blocco &lt;code class=&quot;highlighter-rouge&quot;&gt;hlBeginShape&lt;/code&gt; -
-&lt;code class=&quot;highlighter-rouge&quot;&gt;hlEndShape&lt;/code&gt;. Se è attiva l’ottimizzazione &lt;em&gt;haptic camera view&lt;/em&gt;, tale
+codice di rendering grafico all’interno di un blocco &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlBeginShape&lt;/code&gt; -
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlEndShape&lt;/code&gt;. Se è attiva l’ottimizzazione &lt;em&gt;haptic camera view&lt;/em&gt;, tale
 metodo non funzionerà in quanto il rendering grafico verrà effettuato
 dal punto di vista modificato.&lt;/p&gt;
 
@@ -2873,26 +2873,26 @@ dal punto di vista modificato.&lt;/p&gt;
 
 &lt;p&gt;Il rendering tramite &lt;em&gt;feedback buffer&lt;/em&gt; usa il feedback buffer delle
 OpenGL per catturare le primitive geometriche: quando l’istruzione
-&lt;code class=&quot;highlighter-rouge&quot;&gt;hlBeginShape&lt;/code&gt; viene richiamata, le HLAPI automaticamente allocano tale
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlBeginShape&lt;/code&gt; viene richiamata, le HLAPI automaticamente allocano tale
 buffer e impostano la modalità di rendering OpenGL a feedback buffer;
 tutte le primitive vengono così salvate, ma solo i comandi che generano
 punti, linee o vertici vengono catturati dalla routine aptica (gli altri
 comandi, come quelli relativi all’impostazione delle texture, vengono
-ignorati). Con il comando &lt;code class=&quot;highlighter-rouge&quot;&gt;hlEndShape&lt;/code&gt; le primitive salvate nel feedback
+ignorati). Con il comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlEndShape&lt;/code&gt; le primitive salvate nel feedback
 buffer vengono usate per il rendering aptico. E’ opportuno utilizzare
-l’istruzione &lt;code class=&quot;highlighter-rouge&quot;&gt;hlHinti&lt;/code&gt; per impostare il numero di vertici che saranno
+l’istruzione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlHinti&lt;/code&gt; per impostare il numero di vertici che saranno
 presenti nella scena, numero che verrà usato dalle HLAPI per allocare la
 memoria per il feedback buffer; ad esempio il comando seguente alloca
 memoria per 4 vertici:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlHinti(HL_SHAPE_FEEDBACK_BUFFER_VERTICES, 4);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlHinti(HL_SHAPE_FEEDBACK_BUFFER_VERTICES, 4);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;il valore di default è 65536.&lt;/p&gt;
 
 &lt;p&gt;Durante la creazione di un oggetto con il feedback buffer è importante
-non richiamare l’istruzione &lt;code class=&quot;highlighter-rouge&quot;&gt;glCullFace&lt;/code&gt; (o la relativa
+non richiamare l’istruzione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;glCullFace&lt;/code&gt; (o la relativa
 abilitazione/disabilitazione) all’interno della coppia di istruzioni
-&lt;code class=&quot;highlighter-rouge&quot;&gt;hlBeginShape&lt;/code&gt; - &lt;code class=&quot;highlighter-rouge&quot;&gt;hlEndShape&lt;/code&gt;, altrimenti può accadere di non essere in
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlBeginShape&lt;/code&gt; - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlEndShape&lt;/code&gt;, altrimenti può accadere di non essere in
 grado di percepire alcune parti dell’oggetto.&lt;/p&gt;
 
 &lt;h4 id=&quot;ottimizzazione-del-rendering&quot;&gt;Ottimizzazione del rendering&lt;/h4&gt;
@@ -2912,7 +2912,7 @@ effettuate.&lt;/p&gt;
   all’area prossima alla posizione corrente del proxy. L’incremento di
   prestazioni dipende dalla velocità con la quale la scheda grafica
   riesce a leggere il depth buffer dalla memoria. Il comando per
-  abilitare tale opzione è &lt;code class=&quot;highlighter-rouge&quot;&gt;hlEnable(HL_ADAPTIVE_VIEWPORT)&lt;/code&gt;.
+  abilitare tale opzione è &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlEnable(HL_ADAPTIVE_VIEWPORT)&lt;/code&gt;.
   Per utilizzare l’adaptive viewport la scena deve essere ridisegnata
   regolarmente quando il dispositivo aptico è in movimento, ad una
   frequenza tanto più alta quanto più veloce è il movimento del
@@ -2947,7 +2947,7 @@ effettuate.&lt;/p&gt;
   Per prima cosa è necessario determinare la regione dello spazio che
   viene presa in considerazione per il rendering aptico; tale regione
   è semplicemente quella che viene impostata dalle HLAPI nella
-  chiamata a &lt;code class=&quot;highlighter-rouge&quot;&gt;hlBeginShape&lt;/code&gt; quando è abilitata la &lt;em&gt;haptic camera
+  chiamata a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlBeginShape&lt;/code&gt; quando è abilitata la &lt;em&gt;haptic camera
   view&lt;/em&gt;. Una volta individuata la regione, si utilizzano delle
   partizioni dello spazio per trovare il sottoinsieme di primitive che
   si trovano all’interno (completamente o parzialmente) di essa; tali
@@ -2981,17 +2981,17 @@ vengono tradotti in movimenti nella rappresentazione grafica.&lt;/p&gt;
 dispositivo aptico, e le dimensioni (in millimetri) di tale spazio
 possono essere ottenute con il comando&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;HLdouble workspaceDims[6];
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;HLdouble workspaceDims[6];
 hlGetDoublev(HL_WORKSPACE, workspaceDims);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Si può scegliere di non utilizzare l’intero spazio di lavoro scegliendo
-la porzione utilizzabile con la chiamata a &lt;code class=&quot;highlighter-rouge&quot;&gt;hlWorkspace&lt;/code&gt;.&lt;/p&gt;
+la porzione utilizzabile con la chiamata a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlWorkspace&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;stack-di-matrici&quot;&gt;Stack di matrici&lt;/h4&gt;
 
 &lt;p&gt;Sono previsti due stack di matrici 4x4 tramite le quali viene effettuata
-la mappatura: &lt;code class=&quot;highlighter-rouge&quot;&gt;HL_VIEWTOUCH_MATRIX&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;HL_TOUCHWORKSPACE_MATRIX&lt;/code&gt;. Mentre
+la mappatura: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HL_VIEWTOUCH_MATRIX&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HL_TOUCHWORKSPACE_MATRIX&lt;/code&gt;. Mentre
 il primo ha la funzione di definire una mappatura tra lo spazio di
 lavoro e le coordinate visive, il secondo serve ad orientare lo spazio
 di lavoro secondo le coordinate visive.&lt;/p&gt;
@@ -3017,21 +3017,21 @@ questo.&lt;/p&gt;
 &lt;p&gt;Controllando le proprietà dei materiali si controllano le proprietà
 tattili della superficie, analogamente a come vengono controllate le
 proprietà visive. Il comando per specificare tali proprietà è
-&lt;code class=&quot;highlighter-rouge&quot;&gt;hlMaterial&lt;/code&gt;, e può essere applicato al fronte o retro della superficie
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlMaterial&lt;/code&gt;, e può essere applicato al fronte o retro della superficie
 o ad entrambe le facce.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Rigidità: La rigidità di una superficie viene impostata tramite il comando &lt;code class=&quot;highlighter-rouge&quot;&gt;hlMaterialf(HL_FRONT_AND_BACK, HL_STIFFNESS, 0.7)&lt;/code&gt; dove la &lt;code class=&quot;highlighter-rouge&quot;&gt;f&lt;/code&gt; aggiunta indica che il parametro numerico è un &lt;em&gt;float&lt;/em&gt;.
+    &lt;p&gt;Rigidità: La rigidità di una superficie viene impostata tramite il comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlMaterialf(HL_FRONT_AND_BACK, HL_STIFFNESS, 0.7)&lt;/code&gt; dove la &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f&lt;/code&gt; aggiunta indica che il parametro numerico è un &lt;em&gt;float&lt;/em&gt;.
   Matematicamente rappresenta il tasso con il quale la forza aumenta
   mano a mano che il dispositivo tenta di penetrare la superficie
-  secondo la legge di Hooke &lt;script type=&quot;math/tex&quot;&gt;F=kx&lt;/script&gt;, dove &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; è la costante di rigidità
-  e &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; è il vettore rappresentante la penetrazione.&lt;/p&gt;
+  secondo la legge di Hooke \(F=kx\), dove \(k\) è la costante di rigidità
+  e \(x\) è il vettore rappresentante la penetrazione.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Smorzamento: Impostando tale proprietà tramite il comando &lt;code class=&quot;highlighter-rouge&quot;&gt;hlMaterialf(HL_FRONT_AND_BACK, HL_DAMPING, 0.1)&lt;/code&gt;
+    &lt;p&gt;Smorzamento: Impostando tale proprietà tramite il comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlMaterialf(HL_FRONT_AND_BACK, HL_DAMPING, 0.1)&lt;/code&gt;
   viene aggiunta una forza di resistenza dipendente dalla velocità
-  secondo la legge &lt;script type=&quot;math/tex&quot;&gt;F=kv&lt;/script&gt;, con &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; costante di smorzamento e &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt;
+  secondo la legge \(F=kv\), con \(k\) costante di smorzamento e \(v\)
   velocità del dispositivo.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Frizione: La frizione indica la resistenza di un oggetto al movimento laterale
@@ -3043,7 +3043,7 @@ o ad entrambe le facce.&lt;/p&gt;
   dotato di un’alta frizione statica ma bassa frizione dinamica; la
   gomma invece ha coefficienti elevati per entrambi i tipi di
   frizione. Il comando per settare le due proprietà è:
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlMaterialf(HL_FRONT_AND_BACK, HL_STATIC_FRICTION, 0.3)
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlMaterialf(HL_FRONT_AND_BACK, HL_STATIC_FRICTION, 0.3)
 hlMaterialf(HL_FRONT_AND_BACK, HL_DYNAMIC_FRICTION, 0.2)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
@@ -3052,13 +3052,13 @@ hlMaterialf(HL_FRONT_AND_BACK, HL_DYNAMIC_FRICTION, 0.2)
   simulazione di una superficie magnetica). Per attivare questa
   modalità è sufficiente eseguire il seguente comando prima della
   creazione dell’oggetto:
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlTouchModel(HL_COSTRAINT);
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlTouchModel(HL_COSTRAINT);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
     &lt;p&gt;per tornare alla modalità di default si richiama nuovamente la
-  funzione &lt;code class=&quot;highlighter-rouge&quot;&gt;hlTouchModel&lt;/code&gt; con il parametro &lt;code class=&quot;highlighter-rouge&quot;&gt;HL_CONTACT&lt;/code&gt;. E’ possibile
+  funzione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hlTouchModel&lt;/code&gt; con il parametro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HL_CONTACT&lt;/code&gt;. E’ possibile
   inoltre impostare il raggio d’azione del vincolo tramite il comando:&lt;/p&gt;
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlTouchModelf(HL_SNAP_DISTANCE, 1.5);
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlTouchModelf(HL_SNAP_DISTANCE, 1.5);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
     &lt;p&gt;oggi volta che il proxy viene a trovarsi ad una distanza dal vincolo
@@ -3075,13 +3075,13 @@ causare instabilità del dispositivo.&lt;/p&gt;
 
 &lt;p&gt;Tramite le HLAPI è possibile associare una funzione al verificarsi di un
 determinato evento. Ciò avviene eseguendo il comando:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlAddEventCallback(HL_EVENT_TOUCH, HL_OBJECT_ANY, HL_CLIENT_THREAD, &amp;amp;function, NULL);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hlAddEventCallback(HL_EVENT_TOUCH, HL_OBJECT_ANY, HL_CLIENT_THREAD, &amp;amp;function, NULL);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;in questo modo verrà eseguita la funzione &lt;code class=&quot;highlighter-rouge&quot;&gt;function&lt;/code&gt; ogni volta che
+&lt;p&gt;in questo modo verrà eseguita la funzione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;function&lt;/code&gt; ogni volta che
 un’oggetto verrà toccato. La funzione di callback deve essere
 specificata come segue:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void HLCALLBACK function(HLENUM event, HLuint object, HLenum thread, HLcache *cache, void *userdata)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void HLCALLBACK function(HLENUM event, HLuint object, HLenum thread, HLcache *cache, void *userdata)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Le callback possono essere associate ai seguenti eventi:&lt;/p&gt;
@@ -3099,14 +3099,14 @@ specificata come segue:&lt;/p&gt;
     &lt;p&gt;Movimento: Il moto viene rilevato come tale quando la posizione o
   l’orientamento del proxy cambiano. La variazione di movimento e
   orientamento che viene rilevata come movimento può essere modificata
-  tramite le variabili &lt;code class=&quot;highlighter-rouge&quot;&gt;HL_EVENT_MOTION_TOLERANCE&lt;/code&gt; e
-  &lt;code class=&quot;highlighter-rouge&quot;&gt;HL_EVENT_ANGULAR_TOLERANCE&lt;/code&gt;.&lt;/p&gt;
+  tramite le variabili &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HL_EVENT_MOTION_TOLERANCE&lt;/code&gt; e
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HL_EVENT_ANGULAR_TOLERANCE&lt;/code&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Pulsante: Possono essere associate delle funzioni anche alla pressione dei
   pulsanti presenti sul dispositivo usando come identificatori per il
-  primo pulsante &lt;code class=&quot;highlighter-rouge&quot;&gt;HL_EVENT1_BUTTON_DOWN&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HL_EVENT1_BUTTON_UP&lt;/code&gt; e per
-  il secondo pulsante &lt;code class=&quot;highlighter-rouge&quot;&gt;HL_EVENT2_BUTTON_DOWN&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HL_EVENT2_BUTTON_UP&lt;/code&gt;.&lt;/p&gt;
+  primo pulsante &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HL_EVENT1_BUTTON_DOWN&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HL_EVENT1_BUTTON_UP&lt;/code&gt; e per
+  il secondo pulsante &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HL_EVENT2_BUTTON_DOWN&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HL_EVENT2_BUTTON_UP&lt;/code&gt;.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Andrea Maglie</name></author><category term="haptic feedback" /><category term="pure data" /><summary type="html">Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.</summary></entry><entry><title type="html">Dispositivi Aptici</title><link href="/dispositivi-aptici" rel="alternate" type="text/html" title="Dispositivi Aptici" /><published>2019-02-05T00:00:00+01:00</published><updated>2019-02-05T00:00:00+01:00</updated><id>/dispositivi-aptici</id><content type="html" xml:base="/dispositivi-aptici">&lt;hr /&gt;
 
@@ -3132,7 +3132,7 @@ delle collisioni e comprensione del sistema tattile umano.&lt;/p&gt;
 scambio di energia con l’utente; in particolare permettono all’utente di
 interagire con un ambiente virtuale ricevendo un feedback tattile,
 ottenuto applicando delle forze opposte al movimento dell’utente lungo i
-tre assi &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; e &lt;script type=&quot;math/tex&quot;&gt;z&lt;/script&gt;. La caratteristica principale che li distingue
+tre assi \(x\), \(y\) e \(z\). La caratteristica principale che li distingue
 dalle altre tipologie di dispositivi è la loro &lt;em&gt;bidirezionalità&lt;/em&gt;, cioè
 la possibilità di ricevere informazioni dall’utente e di inviare
 informazioni all’utente. Infatti, durante il normale utilizzo di un tale
@@ -3372,8 +3372,8 @@ e punto di collisione lungo la normale alla superficie.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In entrambi i casi la forza è calcolata usando la legge di Hooke &lt;script type=&quot;math/tex&quot;&gt;F=kx&lt;/script&gt;,
-dove &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; è la stessa direzione lungo la quale viene calcolata la
+&lt;p&gt;In entrambi i casi la forza è calcolata usando la legge di Hooke \(F=kx\),
+dove \(x\) è la stessa direzione lungo la quale viene calcolata la
 profondità di penetrazione; se le interazioni sono prive di forze di
 frizione, la forza di reazione è normale alla superficie nel punto di
 contatto.&lt;/p&gt;
@@ -3463,8 +3463,8 @@ prendono spunto da quelle usate nella computer graphics:&lt;/p&gt;
   superficie (come la ruvidità). Max e Becker &lt;a class=&quot;citation&quot; href=&quot;#art:max&quot;&gt;(Max, N. L. &amp;amp; Becker, B. G., 1994)&lt;/a&gt; hanno
   sviluppato una formula che permette di generare delle ruvidità
   visuali, basandosi sulla normale alla superficie originale:
-  &lt;script type=&quot;math/tex&quot;&gt;M = N - \nabla h + (\nabla h \cdot N)N&lt;/script&gt; dove &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt; è la normale
-  modificata, &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; è la normale originale e &lt;script type=&quot;math/tex&quot;&gt;\nabla h&lt;/script&gt; è il gradiente
+  \(M = N - \nabla h + (\nabla h \cdot N)N\) dove \(M\) è la normale
+  modificata, \(N\) è la normale originale e \(\nabla h\) è il gradiente
   della profondità della tessitura. Lo stesso metodo può essere usato
   per generare la ruvidità aptica.&lt;/p&gt;
   &lt;/li&gt;
@@ -3495,14 +3495,14 @@ profondità delle tessiture:&lt;/p&gt;
   bidimensionale usata come texture dell’oggetto virtuale; assumendo
   che le intensità di grigio dell’immagine possano essere usate
   direttamente come indicatori della profondità della tessitura
-  aptica, possiamo associare ogni coordinata della texture &lt;script type=&quot;math/tex&quot;&gt;(u,v)&lt;/script&gt;
-  alle coordinate di ogni vertice &lt;script type=&quot;math/tex&quot;&gt;(x,y,z)&lt;/script&gt;. Viene poi calcolato il
+  aptica, possiamo associare ogni coordinata della texture \((u,v)\)
+  alle coordinate di ogni vertice \((x,y,z)\). Viene poi calcolato il
   gradiente della profondità al punto di collisione e il vettore della
   forza è perturbato di conseguenza.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;em&gt;Tessiture aptiche procedurali&lt;/em&gt;: L’obiettivo è generare le tessiture aptiche mediante funzioni
-  matematiche, usandole poi per modificare il gradiente &lt;script type=&quot;math/tex&quot;&gt;\nabla h&lt;/script&gt; e
+  matematiche, usandole poi per modificare il gradiente \(\nabla h\) e
   la forza di reazione al punto di contatto, o per modificare la
   geometria dell’oggetto; un esempio è la simulazione di tessiture
   stocastiche &lt;a class=&quot;citation&quot; href=&quot;#art:fritz&quot;&gt;(Fritz, J. P. &amp;amp; Barner, K. E., 1996)&lt;/a&gt;.&lt;/p&gt;
@@ -3556,9 +3556,9 @@ tessiture che vanno da lisce a ruvide &lt;a class=&quot;citation&quot; href=&quo
 
 &lt;p&gt;Per tessiture complesse si può utilizzare una &lt;em&gt;pdf&lt;/em&gt; (probability density
 function) ottenuta da varie pdf gaussiane:
-&lt;script type=&quot;math/tex&quot;&gt;f(x) = \sum_{i=1}^{M} a_i N({\mu}_i,C_i),&lt;/script&gt; dove
-&lt;script type=&quot;math/tex&quot;&gt;\sum_{i=1}^{M} a_i = 1&lt;/script&gt; e &lt;script type=&quot;math/tex&quot;&gt;N(\cdot)&lt;/script&gt; è l’i-esima pdf gaussiana con
-media &lt;script type=&quot;math/tex&quot;&gt;{\mu}_i&lt;/script&gt; e matrice di covarianza &lt;script type=&quot;math/tex&quot;&gt;C_i&lt;/script&gt;; i termini &lt;script type=&quot;math/tex&quot;&gt;a_i&lt;/script&gt; possono
+\(f(x) = \sum_{i=1}^{M} a_i N({\mu}_i,C_i),\) dove
+\(\sum_{i=1}^{M} a_i = 1\) e \(N(\cdot)\) è l’i-esima pdf gaussiana con
+media \({\mu}_i\) e matrice di covarianza \(C_i\); i termini \(a_i\) possono
 essere variati arbitrariamente, o modellati in base a tessiture reali.
 In figura è rappresentata una texture bidimensionale
 composta da due pdf gaussiane.&lt;/p&gt;
@@ -3577,8 +3577,8 @@ affiancano trasformazioni statistiche al normale filtraggio. Un esempio
 è costituito dal moto Browniano visto nel paragrafo
 &lt;a href=&quot;#sec:tessiture_superficie&quot;&gt;[sec:tessiture_superficie]&lt;/a&gt;{reference-type=”ref”
 reference=”sec:tessiture_superficie”}, un processo invariante rispetto
-alla scala descritto da un parametro di auto–similarità &lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; e uno
-spettro di potenza di tipo &lt;script type=&quot;math/tex&quot;&gt;1/f&lt;/script&gt; &lt;a class=&quot;citation&quot; href=&quot;#art:ebert&quot;&gt;(Ebert, D. S., Musgrave, F. K., Peachey, D., Perlin, K., &amp;amp; Worley, S., 1994)&lt;/a&gt; &lt;a class=&quot;citation&quot; href=&quot;#art:haruyama&quot;&gt;(Haruyama, S. &amp;amp; Barsky, B. A., 1984)&lt;/a&gt;.&lt;/p&gt;
+alla scala descritto da un parametro di auto–similarità \(h\) e uno
+spettro di potenza di tipo \(1/f\) &lt;a class=&quot;citation&quot; href=&quot;#art:ebert&quot;&gt;(Ebert, D. S., Musgrave, F. K., Peachey, D., Perlin, K., &amp;amp; Worley, S., 1994)&lt;/a&gt; &lt;a class=&quot;citation&quot; href=&quot;#art:haruyama&quot;&gt;(Haruyama, S. &amp;amp; Barsky, B. A., 1984)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;procedure-implicite-e-sintesi-spettrale-di-fourier&quot;&gt;Procedure implicite e sintesi spettrale di Fourier&lt;/h3&gt;
 
@@ -3600,9 +3600,9 @@ tessitura.&lt;/p&gt;
 periodiche possono essere usate per creare tessiture che appaiono
 casuali. Un altro modo per creare tessiture casuali con funzioni
 periodiche è l’uso di un processo stocastico: il vettore delle forze
-della tessitura &lt;script type=&quot;math/tex&quot;&gt;F_t&lt;/script&gt; alla posizione &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; può essere espresso tramite la
-seguente equazione: &lt;script type=&quot;math/tex&quot;&gt;F_t(p) = Sg(p)+N,&lt;/script&gt; dove &lt;script type=&quot;math/tex&quot;&gt;g(p)&lt;/script&gt; è una funzione
-implicita e deterministica, &lt;script type=&quot;math/tex&quot;&gt;S&lt;/script&gt; è un rumore moltiplicativo e &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt;
+della tessitura \(F_t\) alla posizione \(p\) può essere espresso tramite la
+seguente equazione: \(F_t(p) = Sg(p)+N,\) dove \(g(p)\) è una funzione
+implicita e deterministica, \(S\) è un rumore moltiplicativo e \(N\)
 rappresenta un rumore sovrapposto. Il rumore moltiplicativo può essere
 usato per scalare casualmente una funzione deterministica apportando
 ulteriori variazioni alla tessitura.&lt;/p&gt;
@@ -3719,17 +3719,17 @@ calcolato con un modello di impatto unidimensionale con la curva in figura 1. I
 punti di contatto e la traiettoria risultante, che idealmente dovrebbe
 essere applicata al modello di impatto unidimensionale, sono
 rappresentati in figura 2. Il calcolo esatto dei punti di contatto è
-dispendioso in termini di risorse computazionali: in ogni punto &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;
+dispendioso in termini di risorse computazionali: in ogni punto \(x\)
 lungo la curva della superficie, cioè per ogni punto di campionamento
 nel caso discreto (dove la frequenza del campionamento è la stessa del
 campionamento audio), deve essere calcolata la seguente funzione che
-descrive l’attuale punto &lt;script type=&quot;math/tex&quot;&gt;p_x&lt;/script&gt; :&lt;/p&gt;
+descrive l’attuale punto \(p_x\) :&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f_x(p_x) \stackrel{!}{=} max_{q\in[x-r,x+r]}f_x(q) \hspace{0,5cm}, \label{eq:rolling1}&lt;/script&gt;
+\[f_x(p_x) \stackrel{!}{=} max_{q\in[x-r,x+r]}f_x(q) \hspace{0,5cm}, \label{eq:rolling1}\]
 
 &lt;p&gt;dove&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f_x(q) = s(q) + \sqrt{r^2 - (q-x)^2} \hspace{0,5cm},\hspace{0,5cm} q \in [x-r, x+r] \hspace{0,5cm}. \label{eq:rolling2}&lt;/script&gt;
+\[f_x(q) = s(q) + \sqrt{r^2 - (q-x)^2} \hspace{0,5cm},\hspace{0,5cm} q \in [x-r, x+r] \hspace{0,5cm}. \label{eq:rolling2}\]
 
 &lt;p&gt;La curva ideale viene poi calcolata da questi punti di contatto. Una tecnica più semplice (e quindi anche meno dispendiosa in termini di risorse di calcolo) è rappresentata in figura 3.
 La traiettoria in figura 2 converge alla curva ideale di figura 3 per raggi molto grandi se comparati alla ruvidità della superficie. 
@@ -3767,8 +3767,8 @@ efficientemente generare segnali per i vari attributi.&lt;/p&gt;
 &lt;p&gt;E’ comune nella computer graphics descrivere le superfici tramite metodi
 frattali. L’applicazione di questa idea al nostro modello
 unidimensionale conduce all’utilizzo di un segnale di rumore con spettro
-di potenza &lt;script type=&quot;math/tex&quot;&gt;1/f^{\beta}&lt;/script&gt;, o equivalentemente rumore bianco filtrato con
-queste caratteristiche. Il parametro reale &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; riflette la
+di potenza \(1/f^{\beta}\), o equivalentemente rumore bianco filtrato con
+queste caratteristiche. Il parametro reale \(\beta\) riflette la
 dimensione frattale (o ruvidità). I risultati pratici di questo tipo di
 modello sono diventati più convincenti quando la banda del segnale della
 superficie è stata fortemente limitata; ciò non deve sorprendere se
@@ -3778,7 +3778,7 @@ tagliare pezzi di pietra per pavimentazioni) corrisponde ad un
 filtraggio passa–alto, mentre smussare a livello microscopico (come
 lucidare una pietra) può essere visto come un filtraggio di tipo
 passa–basso. Tramite queste elaborazioni però si possono perdere le
-caratteristiche del rumore &lt;script type=&quot;math/tex&quot;&gt;1/f^{\beta}&lt;/script&gt; di partenza. Perciò optiamo per
+caratteristiche del rumore \(1/f^{\beta}\) di partenza. Perciò optiamo per
 una approssimazione di questa curva con un filtro del secondo ordine la
 cui ripidità è proporzionale al grado di ruvidità a livello
 microscopico.&lt;/p&gt;
@@ -3786,7 +3786,7 @@ microscopico.&lt;/p&gt;
 &lt;p&gt;Tutte le frequenze in questo modello di basso livello devono variare
 proporzionalmente ai parametri di velocità, perciò l’ampiezza del
 segnale di superficie deve essere mantenuta costante. Naturalmente i
-parametri dell’impatto, in particolare la costante di elasticità &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;,
+parametri dell’impatto, in particolare la costante di elasticità \(k\),
 devono essere variati opportunamente a seconda della superficie che si
 vuole simulare (cioè in base alle proprietà del materiale), in quanto
 contribuiscono fortemente alla espressività del modello.&lt;/p&gt;
@@ -3797,26 +3797,25 @@ contribuiscono fortemente alla espressività del modello.&lt;/p&gt;
 risonante e uno per l’oggetto percussore. Supposto che la superficie di
 contatto sia piccola, la forza di contatto viene espressa come:&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-f(x(t),v(t)) = \left\{
+\[f(x(t),v(t)) = \left\{
                                             \begin{array}{ll}
-                                            kx(t)^{\alpha}+\lambda x(t)^{\alpha}\cdot v(t) = kx(t)^{\alpha}(1+\mu v(t)) &amp; x &gt; 0\\
-                                            0 &amp; x \leq 0
+                                            kx(t)^{\alpha}+\lambda x(t)^{\alpha}\cdot v(t) = kx(t)^{\alpha}(1+\mu v(t)) &amp;amp; x &amp;gt; 0\\
+                                            0 &amp;amp; x \leq 0
                                             \end{array}
                                 \right.
-\hspace{0,5cm}, \label{eq:impact1} %]]&gt;&lt;/script&gt;
+\hspace{0,5cm}, \label{eq:impact1}\]
 
-&lt;p&gt;dove &lt;script type=&quot;math/tex&quot;&gt;v(t) = \dot{x}(t)&lt;/script&gt; è la velocità di compressione, &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; è il
-coefficiente di rigidità, &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; è un parametro che descrive la
+&lt;p&gt;dove \(v(t) = \dot{x}(t)\) è la velocità di compressione, \(k\) è il
+coefficiente di rigidità, \(\alpha\) è un parametro che descrive la
 geometria locale dell’impatto (nel caso di due perfette sfere vale 1.5),
-&lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt; è un coefficiente di smorzamento e &lt;script type=&quot;math/tex&quot;&gt;\mu = \lambda/k&lt;/script&gt; è un
+\(\lambda\) è un coefficiente di smorzamento e \(\mu = \lambda/k\) è un
 termine matematico (senza significato fisico) detto &lt;em&gt;caratteristica
 viscoelastica&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Il percussore è considerato una massa ideale, quindi l’unico parametro
 che lo caratterizza è la massa; il risonatore invece è un oggetto modale
 ed è caratterizzato dai parametri di frequenza, tempi di decadimento,
-&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; e &lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt;. Si assume inoltre che il percussore abbia un
+\(k\), \(\alpha\) e \(\lambda\). Si assume inoltre che il percussore abbia un
 elevato coefficiente di smorzamento: in tal modo diventa trascurabile
 l’energia acustica delle sue vibrazioni, e l’energia viene trasferita al
 risonatore che emette il suono. Per una descrizione matematica vengono
@@ -3880,76 +3879,75 @@ formalmente, un processo frattale unidimensionale può essere definito
 come una generalizzazione della definizione di moto standard Browniano
 &lt;a class=&quot;citation&quot; href=&quot;#book:brownian&quot;&gt;(Resnick, S., 1992)&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Il processo stocastico &lt;script type=&quot;math/tex&quot;&gt;x = \{x(t),t \geq 0\}&lt;/script&gt; è un moto standard Browniano se:&lt;/p&gt;
+&lt;p&gt;Il processo stocastico \(x = \{x(t),t \geq 0\}\) è un moto standard Browniano se:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;il processo stocastico &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; ha incrementi indipendenti;&lt;/li&gt;
+  &lt;li&gt;il processo stocastico \(x\) ha incrementi indipendenti;&lt;/li&gt;
   &lt;li&gt;vale la proprietà
-&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
-x(t) - x(s) \sim N(0,t-s) \hspace{0,5cm} per \hspace{0,5cm} 0 \leq s &lt; t; %]]&gt;&lt;/script&gt;
-cioè l’incremento &lt;script type=&quot;math/tex&quot;&gt;x(t) - x(s)&lt;/script&gt; è normalmente distribuito con media
-nulla e varianza &lt;script type=&quot;math/tex&quot;&gt;(t-s)&lt;/script&gt;;&lt;/li&gt;
-  &lt;li&gt;è vero che &lt;script type=&quot;math/tex&quot;&gt;x(0) = 0.&lt;/script&gt;&lt;/li&gt;
+\(x(t) - x(s) \sim N(0,t-s) \hspace{0,5cm} per \hspace{0,5cm} 0 \leq s &amp;lt; t;\)
+cioè l’incremento \(x(t) - x(s)\) è normalmente distribuito con media
+nulla e varianza \((t-s)\);&lt;/li&gt;
+  &lt;li&gt;è vero che \(x(0) = 0.\)&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;La definizione di moto standard Browniano può essere generalizzata alla
-definizione di &lt;em&gt;processo frattale&lt;/em&gt; se l’incremento &lt;script type=&quot;math/tex&quot;&gt;x(t)-x(s)&lt;/script&gt; è
+definizione di &lt;em&gt;processo frattale&lt;/em&gt; se l’incremento \(x(t)-x(s)\) è
 normalmente distribuito con media 0 e varianza proporzionale a
-&lt;script type=&quot;math/tex&quot;&gt;(t-s)^{2H}&lt;/script&gt;. Il parametro &lt;em&gt;H&lt;/em&gt; è chiamato &lt;em&gt;esponente di Hurst&lt;/em&gt; e
+\((t-s)^{2H}\). Il parametro &lt;em&gt;H&lt;/em&gt; è chiamato &lt;em&gt;esponente di Hurst&lt;/em&gt; e
 caratterizza il comportamento del processo frattale rispetto alla
-scalatura: se &lt;script type=&quot;math/tex&quot;&gt;x=\{x(t),t \geq 0\}&lt;/script&gt; è un processo frattale con esponente
-di Hurst &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt;, allora, per ogni reale &lt;script type=&quot;math/tex&quot;&gt;a &gt; 0&lt;/script&gt;, obbedisce alla seguente
+scalatura: se \(x=\{x(t),t \geq 0\}\) è un processo frattale con esponente
+di Hurst \(H\), allora, per ogni reale \(a &amp;gt; 0\), obbedisce alla seguente
 relazione di scala:&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;x(t) \stackrel{P}{=} a^{-H}x(at) \hspace{0,5cm} , \label{eq:surface1}&lt;/script&gt;
+\[x(t) \stackrel{P}{=} a^{-H}x(at) \hspace{0,5cm} , \label{eq:surface1}\]
 
-&lt;p&gt;dove &lt;script type=&quot;math/tex&quot;&gt;\stackrel{P}{=}&lt;/script&gt; denota l’uguaglianza statistica. Questa è la
+&lt;p&gt;dove \(\stackrel{P}{=}\) denota l’uguaglianza statistica. Questa è la
 definizione formale di &lt;em&gt;auto–similirarità statistica&lt;/em&gt;. La famiglia di
-processi &lt;script type=&quot;math/tex&quot;&gt;1/f&lt;/script&gt; statisticamente auto–simili, nota anche come rumore &lt;script type=&quot;math/tex&quot;&gt;1/f&lt;/script&gt;, è
-composta da processi aventi densità di spettro di potenza &lt;script type=&quot;math/tex&quot;&gt;S_x(\omega)&lt;/script&gt;
-proporzionale a &lt;script type=&quot;math/tex&quot;&gt;1/ \omega^{\beta}&lt;/script&gt;, con &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; legato all’esponente di
-Hurst &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt; dalla relazione &lt;script type=&quot;math/tex&quot;&gt;\beta = 2H + 1&lt;/script&gt;. Per &lt;script type=&quot;math/tex&quot;&gt;\beta = 0&lt;/script&gt; la
-definizione corrisponde al rumore bianco, per &lt;script type=&quot;math/tex&quot;&gt;\beta = 2&lt;/script&gt; si ottiene il
-rumore Browniano, e per &lt;script type=&quot;math/tex&quot;&gt;\beta = 1&lt;/script&gt; il rumore risultante è rumore rosa.
-Il parametro &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; è in relazione anche con la dimensione frattale. La
+processi \(1/f\) statisticamente auto–simili, nota anche come rumore \(1/f\), è
+composta da processi aventi densità di spettro di potenza \(S_x(\omega)\)
+proporzionale a \(1/ \omega^{\beta}\), con \(\beta\) legato all’esponente di
+Hurst \(H\) dalla relazione \(\beta = 2H + 1\). Per \(\beta = 0\) la
+definizione corrisponde al rumore bianco, per \(\beta = 2\) si ottiene il
+rumore Browniano, e per \(\beta = 1\) il rumore risultante è rumore rosa.
+Il parametro \(\beta\) è in relazione anche con la dimensione frattale. La
 dimensione frattale &lt;a class=&quot;citation&quot; href=&quot;#book:wornell&quot;&gt;(Wornell, G. W., 1998)&lt;/a&gt; di una funzione è un parametro reale
 che determina l’irregolarità di un oggetto frattale, è legata al grafico
 della funzione ed è usata nella computer graphics per controllare la
-ruvidità percepita &lt;a class=&quot;citation&quot; href=&quot;#art:pentland&quot;&gt;(Pentland, A. P., 1988)&lt;/a&gt;. Per i processi &lt;script type=&quot;math/tex&quot;&gt;1/f&lt;/script&gt;, tale dimensione
-è inversamente proporzionale all’esponente di Hurst &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt;: valori maggiori
-di &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt; corrispondono a valori minori della dimensione frattale; &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt; è
-proporzionale a &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;. Perciò, incrementando &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; possiamo
+ruvidità percepita &lt;a class=&quot;citation&quot; href=&quot;#art:pentland&quot;&gt;(Pentland, A. P., 1988)&lt;/a&gt;. Per i processi \(1/f\), tale dimensione
+è inversamente proporzionale all’esponente di Hurst \(H\): valori maggiori
+di \(H\) corrispondono a valori minori della dimensione frattale; \(H\) è
+proporzionale a \(\beta\). Perciò, incrementando \(\beta\) possiamo
 raggiungere una redistribuzione della potenza dalle alte alle basse
 frequenze, con uno smussamento complessivo della forma d’onda.&lt;/p&gt;
 
-&lt;p&gt;Il problema di generare il rumore &lt;script type=&quot;math/tex&quot;&gt;1/f&lt;/script&gt; è stato trattato estensivamente.
+&lt;p&gt;Il problema di generare il rumore \(1/f\) è stato trattato estensivamente.
 Uno degli approcci più comuni risulta quello di filtrare una sorgente di
-rumore bianco per ottenere lo spettro &lt;script type=&quot;math/tex&quot;&gt;1/f&lt;/script&gt;; seguendo questo procedimento
+rumore bianco per ottenere lo spettro \(1/f\); seguendo questo procedimento
 utilizzeremo il modello riportato in &lt;a class=&quot;citation&quot; href=&quot;#art:saletti&quot;&gt;(Saletti, R., Novembre 1986)&lt;/a&gt; e &lt;a class=&quot;citation&quot; href=&quot;#art:corsini&quot;&gt;(Corsini, G. &amp;amp; Saletti, R., Dicembre 1988)&lt;/a&gt;. Il
 filtro è una cascata di N filtri del primo ordine, ognuno con una coppia
-di poli e zeri; la funzione di trasferimento &lt;script type=&quot;math/tex&quot;&gt;H(s)&lt;/script&gt; nel dominio di
+di poli e zeri; la funzione di trasferimento \(H(s)\) nel dominio di
 Laplace è la seguente:&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;H(s)=A\frac{\prod_{i=1}^{N}(s-s_{0i})}{\prod_{i=1}^{N}(s-s_{pi})} \hspace{0,5cm} ,  \label{eq:surface2}&lt;/script&gt;
+\[H(s)=A\frac{\prod_{i=1}^{N}(s-s_{0i})}{\prod_{i=1}^{N}(s-s_{pi})} \hspace{0,5cm} ,  \label{eq:surface2}\]
 
-&lt;p&gt;dove &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; è una costante. Il generatore di rumore frattale è ottenuto
+&lt;p&gt;dove \(A\) è una costante. Il generatore di rumore frattale è ottenuto
 impostando opportunamente i poli e gli zeri dei filtri nella cascata
 &lt;a class=&quot;citation&quot; href=&quot;#art:saletti&quot;&gt;(Saletti, R., Novembre 1986)&lt;/a&gt;. In particolare, il polo e lo zero alle frequenze
-&lt;script type=&quot;math/tex&quot;&gt;f_{pi}&lt;/script&gt; e &lt;script type=&quot;math/tex&quot;&gt;f_{0i}&lt;/script&gt; possono essere computati come funzioni di &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;
+\(f_{pi}\) e \(f_{0i}\) possono essere computati come funzioni di \(\beta\)
 con le seguenti formule:&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f_{pi} = -\frac{s_{pi}}{2\pi} = f_{p(i-1)}10^{\frac{1}{h}} \hspace{0,5cm} , \label{eq:surface3a}&lt;/script&gt;
+\[f_{pi} = -\frac{s_{pi}}{2\pi} = f_{p(i-1)}10^{\frac{1}{h}} \hspace{0,5cm} , \label{eq:surface3a}\]
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f_{0i} = - \frac{s_{0i}}{2\pi} = f_{pi}10^{\frac{\beta}{2h}} \hspace{0,5cm} , \label{eq:surface3b}&lt;/script&gt;
+\[f_{0i} = - \frac{s_{0i}}{2\pi} = f_{pi}10^{\frac{\beta}{2h}} \hspace{0,5cm} , \label{eq:surface3b}\]
 
-&lt;p&gt;dove &lt;script type=&quot;math/tex&quot;&gt;f_{p1}&lt;/script&gt; è il polo di frequenza più bassa del filtro; perciò il
+&lt;p&gt;dove \(f_{p1}\) è il polo di frequenza più bassa del filtro; perciò il
 limite inferiore della banda di frequenza per l’approssimazione è
-&lt;script type=&quot;math/tex&quot;&gt;f_{p1}&lt;/script&gt;. La densità &lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; (densità dei poli per decade di frequenze) può
+\(f_{p1}\). La densità \(h\) (densità dei poli per decade di frequenze) può
 essere usata per controllare l’errore tra lo spettro desiderato e lo
 spettro approssimato ottenuto dal filtraggio del rumore bianco. La
 dipendenza dell’errore in relazione alla densità dei poli del filtro è
-discussa in &lt;a class=&quot;citation&quot; href=&quot;#art:corsini&quot;&gt;(Corsini, G. &amp;amp; Saletti, R., Dicembre 1988)&lt;/a&gt;. La figura mostra uno spettro &lt;script type=&quot;math/tex&quot;&gt;1/f^{\beta}&lt;/script&gt; ottenuto usando
-il filtro &lt;script type=&quot;math/tex&quot;&gt;f_{pi}&lt;/script&gt;, con due diversi valori per &lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt;.&lt;/p&gt;
+discussa in &lt;a class=&quot;citation&quot; href=&quot;#art:corsini&quot;&gt;(Corsini, G. &amp;amp; Saletti, R., Dicembre 1988)&lt;/a&gt;. La figura mostra uno spettro \(1/f^{\beta}\) ottenuto usando
+il filtro \(f_{pi}\), con due diversi valori per \(h\).&lt;/p&gt;
 
 &lt;figure class=&quot;image&quot;&gt;
   &lt;img src=&quot;images/noise.jpg&quot; alt=&quot;Spettro di ampiezza del rumore frattale generato con $$\beta=1.81$$, $$h=2$$ a sinistra e $$h=6$$ a destra.&quot; /&gt;
@@ -3959,33 +3957,32 @@ il filtro &lt;script type=&quot;math/tex&quot;&gt;f_{pi}&lt;/script&gt;, con due
 &lt;p&gt;La funzione di trasferimento nel dominio discreto del tempo può essere
 computata con il metodo della varianza della risposta all’impulso
  &lt;a class=&quot;citation&quot; href=&quot;#book:mitra&quot;&gt;(Mitra, S. K., 1998)&lt;/a&gt;; ciò corrisponde a mappare poli e zeri della funzione di
-trasferimento &lt;script type=&quot;math/tex&quot;&gt;H(s)&lt;/script&gt; su poli e zeri della funzione di trasferimento
-&lt;script type=&quot;math/tex&quot;&gt;H(z)&lt;/script&gt; nel dominio discreto del tempo attraverso la seguente
+trasferimento \(H(s)\) su poli e zeri della funzione di trasferimento
+\(H(z)\) nel dominio discreto del tempo attraverso la seguente
 sostituzione:&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;s-s_x \rightarrow 1-e^{s_xT_s}z^{-1} \hspace{0,5cm} , \label{eq:surface4}&lt;/script&gt;
+\[s-s_x \rightarrow 1-e^{s_xT_s}z^{-1} \hspace{0,5cm} , \label{eq:surface4}\]
 
-&lt;p&gt;dove &lt;script type=&quot;math/tex&quot;&gt;T_s&lt;/script&gt; è il periodo di campionamento e &lt;script type=&quot;math/tex&quot;&gt;s_x&lt;/script&gt; indica un polo &lt;script type=&quot;math/tex&quot;&gt;s_{pi}&lt;/script&gt;
-o uno zero &lt;script type=&quot;math/tex&quot;&gt;s_{0i}&lt;/script&gt;. Si ottiene la seguente funzione di trasferimento
+&lt;p&gt;dove \(T_s\) è il periodo di campionamento e \(s_x\) indica un polo \(s_{pi}\)
+o uno zero \(s_{0i}\). Si ottiene la seguente funzione di trasferimento
 discreta:&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;H(z)=A' \frac { \prod^{N}_{i=1}1-e^{s_{0i}T}z^{-1} }{ \prod^{N}_{i=1}1-e^{s_{pi}T}z^{-1} } \hspace{0,5cm} , \label{eq:surface5}&lt;/script&gt;
+\[H(z)=A' \frac { \prod^{N}_{i=1}1-e^{s_{0i}T}z^{-1} }{ \prod^{N}_{i=1}1-e^{s_{pi}T}z^{-1} } \hspace{0,5cm} , \label{eq:surface5}\]
 
-&lt;p&gt;dove &lt;script type=&quot;math/tex&quot;&gt;A'&lt;/script&gt; è una costante di normalizzazione. In conclusione, lo spettro
-&lt;script type=&quot;math/tex&quot;&gt;1/f^{\beta}&lt;/script&gt; è approssimato da una cascata di filtri del primo ordine,
+&lt;p&gt;dove \(A'\) è una costante di normalizzazione. In conclusione, lo spettro
+\(1/f^{\beta}\) è approssimato da una cascata di filtri del primo ordine,
 ognuno con la seguente funzione di trasferimento discreta:&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-H^{(i)}(z)=\frac{1+b_iz^{-1}}{1+a_iz^{-1}} \hspace{0,5cm} , \hspace{0,5cm} con \hspace{0,5cm}
+\[H^{(i)}(z)=\frac{1+b_iz^{-1}}{1+a_iz^{-1}} \hspace{0,5cm} , \hspace{0,5cm} con \hspace{0,5cm}
  \left\{
  \begin{array}{ll}
- a_i=e^{-2{\pi}f_{pi}T}, &amp; b_i=e^{-2{\pi}f_{0i}T} \\
+ a_i=e^{-2{\pi}f_{pi}T}, &amp;amp; b_i=e^{-2{\pi}f_{0i}T} \\
  \\
- f_{pi}=f_{p(i-1)}10^{\frac{1}{h}}, &amp; f_{0i}=f_{pi}10^{\frac{\beta}{2h}} \\
+ f_{pi}=f_{p(i-1)}10^{\frac{1}{h}}, &amp;amp; f_{0i}=f_{pi}10^{\frac{\beta}{2h}} \\
  \end{array}
  %\hspace{0,5cm}
  \right .
- \label{eq:surface6} %]]&gt;&lt;/script&gt;
+ \label{eq:surface6}\]
 
 &lt;hr /&gt;
 
@@ -4088,16 +4085,16 @@ incapsulamento:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;one–off subpatch – se l’oggetto viene chiamato &lt;code class=&quot;highlighter-rouge&quot;&gt;pd&lt;/code&gt; o &lt;code class=&quot;highlighter-rouge&quot;&gt;pd my-name&lt;/code&gt;, viene creata una subpatch il cui contenuto viene salvato come parte della patch genitore che può essere riutilizzata e modificata più volte all’interno di quest’ultima;&lt;/p&gt;
+    &lt;p&gt;one–off subpatch – se l’oggetto viene chiamato &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pd&lt;/code&gt; o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pd my-name&lt;/code&gt;, viene creata una subpatch il cui contenuto viene salvato come parte della patch genitore che può essere riutilizzata e modificata più volte all’interno di quest’ultima;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;astrazione – se l’oggetto ha il nome di una patch già presente come file (omettendo l’estensione &lt;code class=&quot;highlighter-rouge&quot;&gt;.pd&lt;/code&gt;), PD caricherà il contenuto del file all’interno della subpatch; in tal caso un cambiamento alla patch si propaga a tutte le chiamate alla sua astrazione.&lt;/p&gt;
+    &lt;p&gt;astrazione – se l’oggetto ha il nome di una patch già presente come file (omettendo l’estensione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.pd&lt;/code&gt;), PD caricherà il contenuto del file all’interno della subpatch; in tal caso un cambiamento alla patch si propaga a tutte le chiamate alla sua astrazione.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Per definire il numero di inlet e outlet che deve possedere l’oggetto
 contenente la subpatch è sufficiente utilizzare all’interno di
-quest’ultima i blocchi &lt;code class=&quot;highlighter-rouge&quot;&gt;inlet&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;outlet&lt;/code&gt; (oppure &lt;code class=&quot;highlighter-rouge&quot;&gt;inlet~&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;outlet~&lt;/code&gt;
+quest’ultima i blocchi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inlet&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;outlet&lt;/code&gt; (oppure &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inlet~&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;outlet~&lt;/code&gt;
 per i collegamenti di segnale).&lt;/p&gt;
 
 &lt;h3 id=&quot;gestione-dei-segnali-audio&quot;&gt;Gestione dei segnali audio&lt;/h3&gt;
@@ -4115,7 +4112,7 @@ due limiti. La frequenza di campionamento di default è 44100 Hz
 (modificabile da riga di comando o nel menù &lt;em&gt;audio setup&lt;/em&gt;).&lt;/p&gt;
 
 &lt;p&gt;Le computazioni audio vengono eseguite dai &lt;em&gt;blocchi tilde&lt;/em&gt;, cioè quelli
-che, per convenzione, hanno il nome seguito da una tilde, come &lt;code class=&quot;highlighter-rouge&quot;&gt;sc~&lt;/code&gt;;
+che, per convenzione, hanno il nome seguito da una tilde, come &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sc~&lt;/code&gt;;
 essi comunicano attraverso connessioni di segnale. All’avvio della
 computazione, o quando vengono cambiati i collegamenti, gli oggetti
 tilde vengono ordinati secondo un ordine di esecuzione lineare; tale
@@ -4124,8 +4121,8 @@ significa che l’intera rete di blocchi audio viene eseguita una volta
 ogni 1.45 millisecondi). Le connessioni nella rete audio devono essere
 acicliche; la presenza di eventuali cicli viene rilevata al momento del
 riordino dei blocchi. Ogni subpatch può avere dei collegamenti di
-segnale in entrata e in uscita tramite i blocchi “inlet&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt;” e
-“outlet&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt;”.&lt;/p&gt;
+segnale in entrata e in uscita tramite i blocchi “inlet\(\sim\)” e
+“outlet\(\sim\)”.&lt;/p&gt;
 
 &lt;p&gt;La computazione dei segnali non avviene in &lt;em&gt;real time&lt;/em&gt;, ma in &lt;em&gt;logical
 time&lt;/em&gt;: quest’ultimo è definito come l’istante del successivo campione
@@ -4140,25 +4137,25 @@ figura si vede come la computazione dell’audio
 viene svolta rispetto all’elaborazione dei segnali di controllo: i
 campioni audio vengono calcolati a scadenze regolari, ma prima di ogni
 scadenza devono essere effettuati tutti i calcoli di controllo che
-possono influenzare il campione audio in quella scadenza. Se &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; è il
+possono influenzare il campione audio in quella scadenza. Se \(N\) è il
 numero di campioni in un blocco, la prima computazione audio riguarda i
-campioni da &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; a &lt;script type=&quot;math/tex&quot;&gt;N-1&lt;/script&gt;, i quali vengono inviati in output tutti insieme
-all’istante &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; (logical time); prima di questo istante vengono
-effettuate tutte le elaborazioni di controllo per gli &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; campioni.&lt;/p&gt;
+campioni da \(0\) a \(N-1\), i quali vengono inviati in output tutti insieme
+all’istante \(N\) (logical time); prima di questo istante vengono
+effettuate tutte le elaborazioni di controllo per gli \(N\) campioni.&lt;/p&gt;
 
 &lt;h4 id=&quot;conversione-tra-segnali-audio-e-segnali-di-controllo&quot;&gt;Conversione tra segnali audio e segnali di controllo&lt;/h4&gt;
 
 &lt;p&gt;La conversione da segnale di controllo a segnale audio è possibile
-utilizzando l’oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;sig~&lt;/code&gt;. Per quanto riguarda la conversione inversa
+utilizzando l’oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sig~&lt;/code&gt;. Per quanto riguarda la conversione inversa
 (da segnale a controllo) deve essere specificato l’istante nel quale il
 segnale viene campionato; questo può essere gestito tramite l’oggetto
-&lt;code class=&quot;highlighter-rouge&quot;&gt;snapshot~&lt;/code&gt; che campiona il segnale ogni volta che riceve in input un
-&lt;em&gt;bang&lt;/em&gt;. Gli oggetti &lt;code class=&quot;highlighter-rouge&quot;&gt;+~&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;-~&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;*~&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;/~&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;osc~&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;phasor~&lt;/code&gt; possono
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;snapshot~&lt;/code&gt; che campiona il segnale ogni volta che riceve in input un
+&lt;em&gt;bang&lt;/em&gt;. Gli oggetti &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+~&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-~&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*~&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/~&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;osc~&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phasor~&lt;/code&gt; possono
 essere configurati per accettare entrambi i tipi di segnale.&lt;/p&gt;
 
 &lt;h4 id=&quot;selettori-e-blocchi&quot;&gt;Selettori e blocchi&lt;/h4&gt;
 
-&lt;p&gt;Gli oggetti &lt;code class=&quot;highlighter-rouge&quot;&gt;switch~&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;block~&lt;/code&gt; sono utilizzati per attivare o
+&lt;p&gt;Gli oggetti &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;switch~&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;block~&lt;/code&gt; sono utilizzati per attivare o
 disattivare parti della computazione audio e per controllare la
 dimensione dei blocchi di calcolo; deve essere presente uno solo dei due
 oggetti per ogni finestra della patch e il suo effetto verrà esteso a
@@ -4166,7 +4163,7 @@ tutte le subpatch. Entrambi accettano due argomenti per la loro
 costruzione: il primo è la dimensione del blocco e il secondo un fattore
 di sovrapposizione.&lt;/p&gt;
 
-&lt;p&gt;L’oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;switch~&lt;/code&gt; può essere usato per ridurre il carico
+&lt;p&gt;L’oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;switch~&lt;/code&gt; può essere usato per ridurre il carico
 computazionale scegliendo, ad esempio, uno tra diversi algoritmi di
 sintesi da utilizzare: per farlo è sufficiente che ogni algoritmo sia
 implementato in una subpatch diversa.&lt;/p&gt;
@@ -4180,23 +4177,23 @@ retroazione. Questo può essere implementato attraverso tre coppie di
 oggetti:&lt;/p&gt;
 
 &lt;dl&gt;
-  &lt;dt&gt;throw&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt;/catch&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt; –&lt;/dt&gt;
+  &lt;dt&gt;throw\(\sim\)/catch\(\sim\) –&lt;/dt&gt;
   &lt;dd&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;throw~&lt;/code&gt; accumula dati in un bus, mentre &lt;code class=&quot;highlighter-rouge&quot;&gt;catch~&lt;/code&gt; legge i dati
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;throw~&lt;/code&gt; accumula dati in un bus, mentre &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;catch~&lt;/code&gt; legge i dati
 accumulati e riazzera il bus per il ciclo successivo;&lt;/p&gt;
   &lt;/dd&gt;
-  &lt;dt&gt;send&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt;/receive&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt; –&lt;/dt&gt;
+  &lt;dt&gt;send\(\sim\)/receive\(\sim\) –&lt;/dt&gt;
   &lt;dd&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;send~&lt;/code&gt; salva un segnale che può essere ricevuto più volte da un
-blocco &lt;code class=&quot;highlighter-rouge&quot;&gt;receive~&lt;/code&gt;, il quale però può leggere un solo &lt;code class=&quot;highlighter-rouge&quot;&gt;send~&lt;/code&gt; alla
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;send~&lt;/code&gt; salva un segnale che può essere ricevuto più volte da un
+blocco &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;receive~&lt;/code&gt;, il quale però può leggere un solo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;send~&lt;/code&gt; alla
 volta;&lt;/p&gt;
   &lt;/dd&gt;
-  &lt;dt&gt;delread&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt;/delwrite&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt; –&lt;/dt&gt;
+  &lt;dt&gt;delread\(\sim\)/delwrite\(\sim\) –&lt;/dt&gt;
   &lt;dd&gt;
     &lt;p&gt;se viene inviato un segnale ad un punto precedente nella rete audio,
 esso viene ricevuto solo al ciclo successivo, con un ritardo quindi
 di 1.45 millisecondi (con le impostazioni di default). Gli oggetti
-&lt;code class=&quot;highlighter-rouge&quot;&gt;delread~&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;delwrite~&lt;/code&gt; permettono di ridurre al minimo tale
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;delread~&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;delwrite~&lt;/code&gt; permettono di ridurre al minimo tale
 ritardo.&lt;/p&gt;
   &lt;/dd&gt;
 &lt;/dl&gt;
@@ -4229,8 +4226,8 @@ memoria, non è più distinguibile dagli internal. Una libreria è una
 collezione di external compilati all’interno di un unico file binario;
 il nome di una libreria varia a seconda del sistema operativo per la
 quale viene implementata: ad esempio, se viene creata la libreria
-&lt;code class=&quot;highlighter-rouge&quot;&gt;my_lib&lt;/code&gt;, essa dovrà essere chiamata &lt;code class=&quot;highlighter-rouge&quot;&gt;my_lib.pd_linux&lt;/code&gt; nei sistemi
-Linux, &lt;code class=&quot;highlighter-rouge&quot;&gt;my_lib.pd_irix&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;my_lib.dll&lt;/code&gt; nei sistemi Win32. Una libreria
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;my_lib&lt;/code&gt;, essa dovrà essere chiamata &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;my_lib.pd_linux&lt;/code&gt; nei sistemi
+Linux, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;my_lib.pd_irix&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;my_lib.dll&lt;/code&gt; nei sistemi Win32. Una libreria
 elementare include esattamente un external avente lo stesso nome della
 libreria.&lt;/p&gt;
 
@@ -4239,14 +4236,14 @@ modi:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;tramite opzione da riga di comando: &lt;code class=&quot;highlighter-rouge&quot;&gt;-lib my_lib&lt;/code&gt; (così la libreria e tutti gli external in essa contenuti vengono caricati all’avvio di PD);&lt;/p&gt;
+    &lt;p&gt;tramite opzione da riga di comando: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-lib my_lib&lt;/code&gt; (così la libreria e tutti gli external in essa contenuti vengono caricati all’avvio di PD);&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;creando un oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;my_lib&lt;/code&gt; (consigliabile quando la libreria contiene un solo oggetto con il nome della libreria stessa).&lt;/p&gt;
+    &lt;p&gt;creando un oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;my_lib&lt;/code&gt; (consigliabile quando la libreria contiene un solo oggetto con il nome della libreria stessa).&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In entrambi i casi PD prima controlla se una libreria &lt;code class=&quot;highlighter-rouge&quot;&gt;my_lib&lt;/code&gt; è già
+&lt;p&gt;In entrambi i casi PD prima controlla se una libreria &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;my_lib&lt;/code&gt; è già
 stata caricata; se così non è, viene cercato il file corrispondente e,
 se trovato, tutti gli external inclusi vengono caricati.&lt;/p&gt;
 
@@ -4255,7 +4252,7 @@ questo linguaggio di programmazione; il codice per un semplice external
 che stampa il messaggio “hello world!” è riportato di seguito
  &lt;a class=&quot;citation&quot; href=&quot;#pdexternal&quot;&gt;(Zmölnig, J. M., n.d.)&lt;/a&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    #include &quot;m_pd.h&quot;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    #include &quot;m_pd.h&quot;
 
     static t_class *helloworld_class;
 
@@ -4286,9 +4283,9 @@ che stampa il messaggio “hello world!” è riportato di seguito
 
 &lt;p&gt;Inizialmente viene definita la nuova &lt;em&gt;classe&lt;/em&gt; (qui il termine “classe”
 viene usato con un significato diverso da quello usuale della
-programmazione ad oggetti), dove &lt;code class=&quot;highlighter-rouge&quot;&gt;hello_worldclass&lt;/code&gt; è un puntatore alla
-nuova classe e la struttura &lt;code class=&quot;highlighter-rouge&quot;&gt;t_helloworld&lt;/code&gt; costituisce il &lt;em&gt;dataspace&lt;/em&gt;
-della classe; la variabile &lt;code class=&quot;highlighter-rouge&quot;&gt;t_object&lt;/code&gt; è assolutamente necessaria e serve
+programmazione ad oggetti), dove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hello_worldclass&lt;/code&gt; è un puntatore alla
+nuova classe e la struttura &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;t_helloworld&lt;/code&gt; costituisce il &lt;em&gt;dataspace&lt;/em&gt;
+della classe; la variabile &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;t_object&lt;/code&gt; è assolutamente necessaria e serve
 a memorizzare le proprietà dell’oggetto, come la sua rappresentazione
 grafica e le informazioni su inlet e outlet.&lt;/p&gt;
 
@@ -4298,8 +4295,8 @@ metodo; ogni metodo è associato ad un inlet. La funzione implementata
 viene eseguita solo quando un nuovo dato arriva a tale inlet.&lt;/p&gt;
 
 &lt;p&gt;Al caricamento della libreria, PD richiama la funzione
-&lt;code class=&quot;highlighter-rouge&quot;&gt;helloworld_setup()&lt;/code&gt;: tale funzione dichiara la nuova classe e le sue
-proprietà. L’istruzione &lt;code class=&quot;highlighter-rouge&quot;&gt;class_new&lt;/code&gt; crea una nuova classe e ritorna un
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;helloworld_setup()&lt;/code&gt;: tale funzione dichiara la nuova classe e le sue
+proprietà. L’istruzione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class_new&lt;/code&gt; crea una nuova classe e ritorna un
 puntatore ad essa: il primo argomento è il nome simbolico della classe;
 il secondo e il terzo definiscono il costruttore e il distruttore; il
 quarto definisce la dimensione della struttura dati; il quinto determina
@@ -4308,8 +4305,8 @@ dell’oggetto. L’istruzione successiva serve per aggiungere i metodi alla
 classe (il primo argomento è la classe, il secondo è il metodo).&lt;/p&gt;
 
 &lt;p&gt;L’inizializzazione dell’oggetto avviene tramite la funzione
-&lt;code class=&quot;highlighter-rouge&quot;&gt;helloworld_new()&lt;/code&gt;, i cui argomenti dipendono dalla definizione data con
-&lt;code class=&quot;highlighter-rouge&quot;&gt;class_new&lt;/code&gt;.&lt;/p&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;helloworld_new()&lt;/code&gt;, i cui argomenti dipendono dalla definizione data con
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class_new&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;sec:librerie_pd&quot;&gt;Librerie utili per Pure Data&lt;/h3&gt;
 
@@ -4340,7 +4337,7 @@ piattaforme (Windows, Linux, OSX) e compilatori.&lt;/p&gt;
 
 &lt;p&gt;Un semplice esempio di external basato su flext è il seguente.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    // inclusione del header file
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    // inclusione del header file
     #include &amp;lt;flext.h&amp;gt;
 
     // controllo sulla versione
@@ -4417,7 +4414,7 @@ rispettivi inlet.&lt;/p&gt;
 &lt;p&gt;Un &lt;em&gt;callback wrapper&lt;/em&gt; è necessario per stabilire un collegamento con PD
 per ogni metodo che deve essere lanciato ogni volta che un dato viene
 ricevuto: ciò avviene tramite l’istruzione
-&lt;code class=&quot;highlighter-rouge&quot;&gt;FLEXT_CALLBACK_1(m_float, float)&lt;/code&gt;. Con l’ultimo comando si informa il
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FLEXT_CALLBACK_1(m_float, float)&lt;/code&gt;. Con l’ultimo comando si informa il
 sistema riguardo al nome della classe e ai suoi argomenti di creazione.&lt;/p&gt;
 
 &lt;h3 id=&quot;implementazione-della-patch-generatrice-di-rumore-frattale&quot;&gt;Implementazione della patch generatrice di rumore frattale&lt;/h3&gt;
@@ -4425,14 +4422,13 @@ sistema riguardo al nome della classe e ai suoi argomenti di creazione.&lt;/p&gt
 &lt;p&gt;Nella realizzazione della patch per Pure Data che implementa l’algoritmo
 di generazione di rumore frattale, per convenienze implementative, i
 filtri sono stati riscritti come cascata di biquadri: perciò la cascata
-è formata da &lt;script type=&quot;math/tex&quot;&gt;N/2&lt;/script&gt; filtri del secondo ordine, ognuno con le seguenti
+è formata da \(N/2\) filtri del secondo ordine, ognuno con le seguenti
 funzioni di trasferimento:&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{aligned}
-H^{(i)}(z) = H^{j}H^{j-1}(z) &amp; = &amp; \frac{(1+b_jz^{-1})(1+b_{j-1}z^{-1})}{(1+a_jz^{-1})(1+a_{j-1}z^{-1})} \label{eq:surface7} \\
-                             &amp; = &amp;\mbox{} \frac{1+(b_j+b_{j-1})z^{-1}+(b_jb_{j-1})z^{-2}}{1+(a_j+a_{j-1})z^{-1}+(a_ja_{j-1})z^{-2}}\\
-                                             &amp;   &amp; con~ j=2\cdot i, i=1...N/2.\end{aligned} %]]&gt;&lt;/script&gt;
+\[\begin{aligned}
+H^{(i)}(z) = H^{j}H^{j-1}(z) &amp;amp; = &amp;amp; \frac{(1+b_jz^{-1})(1+b_{j-1}z^{-1})}{(1+a_jz^{-1})(1+a_{j-1}z^{-1})} \label{eq:surface7} \\
+                             &amp;amp; = &amp;amp;\mbox{} \frac{1+(b_j+b_{j-1})z^{-1}+(b_jb_{j-1})z^{-2}}{1+(a_j+a_{j-1})z^{-1}+(a_ja_{j-1})z^{-2}}\\
+                                             &amp;amp;   &amp;amp; con~ j=2\cdot i, i=1...N/2.\end{aligned}\]
 
 &lt;figure class=&quot;image&quot;&gt;
   &lt;img src=&quot;images/surface_modeler1.jpg&quot; alt=&quot;La patch surface_modeler che implementa la generazione di rumore frattale.&quot; /&gt;
@@ -4440,10 +4436,10 @@ H^{(i)}(z) = H^{j}H^{j-1}(z) &amp; = &amp; \frac{(1+b_jz^{-1})(1+b_{j-1}z^{-1})}
 &lt;/figure&gt;
 
 &lt;p&gt;Il parametro di controllo più importante impostabile dall’utente è
-&lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;, che definisce lo spettro &lt;script type=&quot;math/tex&quot;&gt;1/f^{\beta}&lt;/script&gt;; deve essere impostato
+\(\beta\), che definisce lo spettro \(1/f^{\beta}\); deve essere impostato
 anche il numero di poli della cascata di filtri assieme alla frequenza
 del primo polo: con questi parametri viene controllata l’accuratezza
-dell’approssimazione &lt;script type=&quot;math/tex&quot;&gt;1/f^{\beta}&lt;/script&gt;.&lt;/p&gt;
+dell’approssimazione \(1/f^{\beta}\).&lt;/p&gt;
 
 &lt;p&gt;Nella figura precedente è riportata la patch &lt;em&gt;surface_modeler&lt;/em&gt;
 che implementa la generazione di rumore frattale. Per avviare la
@@ -4455,7 +4451,7 @@ computazione è sufficiente cliccare sul blocco (in modalità &lt;em&gt;running&
 &lt;/figure&gt;
 
 &lt;p&gt;subito dopo si seleziona il numero di poli desiderato (due, quattro o
-sei). Il controllo sulla patch avviene variando il parametro &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;
+sei). Il controllo sulla patch avviene variando il parametro \(\beta\)
 tramite lo slider:&lt;/p&gt;
 
 &lt;figure class=&quot;image&quot;&gt;
@@ -4470,15 +4466,15 @@ tramite lo slider:&lt;/p&gt;
 
 &lt;p&gt;Il modulo &lt;em&gt;_cascade&lt;/em&gt; invece è una subpatch nella quale viene
 implementata una cascata di tre filtri; ogni
-oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;biquad~&lt;/code&gt; è un filtro biquadro a due poli e due zeri; ognuno di
+oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biquad~&lt;/code&gt; è un filtro biquadro a due poli e due zeri; ognuno di
 questi filtri calcola le seguenti equazioni differenziali:&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{array}{ll}
+\[\begin{array}{ll}
 y(n) = ff1 \cdot w(n) + ff2 \cdot w(n-1) + ff3 \cdot w(n-2) \\
 w(n) = x(n) + fb1 \cdot w(n-1) + fb2 \cdot w(n-2)
-\end{array}&lt;/script&gt;
+\end{array}\]
 
-&lt;p&gt;I valori &lt;script type=&quot;math/tex&quot;&gt;fb1, fb2, ff1, ff2, ff3&lt;/script&gt; vengono dati, in
+&lt;p&gt;I valori \(fb1, fb2, ff1, ff2, ff3\) vengono dati, in
 quest’ordine, come argomenti di creazione dell’oggetto.&lt;/p&gt;
 
 &lt;figure class=&quot;image&quot;&gt;
@@ -4507,7 +4503,7 @@ rotolamento.&lt;/p&gt;
 &lt;p&gt;Una prima distinzione si ha nella velocità con cui avviene il contatto:
 se per il modello di rotolamento deve essere presa in considerazione la
 velocità angolare dell’oggetto che rotola (che nel caso di una sfera si
-calcola come &lt;script type=&quot;math/tex&quot;&gt;\omega = v/r&lt;/script&gt;, con &lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt; raggio della sfera), per un corpo
+calcola come \(\omega = v/r\), con \(r\) raggio della sfera), per un corpo
 che striscia si deve considerare la velocità tangenziale, cioè la
 velocità lungo il piano sul quale giace la superficie. In secondo luogo
 il suono di un moto di rotolamento è spesso caratterizzato da
@@ -4526,14 +4522,14 @@ della superficie sulla quale si muove.&lt;/p&gt;
 &lt;p&gt;La patch che implementa la generazione di rumore di sfregamento è stata quindi elaborata a partire dalla
 patch che implementa il modello di rotolamento.&lt;/p&gt;
 
-&lt;h4 id=&quot;holy-rollersim&quot;&gt;holy-roller&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;holy-rollersim&quot;&gt;holy-roller\(\sim\)&lt;/h4&gt;
 
-&lt;p&gt;Il cuore della computazione viene svolto dalla subpatch &lt;code class=&quot;highlighter-rouge&quot;&gt;holy_roller~&lt;/code&gt;; l’oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;holy_roller~&lt;/code&gt; possiede 13
+&lt;p&gt;Il cuore della computazione viene svolto dalla subpatch &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;holy_roller~&lt;/code&gt;; l’oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;holy_roller~&lt;/code&gt; possiede 13
 inlet:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;inlet 0 – accetta un oggetto di tipo messaggio contente il nome di un file &lt;code class=&quot;highlighter-rouge&quot;&gt;.wav&lt;/code&gt;; tale file è stato precedentemente ottenuto registrando per circa 10 secondi l’output della patch generatrice di rumore frattale (e pertanto contiene a sua volta un rumore frattale);&lt;/p&gt;
+    &lt;p&gt;inlet 0 – accetta un oggetto di tipo messaggio contente il nome di un file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.wav&lt;/code&gt;; tale file è stato precedentemente ottenuto registrando per circa 10 secondi l’output della patch generatrice di rumore frattale (e pertanto contiene a sua volta un rumore frattale);&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;inlet 1 e 2 – non utilizzati in questa implementazione; accettano entrambi un segnale utilizzato poi come forza aggiuntiva da applicare all’oggetto rotolante;&lt;/p&gt;
@@ -4545,16 +4541,16 @@ inlet:&lt;/p&gt;
     &lt;p&gt;inlet 4 – assumendo che l’oggetto che si muove sulla superficie sia una sfera, questo inlet riceve un numero in virgola mobile corrispondente al diametro della sfera in centimetri; sarà poi utilizzato per calcolarne la massa;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;inlet 5 – riceve un numero in virgola mobile indicante la velocità (in &lt;script type=&quot;math/tex&quot;&gt;m/s&lt;/script&gt;) dell’oggetto che si muove;&lt;/p&gt;
+    &lt;p&gt;inlet 5 – riceve un numero in virgola mobile indicante la velocità (in \(m/s\)) dell’oggetto che si muove;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;inlet 6, 7, 8 e 9 – ricevono tutti dei segnali di controllo per l’impostazione delle frequenze e i tempi di decadimento degli oggetti modali usati nel modello di impatto (il tempo di decadimento è definito come il tempo richiesto affinché l’ampiezza decresca di un fattore &lt;script type=&quot;math/tex&quot;&gt;1/e&lt;/script&gt; rispetto al suo valore iniziale);&lt;/p&gt;
+    &lt;p&gt;inlet 6, 7, 8 e 9 – ricevono tutti dei segnali di controllo per l’impostazione delle frequenze e i tempi di decadimento degli oggetti modali usati nel modello di impatto (il tempo di decadimento è definito come il tempo richiesto affinché l’ampiezza decresca di un fattore \(1/e\) rispetto al suo valore iniziale);&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;inlet 10 – riceve un numero in virgola mobile (&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;) proporzionale alla rigidità dell’oggetto;&lt;/p&gt;
+    &lt;p&gt;inlet 10 – riceve un numero in virgola mobile (\(k\)) proporzionale alla rigidità dell’oggetto;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;inlet 11 e 12 – ricevono due numeri in virgola mobile (&lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; e &lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt;) utilizzati nel modulo &lt;code class=&quot;highlighter-rouge&quot;&gt;impact_modalb~&lt;/code&gt; per il calcolo della forza di impatto.&lt;/p&gt;
+    &lt;p&gt;inlet 11 e 12 – ricevono due numeri in virgola mobile (\(\alpha\) e \(\lambda\)) utilizzati nel modulo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;impact_modalb~&lt;/code&gt; per il calcolo della forza di impatto.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -4564,36 +4560,36 @@ inlet:&lt;/p&gt;
 calcolare dei valori indicanti il volume e la massa dell’oggetto
 rotolante.&lt;/p&gt;
 
-&lt;p&gt;Il modulo &lt;code class=&quot;highlighter-rouge&quot;&gt;_smoother&lt;/code&gt; ha lo scopo di trasformare una variazione
+&lt;p&gt;Il modulo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_smoother&lt;/code&gt; ha lo scopo di trasformare una variazione
 istantanea del valore del diametro secondo una rampa lineare della
 durata di un millisecondo.&lt;/p&gt;
 
 &lt;p&gt;Il valore di velocità invece viene inviato in input all’oggetto
-&lt;code class=&quot;highlighter-rouge&quot;&gt;_clip_velo+fade&lt;/code&gt;; tale oggetto invia al primo outlet il valore di input
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_clip_velo+fade&lt;/code&gt;; tale oggetto invia al primo outlet il valore di input
 se questo è maggiore del valore dato come primo argomento di costruzione
-(che nell’implementazione è &lt;script type=&quot;math/tex&quot;&gt;0.01&lt;/script&gt;), altrimenti viene inviato
+(che nell’implementazione è \(0.01\)), altrimenti viene inviato
 quest’ultimo. Il ruolo di questo outlet è impedire che alla patch
-successiva &lt;code class=&quot;highlighter-rouge&quot;&gt;clip_exp~&lt;/code&gt; venga inviato costantemente un segnale di
+successiva &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clip_exp~&lt;/code&gt; venga inviato costantemente un segnale di
 controllo nullo; se ciò si verificasse infatti si creerebbe un ciclo
 infinito che porterebbe ad un funzionamento non corretto della patch. Al
 secondo outlet viene inviato il valore ricevuto all’inlet opportunamente
 scalato nell’intervallo delimitato dai due argomenti.&lt;/p&gt;
 
-&lt;h4 id=&quot;clip_expsim&quot;&gt;clip_exp&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;clip_expsim&quot;&gt;clip_exp\(\sim\)&lt;/h4&gt;
 
 &lt;p&gt;I valori di raggio (in metri) e di velocità (in metri al secondo)
-vengono inviati ai due oggetti &lt;code class=&quot;highlighter-rouge&quot;&gt;clip_exp~&lt;/code&gt;, la cui funzione è quella di
+vengono inviati ai due oggetti &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clip_exp~&lt;/code&gt;, la cui funzione è quella di
 limitare la variazione logaritmica dei segnali in input. Più
 precisamente, in ognuno dei due oggetti viene per prima cosa calcolato
 il rapporto tra due campioni in input a distanza di un millisecondo
-l’uno dall’altro; se tale rapporto è maggiore di &lt;code class=&quot;highlighter-rouge&quot;&gt;maxfact&lt;/code&gt; o minore di
-&lt;code class=&quot;highlighter-rouge&quot;&gt;minfact&lt;/code&gt; (calcolati a partire dal parametro di costruzione), il valore
+l’uno dall’altro; se tale rapporto è maggiore di &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maxfact&lt;/code&gt; o minore di
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minfact&lt;/code&gt; (calcolati a partire dal parametro di costruzione), il valore
 del campione corrente viene limitato e inviato all’outlet. Se il
 rapporto è minore del valore predeterminato, il campione viene inviato
 in output invariato. Il codice seguente mostra come questo algoritmo sia
 implementato (per ragioni di efficienza) in C.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    static t_int *clip_exp_tilde_perform(t_int *w)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    static t_int *clip_exp_tilde_perform(t_int *w)
     {
       t_float *in = (t_float *)(w[1]);
       t_float *out = (t_float *)(w[2]);
@@ -4633,9 +4629,9 @@ implementato (per ragioni di efficienza) in C.&lt;/p&gt;
     }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;I valori &lt;code class=&quot;highlighter-rouge&quot;&gt;maxfact&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;minfact&lt;/code&gt; vengono calcolati nel seguente modo:&lt;/p&gt;
+&lt;p&gt;I valori &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maxfact&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minfact&lt;/code&gt; vengono calcolati nel seguente modo:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    static void set_expmax(t_clip_exp_tilde *x, t_floatarg expmax)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    static void set_expmax(t_clip_exp_tilde *x, t_floatarg expmax)
     {
       t_clip_exp_tilde_ctl *c = x-&amp;gt;x_ctl;
 
@@ -4656,18 +4652,18 @@ implementato (per ragioni di efficienza) in C.&lt;/p&gt;
     }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;circ_max_filtersim&quot;&gt;circ_max_filter&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;circ_max_filtersim&quot;&gt;circ_max_filter\(\sim\)&lt;/h4&gt;
 
-&lt;p&gt;Gli outlet dei due moduli &lt;code class=&quot;highlighter-rouge&quot;&gt;clip_exp~&lt;/code&gt; sono collegati al secondo e terzo
-inlet dell’oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;circ_max_filter~&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Gli outlet dei due moduli &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clip_exp~&lt;/code&gt; sono collegati al secondo e terzo
+inlet dell’oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;circ_max_filter~&lt;/code&gt;:&lt;/p&gt;
 
 &lt;p&gt;la sua funzione è quella di tracciare il profilo della superficie sulla
 quale l’oggetto rotola e calcolare i punti di contatto tra i due. Nel
 primo inlet entra il controllo di segnale ottenuto dalla moltiplicazione
-del rumore frattale per il fattore di amplificazione &lt;code class=&quot;highlighter-rouge&quot;&gt;surface_depth&lt;/code&gt;. Il
+del rumore frattale per il fattore di amplificazione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;surface_depth&lt;/code&gt;. Il
 ciclo principale svolto dal modulo è il seguente:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;static t_int *circ_max_filter_perform(t_int *w)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;static t_int *circ_max_filter_perform(t_int *w)
 {
     t_float *in1 = (t_float *)(w[1]);
     t_float *in2 = (t_float *)(w[2]);
@@ -4708,16 +4704,16 @@ ciclo principale svolto dal modulo è il seguente:&lt;/p&gt;
 
 &lt;p&gt;In particolare si può notare come l’istruzione&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    *out++ = up_circle(velocity * range / *p_samprate, radius)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    *out++ = up_circle(velocity * range / *p_samprate, radius)
             + bottom_fvalue_circ_buff_1float2int(c-&amp;gt;p_peaks);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;calcola i punti di contatto svolgendo la computazione della funzione &lt;script type=&quot;math/tex&quot;&gt;f_x(q)&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;calcola i punti di contatto svolgendo la computazione della funzione \(f_x(q)\).&lt;/p&gt;
 
-&lt;p&gt;La funzione &lt;code class=&quot;highlighter-rouge&quot;&gt;up_circle&lt;/code&gt; richiede due argomenti; dopo aver calcolato i
+&lt;p&gt;La funzione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;up_circle&lt;/code&gt; richiede due argomenti; dopo aver calcolato i
 quadrati di questi, ritorna la radice quadrata della differenza dei due:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    static INLINE t_float up_circle(t_float x, t_float radius)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    static INLINE t_float up_circle(t_float x, t_float radius)
     {
         t_float x_2 = x*x, radius_2 = radius*radius;
 
@@ -4730,15 +4726,15 @@ quadrati di questi, ritorna la radice quadrata della differenza dei due:&lt;/p&g
     }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;La funzione &lt;code class=&quot;highlighter-rouge&quot;&gt;to_buffer&lt;/code&gt; si occupa di aggiornare il profilo della
+&lt;p&gt;La funzione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to_buffer&lt;/code&gt; si occupa di aggiornare il profilo della
 superficie in base al segnale ricevuto al primo inlet.&lt;/p&gt;
 
-&lt;h4 id=&quot;_surface_tracersim&quot;&gt;_surface_tracer&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;_surface_tracersim&quot;&gt;_surface_tracer\(\sim\)&lt;/h4&gt;
 
-&lt;p&gt;Il file con estensione &lt;code class=&quot;highlighter-rouge&quot;&gt;.wav&lt;/code&gt; contenente il rumore frattale viene letto
-dalla subpatch &lt;code class=&quot;highlighter-rouge&quot;&gt;_surface_tracer~&lt;/code&gt;. Questa subpatch, assieme alle subpatch
-in essa contenute quali &lt;code class=&quot;highlighter-rouge&quot;&gt;pd tracer+calculation~&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;soundfiler_tracer~&lt;/code&gt; e
-&lt;code class=&quot;highlighter-rouge&quot;&gt;table_tracer~&lt;/code&gt;, legge il file audio e lo scrive in un array;
+&lt;p&gt;Il file con estensione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.wav&lt;/code&gt; contenente il rumore frattale viene letto
+dalla subpatch &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_surface_tracer~&lt;/code&gt;. Questa subpatch, assieme alle subpatch
+in essa contenute quali &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pd tracer+calculation~&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;soundfiler_tracer~&lt;/code&gt; e
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;table_tracer~&lt;/code&gt;, legge il file audio e lo scrive in un array;
 successivamente, per inviare i campioni in output, esegue una ricerca di
 tipo &lt;em&gt;table look–up&lt;/em&gt; con frequenza dipendente dalla velocità di
 movimento dell’oggetto sulla superficie.&lt;/p&gt;
@@ -4748,10 +4744,10 @@ movimento dell’oggetto sulla superficie.&lt;/p&gt;
   &lt;figcaption&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h4 id=&quot;impact_modalbsim&quot;&gt;impact_modalb&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;impact_modalbsim&quot;&gt;impact_modalb\(\sim\)&lt;/h4&gt;
 
 &lt;p&gt;Le successive elaborazioni dei segnali finora calcolati sono svolte dal
-modulo &lt;code class=&quot;highlighter-rouge&quot;&gt;impact_modalb~&lt;/code&gt;, un oggetto che implementa il modello descritto
+modulo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;impact_modalb~&lt;/code&gt;, un oggetto che implementa il modello descritto
 in  &lt;a class=&quot;citation&quot; href=&quot;#art:soundobj&quot;&gt;(Avanzini, F., Rath, M., &amp;amp; Rocchesso, D., 2003)&lt;/a&gt; per i suoni di impatto.&lt;/p&gt;
 
 &lt;figure class=&quot;image&quot;&gt;
@@ -4768,12 +4764,12 @@ interazione.&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;I parametri della forza di contatto e della massa vengono ricevuti dalla
-subpatch &lt;code class=&quot;highlighter-rouge&quot;&gt;interaction+mass&lt;/code&gt; e la subpatch in essa contenuta
-&lt;code class=&quot;highlighter-rouge&quot;&gt;_par_to_list4&lt;/code&gt;; in output (secondo outlet) viene mandata
+subpatch &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;interaction+mass&lt;/code&gt; e la subpatch in essa contenuta
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_par_to_list4&lt;/code&gt;; in output (secondo outlet) viene mandata
 una lista contenente queste informazioni. Nei quattro inlet vengono
-ricevuti, in ordine: &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt; e la massa del percussore.&lt;/p&gt;
+ricevuti, in ordine: \(k\), \(\alpha\), \(\lambda\) e la massa del percussore.&lt;/p&gt;
 
-&lt;p&gt;La subpatch &lt;code class=&quot;highlighter-rouge&quot;&gt;_modal_object_parameters3_2&lt;/code&gt;, dove 3 è il numero di modi e
+&lt;p&gt;La subpatch &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_modal_object_parameters3_2&lt;/code&gt;, dove 3 è il numero di modi e
 2 il numero di punti di interazione, raccoglie i parametri del
 risonatore. Nei primi tre inlet entrano i fattori moltiplicativi per
 frequenza, tempo di decadimento e guadagno; ai successivi tre inlet sono
@@ -4785,18 +4781,18 @@ outlet: il primo per la lista dei fattori, il secondo per la lista delle
 frequenze, il terzo per la lista dei tempi di decadimento e un outlet
 per ogni punto di interazione con l’indice del punto di interazione
 seguito dalla lista dei livelli (con l’eventuale fattore di phase
-reverse). Infine l’oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;_modal_object_parameters3_2&lt;/code&gt; deve essere
+reverse). Infine l’oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_modal_object_parameters3_2&lt;/code&gt; deve essere
 inizializzato con la seguente lista di argomenti: lista dei valori delle
 frequenze, lista dei valori dei tempi di decadimento, valori dei punti
 di interazione e del phase–reverse; un valore 1 per il livello
 corrisponde ad una impostazione del relativo slider a 100, dato che
 quest’ultimo viene convertito in dB RMS.&lt;/p&gt;
 
-&lt;p&gt;L’oggetto &lt;code class=&quot;highlighter-rouge&quot;&gt;impact_modalb~&lt;/code&gt; possiede i seguenti argomenti di costruzione:&lt;/p&gt;
+&lt;p&gt;L’oggetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;impact_modalb~&lt;/code&gt; possiede i seguenti argomenti di costruzione:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;valori di default di &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt; e massa del
+    &lt;p&gt;valori di default di \(k\), \(\alpha\), \(\lambda\) e massa del
 percussore;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -4830,12 +4826,12 @@ dai valori dei livelli.&lt;/p&gt;
 &lt;p&gt;Secondo studi svolti da Van Den Doel, Kry e Pai [@art:vandendoel], nei
 contatti che avvengono tra due corpi e che coinvolgono forze di
 frizione, queste ultime sono calcolabili come:
-&lt;script type=&quot;math/tex&quot;&gt;F_{frizione} = \mu F_{normale}&lt;/script&gt; e il volume del suono prodotto da
-ogni contatto è proporzionale a &lt;script type=&quot;math/tex&quot;&gt;\sqrt{v \cdot F_{normale}}&lt;/script&gt;, dove &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; è
+\(F_{frizione} = \mu F_{normale}\) e il volume del suono prodotto da
+ogni contatto è proporzionale a \(\sqrt{v \cdot F_{normale}}\), dove \(v\) è
 la velocità alla quale avviene il contatto; in questo calcolo si assume
 che l’energia acustica sia proporzionale alla perdita di capacità da
 parte della superficie di opporre una resistenza (di frizione) al moto.
-Nella subpatch &lt;code class=&quot;highlighter-rouge&quot;&gt;holy_roller~&lt;/code&gt; tale caratteristica è implementata tramite
+Nella subpatch &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;holy_roller~&lt;/code&gt; tale caratteristica è implementata tramite
 gli oggetti in figura:&lt;/p&gt;
 
 &lt;figure class=&quot;image&quot;&gt;

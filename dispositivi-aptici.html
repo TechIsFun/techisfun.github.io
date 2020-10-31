@@ -19,7 +19,7 @@
   <!-- Use Atom -->
   <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ing. Andrea Maglie" />
   <!-- Use RSS-2.0 -->
-  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="ing. Andrea Maglie | "/>
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="ing. Andrea Maglie | A blog about Software Engineering, with a focus on Java, Kotlin, Flutter and architecture"/>
   //-->
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
@@ -44,8 +44,9 @@
 
 
   <!-- Use Jekyll SEO plugin -->
-  <!-- Begin Jekyll SEO tag v2.3.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Dispositivi Aptici | ing. Andrea Maglie</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Dispositivi Aptici" />
 <meta name="author" content="Andrea Maglie" />
 <meta property="og:locale" content="en_US" />
@@ -54,8 +55,12 @@
 <meta property="og:site_name" content="ing. Andrea Maglie" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-02-05T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dispositivi Aptici" />
+<meta name="twitter:site" content="@techisfun" />
+<meta name="twitter:creator" content="@Andrea Maglie" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/dispositivi-aptici"},"url":"/dispositivi-aptici","publisher":null,"name":null,"author":{"@type":"Person","name":"Andrea Maglie"},"description":"Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.","headline":"Dispositivi Aptici","dateModified":"2019-02-05T00:00:00+01:00","datePublished":"2019-02-05T00:00:00+01:00","sameAs":null,"image":null,"@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"Andrea Maglie"},"mainEntityOfPage":{"@type":"WebPage","@id":"/dispositivi-aptici"},"url":"/dispositivi-aptici","headline":"Dispositivi Aptici","dateModified":"2019-02-05T00:00:00+01:00","datePublished":"2019-02-05T00:00:00+01:00","description":"Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -68,7 +73,7 @@
     <header class="masthead">
   <h3 class="masthead-title">
     <a href="/">ing. Andrea Maglie</a>
-    <small class="masthead-subtitle"></small>
+    <small class="masthead-subtitle">A blog about Software Engineering, with a focus on Java, Kotlin, Flutter and architecture</small>
     <div class="menu">
   <nav class="menu-content">
     
@@ -144,7 +149,7 @@ delle collisioni e comprensione del sistema tattile umano.</p>
 scambio di energia con l’utente; in particolare permettono all’utente di
 interagire con un ambiente virtuale ricevendo un feedback tattile,
 ottenuto applicando delle forze opposte al movimento dell’utente lungo i
-tre assi <script type="math/tex">x</script>, <script type="math/tex">y</script> e <script type="math/tex">z</script>. La caratteristica principale che li distingue
+tre assi \(x\), \(y\) e \(z\). La caratteristica principale che li distingue
 dalle altre tipologie di dispositivi è la loro <em>bidirezionalità</em>, cioè
 la possibilità di ricevere informazioni dall’utente e di inviare
 informazioni all’utente. Infatti, durante il normale utilizzo di un tale
@@ -384,8 +389,8 @@ e punto di collisione lungo la normale alla superficie.</p>
   </li>
 </ul>
 
-<p>In entrambi i casi la forza è calcolata usando la legge di Hooke <script type="math/tex">F=kx</script>,
-dove <script type="math/tex">x</script> è la stessa direzione lungo la quale viene calcolata la
+<p>In entrambi i casi la forza è calcolata usando la legge di Hooke \(F=kx\),
+dove \(x\) è la stessa direzione lungo la quale viene calcolata la
 profondità di penetrazione; se le interazioni sono prive di forze di
 frizione, la forza di reazione è normale alla superficie nel punto di
 contatto.</p>
@@ -475,8 +480,8 @@ prendono spunto da quelle usate nella computer graphics:</p>
   superficie (come la ruvidità). Max e Becker <a class="citation" href="#art:max">(Max, N. L. &amp; Becker, B. G., 1994)</a> hanno
   sviluppato una formula che permette di generare delle ruvidità
   visuali, basandosi sulla normale alla superficie originale:
-  <script type="math/tex">M = N - \nabla h + (\nabla h \cdot N)N</script> dove <script type="math/tex">M</script> è la normale
-  modificata, <script type="math/tex">N</script> è la normale originale e <script type="math/tex">\nabla h</script> è il gradiente
+  \(M = N - \nabla h + (\nabla h \cdot N)N\) dove \(M\) è la normale
+  modificata, \(N\) è la normale originale e \(\nabla h\) è il gradiente
   della profondità della tessitura. Lo stesso metodo può essere usato
   per generare la ruvidità aptica.</p>
   </li>
@@ -507,14 +512,14 @@ profondità delle tessiture:</p>
   bidimensionale usata come texture dell’oggetto virtuale; assumendo
   che le intensità di grigio dell’immagine possano essere usate
   direttamente come indicatori della profondità della tessitura
-  aptica, possiamo associare ogni coordinata della texture <script type="math/tex">(u,v)</script>
-  alle coordinate di ogni vertice <script type="math/tex">(x,y,z)</script>. Viene poi calcolato il
+  aptica, possiamo associare ogni coordinata della texture \((u,v)\)
+  alle coordinate di ogni vertice \((x,y,z)\). Viene poi calcolato il
   gradiente della profondità al punto di collisione e il vettore della
   forza è perturbato di conseguenza.</p>
   </li>
   <li>
     <p><em>Tessiture aptiche procedurali</em>: L’obiettivo è generare le tessiture aptiche mediante funzioni
-  matematiche, usandole poi per modificare il gradiente <script type="math/tex">\nabla h</script> e
+  matematiche, usandole poi per modificare il gradiente \(\nabla h\) e
   la forza di reazione al punto di contatto, o per modificare la
   geometria dell’oggetto; un esempio è la simulazione di tessiture
   stocastiche <a class="citation" href="#art:fritz">(Fritz, J. P. &amp; Barner, K. E., 1996)</a>.</p>
@@ -568,9 +573,9 @@ tessiture che vanno da lisce a ruvide <a class="citation" href="#art:siira">(Sii
 
 <p>Per tessiture complesse si può utilizzare una <em>pdf</em> (probability density
 function) ottenuta da varie pdf gaussiane:
-<script type="math/tex">f(x) = \sum_{i=1}^{M} a_i N({\mu}_i,C_i),</script> dove
-<script type="math/tex">\sum_{i=1}^{M} a_i = 1</script> e <script type="math/tex">N(\cdot)</script> è l’i-esima pdf gaussiana con
-media <script type="math/tex">{\mu}_i</script> e matrice di covarianza <script type="math/tex">C_i</script>; i termini <script type="math/tex">a_i</script> possono
+\(f(x) = \sum_{i=1}^{M} a_i N({\mu}_i,C_i),\) dove
+\(\sum_{i=1}^{M} a_i = 1\) e \(N(\cdot)\) è l’i-esima pdf gaussiana con
+media \({\mu}_i\) e matrice di covarianza \(C_i\); i termini \(a_i\) possono
 essere variati arbitrariamente, o modellati in base a tessiture reali.
 In figura è rappresentata una texture bidimensionale
 composta da due pdf gaussiane.</p>
@@ -589,8 +594,8 @@ affiancano trasformazioni statistiche al normale filtraggio. Un esempio
 è costituito dal moto Browniano visto nel paragrafo
 <a href="#sec:tessiture_superficie">[sec:tessiture_superficie]</a>{reference-type=”ref”
 reference=”sec:tessiture_superficie”}, un processo invariante rispetto
-alla scala descritto da un parametro di auto–similarità <script type="math/tex">h</script> e uno
-spettro di potenza di tipo <script type="math/tex">1/f</script> <a class="citation" href="#art:ebert">(Ebert, D. S., Musgrave, F. K., Peachey, D., Perlin, K., &amp; Worley, S., 1994)</a> <a class="citation" href="#art:haruyama">(Haruyama, S. &amp; Barsky, B. A., 1984)</a>.</p>
+alla scala descritto da un parametro di auto–similarità \(h\) e uno
+spettro di potenza di tipo \(1/f\) <a class="citation" href="#art:ebert">(Ebert, D. S., Musgrave, F. K., Peachey, D., Perlin, K., &amp; Worley, S., 1994)</a> <a class="citation" href="#art:haruyama">(Haruyama, S. &amp; Barsky, B. A., 1984)</a>.</p>
 
 <h3 id="procedure-implicite-e-sintesi-spettrale-di-fourier">Procedure implicite e sintesi spettrale di Fourier</h3>
 
@@ -612,9 +617,9 @@ tessitura.</p>
 periodiche possono essere usate per creare tessiture che appaiono
 casuali. Un altro modo per creare tessiture casuali con funzioni
 periodiche è l’uso di un processo stocastico: il vettore delle forze
-della tessitura <script type="math/tex">F_t</script> alla posizione <script type="math/tex">p</script> può essere espresso tramite la
-seguente equazione: <script type="math/tex">F_t(p) = Sg(p)+N,</script> dove <script type="math/tex">g(p)</script> è una funzione
-implicita e deterministica, <script type="math/tex">S</script> è un rumore moltiplicativo e <script type="math/tex">N</script>
+della tessitura \(F_t\) alla posizione \(p\) può essere espresso tramite la
+seguente equazione: \(F_t(p) = Sg(p)+N,\) dove \(g(p)\) è una funzione
+implicita e deterministica, \(S\) è un rumore moltiplicativo e \(N\)
 rappresenta un rumore sovrapposto. Il rumore moltiplicativo può essere
 usato per scalare casualmente una funzione deterministica apportando
 ulteriori variazioni alla tessitura.</p>
@@ -805,7 +810,7 @@ però più memoria.</p>
     <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
   
 
-  <div class="post-date"><a href="/menu/about.html">ing. Andrea Maglie |  by Andrea Maglie</a></div>
+  <div class="post-date"><a href="/menu/about.html">ing. Andrea Maglie | A blog about Software Engineering, with a focus on Java, Kotlin, Flutter and architecture by Andrea Maglie</a></div>
 </footer>
 
   </div>

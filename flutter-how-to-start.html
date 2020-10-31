@@ -19,7 +19,7 @@
   <!-- Use Atom -->
   <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ing. Andrea Maglie" />
   <!-- Use RSS-2.0 -->
-  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="ing. Andrea Maglie | "/>
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="ing. Andrea Maglie | A blog about Software Engineering, with a focus on Java, Kotlin, Flutter and architecture"/>
   //-->
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
@@ -44,8 +44,9 @@
 
 
   <!-- Use Jekyll SEO plugin -->
-  <!-- Begin Jekyll SEO tag v2.3.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Get Started with Flutter Mobile Development: All You Need to Know | ing. Andrea Maglie</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Get Started with Flutter Mobile Development: All You Need to Know" />
 <meta name="author" content="Andrea Maglie" />
 <meta property="og:locale" content="en_US" />
@@ -54,8 +55,12 @@
 <meta property="og:site_name" content="ing. Andrea Maglie" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-08-22T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Get Started with Flutter Mobile Development: All You Need to Know" />
+<meta name="twitter:site" content="@techisfun" />
+<meta name="twitter:creator" content="@Andrea Maglie" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/flutter-how-to-start.html"},"url":"/flutter-how-to-start.html","publisher":null,"name":null,"author":{"@type":"Person","name":"Andrea Maglie"},"description":"Flutter is an open-source mobile UI framework by Google. It was released in May 2017 and the purpose behind creating Flutter was to enable users to create native mobile applications with only one codebase. In summary, it means to use a single programming language to create two different apps, one for iOS and one for Android.","headline":"Get Started with Flutter Mobile Development: All You Need to Know","dateModified":"2020-08-22T00:00:00+02:00","datePublished":"2020-08-22T00:00:00+02:00","sameAs":null,"image":null,"@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"Andrea Maglie"},"mainEntityOfPage":{"@type":"WebPage","@id":"/flutter-how-to-start.html"},"url":"/flutter-how-to-start.html","headline":"Get Started with Flutter Mobile Development: All You Need to Know","dateModified":"2020-08-22T00:00:00+02:00","datePublished":"2020-08-22T00:00:00+02:00","description":"Flutter is an open-source mobile UI framework by Google. It was released in May 2017 and the purpose behind creating Flutter was to enable users to create native mobile applications with only one codebase. In summary, it means to use a single programming language to create two different apps, one for iOS and one for Android.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -68,7 +73,7 @@
     <header class="masthead">
   <h3 class="masthead-title">
     <a href="/">ing. Andrea Maglie</a>
-    <small class="masthead-subtitle"></small>
+    <small class="masthead-subtitle">A blog about Software Engineering, with a focus on Java, Kotlin, Flutter and architecture</small>
     <div class="menu">
   <nav class="menu-content">
     
@@ -155,7 +160,7 @@
 
 <p>To get started, download Flutter SDK for your platform (Windows, macOS, Linux or Chrome OS) from this link: https://flutter.dev/docs/get-started/install. We will be using Mac to go through the whole installation process.</p>
 
-<p>1 - Extract the files to your desired location (for example: <code class="highlighter-rouge">~/development</code>)</p>
+<p>1 - Extract the files to your desired location (for example: <code class="language-plaintext highlighter-rouge">~/development</code>)</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/development
 <span class="nv">$ </span>unzip ~/Downloads/flutter_macos_1.20.2-stable.zip
@@ -209,11 +214,11 @@
 
 <p>In this case the sdk is correctly configured supposing that we work with Android Studio and not with IntelliJ or Visual Studio code.</p>
 
-<p>The message <code class="highlighter-rouge">! No devices available</code> just means that no physical device is actually connected and no emulator is running. We can continue to develop and build our application without any attached device; we’ll need to attach a device (or start emulator) only when we want to launch the app.</p>
+<p>The message <code class="language-plaintext highlighter-rouge">! No devices available</code> just means that no physical device is actually connected and no emulator is running. We can continue to develop and build our application without any attached device; we’ll need to attach a device (or start emulator) only when we want to launch the app.</p>
 
 <h3 id="assign-the-same-path-to-flutter--dart">Assign the Same Path to Flutter &amp; Dart</h3>
 
-<p>Starting from release 1.19.0, the Flutter SDK already contains the <code class="highlighter-rouge">dart</code> command alongside the <code class="highlighter-rouge">flutter</code> command. But if you installed Flutter and Dart at different times, you need to double check paths. Xcode won’t work if the assigned path of Flutter and Dart programming language is different. So you need to assign the same path to both of them. Here is an example of the wrong assigned path.</p>
+<p>Starting from release 1.19.0, the Flutter SDK already contains the <code class="language-plaintext highlighter-rouge">dart</code> command alongside the <code class="language-plaintext highlighter-rouge">flutter</code> command. But if you installed Flutter and Dart at different times, you need to double check paths. Xcode won’t work if the assigned path of Flutter and Dart programming language is different. So you need to assign the same path to both of them. Here is an example of the wrong assigned path.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>which flutter dart
 
@@ -221,7 +226,7 @@
 /usr/local/bin/dart
 </code></pre></div></div>
 
-<p>As you can see, files are placed in different <code class="highlighter-rouge">bin</code> directories.</p>
+<p>As you can see, files are placed in different <code class="language-plaintext highlighter-rouge">bin</code> directories.</p>
 
 <p>Fix your path env variable until you get an output like this:</p>
 
@@ -391,7 +396,7 @@
     <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
   
 
-  <div class="post-date"><a href="/menu/about.html">ing. Andrea Maglie |  by Andrea Maglie</a></div>
+  <div class="post-date"><a href="/menu/about.html">ing. Andrea Maglie | A blog about Software Engineering, with a focus on Java, Kotlin, Flutter and architecture by Andrea Maglie</a></div>
 </footer>
 
   </div>
