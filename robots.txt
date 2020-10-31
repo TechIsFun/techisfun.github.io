@@ -1,1 +1,1 @@
-Sitemap: http://andreamaglie.com/sitemap.xml
+Sitemap: https://techisfun.github.io/sitemap.xml
