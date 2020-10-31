@@ -7,6 +7,19 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Clean Architecture: una introduzione</title>
+				
+				
+					<description>&lt;h1 id=&quot;cosè-la-clean-architecture&quot;&gt;Cos’è la Clean Architecture?&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Wed, 28 Oct 2020 00:00:00 +0100</pubDate>
+				<link>/clean-architecture-introduction.html</link>
+				<guid isPermaLink="true">/clean-architecture-introduction.html</guid>
+			</item>
+		
+			<item>
 				<title>DevFest 2020</title>
 				
 				
@@ -142,19 +155,6 @@
 				<pubDate>Tue, 15 Jan 2019 00:00:00 +0100</pubDate>
 				<link>/percezione-aptica.html</link>
 				<guid isPermaLink="true">/percezione-aptica.html</guid>
-			</item>
-		
-			<item>
-				<title>Una piattaforma per il rendering audio aptico di interazioni continue</title>
-				
-				
-					<description>&lt;p&gt;&lt;em&gt;Nel 2006 pubblicavo questa tesi dal titolo “Una piattaforma per il rendering audio aptico di interazioni continue” per la mia laurea in Ingegneria Informatica all’Università di Padova. 9 mesi passati a lavorare su quello che sicuramente è il progetto più complesso e interessante sul quale abbia mai lavorato.&lt;/em&gt;&lt;/p&gt;
-
-</description>
-				
-				<pubDate>Thu, 10 Jan 2019 00:00:00 +0100</pubDate>
-				<link>/piattaforma-rendering-audio-aptico-intro.html</link>
-				<guid isPermaLink="true">/piattaforma-rendering-audio-aptico-intro.html</guid>
 			</item>
 		
 	</channel>

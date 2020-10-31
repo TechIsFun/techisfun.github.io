@@ -1,4 +1,121 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-10-01T14:38:32+02:00</updated><id>/</id><title type="html">ing. Andrea Maglie</title><subtitle></subtitle><author><name>Andrea Maglie</name></author><entry><title type="html">DevFest 2020</title><link href="/devfest-2020.html" rel="alternate" type="text/html" title="DevFest 2020" /><published>2020-10-01T00:00:00+02:00</published><updated>2020-10-01T00:00:00+02:00</updated><id>/devfest-2020</id><content type="html" xml:base="/devfest-2020.html">&lt;iframe width=&quot;100%&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/z-Wdaw0VRak&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-10-31T10:22:23+01:00</updated><id>/</id><title type="html">ing. Andrea Maglie</title><subtitle></subtitle><author><name>Andrea Maglie</name></author><entry><title type="html">Clean Architecture: una introduzione</title><link href="/clean-architecture-introduction.html" rel="alternate" type="text/html" title="Clean Architecture: una introduzione" /><published>2020-10-28T00:00:00+01:00</published><updated>2020-10-28T00:00:00+01:00</updated><id>/clean-architecture-introduction</id><content type="html" xml:base="/clean-architecture-introduction.html">&lt;h1 id=&quot;cosè-la-clean-architecture&quot;&gt;Cos’è la Clean Architecture?&lt;/h1&gt;
+
+&lt;p&gt;Il termine &lt;em&gt;Clean Architecture&lt;/em&gt; deriva dall’omonimo &lt;a href=&quot;https://amzn.to/31MI9n1&quot;&gt;libro di Robert C. Martin&lt;/a&gt;. Questo libro è uno di quelli che ti consiglio assolutamente di leggere se sei uno sviluppatore o se vuoi diventarlo, non deve assolutamente mancare nella biblioteca di un &lt;em&gt;dev&lt;/em&gt; che si rispetti!&lt;/p&gt;
+
+&lt;p&gt;Nel libro viene illustrato in modo estensivo e molto chiaro il concetto di &lt;em&gt;Clean Architecture&lt;/em&gt;, ma se dovessi sintetizzare in una frase sola, direi che possiamo pensare alla Clean Architecture come &lt;em&gt;un insieme di linee guida per progettare l’architettura di un software&lt;/em&gt;. OK, forse come definizione è un po’ generica, ma nel resto dell’articolo cerco di andare un po’ più in profondità.&lt;/p&gt;
+
+&lt;p&gt;Prima di tutto partiamo dal “perché”: perché mi serve pensare alla architettura e perché dovrei interessarmi alla &lt;em&gt;Clean Architecture&lt;/em&gt;?&lt;/p&gt;
+
+&lt;h2 id=&quot;perché-serve-una-architettura&quot;&gt;Perché serve una architettura?&lt;/h2&gt;
+
+&lt;p&gt;Se sei uno sviluppatore software con un po’ di esperienza nello sviluppo di qualsiasi tipo di applicativo (che sia backend, app mobile app, web o altro), ti sarai scontrato sicuramente con il problema di progettare un’architettura per la tua applicazione. Probabilmente in qualche caso ti è capitato anche di partire senza un’architettura ben definita, per poi accorgerti che il progetto diventava veramente difficile da gestire man mano che venivano aggiunte nuove funzionalità; detto in gergo un po’ più tecnico, hai scoperto che l’architettura non è &lt;em&gt;scalabile&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Progettare un’architettura è fondamentale nel processo di sviluppo del software, perché permette di gettare le fondamenta di quello che poi dovrà essere l’applicativo completo; se parto con delle fondamenta deboli, il software che ho costruito sopra è pronto a crollare da un momento all’altro.&lt;/p&gt;
+
+&lt;p&gt;Progettare l’architettura non è necessariamente un processo complesso. Ad esempio se voglio realizzare un POC (proof of concept) o un prototipo, un buon compromesso può essere l’utilizzo di una architettura molto semplice. Se invece il mio software è destinato a crescere (pensiamo ad esempio ad un servizio di backend, un’applicazione desktop o un’applicazione mobile di media o grande complessità), allora può essere utile progettare una architettura più solida, che possa essere:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;scalabile (cioè mi permette di aggiungere agevolmente nuove funzionalità e gestire la complessità crescente senza dover modificare l’achitettura stessa);&lt;/li&gt;
+  &lt;li&gt;facile da modificare, permettendomi quindi di apportare modifiche alle funzionalità già implementate modificando il minor numero possibile di sorgenti;&lt;/li&gt;
+  &lt;li&gt;testabile (su questo torneremo più avanti).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-e-perché-dovrei-pensare-ad-una-clean-architecture&quot;&gt;… e perché dovrei pensare ad una &lt;em&gt;Clean Architecture&lt;/em&gt;?&lt;/h2&gt;
+
+&lt;p&gt;Esattamente per i 3 punti che ti ho appena esposto. Come detto prima non tutte le architetture ti permettono di avere un software scalabile, facile da modificare e testabile; è necessario che l’architettura rispetti determinati requisiti (che vedremo in dettaglio in seguito).&lt;/p&gt;
+
+&lt;p&gt;Precisando ulteriormente, non sto parlando di una architettura ben definita e specifica da usare in tutti i casi, ma piuttosto di una serie di principi ben definiti da utilizzare per la progettazione dell’architettura.&lt;/p&gt;
+
+&lt;h1 id=&quot;i-principi-della-clean-architecture&quot;&gt;I principi della &lt;em&gt;Clean Architecture&lt;/em&gt;&lt;/h1&gt;
+
+&lt;p&gt;Possiamo riassumere i principi della &lt;em&gt;Clean Architecture&lt;/em&gt; nei seguenti punti:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Indipendente dal framework&lt;/li&gt;
+  &lt;li&gt;Indipendente dalla UI&lt;/li&gt;
+  &lt;li&gt;Indipendente dal database&lt;/li&gt;
+  &lt;li&gt;Testabile&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;indipendenza-dal-framework&quot;&gt;Indipendenza dal framework&lt;/h3&gt;
+
+&lt;p&gt;L’architettura deve essere indipendente da qualsiasi framework o libreria. Facendo un esempio più concreto, supponiamo che tu debba progettare l’architettura di una applicazione Android nativa (sto già restringendo il campo per semplicità); sicuramente le prime domande che ti farai saranno simili a queste:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;quale libreria userò per fare le chiamate alle API Rest?&lt;/li&gt;
+  &lt;li&gt;quale framework voglio usare per la dependency injection?&lt;/li&gt;
+  &lt;li&gt;i dati locali li salverò nelle &lt;em&gt;SharedPreferences&lt;/em&gt; oppure in un database?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ti sembrerà assurdo, ma queste domande non dovresti nemmeno portele in fase di studio della architettura. Devi essere in grado di astrarti da questi dettagli, altrimenti potrebbero rivelarsi un vincolo troppo stretto che ti impediscono di apportare modifiche facilmente.&lt;/p&gt;
+
+&lt;h3 id=&quot;indipendenza-dalla-ui&quot;&gt;Indipendenza dalla UI&lt;/h3&gt;
+
+&lt;p&gt;L’interfaccia utente è una delle componenti più soggette a modifiche nel ciclo di vita dello sviluppo di un software, soprattutto se si parla di interfacce grafiche. Pensa se fosse necessario, ad esempio, modificare le classi che gestiscono le chiamate alle API ogni volta che ti chiedono di aggiornare il layout di una vista, oppure se dovessi modificare le classi che implementano le regole di business se la richiesta riguarda solo la modifica del layout degli elementi di una lista. Quello che una buona architettura deve consentirci è di separare le componenti in modo che siano facilmente modificabili senza interferire le une con le altre.&lt;/p&gt;
+
+&lt;h3 id=&quot;indipendenza-dal-database&quot;&gt;Indipendenza dal database&lt;/h3&gt;
+
+&lt;p&gt;Qui andiamo sul pesante. Quante volte è capitato di partire proprio dalla definizione della base di dati? Dobbiamo usare SQL o NoSQL? MySQL, Postgres o SQL Server? Firebase? Mongo? Quante tabelle mi servono? E via di seguito, insistendo sul fatto che questa debba essere la base dell’architettura. Ma non è l’approccio corretto. Questo non significa che il database non sia importante (lo è eccome!), ma piuttosto che l’architettura deve consentirti di essere indipendente dall’implementazione specifica del database, perché, se ci pensi, le regole di business di un software sono indipendenti da come decido di persistere i dati. Tra l’altro questo approccio mi da la possibilità di sviluppare anche senza un database (che magari è in carico ad un collega), utilizzando una classe che fornisce dati mock; sostituirò poi questa classe con l’implementazione reale del database quando questa sarà pronta (su questo punto tornerò più in profondità in seguito).&lt;/p&gt;
+
+&lt;h3 id=&quot;testabile&quot;&gt;Testabile&lt;/h3&gt;
+
+&lt;p&gt;Le diverse componenti del mio software dovrebbero essere testabili in modo indipendente le une dalle altre. Ad esempio devo essere in grado di testare le regole di business senza bisogno di accedere all’interfaccia grafica, al database o alle API di backend. Quindi la mia architettura deve favorire gli &lt;em&gt;unit test&lt;/em&gt;. Gli &lt;em&gt;integration test&lt;/em&gt; (i test che mi permettono di testare l’integrazione di più funzionalità dell’applicativo) o test &lt;em&gt;end to end&lt;/em&gt; (i test dell’applicativo nella sua interezza) continuano ad essere importanti nel ciclo di vita del software, ma testare le componenti singole mi permette di validare fin da subito il comportamento del singolo metodo o della singola classe, isolando facilmente eventuali bug e accelerando così il ciclio di sviluppo del software.&lt;/p&gt;
+
+&lt;h1 id=&quot;rimandare-le-decisioni-critiche&quot;&gt;Rimandare le decisioni critiche&lt;/h1&gt;
+
+&lt;p&gt;I principi elencanti qui sopra hanno come conseguenza un altro caposaldo della &lt;em&gt;Clean Architecture&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Ogni buona architettura ti permette di rimandare le decisioni critiche&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Questo è uno degli aspetti che mi ha coplito di più la prima volta che studiato la &lt;em&gt;Clean Architecture&lt;/em&gt;, e a mio avviso è uno degli aspetti più potenti.&lt;/p&gt;
+
+&lt;p&gt;Ma cosa significa “rimandare le dicisioni critiche”?&lt;/p&gt;
+
+&lt;p&gt;Significa aver la possibilità, in fase di progettazione così come in fase di sviluppo, di non preoccuparsi di “dettagli implementativi” che ancora non conosciamo.&lt;/p&gt;
+
+&lt;p&gt;Provo a fare un piccolo esempio (affronterò un caso pratico completo nei prossimi articoli). Supponi di dover progettare una app di ricerca ristoranti; un aspetto fondamentale è sapere quale sarà la sorgente dei dati, ovvero da dove andrai a prendere i ristoranti da mostrare all’utente. E’ verosimile che i dati saranno forniti da un backend attraverso una API REST,  ma al momento non è disponibile ancora questa informazione; come puoi procedere? Potresti creare una interfaccia &lt;code class=&quot;highlighter-rouge&quot;&gt;Repository&lt;/code&gt; in un modo simile al seguente:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Repository&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Restaurant&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Questa interfaccia rappresenterà il “punto di accesso” ai dati, senza bisogno di sapere quale dovrà essere l’implementazione concreta. In questo modo stai “rimandando” diverse decisioni, come ad esempio:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;quale libreria dovrò utilizzare per le chiamate REST?&lt;/li&gt;
+  &lt;li&gt;dovrò gestire la sincronizzazione dei dati con un DB locale?&lt;/li&gt;
+  &lt;li&gt;quale database locale devo utilizzare?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Rimandando queste dicisioni puoi continuare a progettare l’architettura in base alle regole di business e gli altri requisiti che sono già noti.&lt;/p&gt;
+
+&lt;h1 id=&quot;integrazione-con-altri-pattern&quot;&gt;Integrazione con altri pattern&lt;/h1&gt;
+
+&lt;p&gt;Una domanda che mi sento porre spesso è: come posso integrare la &lt;em&gt;Clean Architecture&lt;/em&gt; nel mio progetto che segue già il pattern MVP / MVVM / MVI ecc…?&lt;/p&gt;
+
+&lt;p&gt;E’ fondamentale capire che la &lt;em&gt;Clean Architecture&lt;/em&gt; non è un pattern di programmazione alternativo a MVP, MVVM ecc. Questi pattern infatti hanno lo scopo di definire una architettura per lo strato di “presentation” del software, mentre la &lt;em&gt;Clean Architecture&lt;/em&gt; ha lo scopo di definire una chiara separazione degli strati del software e la comunicazione tra questi strati.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusione&quot;&gt;Conclusione&lt;/h1&gt;
+
+&lt;p&gt;In questo articolo ho provato a darti una idea di base di cosa si intende per &lt;em&gt;Clean Architecture&lt;/em&gt; e di come questo sia un concetto che può essere applicato a qualsiasi tipo di software, indipendentemente dal linguaggio di programmazione, dai pattern e dai framework che si vogliono utilizzare.&lt;/p&gt;
+
+&lt;p&gt;Nel prossimo articolo andrò più in profondità su questi aspetti, chiarendo cosa si intende per “strati” (o livelli o &lt;em&gt;layer&lt;/em&gt;) del software e la comunicazione tra loro.&lt;/p&gt;
+
+&lt;h1 id=&quot;riferimenti&quot;&gt;Riferimenti&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Libro: Clean Architecture: A Craftsman’s Guide to Software Structure and Design (&lt;a href=&quot;https://amzn.to/31MI9n1&quot;&gt;Amazon&lt;/a&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Blog post: &lt;a href=&quot;https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html&quot;&gt;The Clean Architecture, by Robert C. Martin&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Andrea Maglie</name></author><category term="clean architecture" /><category term="android" /><category term="kotlin" /><summary type="html">Cos’è la Clean Architecture?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/hero-architecture.jpg" /></entry><entry><title type="html">DevFest 2020</title><link href="/devfest-2020.html" rel="alternate" type="text/html" title="DevFest 2020" /><published>2020-10-01T00:00:00+02:00</published><updated>2020-10-01T00:00:00+02:00</updated><id>/devfest-2020</id><content type="html" xml:base="/devfest-2020.html">&lt;iframe width=&quot;100%&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/z-Wdaw0VRak&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Quest’anno la Dev Fest Veneto lascia lo spazio ad un evento tutto nuovo: la &lt;strong&gt;DevFest 2020&lt;/strong&gt;!&lt;/p&gt;
 
@@ -5652,40 +5769,4 @@ aptiche posseggono queste caratteristiche.&lt;/p&gt;
 &lt;li&gt;&lt;span id=&quot;book:chapentier&quot;&gt;Chapentier, A. (1891). &lt;i&gt;Experimental study of some aspects of weight perception&lt;/i&gt; (Vol. 3, pp. 122–135). Archives de Physiologie Normales et Pathologiques.&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span id=&quot;art:lederman7&quot;&gt;Lederman, S. J., &amp;amp; Klatzky, R. L. (1987). Hand movements: A window into haptic object recognition. &lt;i&gt;Cognitive Psychology&lt;/i&gt;, &lt;i&gt;19&lt;/i&gt;, 342–368.&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span id=&quot;art:lederman6&quot;&gt;Lederman, S. J., Klatzky, R. L., Collins, A., &amp;amp; Wardell, J. (1987). Exploring environments by hand or foot: Time-based heuristics for encoding distance in movement space. &lt;i&gt;Journal of Experimental Psychology: Learning, Memory and Cognition&lt;/i&gt;, &lt;i&gt;13&lt;/i&gt;, 606–614.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span id=&quot;art:millar&quot;&gt;Millar, S. (1999). Memory in Touch. &lt;i&gt;Psicothema&lt;/i&gt;, &lt;i&gt;11&lt;/i&gt;, 747–767.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;</content><author><name>Andrea Maglie</name></author><category term="haptic feedback" /><category term="pure data" /><summary type="html">Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.</summary></entry><entry><title type="html">Una piattaforma per il rendering audio aptico di interazioni continue</title><link href="/piattaforma-rendering-audio-aptico-intro.html" rel="alternate" type="text/html" title="Una piattaforma per il rendering audio aptico di interazioni continue" /><published>2019-01-10T00:00:00+01:00</published><updated>2019-01-10T00:00:00+01:00</updated><id>/piattaforma-rendering-audio-aptico-intro</id><content type="html" xml:base="/piattaforma-rendering-audio-aptico-intro.html">&lt;p&gt;&lt;em&gt;Nel 2006 pubblicavo questa tesi dal titolo “Una piattaforma per il rendering audio aptico di interazioni continue” per la mia laurea in Ingegneria Informatica all’Università di Padova. 9 mesi passati a lavorare su quello che sicuramente è il progetto più complesso e interessante sul quale abbia mai lavorato.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;indice-dei-capitoli&quot;&gt;Indice dei capitoli&lt;/h1&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/percezione-aptica.html&quot;&gt;La percezione aptica&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/percezione-uditiva.html&quot;&gt;La percezione uditiva&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/pure-data-modelli-audio.html&quot;&gt;Pure Data e i modelli audio&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/dispositivi-aptici&quot;&gt;Dispositivi aptici&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/phantom-omni.html&quot;&gt;Il Phantom Omni&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/applicazione-phantom-friction.html&quot;&gt;L’applicazione Phantom Friction&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/esperimenti-percezione-audio-aptica.html&quot;&gt;Esperimenti sulla percezione audio-aptica&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;introduzione&quot;&gt;Introduzione&lt;/h1&gt;
-&lt;p&gt;Se nel campo della computer graphics le tessiture (texture) sono state studiate estensivamente allo scopo di rendere sempre più reali gli ambienti virtuali, altrettanto non si può dire per quanto riguarda la computer haptics, dove con tale termine si intende la scienza che studia la simulazione e lo scambio tra utente e computer di informazioni legate al senso del tatto. Tuttavia, per creare un ambiente virtuale realistico, è indispensabile fornire all’utente un ritorno di suono in corrispondenza al verificarsi di un evento (come un contatto tra oggetti).&lt;/p&gt;
-
-&lt;p&gt;Quando tocchiamo la superficie di un oggetto reale ad occhi chiusi, raccogliamo principalmente due tipi di informazione: il primo tipo è costituito dalle informazioni percepite tramite le dita e le mani, ovvero tramite il senso del tatto; il secondo tipo è invece costituito dalle informazioni uditive, catturate dai suoni che vengono generati nel momento in cui muoviamo le nostre dita sulla superficie. La piattaforma descritta è stata realizzata proprio basandosi su questi concetti, estendendoli all’interazione con oggetti simulati.&lt;/p&gt;
-
-&lt;p&gt;L’obiettivo a cui mira questa tesi è la realizzazione di un sistema che permetta l’interazione visiva, aptica e sonora con un ambiente virtuale (dove la parola aptica è legata al senso di tocco attivo):
-visiva in quanto l’utente può visualizzare su uno schermo gli oggetti virtuali con cui interagisce;
-aptica perché gli oggetti virtuali possono essere sentiti al tatto;
-audio perché, come in un ambiente reale, sia possibile ascoltare i suoni provocati dalle interazioni.&lt;/p&gt;
-
-&lt;p&gt;In particolare l’attenzione viene concentrata sulla realizzazione di tessiture sulle superfici, le quali, attraverso il controllo di alcuni parametri di significato fisico, possano far sentire (sia tramite il tatto che l’udito) all’utente super ci di diverso livello di ruvidità (non ci preoccupiamo invece delle tessiture grafiche). La sintesi dell’audio non ha più come elemento centrale il segnale che viene prodotto e percepito, ma la sorgente del suono: attraverso modelli fisici si cerca quindi di descrivere la sorgente (o le sorgenti) sonore unitamente agli eventi che producono il suono stesso. Variando un insieme ristretto di parametri è così possibile simulare diverse sorgenti; gli stessi parametri possono poi essere utilizzati per controllare la simulazione aptica.&lt;/p&gt;
-
-&lt;p&gt;La rappresentazione grafica dell’ambiente tridimensionale virtuale è stata fatta sfruttando le API OpenGL; si è scelto di mantenere questa componente molto semplice, infatti l’ambiente è costituito da un solo oggetto che si presenta liscio e monocromatico alla vista. Per rendere possibile la rappresentazione aptica invece è necessario eseguire un interfacciamento tra l’applicazione grafica e un dispositivo di force feedback (il Phantom® Omni di SensAble Technologies in questo caso); utilizzando tale dispositivo sarà possibile toccare ogni oggetto dell’ambiente virtuale. Infine la sintesi dell’audio è stata realizzata separatamente tramite l’ambiente di programmazione visuale Pure Data, implementando dei modelli fisici la cui validità è già consolidata. Le tre componenti possono essere eseguite contemporaneamente, realizzando una completa simulazione in tempo reale che può prestarsi ad una molteplicità di usi diversi.&lt;/p&gt;
-
-&lt;p&gt;Nel primo capitolo si descrive brevemente il senso del tatto, in particolare come il corpo umano raccoglie ed elabora le informazioni tattili; nel secondo invece viene analizzato il modo di percepire da parte dell’uomo i suoni nell’ambiente circostante.&lt;/p&gt;
-
-&lt;p&gt;Nel terzo capitolo si illustrano per prima cosa i modelli fisici su cui viene basata la sintesi dell’audio. I modelli comprendono la realizzazione di tessiture stocastiche a partire da un rumore filtrato e il rendering di suoni di contatto tramite una sintesi modale. Successivamente viene descritto il funzionamento dell’ambiente di programmazione Pure Data e dei moduli esterni utilizzati; segue una spiegazione dettagliata su come sono stati implementati i modelli fisici in patch eseguibili in tale ambiente.&lt;/p&gt;
-
-&lt;p&gt;Il capitolo 4 riporta una panoramica sui dispositivi aptici, mentre il capitolo successivo illustra nel dettaglio il dispositivo Phantom® Omni , unitamente al toolkit OpenHaptics utilizzato per la programmazione di tale dispositivo.&lt;/p&gt;
-
-&lt;p&gt;Nel capitolo 6 si tratta la programmazione dell’interfaccia grafica e dell’interfaccia aptica; viene spiegato come avviene il rendering delle forze e come sono realizzate le tessiture aptiche. Infine si spiega come queste componenti siano state integrate tra loro e come avviene la comunicazione tra l’interfaccia grafica/aptica e l’algoritmo di sintesi audio creato ed eseguito in Pure Data.&lt;/p&gt;
-
-&lt;p&gt;La parte finale (capitolo 7) è dedicata agli esperimenti di percezione bimodale audio aptica: dopo aver presentato una panoramica sugli studi che sono già stati condotti in questo campo, vengono illustrate le differenze rispetto a questi e gli aspetti innovativi degli studi svolti in questa tesi. Sono stati svolti tre esperimenti: il primo in condizione di variazione concorde degli stimoli audio e aptico, gli altri in condizioni di variazione discorde dei due stimoli. In conclusione vengono riportati i risultati e le discussioni sulle percezioni avute dai partecipanti.&lt;/p&gt;</content><author><name>Andrea Maglie</name></author><category term="haptic feedback" /><category term="pure data" /><summary type="html">Nel 2006 pubblicavo questa tesi dal titolo “Una piattaforma per il rendering audio aptico di interazioni continue” per la mia laurea in Ingegneria Informatica all’Università di Padova. 9 mesi passati a lavorare su quello che sicuramente è il progetto più complesso e interessante sul quale abbia mai lavorato.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/hero-phantomomni.jpg" /></entry></feed>
+&lt;li&gt;&lt;span id=&quot;art:millar&quot;&gt;Millar, S. (1999). Memory in Touch. &lt;i&gt;Psicothema&lt;/i&gt;, &lt;i&gt;11&lt;/i&gt;, 747–767.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;</content><author><name>Andrea Maglie</name></author><category term="haptic feedback" /><category term="pure data" /><summary type="html">Disclaimer: Il contenuto di questo post è un estratto della mia tesi di laurea, realizzata nel 2006. Alcuni esempi potrebbero risultare obsoleti, tuttavia la componente teorica resta un buon riferimento per chi deve approcciarsi alla materia.</summary></entry></feed>

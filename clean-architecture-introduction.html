@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      Clean Architecture: una introduzione | ing. Andrea Maglie
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+  
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ing. Andrea Maglie" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="ing. Andrea Maglie | "/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48681711-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Clean Architecture: una introduzione | ing. Andrea Maglie</title>
+<meta property="og:title" content="Clean Architecture: una introduzione" />
+<meta name="author" content="Andrea Maglie" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Cos’è la Clean Architecture?" />
+<meta property="og:description" content="Cos’è la Clean Architecture?" />
+<meta property="og:site_name" content="ing. Andrea Maglie" />
+<meta property="og:image" content="/hero-architecture.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-28T00:00:00+01:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/clean-architecture-introduction.html"},"url":"/clean-architecture-introduction.html","publisher":null,"name":null,"author":{"@type":"Person","name":"Andrea Maglie"},"description":"Cos’è la Clean Architecture?","headline":"Clean Architecture: una introduzione","dateModified":"2020-10-28T00:00:00+01:00","datePublished":"2020-10-28T00:00:00+01:00","sameAs":null,"image":"/hero-architecture.jpg","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">ing. Andrea Maglie</a>
+    <small class="masthead-subtitle"></small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/about.html">Informazioni</a>
+    
+      <a href="/menu/writing.html">Post</a>
+    
+      <a href="/menu/contact.html">Contatti</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/techisfun" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/techisfun" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="http://www.linkedin.com/in/andreamaglie/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:l.andrea.maglie@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  Clean Architecture: una introduzione
+</h1>
+
+
+  <img src="/assets/img/hero-architecture.jpg">
+
+
+<h1 id="cosè-la-clean-architecture">Cos’è la Clean Architecture?</h1>
+
+<p>Il termine <em>Clean Architecture</em> deriva dall’omonimo <a href="https://amzn.to/31MI9n1">libro di Robert C. Martin</a>. Questo libro è uno di quelli che ti consiglio assolutamente di leggere se sei uno sviluppatore o se vuoi diventarlo, non deve assolutamente mancare nella biblioteca di un <em>dev</em> che si rispetti!</p>
+
+<p>Nel libro viene illustrato in modo estensivo e molto chiaro il concetto di <em>Clean Architecture</em>, ma se dovessi sintetizzare in una frase sola, direi che possiamo pensare alla Clean Architecture come <em>un insieme di linee guida per progettare l’architettura di un software</em>. OK, forse come definizione è un po’ generica, ma nel resto dell’articolo cerco di andare un po’ più in profondità.</p>
+
+<p>Prima di tutto partiamo dal “perché”: perché mi serve pensare alla architettura e perché dovrei interessarmi alla <em>Clean Architecture</em>?</p>
+
+<h2 id="perché-serve-una-architettura">Perché serve una architettura?</h2>
+
+<p>Se sei uno sviluppatore software con un po’ di esperienza nello sviluppo di qualsiasi tipo di applicativo (che sia backend, app mobile app, web o altro), ti sarai scontrato sicuramente con il problema di progettare un’architettura per la tua applicazione. Probabilmente in qualche caso ti è capitato anche di partire senza un’architettura ben definita, per poi accorgerti che il progetto diventava veramente difficile da gestire man mano che venivano aggiunte nuove funzionalità; detto in gergo un po’ più tecnico, hai scoperto che l’architettura non è <em>scalabile</em>.</p>
+
+<p>Progettare un’architettura è fondamentale nel processo di sviluppo del software, perché permette di gettare le fondamenta di quello che poi dovrà essere l’applicativo completo; se parto con delle fondamenta deboli, il software che ho costruito sopra è pronto a crollare da un momento all’altro.</p>
+
+<p>Progettare l’architettura non è necessariamente un processo complesso. Ad esempio se voglio realizzare un POC (proof of concept) o un prototipo, un buon compromesso può essere l’utilizzo di una architettura molto semplice. Se invece il mio software è destinato a crescere (pensiamo ad esempio ad un servizio di backend, un’applicazione desktop o un’applicazione mobile di media o grande complessità), allora può essere utile progettare una architettura più solida, che possa essere:</p>
+
+<ul>
+  <li>scalabile (cioè mi permette di aggiungere agevolmente nuove funzionalità e gestire la complessità crescente senza dover modificare l’achitettura stessa);</li>
+  <li>facile da modificare, permettendomi quindi di apportare modifiche alle funzionalità già implementate modificando il minor numero possibile di sorgenti;</li>
+  <li>testabile (su questo torneremo più avanti).</li>
+</ul>
+
+<h2 id="-e-perché-dovrei-pensare-ad-una-clean-architecture">… e perché dovrei pensare ad una <em>Clean Architecture</em>?</h2>
+
+<p>Esattamente per i 3 punti che ti ho appena esposto. Come detto prima non tutte le architetture ti permettono di avere un software scalabile, facile da modificare e testabile; è necessario che l’architettura rispetti determinati requisiti (che vedremo in dettaglio in seguito).</p>
+
+<p>Precisando ulteriormente, non sto parlando di una architettura ben definita e specifica da usare in tutti i casi, ma piuttosto di una serie di principi ben definiti da utilizzare per la progettazione dell’architettura.</p>
+
+<h1 id="i-principi-della-clean-architecture">I principi della <em>Clean Architecture</em></h1>
+
+<p>Possiamo riassumere i principi della <em>Clean Architecture</em> nei seguenti punti:</p>
+
+<ul>
+  <li>Indipendente dal framework</li>
+  <li>Indipendente dalla UI</li>
+  <li>Indipendente dal database</li>
+  <li>Testabile</li>
+</ul>
+
+<h3 id="indipendenza-dal-framework">Indipendenza dal framework</h3>
+
+<p>L’architettura deve essere indipendente da qualsiasi framework o libreria. Facendo un esempio più concreto, supponiamo che tu debba progettare l’architettura di una applicazione Android nativa (sto già restringendo il campo per semplicità); sicuramente le prime domande che ti farai saranno simili a queste:</p>
+
+<ul>
+  <li>quale libreria userò per fare le chiamate alle API Rest?</li>
+  <li>quale framework voglio usare per la dependency injection?</li>
+  <li>i dati locali li salverò nelle <em>SharedPreferences</em> oppure in un database?</li>
+</ul>
+
+<p>Ti sembrerà assurdo, ma queste domande non dovresti nemmeno portele in fase di studio della architettura. Devi essere in grado di astrarti da questi dettagli, altrimenti potrebbero rivelarsi un vincolo troppo stretto che ti impediscono di apportare modifiche facilmente.</p>
+
+<h3 id="indipendenza-dalla-ui">Indipendenza dalla UI</h3>
+
+<p>L’interfaccia utente è una delle componenti più soggette a modifiche nel ciclo di vita dello sviluppo di un software, soprattutto se si parla di interfacce grafiche. Pensa se fosse necessario, ad esempio, modificare le classi che gestiscono le chiamate alle API ogni volta che ti chiedono di aggiornare il layout di una vista, oppure se dovessi modificare le classi che implementano le regole di business se la richiesta riguarda solo la modifica del layout degli elementi di una lista. Quello che una buona architettura deve consentirci è di separare le componenti in modo che siano facilmente modificabili senza interferire le une con le altre.</p>
+
+<h3 id="indipendenza-dal-database">Indipendenza dal database</h3>
+
+<p>Qui andiamo sul pesante. Quante volte è capitato di partire proprio dalla definizione della base di dati? Dobbiamo usare SQL o NoSQL? MySQL, Postgres o SQL Server? Firebase? Mongo? Quante tabelle mi servono? E via di seguito, insistendo sul fatto che questa debba essere la base dell’architettura. Ma non è l’approccio corretto. Questo non significa che il database non sia importante (lo è eccome!), ma piuttosto che l’architettura deve consentirti di essere indipendente dall’implementazione specifica del database, perché, se ci pensi, le regole di business di un software sono indipendenti da come decido di persistere i dati. Tra l’altro questo approccio mi da la possibilità di sviluppare anche senza un database (che magari è in carico ad un collega), utilizzando una classe che fornisce dati mock; sostituirò poi questa classe con l’implementazione reale del database quando questa sarà pronta (su questo punto tornerò più in profondità in seguito).</p>
+
+<h3 id="testabile">Testabile</h3>
+
+<p>Le diverse componenti del mio software dovrebbero essere testabili in modo indipendente le une dalle altre. Ad esempio devo essere in grado di testare le regole di business senza bisogno di accedere all’interfaccia grafica, al database o alle API di backend. Quindi la mia architettura deve favorire gli <em>unit test</em>. Gli <em>integration test</em> (i test che mi permettono di testare l’integrazione di più funzionalità dell’applicativo) o test <em>end to end</em> (i test dell’applicativo nella sua interezza) continuano ad essere importanti nel ciclo di vita del software, ma testare le componenti singole mi permette di validare fin da subito il comportamento del singolo metodo o della singola classe, isolando facilmente eventuali bug e accelerando così il ciclio di sviluppo del software.</p>
+
+<h1 id="rimandare-le-decisioni-critiche">Rimandare le decisioni critiche</h1>
+
+<p>I principi elencanti qui sopra hanno come conseguenza un altro caposaldo della <em>Clean Architecture</em>:</p>
+
+<blockquote>
+  <p>Ogni buona architettura ti permette di rimandare le decisioni critiche</p>
+</blockquote>
+
+<p>Questo è uno degli aspetti che mi ha coplito di più la prima volta che studiato la <em>Clean Architecture</em>, e a mio avviso è uno degli aspetti più potenti.</p>
+
+<p>Ma cosa significa “rimandare le dicisioni critiche”?</p>
+
+<p>Significa aver la possibilità, in fase di progettazione così come in fase di sviluppo, di non preoccuparsi di “dettagli implementativi” che ancora non conosciamo.</p>
+
+<p>Provo a fare un piccolo esempio (affronterò un caso pratico completo nei prossimi articoli). Supponi di dover progettare una app di ricerca ristoranti; un aspetto fondamentale è sapere quale sarà la sorgente dei dati, ovvero da dove andrai a prendere i ristoranti da mostrare all’utente. E’ verosimile che i dati saranno forniti da un backend attraverso una API REST,  ma al momento non è disponibile ancora questa informazione; come puoi procedere? Potresti creare una interfaccia <code class="highlighter-rouge">Repository</code> in un modo simile al seguente:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Repository</span> <span class="o">{</span>
+
+  <span class="n">List</span><span class="o">&lt;</span><span class="n">Restaurant</span><span class="o">&gt;</span> <span class="nf">search</span><span class="o">(</span><span class="n">String</span> <span class="n">query</span><span class="o">)</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Questa interfaccia rappresenterà il “punto di accesso” ai dati, senza bisogno di sapere quale dovrà essere l’implementazione concreta. In questo modo stai “rimandando” diverse decisioni, come ad esempio:</p>
+
+<ul>
+  <li>quale libreria dovrò utilizzare per le chiamate REST?</li>
+  <li>dovrò gestire la sincronizzazione dei dati con un DB locale?</li>
+  <li>quale database locale devo utilizzare?</li>
+</ul>
+
+<p>Rimandando queste dicisioni puoi continuare a progettare l’architettura in base alle regole di business e gli altri requisiti che sono già noti.</p>
+
+<h1 id="integrazione-con-altri-pattern">Integrazione con altri pattern</h1>
+
+<p>Una domanda che mi sento porre spesso è: come posso integrare la <em>Clean Architecture</em> nel mio progetto che segue già il pattern MVP / MVVM / MVI ecc…?</p>
+
+<p>E’ fondamentale capire che la <em>Clean Architecture</em> non è un pattern di programmazione alternativo a MVP, MVVM ecc. Questi pattern infatti hanno lo scopo di definire una architettura per lo strato di “presentation” del software, mentre la <em>Clean Architecture</em> ha lo scopo di definire una chiara separazione degli strati del software e la comunicazione tra questi strati.</p>
+
+<h1 id="conclusione">Conclusione</h1>
+
+<p>In questo articolo ho provato a darti una idea di base di cosa si intende per <em>Clean Architecture</em> e di come questo sia un concetto che può essere applicato a qualsiasi tipo di software, indipendentemente dal linguaggio di programmazione, dai pattern e dai framework che si vogliono utilizzare.</p>
+
+<p>Nel prossimo articolo andrò più in profondità su questi aspetti, chiarendo cosa si intende per “strati” (o livelli o <em>layer</em>) del software e la comunicazione tra loro.</p>
+
+<h1 id="riferimenti">Riferimenti</h1>
+
+<ul>
+  <li>
+    <p>Libro: Clean Architecture: A Craftsman’s Guide to Software Structure and Design (<a href="https://amzn.to/31MI9n1">Amazon</a>).</p>
+  </li>
+  <li>
+    <p>Blog post: <a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">The Clean Architecture, by Robert C. Martin</a></p>
+  </li>
+</ul>
+
+
+
+<span class="post-date">
+  Pubblicato il
+  
+  October
+  28th,
+  2020
+  by
+  
+    Andrea Maglie
+  
+</span>
+
+<div class="post-date">Condividi!</div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=Clean Architecture: una introduzione&amp;url=/clean-architecture-introduction.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/clean-architecture-introduction.html&amp;title=Clean Architecture: una introduzione" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/clean-architecture-introduction.html&amp;title=Clean Architecture: una introduzione" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 >Potrebbero interessarti:</h1>
+  
+  <ul class="related-posts">
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+        
+          <li>
+            <h3>
+              <a href="/speed-up-your-builds-without-upgrading-your-hardware.html">
+                Speed up your builds… without upgrading your hardware
+                <!--<img src="/images/">-->
+                <!--<small>April 27, 2018</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+        
+          <li>
+            <h3>
+              <a href="/android-studio-2.3-migration.html">
+                Migrate to Android Studio 2.3
+                <!--<img src="/images/">-->
+                <!--<small>March 8, 2017</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+    
+      
+        
+        
+      
+    
+  </ul>
+</div>
+
+
+
+  <section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = "techisfun";
+    var disqus_identifier = "/clean-architecture-introduction.html";
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/techisfun" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/techisfun" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="http://www.linkedin.com/in/andreamaglie/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:l.andrea.maglie@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">ing. Andrea Maglie |  by Andrea Maglie</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>
